@@ -699,7 +699,7 @@ maritime_ideas = {
 
 # Naval ideas
 naval_ideas = {
-	category = MIL
+	category = DIP
 
 	trigger = {
 		primitives = no

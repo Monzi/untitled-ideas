@@ -4,5 +4,5 @@ tags={
 	"Balance"
 }
 picture="thumbnail.png"
-supported_version="1.37.*"
+supported_version="v1.37.*.*"
 remote_file_id="2816357465"
