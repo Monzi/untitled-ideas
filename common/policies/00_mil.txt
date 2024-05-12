@@ -159,7 +159,7 @@ cent_merc = {
 	}
 
 	merc_leader_army_tradition = 0.5
-	allow_mercenary_drill = yes
+	allow_mercenaries_to_split = yes
 
 	effect = {}
 	removed_effect = {}
@@ -205,7 +205,7 @@ assi_merc = {
 	}
 
 	mercenary_manpower = 0.20
-	merc_independent_from_trade_range = yes
+	mercenary_cost = -0.10
 
 	effect = {}
 	removed_effect = {}
@@ -345,7 +345,7 @@ court_cav = {
 
 	max_general_shock = 1
 	drill_decay_modifier = -0.10
-	cavalry_flanking = 0.10
+	cavalry_flanking = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -516,26 +516,42 @@ influ_stand = {
 	}
 }
 
-exp_inf_cav = {
+exp_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = exploration_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = exploration_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
 	}
 
 	vassal_forcelimit_bonus = 0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
+exp_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = exploration_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = exploration_ideas
+		full_idea_group = cavalry_ideas
+	}
+
+	vassal_manpower_bonus = 0.2
 
 	effect = {}
 	removed_effect = {}
@@ -742,9 +758,9 @@ nat_horde = {
 		full_idea_group = horde_gov_ideas
 	}
 
-	cav_to_inf_ratio = 25
+	cav_to_inf_ratio = 0.25
 	cavalry_cost = -0.05
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -767,7 +783,7 @@ nat_divine = {
 	}
 
 	land_morale = 0.1
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -790,7 +806,7 @@ nat_off = {
 	}
 
 	morale_damage = 0.05
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -813,7 +829,7 @@ nat_def = {
 	}
 
 	reserves_organisation = 0.10
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -836,7 +852,7 @@ nat_quality = {
 	}
 
 	artillery_power = 0.10
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -859,7 +875,7 @@ nat_quant = {
 	}
 
 	manpower_in_culture_group_provinces = 0.1
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -882,7 +898,7 @@ nat_inf = {
 	}
 
 	infantry_power = 0.10
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -905,7 +921,7 @@ nat_cav = {
 	}
 
 	cavalry_power = 0.10
-	culture_conversion_cost = -0.10
+	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -914,27 +930,44 @@ nat_cav = {
 	}
 }
 
-trade_inf_cav = {
+trade_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = trade_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = trade_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
 	}
 
 	privateer_efficiency = 0.2
 	embargo_efficiency = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
+trade_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = trade_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = trade_ideas
+		full_idea_group = cavalry_ideas
+	}
+
+	privateer_efficiency = 0.2
+	ship_trade_power_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1311,23 +1344,17 @@ inno_stand = {
 	}
 }
 
-reli_inf_cav = {
+reli_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = religious_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = religious_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
 	}
 
 	land_morale = 0.1
@@ -1341,26 +1368,67 @@ reli_inf_cav = {
 	}
 }
 
-infra_inf_cav = {
+reli_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = cavalry_ideas
+	}
+
+	land_morale = 0.1
+	morale_damage = 0.025
+
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
+infra_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = infrastructure_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = infrastructure_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
 	}
 
 	movement_speed = 0.10
+	land_maintenance_modifier = -0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
+infra_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = infrastructure_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = infrastructure_ideas
+		full_idea_group = cavalry_ideas
+	}
+
+	reinforce_cost_modifier = -0.10
 	land_maintenance_modifier = -0.10
 
 	effect = {}
@@ -1647,27 +1715,43 @@ decent_stand = {
 	}
 }
 
-cent_inf_cav = {
+cent_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = centralization_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
-		
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = centralization_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
 	}
 
 	land_morale = 0.10
+	land_maintenance_modifier = -0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cent_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = centralization_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = centralization_ideas
+		full_idea_group = cavalry_ideas
+	}
+
+	reinforce_speed = 0.10
 	recover_army_morale_speed = 0.05
 
 	effect = {}
@@ -1677,23 +1761,40 @@ cent_inf_cav = {
 	}
 }
 
-decent_inf_cav = {
+decent_inf = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = decentralization_ideas
-		OR = {
-			has_idea_group = infantry_ideas
-			has_idea_group = cavalry_ideas
-		}
+		has_idea_group = infantry_ideas
 	}
 
 	allow = {
 		full_idea_group = decentralization_ideas
-		OR = {
-			full_idea_group = infantry_ideas
-			full_idea_group = cavalry_ideas
-		}
+		full_idea_group = infantry_ideas
+	}
+
+	siege_ability = 0.10
+	garrison_size = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+decent_cav = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = decentralization_ideas
+		has_idea_group = cavalry_ideas
+	}
+
+	allow = {
+		full_idea_group = decentralization_ideas
+		full_idea_group = cavalry_ideas
 	}
 
 	reinforce_speed = 0.10

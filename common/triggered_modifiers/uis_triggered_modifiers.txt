@@ -13,9 +13,7 @@ discovery_cent_counter = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_discovery_provinces
 			NOT = {
-				num_of_owned_provinces_with = {
-					value = 11
-				}
+				num_of_cities = 12
 			}
 		}
     }
@@ -34,12 +32,8 @@ reformation_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_reformation_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 22
-					}
-				}
+			NOT = {
+				num_of_cities = 23
 			}
 		}
     }
@@ -58,12 +52,8 @@ absolutism_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_absolutism_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 33
-					}
-				}
+			NOT = {
+				num_of_cities = 34
 			}
 		}
     }
@@ -83,12 +73,8 @@ revolutions_cent_counter = {
     trigger = {
         custom_trigger_tooltip = {
 			tooltip = not_more_than_revolutions_provinces
-			owner = {
-				NOT = {
-					num_of_owned_provinces_with = {
-						value = 44
-					}
-				}
+			NOT = {
+				num_of_cities = 45
 			}
 		}
     }

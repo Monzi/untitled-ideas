@@ -161,7 +161,7 @@ country_event = {
 			add_country_modifier = { 
 				name = cent_bonuses_1
 				duration = -1
-				hidden = no
+				# hidden = no
 			}
 		}
 		if = {
@@ -185,7 +185,7 @@ country_event = {
 			add_country_modifier = { 
 				name = cent_bonuses_2
 				duration = -1
-				hidden = no
+				# hidden = no
 			}
 		}
 		if = {
@@ -208,7 +208,7 @@ country_event = {
 			add_country_modifier = { 
 				name = cent_bonuses_3
 				duration = -1
-				hidden = no
+				# hidden = no
 			}
 		}
 		if = {
@@ -230,7 +230,7 @@ country_event = {
 			add_country_modifier = { 
 				name = cent_bonuses_4
 				duration = -1
-				hidden = no
+				# hidden = no
 			}
 		}
 	}

@@ -8,9 +8,19 @@ marine_corps = {
 	is_marine_modifier = yes
 }
 
+# Replacement for early forced march
+early_forced_march = {
+	movement_speed = 0.05
+}
+
+# Replacement for early nationalist cb
+nationalist_cb_replace = {
+	province_warscore_cost = -0.1
+}
+
 # Modifiers for giving the bonuses from Centralization ideas.
 cent_bonuses_1 = {
-	same_culture_advisor_cost = -0.1
+	same_culture_advisor_cost = -0.05
 }
 cent_bonuses_2 = {
 	same_culture_advisor_cost = -0.1
@@ -19,11 +29,13 @@ cent_bonuses_2 = {
 cent_bonuses_3 = {
 	same_culture_advisor_cost = -0.15
 	development_cost = -0.20
+	global_manpower_modifier = 0.10
 	global_trade_goods_size_modifier = 0.05
 }
 cent_bonuses_4 = {
 	same_culture_advisor_cost = -0.15
 	development_cost = -0.25
+	global_manpower_modifier = 0.20
 	global_trade_goods_size_modifier = 0.10
 	global_allowed_num_of_buildings = 1
 }
