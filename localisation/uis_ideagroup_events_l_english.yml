@@ -1,0 +1,8 @@
+﻿l_english:
+ uis_ideagroups.0001.t:0 "Centralization ideas mechanics"
+ uis_ideagroups.0001.d:0 "This idea group comes with a special mechanic were if you stay under a certain limit of provinces you'll have access to some strong bonuses.\n\nThe amount of allowed provinces increases based on the current age.\nTo track your amount of provinces for the current age, look under triggered modifiers in the bottom right.\n\nAge of Discovery = 11\nAge of Reformation = 22\nAge of Absolutism = 33\nAge of Revolutions = 44\n"
+ uis_ideagroups.0001.a:0 "Understood"
+ not_more_than_discovery_provinces:0 "Owns less than §Y11§! provinces."
+ not_more_than_reformation_provinces:0 "Owns less than §Y22§! provinces."
+ not_more_than_absolutism_provinces:0 "Owns less than §Y33§! provinces."
+ not_more_than_revolutions_provinces:0 "Owns less than §Y44§! provinces."
