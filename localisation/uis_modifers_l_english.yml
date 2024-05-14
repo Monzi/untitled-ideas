@@ -13,13 +13,6 @@
 # Triggered Quality Modifiers for Maritime Idea group
  marine_corps:0 "Marine corps"
  desc_marine_corps:0 ""
- 
-# Replacement modifiers for ideas
- early_forced_march:0 "Regular Forced Marches"
- desc_early_forced_march:0 "With regular forced marches becomeing common place within the army our troops have become used to the long marches."
-
- nationalist_cb_replace:0 "Favorable Deals"
- desc_nationalist_cb_replace:0 ""
 
 # Triggered Modifiers
  discovery_cent_counter:0 "Centralized Government in the Age of Discovery"

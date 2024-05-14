@@ -471,7 +471,7 @@ nationalism_ideas = {
 	}
 
 	bonus = {
-		culture_conversion_cost = -0.50
+		culture_conversion_cost = -0.25
 		culture_conversion_time = -0.15
 		monthly_cultural_unity = 0.5
 	}
@@ -498,15 +498,7 @@ nationalism_ideas = {
 	nationalism_ideas_7 = {
 		# cb_early_nationalist = yes
 		# Gives an early and nerfed Nationalism CB.
-		effect = {
-			if = {
-				limit = { dip_tech = 23 }
-				add_country_modifier = {
-					name = nationalist_cb_replace
-					duration = -1
-				}
-			}
-		}
+		province_warscore_cost = -0.1
 	}
 
 	ai_will_do = {

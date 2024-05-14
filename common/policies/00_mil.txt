@@ -989,7 +989,7 @@ trade_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	global_manpower_modifier = 0.1
+	trade_goods_size_modifier = 0.1
 	ship_power_propagation = 0.1
 
 	effect = {}

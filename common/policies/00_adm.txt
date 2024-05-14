@@ -522,7 +522,7 @@ decent_ari = {
 		full_idea_group = aristocracy_ideas
 	}
 
-	global_manpower_modifier = 0.15
+	land_maintenance_modifier = -0.15
 	development_cost = -0.05
 
 	effect = {}

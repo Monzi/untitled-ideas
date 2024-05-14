@@ -1,8 +1,8 @@
 ﻿l_english:
 # Admin Ideas
- religious_ideas:0 "§JMercenary Army Ideas§!"
+ religious_ideas:0 "§JReligious Ideas§!"
 
- humanist_ideas:0 "§JMercenary Army Ideas§!"
+ humanist_ideas:0 "§JHumanist Ideas§!"
 
  industrial_ideas:0 "Industrial Ideas"
  industrial_ideas_bonus:0 "Fully Industialized"
@@ -34,7 +34,7 @@
  cent_ideas_5:0 "Larger Workforce"
  cent_ideas_5_desc:0 "With people not spread out across our lands we can focus them on production."
  cent_ideas_6:0 "Efficient Production Methods"
- cent_ideas_6_desc:0 "With people producing for the state we have developed better ways to manufacture.\n§YBonus§!: Goods Produced Modifier: §G+10%§!\nglobal_manpower_modifier: §G+20%§!\n"
+ cent_ideas_6_desc:0 "With people producing for the state we have developed better ways to manufacture.\n§YBonus§!: Goods Produced Modifier: §G+10%§!\n§YBonus§!: National Manpower Modifier: §G+20%§!\n"
  cent_ideas_7:0 "A Stronger States"
  cent_ideas_7_desc:0 "With focus on a smaller state, the people we rule can feel the presence of their ruler.\n§YBonus§!: Possible Number of Buildings: §G+1§!\n"
 
@@ -88,7 +88,7 @@
  nationalism_ideas_6:0 "Local Traditions"
  nationalism_ideas_6_desc:0 "By incorporating these traditions into our official code of laws we create a happy and loyal populace."
  nationalism_ideas_7:0 "Nationalism"
- nationalism_ideas_7_desc:0 "Our people have survived everything the world has thrown at them, we have shown our resilience.\nPermanent Casus Belli against any country that owns any province with your culture group.\nAdditional bouns after diplo technology 23:\nProvince Warscore Cost §G-10%§!"
+ nationalism_ideas_7_desc:0 "Our people have survived everything the world has thrown at them, we have shown our resilience.\nPermanent Casus Belli against any country that owns any province with your culture group.\nAllows §YEarly Nationalism Casus Belli§!\n"
 
  maritime_ideas_7:0 "Marine Corps and Officers"
  maritime_ideas_7_desc:0 "With proper training we're able to make our marines into a proper fighting force.\nShock Damage Received: §G-15%§! for marines only"
@@ -156,7 +156,7 @@
  stand_ideas_4:0 "Military Drill"
  stand_ideas_4_desc:0 "Allows us to invest in military training and thereby improve battle formations, weapon handling and boost the morale of our army."
  stand_ideas_5:0 "Forced March"
- stand_ideas_5_desc:0 "Allows armies §YForced March§! orders, allowing them to march faster for military power.\nAdditional bouns after admin technology 15:\nMovement speed §G+5%§!"
+ stand_ideas_5_desc:0 "Allows armies §YForced March§! orders, allowing them to march faster for military power.\n"
  stand_ideas_6:0 "Noble Officers"
  stand_ideas_6_desc:0 "Who leads our troops is an important choice. Our nobility is seeking to ensure that preference is given to them. It will give them a chance to show their valor by giving the enemy cold steel and we will allow them to do this."
  stand_ideas_7:0 "Esprit de Corps"

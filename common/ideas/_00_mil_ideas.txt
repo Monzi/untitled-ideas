@@ -619,15 +619,6 @@ standingarmy_ideas = {
 	stand_ideas_5 = {
 		enable_forced_march = yes
 		movement_speed = 0.1
-		effect = {
-			if = {
-				limit = { adm_tech = 15 }
-				add_country_modifier = {
-					name = early_forced_march
-					duration = -1
-				}
-			}
-		}
 	}
 	stand_ideas_6 = {
 		army_tradition = 0.5
