@@ -1,5 +1,8 @@
 version="4.4b"
 name="Untitled ideas"
+dependencies={
+	"UI a la Artemis"
+}
 tags={
 	"Balance"
 }
