@@ -356,6 +356,7 @@ quantity_ideas = {
 
 	mass_army = {
 		global_manpower_modifier = 0.20
+		num_of_pronoiars = 1
 	}
 	the_young_can_serve = {
 		manpower_recovery_speed = 0.10
@@ -628,7 +629,7 @@ standingarmy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.d5
+		factor = 3.5
 		modifier = {
 			factor = 2
 			has_strong_mil_national_ideas = yes 
