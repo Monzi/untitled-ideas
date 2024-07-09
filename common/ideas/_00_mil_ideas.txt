@@ -6,6 +6,7 @@ academy_ideas = {
 
 	bonus = {
 		army_tradition_decay = -0.01
+		navy_tradition_decay = -0.01
 	}
 
 	academy_ideas_1 = {
