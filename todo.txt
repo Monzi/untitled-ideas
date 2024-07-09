@@ -1,0 +1,11 @@
+ Backport anbennar update
+ Fleshed out academy ideas (estate)
+ Fleshed out militarism ideas (government)
+ fleshed out assimilation ideas (mughal government)
+ Replace Naval ideas with ship ideas in missions
+ Rework cav/inf ratio
+ Rework Cent
+ Rework Decent
+ Remove loc. ideas, policies (Desc)
+ Redo policies
+ Add new idea groups to scripted triggers idea counter

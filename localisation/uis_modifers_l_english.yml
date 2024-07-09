@@ -10,9 +10,24 @@
  desc_cent_bonuses_4:0 "This modifier is only active if you have less provinces than what's allowed for the current age."
 
 # Military Event Modifiers
-# Triggered Quality Modifiers for Maritime Idea group
- marine_corps:0 "Marine corps"
- desc_marine_corps:0 ""
+ upgraded_marines_cooldown:0 "Naval War Games"
+ upgraded_marines:0 "Surprise Landings"
+
+ tactics_cooldown:0 "Tactics Cooldown"
+ balanced_tactics:0 "Balanced Tactics"
+ fire_tactics:0 "Fire Tactics"
+ shock_tactics:0 "Shock Tactics"
+ quantity_over_quality_tactics:0 "Quantity over Quality Tactics"
+
+ infantry_training_cooldown:0 "Infantry Training"
+ hardened_infantry:0 "Proper Fighting Force"
+
+ cavalry_training_cooldown:0 "Cavalry Training"
+ cavalry_partially_trained:0 "Partially Trained Cavalry Force"
+ cavalry_mostly_trained:0 "Mostly Trained Cavalry Force"
+ cavalry_fully_trained:0 "Fully Trained Cavalry Force"
+
+ upgraded_stand_5:0 "Regular Forced Marches"
 
 # Triggered Modifiers
  discovery_cent_counter:0 "Centralized Government in the Age of Discovery"
@@ -23,3 +38,5 @@
  desc_absolutism_cent_counter:0 ""
  revolutions_cent_counter:0 "Centralized Government in the Age of Revolutions"
  desc_revolutions_cent_counter:0 ""
+
+ marine_fraction_build:0 "Marine Base"

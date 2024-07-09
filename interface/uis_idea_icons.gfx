@@ -23,6 +23,13 @@ spriteTypes = {
 	}
 	# Diplomatic Ideas
 	spriteType = {
+		name = "GFX_idea_magocratic_ideas"
+		texturefile = "gfx//interface//ideas//idea_magocratic.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
 		name = "GFX_idea_assimilation_ideas"
 		texturefile = "gfx//interface//ideas//idea_assimilation.tga"
 		noOfFrames = 1
@@ -32,6 +39,27 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_nationalism_ideas"
 		texturefile = "gfx//interface//ideas//idea_nationalism.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_heavy_ideas"
+		texturefile = "gfx//interface//ideas//idea_heavy.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_light_ideas"
+		texturefile = "gfx//interface//ideas//idea_light.tga"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_idea_galley_ideas"
+		texturefile = "gfx//interface//ideas//idea_galley.tga"
 		noOfFrames = 1
 		
 		effectFile = "gfx/FX/buttonstate_linear.lua"

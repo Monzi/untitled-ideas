@@ -184,25 +184,25 @@ humanist_ideas = {
 		global_unrest = -2
 		harmonization_speed = 0.25
 	}
-	ecumenism = {
-		tolerance_heretic = 2
-	}
 	indirect_rule = {
 		years_of_nationalism = -5
+	}
+	ecumenism = {
+		tolerance_heretic = 2
 	}
 	cultural_ties = {
 		stability_cost_modifier = -0.1
 	}
-	tolerance_idea = {
-		tolerance_of_heretics_capacity = 1
-		tolerance_of_heathens_capacity = 1
+	humanist_tolerance = {
+		tolerance_heathen = 2
+		religious_unity = 0.2
 	}
 	benevolence = {
 		improve_relation_modifier = 0.3
 	}
-	humanist_tolerance = {
-		tolerance_heathen = 2
-		religious_unity = 0.2
+	tolerance_idea = {
+		tolerance_of_heretics_capacity = 1
+		tolerance_of_heathens_capacity = 1
 	}
 
 	ai_will_do = {
@@ -249,25 +249,25 @@ economic_ideas = {
 	}
 
 	bureaucracy = {
-		global_tax_modifier = 0.10
-	}
-	merchant_passes = {
-		merchants = 1
+		global_tax_modifier = 0.15
 	}
 	national_bank = {
 		inflation_reduction = 0.1
 	}
-	debt_and_loans = {
-		interest = -0.5
+	merchant_passes = {
+		merchants = 1
 	}
 	efficient_mining = {
 		gold_depletion_chance_modifier = -0.25
+	}
+	debt_and_loans = {
+		interest = -0.5
 	}
 	nationalistic_enthusiasm = {
 		land_maintenance_modifier = -0.05
 	}
 	smithian_economics = {
-		#Mechanic: +1/-1 Dev from Manufactories
+		# Mechanic: +1/-1 Dev from Manufactories
 		production_efficiency = 0.1
  	}
 
@@ -325,6 +325,7 @@ industrial_ideas = {
 
 	bonus = {
 		global_allowed_num_of_manufactories = 1
+		special_unit_cost_modifier = -0.33
 	}
 
 	industrial_ideas_1 = {
@@ -429,7 +430,8 @@ infrastructure_ideas = {
 			factor = 1.15
 			OR = {
 				has_idea_group = trade_ideas
-				has_idea_group = naval_ideas
+				has_idea_group = heavy_ideas
+				has_idea_group = light_ideas
 			}
 		}
 	}
@@ -528,7 +530,7 @@ administrative_ideas = {
 	category = ADM
 
 	bonus = {
-		governing_capacity_modifier = 0.25
+		governing_capacity_modifier = 0.20
 		eunuchs_loyalty_modifier = 0.1
 	}
 
@@ -540,7 +542,7 @@ administrative_ideas = {
 		expand_administration_cost = -0.25
 	}
 	cultural_regulations = {
-		promote_culture_cost = -0.3
+		possible_adm_policy = 1
 	}
 	local_rule = {
 		advisor_cost = -0.10
@@ -591,6 +593,82 @@ administrative_ideas = {
 				has_reform = prussian_monarchy
 				has_reform = prussian_monarchy_base
 				governing_capacity_percentage = 0.9
+			}
+		}
+	}
+}
+
+# Militarism ideas
+militarism_ideas = {
+	category = ADM
+	trigger = {
+		primitives = no
+	}
+	
+	bonus = {
+		max_absolutism_effect = 0.05
+		all_estate_loyalty_equilibrium = 0.1
+		num_of_pronoiars = 1
+	}
+
+	militarism_ideas1 = { # Surpression of Dissent
+		harsh_treatment_cost = -0.25
+		global_rebel_suppression_efficiency = 0.2
+	}
+	militarism_ideas2 = { # Ministry of Internal Affairs
+		reduced_liberty_desire_on_same_continent = 10
+	}
+	militarism_ideas3 = { # Ministry of Defense
+		yearly_army_professionalism = 0.002
+	}
+	militarism_ideas4 = { # Ministry of State
+		possible_mil_policy = 1
+	}
+	militarism_ideas5 = { # Service Guarantees Citizenship
+		drill_gain_modifier = 0.20
+		drill_decay_modifier = -0.40
+	}
+	militarism_ideas6 = { # Legitimacy by Might
+		stability_cost_modifier = -0.15
+	}
+	militarism_ideas7 = { # Strong Hold on Government
+		monthly_reform_progress_modifier = 0.2
+		mil_tech_cost_modifier = -0.1
+		# Anbennar
+		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
+		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
+	}
+
+	ai_will_do = {
+		factor = 3.0
+		modifier = {
+			factor = 2
+			has_strong_mil_national_ideas = yes 
+		}
+		modifier = { 
+			factor = 0.60
+			NOT = { monthly_mil = 8 }
+		}
+		modifier = { 
+			factor = 1.05
+			is_great_power = yes 
+		}
+		modifier = { 
+			factor = 1.05
+			national_focus = MIL 
+		}
+		modifier = { 
+			factor = 1.5
+			personality = ai_militarist
+		}
+		modifier = { 
+			factor = 2.0
+			AND = {
+				personality = ai_militarist
+				OR = {
+					current_age = age_of_absolutism
+					current_age = age_of_revolutions
+				}
 			}
 		}
 	}
@@ -653,7 +731,6 @@ centralization_ideas = {
 				tag = FLA
 				tag = BRB
 				tag = RIG
-				tag = PRU
 			}
 		}
 		modifier = {

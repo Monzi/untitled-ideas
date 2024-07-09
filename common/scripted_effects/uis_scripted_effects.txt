@@ -4,3 +4,46 @@ clear_centralization_bonus_modifiers = {
 	remove_country_modifier = cent_bonuses_3
 	remove_country_modifier = cent_bonuses_4
 }
+
+clear_tactic_bonus_modifiers = {
+	remove_country_modifier = balanced_tactics
+	remove_country_modifier = fire_tactics
+	remove_country_modifier = shock_tactics
+	remove_country_modifier = quantity_over_quality_tactics
+}
+
+clear_cavalry_bonus_modifiers = {
+	remove_country_modifier = cavalry_partially_trained
+	remove_country_modifier = cavalry_mostly_trained
+	remove_country_modifier = cavalry_fully_trained
+}
+
+estate_action_GRANT_GENERALSHIP_ACADEMY = {
+	if = {
+		limit = {
+			full_idea_group = innovativeness_ideas
+		}
+		create_general_scaling_with_tradition_and_pips = {
+			add_fire = 1
+			add_shock = 1
+			add_manuever = 1
+			add_siege = 1
+		}
+	}
+	else = {
+		create_leader_scaling_with_tradition = {
+			leader = general
+			type = army
+		}
+	}
+	#add_estate_influence_modifier = {
+	#	estate = estate_academy
+	#	desc = EST_VAL_GRANTED_GENERALSHIP
+	#	influence = 20
+	#	duration = 3650
+	#}
+	add_estate_loyalty = {
+		estate = estate_academy
+		loyalty = 10
+	}
+}

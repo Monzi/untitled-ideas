@@ -125,17 +125,16 @@ diplomatic_ideas = {
 
 	bonus = {
 		reduced_stab_impacts = yes
-		monthly_favor_modifier = 0.10
 	}
 
 	grand_banquets = {
 		diplomats = 1
 	}
-	cabinet = {
-		diplomatic_upkeep = 1
-	}
 	foreign_embassies = {
 		dip_advisor_cost = -0.25
+	}
+	cabinet = {
+		diplomatic_upkeep = 1
 	}
 	benign_diplomats = {
 		improve_relation_modifier = 0.25
@@ -148,6 +147,7 @@ diplomatic_ideas = {
 		province_warscore_cost = -0.2
 	}
 	diplomatic_corps = {
+		possible_dip_policy = 1
 		dip_tech_cost_modifier = -0.1
 	}
 
@@ -222,6 +222,120 @@ influence_ideas = {
 	}
 }
 
+# Assimilation ideas
+assimilation_ideas = {
+	category = DIP
+	trigger = {
+		NOT = {
+			has_idea_group = nationalism_ideas
+		}
+	}
+
+	bonus = {
+		harmonization_speed = 0.25
+		num_accepted_cultures = 8
+		ae_impact = -0.10
+	}
+
+	assimilation_ideas_1 = {
+		promote_culture_cost = -0.30
+	}
+	assimilation_ideas_2 = {
+		native_uprising_chance = -0.50
+	}
+	assimilation_ideas_3 = {
+		native_assimilation = 0.25
+	}
+	assimilation_ideas_4 = {
+		years_of_nationalism = -5
+	}
+	assimilation_ideas_5 = {
+		global_manpower_modifier = 0.1
+	}
+	assimilation_ideas_6 = {
+		advisor_pool = 2
+	}
+	assimilation_ideas_7 = {
+		global_unrest = -1
+	}
+
+	ai_will_do = {
+		factor = 0.55
+
+		modifier = {
+			factor = 1.5
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			num_accepted_cultures = 3
+		}
+		modifier = {
+			factor = 4
+			num_of_owned_provinces_with = {
+				value = 8
+				has_owner_accepted_culture = no
+				NOT = { culture = root }
+				is_overseas = no
+			}
+		}
+	}
+}
+
+# Nationalism
+nationalism_ideas = {
+	category = DIP
+	trigger = {
+		NOT = {
+			has_idea_group = assimilation_ideas
+		}
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.15
+		monthly_cultural_unity = 0.5
+	}
+
+	nationalism_ideas_1 = {
+		hostile_attrition = 1
+	}
+	nationalism_ideas_2 = {
+		manpower_in_culture_group_provinces = 0.10
+		same_culture_advisor_cost = -0.15
+	}
+	nationalism_ideas_3 = {
+		reinforce_cost_modifier = -0.2
+	}
+	nationalism_ideas_4 = {
+		years_of_nationalism = -5
+	}
+	nationalism_ideas_5 = {
+		land_morale = 0.1
+	}
+	nationalism_ideas_6 = {
+		global_autonomy = -0.05
+	}
+	nationalism_ideas_7 = {
+		# cb_early_nationalist = yes
+		# Gives an early and nerfed Nationalism CB.
+		province_warscore_cost = -0.1
+	}
+
+	ai_will_do = {
+		factor = 0.50
+
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			culture_group_claim = from
+		}
+	}
+}
+
 # Exploration ideas
 exploration_ideas = {
 	category = DIP
@@ -243,7 +357,7 @@ exploration_ideas = {
 		range = 0.5
 	}
 	land_of_opportunity = {
-		global_colonial_growth = 10
+		global_colonial_growth = 20
 	}
 	factories = {
 		trade_company_governing_cost = -0.1
@@ -401,120 +515,6 @@ exploration_ideas = {
 	}
 }
 
-# Assimilation ideas
-assimilation_ideas = {
-	category = DIP
-	trigger = {
-		NOT = {
-			has_idea_group = nationalism_ideas
-		}
-	}
-
-	bonus = {
-		harmonization_speed = 0.25
-		num_accepted_cultures = 8
-		ae_impact = -0.1
-	}
-
-	assimilation_ideas_1 = {
-		promote_culture_cost = -0.30
-	}
-	assimilation_ideas_2 = {
-		native_uprising_chance = -0.50
-	}
-	assimilation_ideas_3 = {
-		native_assimilation = 0.25
-	}
-	assimilation_ideas_4 = {
-		years_of_nationalism = -5
-	}
-	assimilation_ideas_5 = {
-		global_manpower_modifier = 0.1
-	}
-	assimilation_ideas_6 = {
-		advisor_pool = 2
-	}
-	assimilation_ideas_7 = {
-		global_unrest = -1
-	}
-
-	ai_will_do = {
-		factor = 0.55
-
-		modifier = {
-			factor = 1.5
-			personality = ai_diplomat
-		}
-		modifier = {
-			factor = 2
-			num_accepted_cultures = 3
-		}
-		modifier = {
-			factor = 4
-			num_of_owned_provinces_with = {
-				value = 8
-				has_owner_accepted_culture = no
-				NOT = { culture = root }
-				is_overseas = no
-			}
-		}
-	}
-}
-
-# Nationalism
-nationalism_ideas = {
-	category = DIP
-	trigger = {
-		NOT = {
-			has_idea_group = assimilation_ideas
-		}
-	}
-
-	bonus = {
-		culture_conversion_cost = -0.25
-		culture_conversion_time = -0.15
-		monthly_cultural_unity = 0.5
-	}
-
-	nationalism_ideas_1 = {
-		hostile_attrition = 1
-	}
-	nationalism_ideas_2 = {
-		manpower_in_culture_group_provinces = 0.10
-		same_culture_advisor_cost = -0.15
-	}
-	nationalism_ideas_3 = {
-		reinforce_cost_modifier = -0.2
-	}
-	nationalism_ideas_4 = {
-		years_of_nationalism = -5
-	}
-	nationalism_ideas_5 = {
-		land_morale = 0.1
-	}
-	nationalism_ideas_6 = {
-		global_autonomy = -0.05
-	}
-	nationalism_ideas_7 = {
-		# cb_early_nationalist = yes
-		# Gives an early and nerfed Nationalism CB.
-		province_warscore_cost = -0.1
-	}
-
-	ai_will_do = {
-		factor = 0.50
-
-		modifier = {
-			factor = 3
-			personality = ai_militarist
-		}
-		modifier = {
-			factor = 2
-			culture_group_claim = from
-		}
-	}
-}
-
 # Trade ideas
 trade_ideas = {
 	category = DIP
@@ -603,7 +603,7 @@ maritime_ideas = {
 	}
 	merchant_marine = {
 		global_sailors_modifier = 0.5
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.50
 	}
 	sheltered_ports = {
 		sailor_maintenance_modifer = -0.1
@@ -616,15 +616,27 @@ maritime_ideas = {
 		global_ship_cost = -0.1
 	}
 	sea_hawks = {
-		global_naval_engagement_modifier = 0.1
+		global_naval_engagement_modifier = 0.15
 		admiral_cost = -0.25
 		free_leader_pool = 1
 	}
 	maritime_ideas_7 = {
-		# marine_corps modifier
-		# shock_damage_received = -0.15 for marines only
+		# Impressment Offices gives 1% Marine fraction
+		# Allows Marine training decision
+		# Removes Marine Marine penalty
 		leader_naval_fire = 1
         leader_naval_shock = 1
+		effect = {
+			add_country_modifier = {
+				name = marine_corps
+				duration = -1
+				hidden = yes
+			}
+		}
+		removed_effect = {
+			remove_country_modifier = upgraded_marines
+			remove_country_modifier = marine_corps
+		}
 	}
 
 	ai_will_do = {
@@ -689,49 +701,49 @@ maritime_ideas = {
 	}
 }
 
-# Naval ideas
-naval_ideas = {
+# Heavy Ship ideas
+heavy_ideas = {
 	category = DIP
-
 	trigger = {
 		primitives = no
+		NOT = {
+			has_idea_group = light_ideas
+			has_idea_group = galley_ideas
+		}
 	}
-
+	
 	bonus = {
-		global_naval_barrage_cost = -1
-		disengagement_chance = 0.15
+		has_man_of_war = yes
+		allowed_man_of_war_fraction = 0.25
 	}
 
-	boarding_parties = {
-		naval_tradition_from_battle = 1.0
-		landing_penalty = -1
+	heavy_ideas1 = {
+		global_sailors_modifier = 0.20
+		heavy_ship_cost = -0.10
+		naval_attrition = -0.10
 	}
-	improved_rams = {
-		galley_power = 0.25
+	heavy_ideas2 = {
+		global_naval_barrage_cost = -0.10
 	}
-	naval_cadets = {
-		light_ship_power = 0.25
-		sunk_ship_morale_hit_recieved = -0.33
+	heavy_ideas3 = {
+		heavy_ship_power = 0.10
 	}
-	naval_glory = {
-		navy_tradition = 1
-		siege_blockade_progress = 1
+	heavy_ideas4 = {
+		naval_morale_damage = 0.15
 	}
-	press_gangs = {
-		sailors_recovery_speed = 0.25
-		allowed_marine_fraction = 0.25
+	heavy_ideas5 = {
+		heavy_ship_hull_size_modifier = 0.25
 	}
-	oak_forests_for_ships = {
-		heavy_ship_power = 0.20
-		ship_durability = 0.1
+	heavy_ideas6 = {
+		global_naval_engagement_modifier = 0.10
 	}
-	superior_seamanship = {
-		naval_morale = 0.1
-		global_naval_engagement_modifier = 0.1
+	heavy_ideas7 = {
+		heavy_ship_number_of_cannons_modifier = 0.25
+		global_naval_barrage_cost = -0.50
 	}
 
 	ai_will_do = {
-		factor = 0.45
+		factor = 0.50
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -753,10 +765,262 @@ naval_ideas = {
 			factor = 0.31
 			num_of_cities = 50
 		}
-
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 10 }
+			current_age = age_of_discovery 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 20 }
+			current_age = age_of_reformation 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 30 }
+			current_age = age_of_absolutism 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 40 }
+			current_age = age_of_revolutions 
+		}
+		modifier = {
+			factor = 0.35
+			NOT = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 1.5 
+			capital_scope = {
+				is_island = yes 
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = {
+				which = naval_forcelimit_modifier 
+				value = 0.25
+			}
+		}
+		modifier = {
+			factor = 1.15
+			heavy_ship_fraction = 0.15
+		}
 		modifier = {
 			factor = 10
 			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+}
+
+# Light Ship ideas
+light_ideas = {
+	category = DIP
+	trigger = {
+		primitives = no
+		NOT = {
+			has_idea_group = heavy_ideas
+			has_idea_group = galley_ideas
+		}
+	}
+	
+	bonus = {
+		has_voc_indiamen = yes
+		allowed_voc_indiamen_fraction = 0.25
+	}
+
+	light_ideas1 = {
+		global_sailors_modifier = 0.20
+		light_ship_cost = -0.10
+		naval_attrition = -0.10
+	}
+	light_ideas2 = {
+		movement_speed_in_fleet_modifier = 1
+	}
+	light_ideas3 = {
+		light_ship_power = 0.20
+	}
+	light_ideas4 = {
+		naval_morale = 0.10
+	}
+	light_ideas5 = {
+		light_ship_hull_size_modifier = 0.20
+	}
+	light_ideas6 = {
+		disengagement_chance = 0.20
+	}
+	light_ideas7 = {
+		light_ship_number_of_cannons_modifier = 1
+	}
+
+	ai_will_do = {
+		factor = 0.50
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.31
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 0.31
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 10 }
+			current_age = age_of_discovery 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 20 }
+			current_age = age_of_reformation 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 30 }
+			current_age = age_of_absolutism 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 40 }
+			current_age = age_of_revolutions 
+		}
+		modifier = {
+			factor = 0.35
+			NOT = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 1.5 
+			capital_scope = {
+				is_island = yes 
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = {
+				which = naval_forcelimit_modifier 
+				value = 0.25
+			}
+		}
+		modifier = {
+			factor = 1.15
+			light_ship_fraction = 0.20
+		}
+		modifier = {
+			factor = 10
+			has_government_attribute = is_pirate_republic_reform
+		}
+	}
+}
+
+# Galley ideas
+galley_ideas = {
+	category = DIP
+	trigger = {
+		primitives = no
+		NOT = {
+			has_idea_group = heavy_ideas
+			has_idea_group = light_ideas
+		}
+	}
+	
+	bonus = {
+		has_galleass = yes
+		allowed_galleass_fraction = 0.25
+	}
+
+	galley_ideas1 = {
+		global_sailors_modifier = 0.20
+		galley_cost = -0.1
+		naval_attrition = -0.10
+	}
+	galley_ideas2 = {
+		sunk_ship_morale_hit_recieved = -0.25
+	}
+	galley_ideas3 = {
+		galley_power = 0.15
+	}
+	galley_ideas4 = {
+		naval_morale_damage_received = -0.15
+	}
+	galley_ideas5 = {
+		galley_hull_size_modifier = 0.15
+	}
+	galley_ideas6 = {
+		recover_navy_morale_speed = 0.1
+	}
+	galley_ideas7 = {
+		galley_number_of_cannons_modifier = 0.50
+	}
+
+	ai_will_do = {
+		factor = 0.50
+		modifier = {
+			factor = 0
+			is_tribal = yes
+		}
+		modifier = {
+			factor = 0
+			primitives = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+			NOT = { is_colonial_nation = yes }
+		}
+		modifier = {
+			factor = 0.31
+			NOT = { num_of_ports = 10 }
+		}
+		modifier = {
+			factor = 0.31
+			num_of_cities = 50
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 10 }
+			current_age = age_of_discovery 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 20 }
+			current_age = age_of_reformation 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 30 }
+			current_age = age_of_absolutism 
+		}
+		modifier = {
+			factor = 0.25
+			NOT = { num_of_ports = 40 }
+			current_age = age_of_revolutions 
+		}
+		modifier = {
+			factor = 0.35
+			NOT = { num_of_ports = 15 }
+		}
+		modifier = {
+			factor = 1.5
+			has_global_modifier_value = {
+				which = naval_forcelimit_modifier 
+				value = 0.25
+			}
+		}
+		modifier = {
+			factor = 1.15
+			galley_fraction = 0.25
 		}
 	}
 }

@@ -6,3 +6,10 @@
  not_more_than_reformation_provinces:0 "Owns less than §Y22§! provinces."
  not_more_than_absolutism_provinces:0 "Owns less than §Y33§! provinces."
  not_more_than_revolutions_provinces:0 "Owns less than §Y44§! provinces."
+
+ uis_ideagroups.2001.t:0 "Change Current Tactics"
+ uis_ideagroups.2001.d:0 "It is time that we had a look at the tactics we're employing."
+ uis_ideagroups.2001.a:0 "Balanced Tactics"
+ uis_ideagroups.2001.b:0 "Fire Tactics"
+ uis_ideagroups.2001.c:0 "Shock Tactics"
+ uis_ideagroups.2001.d:0 "Quantity over Quality Tactics"

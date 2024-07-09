@@ -245,41 +245,115 @@ country_event = {
 # Diplo Ideas						  #
 #######################################
 
-# Maritime Ideas
-#######################################
-# Marine Corps
-# Adds and Removes Maritime Marine modifiers.
-country_event = {
-	id = uis_ideagroups.1001
-	hidden = yes
-	trigger = {
-		OR = {
-			full_idea_group = maritime_ideas
-			AND = {
-				NOT = {
-					full_idea_group = maritime_ideas
-				}
-				has_country_modifier = marine_corps
-			}
-		}
-	}
-	option = {
-		name = uis_ideagroups.1001.a
-		ai_chance = { factor = 100 }
-		if = {
-			limit = { full_idea_group = maritime_ideas }
-			add_country_modifier = { 
-				name = marine_corps
-				duration = -1
-				hidden = yes
-			}
-		}
-		else = {
-			remove_country_modifier = marine_corps
-		}
-	}
-}
+
 
 #######################################
 # Mil Ideas							  #
 #######################################
+# Switch tactics event
+country_event = {
+	id = uis_ideagroups.2001
+	title = uis_ideagroups.2001.t
+	desc = uis_ideagroups.2001.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		clear_tactic_bonus_modifiers = yes
+	}
+
+	option = { # Balanced tactics
+		name = uis_ideagroups.2001.a
+		add_country_modifier = {
+			name = balanced_tactics
+			duration = -1
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = { # Fire tactics
+		name = uis_ideagroups.2001.b
+		add_country_modifier = {
+			name = fire_tactics
+			duration = -1
+		}
+		ai_chance = {
+			factor = 25
+			modifier = { 
+				factor = 50
+				OR = { 
+					has_global_modifier_value = { 
+						which = infantry_power 
+						value = 0.2
+					}
+					has_global_modifier_value = { 
+						which = artillery_power 
+						value = 0.1
+					}
+					has_global_modifier_value = { 
+						which = army_tradition
+						value = 0.01
+					}
+				}
+				
+			}
+		}
+	}
+	option = { # Shock tactics
+		name = uis_ideagroups.2001.c
+		add_country_modifier = {
+			name = shock_tactics
+			duration = -1
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 25
+				has_global_modifier_value = {
+					which = cavalry_power 
+					value = 0.20
+				}
+			}
+			modifier = {
+				factor = 25
+				cavalry_fraction = 0.3
+			}
+		}
+		
+	}
+	option = { # Quantity over Quality tactics
+		name = uis_ideagroups.2001.d
+		add_country_modifier = {
+			name = quantity_over_quality_tactics
+			duration = -1
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				manpower_percentage	 = 0.10
+			}
+		}
+	}
+}
+
+# 
+country_event = {
+	id = uis_ideagroups.2002
+	hidden = yes
+	trigger = {
+		has_idea = stand_ideas_5
+		adm_tech = 15
+		NOT = { has_country_modifier = upgraded_stand_5 }
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = upgraded_stand_5
+			duration = -1
+		}
+	}
+
+	option = {
+		name = uis_ideagroups.2002.a
+	}
+}
