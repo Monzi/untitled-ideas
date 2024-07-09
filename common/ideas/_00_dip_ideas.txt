@@ -701,49 +701,42 @@ maritime_ideas = {
 	}
 }
 
-# Heavy Ship ideas
-heavy_ideas = {
-	category = DIP
+# Maval Ideas
+naval_ideas = {
+	category = MIL
+
 	trigger = {
 		primitives = no
-		NOT = {
-			has_idea_group = light_ideas
-			has_idea_group = galley_ideas
-		}
-	}
-	
-	bonus = {
-		has_man_of_war = yes
-		allowed_man_of_war_fraction = 0.25
 	}
 
-	heavy_ideas1 = {
-		global_sailors_modifier = 0.20
-		heavy_ship_cost = -0.10
-		naval_attrition = -0.10
+	bonus = {
+		
 	}
-	heavy_ideas2 = {
-		global_naval_barrage_cost = -0.10
+
+	boarding_parties = {
+		
 	}
-	heavy_ideas3 = {
-		heavy_ship_power = 0.10
+	improved_rams = {
+		
 	}
-	heavy_ideas4 = {
-		naval_morale_damage = 0.15
+	naval_cadets = {
+		
 	}
-	heavy_ideas5 = {
-		heavy_ship_hull_size_modifier = 0.25
+	naval_glory = {
+		
 	}
-	heavy_ideas6 = {
-		global_naval_engagement_modifier = 0.10
+	press_gangs = {
+		
 	}
-	heavy_ideas7 = {
-		heavy_ship_number_of_cannons_modifier = 0.25
-		global_naval_barrage_cost = -0.50
+	oak_forests_for_ships = {
+		
+	}
+	superior_seamanship = {
+		
 	}
 
 	ai_will_do = {
-		factor = 0.50
+		factor = 0.45
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -765,262 +758,10 @@ heavy_ideas = {
 			factor = 0.31
 			num_of_cities = 50
 		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 10 }
-			current_age = age_of_discovery 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 20 }
-			current_age = age_of_reformation 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 30 }
-			current_age = age_of_absolutism 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 40 }
-			current_age = age_of_revolutions 
-		}
-		modifier = {
-			factor = 0.35
-			NOT = { num_of_ports = 15 }
-		}
-		modifier = {
-			factor = 1.5 
-			capital_scope = {
-				is_island = yes 
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_global_modifier_value = {
-				which = naval_forcelimit_modifier 
-				value = 0.25
-			}
-		}
-		modifier = {
-			factor = 1.15
-			heavy_ship_fraction = 0.15
-		}
+
 		modifier = {
 			factor = 10
 			has_government_attribute = is_pirate_republic_reform
-		}
-	}
-}
-
-# Light Ship ideas
-light_ideas = {
-	category = DIP
-	trigger = {
-		primitives = no
-		NOT = {
-			has_idea_group = heavy_ideas
-			has_idea_group = galley_ideas
-		}
-	}
-	
-	bonus = {
-		has_voc_indiamen = yes
-		allowed_voc_indiamen_fraction = 0.25
-	}
-
-	light_ideas1 = {
-		global_sailors_modifier = 0.20
-		light_ship_cost = -0.10
-		naval_attrition = -0.10
-	}
-	light_ideas2 = {
-		movement_speed_in_fleet_modifier = 1
-	}
-	light_ideas3 = {
-		light_ship_power = 0.20
-	}
-	light_ideas4 = {
-		naval_morale = 0.10
-	}
-	light_ideas5 = {
-		light_ship_hull_size_modifier = 0.20
-	}
-	light_ideas6 = {
-		disengagement_chance = 0.20
-	}
-	light_ideas7 = {
-		light_ship_number_of_cannons_modifier = 1
-	}
-
-	ai_will_do = {
-		factor = 0.50
-		modifier = {
-			factor = 0
-			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_of_ports = 1 }
-			NOT = { is_colonial_nation = yes }
-		}
-		modifier = {
-			factor = 0.31
-			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.31
-			num_of_cities = 50
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 10 }
-			current_age = age_of_discovery 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 20 }
-			current_age = age_of_reformation 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 30 }
-			current_age = age_of_absolutism 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 40 }
-			current_age = age_of_revolutions 
-		}
-		modifier = {
-			factor = 0.35
-			NOT = { num_of_ports = 15 }
-		}
-		modifier = {
-			factor = 1.5 
-			capital_scope = {
-				is_island = yes 
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_global_modifier_value = {
-				which = naval_forcelimit_modifier 
-				value = 0.25
-			}
-		}
-		modifier = {
-			factor = 1.15
-			light_ship_fraction = 0.20
-		}
-		modifier = {
-			factor = 10
-			has_government_attribute = is_pirate_republic_reform
-		}
-	}
-}
-
-# Galley ideas
-galley_ideas = {
-	category = DIP
-	trigger = {
-		primitives = no
-		NOT = {
-			has_idea_group = heavy_ideas
-			has_idea_group = light_ideas
-		}
-	}
-	
-	bonus = {
-		has_galleass = yes
-		allowed_galleass_fraction = 0.25
-	}
-
-	galley_ideas1 = {
-		global_sailors_modifier = 0.20
-		galley_cost = -0.1
-		naval_attrition = -0.10
-	}
-	galley_ideas2 = {
-		sunk_ship_morale_hit_recieved = -0.25
-	}
-	galley_ideas3 = {
-		galley_power = 0.15
-	}
-	galley_ideas4 = {
-		naval_morale_damage_received = -0.15
-	}
-	galley_ideas5 = {
-		galley_hull_size_modifier = 0.15
-	}
-	galley_ideas6 = {
-		recover_navy_morale_speed = 0.1
-	}
-	galley_ideas7 = {
-		galley_number_of_cannons_modifier = 0.50
-	}
-
-	ai_will_do = {
-		factor = 0.50
-		modifier = {
-			factor = 0
-			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			primitives = yes
-		}
-		modifier = {
-			factor = 0
-			NOT = { num_of_ports = 1 }
-			NOT = { is_colonial_nation = yes }
-		}
-		modifier = {
-			factor = 0.31
-			NOT = { num_of_ports = 10 }
-		}
-		modifier = {
-			factor = 0.31
-			num_of_cities = 50
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 10 }
-			current_age = age_of_discovery 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 20 }
-			current_age = age_of_reformation 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 30 }
-			current_age = age_of_absolutism 
-		}
-		modifier = {
-			factor = 0.25
-			NOT = { num_of_ports = 40 }
-			current_age = age_of_revolutions 
-		}
-		modifier = {
-			factor = 0.35
-			NOT = { num_of_ports = 15 }
-		}
-		modifier = {
-			factor = 1.5
-			has_global_modifier_value = {
-				which = naval_forcelimit_modifier 
-				value = 0.25
-			}
-		}
-		modifier = {
-			factor = 1.15
-			galley_fraction = 0.25
 		}
 	}
 }
