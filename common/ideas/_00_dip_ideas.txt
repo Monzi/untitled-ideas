@@ -128,7 +128,7 @@ diplomatic_ideas = {
 		monthly_favor_modifier = 0.10
 	}
 
-	foreign_embassies = {
+	grand_banquets = {
 		diplomats = 1
 	}
 	cabinet = {

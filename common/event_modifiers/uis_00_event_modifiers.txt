@@ -14,17 +14,17 @@ cent_bonuses_1 = {
 }
 cent_bonuses_2 = {
 	same_culture_advisor_cost = -0.1
-	development_cost = -0.15
+	development_cost_modifier = -0.15
 }
 cent_bonuses_3 = {
 	same_culture_advisor_cost = -0.15
-	development_cost = -0.20
+	development_cost_modifier = -0.20
 	global_manpower_modifier = 0.10
 	global_trade_goods_size_modifier = 0.05
 }
 cent_bonuses_4 = {
 	same_culture_advisor_cost = -0.15
-	development_cost = -0.25
+	development_cost_modifier = -0.25
 	global_manpower_modifier = 0.20
 	global_trade_goods_size_modifier = 0.10
 	global_allowed_num_of_buildings = 1

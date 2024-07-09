@@ -627,7 +627,7 @@ centralization_ideas = {
 	cent_ideas_4 = {
 		administrative_efficiency = 0.01
 		# Bonus
-		# development_cost = -0.25
+		# development_cost_modifier = -0.25
 	}
 	cent_ideas_5 = {
 		production_efficiency = 0.15
