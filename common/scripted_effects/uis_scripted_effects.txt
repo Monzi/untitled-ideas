@@ -55,3 +55,55 @@ clear_naval_specialization ={
 	remove_country_modifier = naval_galley_special
 	clr_country_flag = specialized_navy
 }
+
+remove_marine_base = {
+	if = {
+		limit = {
+			OR = {
+				NOT = {
+					root = {
+						has_building = impressment_offices
+					}
+				}
+				NOT = {
+					owner = {
+						full_idea_group = maritime_ideas
+					}
+				}
+				
+			}
+		}
+		remove_province_triggered_modifier = marine_fraction_build
+		remove_province_triggered_modifier = marine_sailor_base
+		hidden_effect = {
+			clr_province_flag = has_marine_base
+		}
+	}
+}
+add_marine_base = {
+	if = {
+		limit = {
+			owner = {
+				full_idea_group = maritime_ideas
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_dlc = "Rule Britannia"
+					has_dlc = "Golden Century"
+					has_dlc = "Lions of the North"
+					has_dlc = "Domination"
+				}
+			}
+			add_province_triggered_modifier = marine_fraction_build
+		}
+		else = {
+			add_province_triggered_modifier = marine_sailor_base
+		}
+		hidden_effect = {
+			set_province_flag = has_marine_base
+		}
+
+	}
+}
