@@ -7,7 +7,6 @@
  MIL Academy: make more privileges and make disaster so a junta can take power.
  MIL Quality: for each iron, copper or grain, give bonuses to inf, cannon, horse. (combat ability 0.2)
  MIL Quantity: button to draft manpower, gives 50% devastate all provinces.
- DIP Assimilation: make a government reform of mughal government to assimilate cultures.
  
  #POLICIES
  Check Vanilla policies, and balance them.
@@ -18,6 +17,7 @@
 
  #LOCALIZATION
  Remove desc from modifiers used in ideas and policies.
+ Add missing Localization for added events, modifiers, ideas etc.
 
  #FIXES
  Add new idea groups to scripted triggers idea counter.

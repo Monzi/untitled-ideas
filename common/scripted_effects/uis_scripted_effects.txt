@@ -1,10 +1,12 @@
-clear_centralization_bonus_modifiers = {
-	remove_country_modifier = cent_bonuses_1
-	remove_country_modifier = cent_bonuses_2
-	remove_country_modifier = cent_bonuses_3
-	remove_country_modifier = cent_bonuses_4
+# Naval Ideas
+clear_naval_specialization ={
+	remove_country_modifier = naval_light_special
+	remove_country_modifier = naval_heavy_special
+	remove_country_modifier = naval_galley_special
+	clr_country_flag = specialized_navy
 }
 
+# Tactic Ideas
 clear_tactic_bonus_modifiers = {
 	remove_country_modifier = balanced_tactics
 	remove_country_modifier = fire_tactics
@@ -12,12 +14,14 @@ clear_tactic_bonus_modifiers = {
 	remove_country_modifier = quantity_over_quality_tactics
 }
 
+# Cavalry Ideas
 clear_cavalry_bonus_modifiers = {
 	remove_country_modifier = cavalry_partially_trained
 	remove_country_modifier = cavalry_mostly_trained
 	remove_country_modifier = cavalry_fully_trained
 }
 
+# Academy Ideas
 estate_action_GRANT_GENERALSHIP_ACADEMY = {
 	if = {
 		limit = {
@@ -46,12 +50,4 @@ estate_action_GRANT_GENERALSHIP_ACADEMY = {
 		estate = estate_academy
 		loyalty = 10
 	}
-}
-
-#Naval Ideas
-clear_naval_specialization ={
-	remove_country_modifier = naval_light_special
-	remove_country_modifier = naval_heavy_special
-	remove_country_modifier = naval_galley_special
-	clr_country_flag = specialized_navy
 }

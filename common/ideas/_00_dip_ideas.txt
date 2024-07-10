@@ -59,7 +59,6 @@ spy_ideas = {
 court_ideas = {
 	category = DIP
 
-
 	bonus = {
 		legitimacy = 0.5
 		republican_tradition = 0.2
@@ -232,9 +231,8 @@ assimilation_ideas = {
 	}
 
 	bonus = {
-		harmonization_speed = 0.25
-		num_accepted_cultures = 8
 		ae_impact = -0.10
+		num_accepted_cultures = 6
 	}
 
 	assimilation_ideas_1 = {
@@ -242,20 +240,23 @@ assimilation_ideas = {
 	}
 	assimilation_ideas_2 = {
 		native_uprising_chance = -0.50
+		native_assimilation = 0.25
 	}
 	assimilation_ideas_3 = {
-		native_assimilation = 0.25
+		diplomatic_reputation = 1
+		dhimmi_loyalty_modifier = 0.05
 	}
 	assimilation_ideas_4 = {
 		years_of_nationalism = -5
 	}
 	assimilation_ideas_5 = {
-		global_manpower_modifier = 0.1
+		manpower_in_accepted_culture_provinces = 0.10
 	}
 	assimilation_ideas_6 = {
 		advisor_pool = 2
 	}
 	assimilation_ideas_7 = {
+		# Allows the use of the assimilation reform
 		global_unrest = -1
 	}
 
@@ -623,9 +624,9 @@ maritime_ideas = {
 	maritime_ideas_7 = {
 		# Impressment Offices gives 1% Marine fraction
 		# Allows Marine training decision
-		# Removes Marine Marine penalty
 		leader_naval_fire = 1
         leader_naval_shock = 1
+		# Removes Marine Marine penalty
 		effect = {
 			add_country_modifier = {
 				name = marine_corps
@@ -710,10 +711,10 @@ naval_ideas = {
 	}
 
 	bonus = {
-	global_naval_barrage_cost = -1
-	leader_naval_manuever = 1
-	max_admiral_maneuver = 1
-	#Unlocks specialization in one of three ship types.
+		global_naval_barrage_cost = -1
+		leader_naval_manuever = 1
+		max_admiral_maneuver = 1
+		# Unlocks specialization in one of three ship types.
 	}
 
 	boarding_parties = {

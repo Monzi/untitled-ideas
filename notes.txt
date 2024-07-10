@@ -1,0 +1,58 @@
+bonus = {
+		liberty_desire_from_subject_development = -0.25
+		# Bonus
+		# global_allowed_num_of_buildings = 1
+	}
+
+	cent_ideas_1 = {
+		build_cost = -0.1
+		build_time = -0.1
+	}
+	cent_ideas_2 = {
+		advisor_pool = 1
+		# Bonus
+		# same_culture_advisor_cost = -0.15
+	}
+	cent_ideas_3 = {
+		global_unrest = -2
+	}
+	cent_ideas_4 = {
+		administrative_efficiency = 0.01
+		# Bonus
+		# development_cost_modifier = -0.25
+	}
+	cent_ideas_5 = {
+		production_efficiency = 0.15
+	}
+	cent_ideas_6 = {
+		army_tradition = 0.25
+		# Bonus
+		# global_manpower_modifier = 0.20
+		# global_trade_goods_size_modifier = 0.10
+	}
+	cent_ideas_7 = {
+		yearly_corruption = -0.1
+	}
+
+	manpowerexchange_from_sailors = {
+		monarch_power = MIL
+		
+		potential = {
+			has_idea_group = nationalism_ideas
+			has_idea_group = quantity_ideas
+		}
+		
+		allow = {
+			full_idea_group = nationalism_ideas
+			full_idea_group = quantity_ideas
+		}	
+		
+		global_manpower_modifier = 0.05
+		# May exchange sailors to manpower decision
+		
+		effect = {}
+		removed_effect = {}
+		ai_will_do = {
+			factor = 1
+		}
+	}

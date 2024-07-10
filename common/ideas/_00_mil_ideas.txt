@@ -63,11 +63,11 @@ tactic_ideas = {
 	category = MIL
 	
 	bonus = {
-		military_tactics = 0.25
+		military_tactics = 0.10
 	}
 
 	tactic_ideas1 = { # Battlefield Assessments
-		army_tradition_from_battle = 0.10
+		army_tradition_from_battle = 0.50
 	}
 	tactic_ideas2 = { # Efficient Maneuvering
 		movement_speed = 0.10

@@ -1,61 +1,171 @@
 ﻿l_english:
 # Admin Ideas
+# Innovative ideas
+ patron_of_art_desc:0 ""
+ empiricism_desc:0 ""
+ scientific_revolution_desc:0 ""
+ dynamic_court_desc:0 ""
+ print_culture_desc:0 ""
+ optimism_desc:0 ""
+ expanded_policies_desc:0 ""
+# Religious ideas
  religious_ideas:0 "§JReligious Ideas§!"
-
+ missionary_schools_desc:0 ""
+ church_attendance_duty_desc:0 ""
+ divine_supremacy_desc:0 ""
+ devoutness_desc:0 ""
+ inquisition_desc:0 ""
+ religious_tradition_desc:0 ""
+ deus_vult_desc:0 ""
+# Humanist ideas
  humanist_ideas:0 "§JHumanist Ideas§!"
-
+ local_traditions_desc:0 ""
+ indirect_rule_desc:0 ""
+ ecumenism_desc:0 ""
+ cultural_ties_desc:0 ""
+ humanist_tolerance_desc:0 ""
+ benevolence_desc:0 ""
+ tolerance_idea_desc:0 ""
+# Economic ideas
+ bureaucracy_desc:0 ""
+ national_bank_desc:0 ""
+ merchant_passes_desc:0 ""
+ efficient_mining_desc:0 ""
+ debt_and_loans_desc:0 ""
+ nationalistic_enthusiasm_desc:0 ""
+ smithian_economics_desc:0 "Development from Manufactories: §G+1§!"
+# Industrial ideas
  industrial_ideas:0 "Industrial Ideas"
  industrial_ideas_bonus:0 "Fully Industialized"
- industrial_ideas_1:0 "Equipment Surplus"
- industrial_ideas_1_desc:0 "With the grants granted to our artisans they have increased production of equipment for our armies."
- industrial_ideas_2:0 "Organized Construction"
- industrial_ideas_2_desc:0 "The need to upgrade the infrastructure of our government is a costly business. If we structure the process correctly we can do this cheaper."
- industrial_ideas_3:0 "Smithian Economics"
- industrial_ideas_3_desc:0 "By opposing mercantilism and restricting the state's influence in economic matters, we shall support a free market that will increase our overall production efficiency."
- industrial_ideas_4:0 "Free Trade"
- industrial_ideas_4_desc:0 "The current merchant families are seeking to ensure that trade privileges remain their exclusive preserve, but we are unwilling to do so and will allow the growth of the merchant class."
- industrial_ideas_5:0 "Prosperous Economy"
- industrial_ideas_5_desc:0 "Prosperity is the lifeblood of a nation."
- industrial_ideas_6:0 "Youth In Service"
- industrial_ideas_6_desc:0 "As mandated by the state any able-bodied young man has to serve on a fort."
- industrial_ideas_7:0 "War Taxes"
- industrial_ideas_7_desc:0 "Using our industrial might we're able to cut down on the overall cost of the army but keep the effectiveness during war times."
-
+ industrial_ideas_1:0 "REPLACE ME"
+ industrial_ideas_1_desc:0 ""
+ industrial_ideas_2:0 "REPLACE ME"
+ industrial_ideas_2_desc:0 ""
+ industrial_ideas_3:0 "REPLACE ME"
+ industrial_ideas_3_desc:0 ""
+ industrial_ideas_4:0 "REPLACE ME"
+ industrial_ideas_4_desc:0 ""
+ industrial_ideas_5:0 "REPLACE ME"
+ industrial_ideas_5_desc:0 ""
+ industrial_ideas_6:0 "REPLACE ME"
+ industrial_ideas_6_desc:0 ""
+ industrial_ideas_7:0 "REPLACE ME"
+ industrial_ideas_7_desc:0 ""
+# Infrastructure ideas
+ state_efficiency_desc:0 ""
+ organised_construction_desc:0 ""
+ efficient_construction_plans_desc:0 ""
+ expanded_infrastructure_network_desc:0 ""
+ administrative_efficiency_idea_desc:0 ""
+ fort_logistics_desc:0 ""
+ regulation_bureau_desc:0 ""
+# Expansion ideas
+ additional_colonists_desc:0 ""
+ additional_merchants_desc:0 ""
+ faster_colonists_desc:0 ""
+ vice_roys_desc:0 ""
+ additional_diplomats_desc:0 ""
+ general_colonization_law_desc:0 ""
+ competetive_merchants_desc:0 ""
+# Administrative ideas
+ administrative_council_desc:0 ""
+ adaptability_desc:0 ""
+ cultural_regulations_desc:0 ""
+ local_rule_desc:0 ""
+ stable_government_desc:0 ""
+ centralization_desc:0 ""
+ civil_servants_desc:0 ""
+# Militarism ideas
+ militarism_ideas:0 "Militarism Ideas"
+ militarism_ideas_bonus:0 "Fully Militarized"
+ militarism_ideas1:0 "REPLACE ME"
+ militarism_ideas1_desc:0 ""
+ militarism_ideas2:0 "REPLACE ME"
+ militarism_ideas2_desc:0 ""
+ militarism_ideas3:0 "REPLACE ME"
+ militarism_ideas3_desc:0 ""
+ militarism_ideas4:0 "REPLACE ME"
+ militarism_ideas4_desc:0 ""
+ militarism_ideas5:0 "REPLACE ME"
+ militarism_ideas5_desc:0 ""
+ militarism_ideas6:0 "REPLACE ME"
+ militarism_ideas6_desc:0 ""
+ militarism_ideas7:0 "REPLACE ME"
+ militarism_ideas7_desc:0 ""
+# Centralization ideas
  centralization_ideas:0 "§lCentralization Ideas§!"
  centralization_ideas_bonus:0 "Fully Centralized"
- cent_ideas_1:0 "Centralized Construction"
- cent_ideas_1_desc:0 "As we are bringing the state closer to cemtralized rule we will also need a unified front for construction."
- cent_ideas_2:0 "Bureaucratic Management"
- cent_ideas_2_desc:0 "We're able to more effectively manage our states, though at the cost of expansion.\n§YBonus§!: Cost of Advisors with Ruler's Culture: §G-15%§!\n"
- cent_ideas_3:0 "Focused Development"
- cent_ideas_3_desc:0 "All the brightest people in the nation can be put towards making our state immaculate-"
- cent_ideas_4:0 "National Police"
- cent_ideas_4_desc:0 "Because we don't focus expanding wide, we're able to effectively keep order in the streets.\n§YBonus§!: Development Cost: §G-25%§!\n"
- cent_ideas_5:0 "Larger Workforce"
- cent_ideas_5_desc:0 "With people not spread out across our lands we can focus them on production."
- cent_ideas_6:0 "Efficient Production Methods"
- cent_ideas_6_desc:0 "With people producing for the state we have developed better ways to manufacture.\n§YBonus§!: Goods Produced Modifier: §G+10%§!\n§YBonus§!: National Manpower Modifier: §G+20%§!\n"
- cent_ideas_7:0 "A Stronger States"
- cent_ideas_7_desc:0 "With focus on a smaller state, the people we rule can feel the presence of their ruler.\n§YBonus§!: Possible Number of Buildings: §G+1§!\n"
-
+ cent_ideas_1:0 "REPLACE ME"
+ cent_ideas_1_desc:0 ""
+ cent_ideas_2:0 "REPLACE ME"
+ cent_ideas_2_desc:0 ""
+ cent_ideas_3:0 "REPLACE ME"
+ cent_ideas_3_desc:0 ""
+ cent_ideas_4:0 "REPLACE ME"
+ cent_ideas_4_desc:0 ""
+ cent_ideas_5:0 "REPLACE ME"
+ cent_ideas_5_desc:0 ""
+ cent_ideas_6:0 "REPLACE ME"
+ cent_ideas_6_desc:0 ""
+ cent_ideas_7:0 "REPLACE ME"
+ cent_ideas_7_desc:0 ""
+# Decentralization ideas
  decentralization_ideas:0 "§lDecentralization Ideas§!"
  decentralization_ideas_bonus:0 "Fully Decentralized"
- decent_ideas_1:0 "Regulation Bureau"
- decent_ideas_1_desc:0 "A legislative body whose jurisdiction involves the maintenance and promotion of inflation-related laws as well as the local administration of our provinces."
- decent_ideas_2:0 "Administrative Efficiency"
- decent_ideas_2_desc:0 "The most important part of any government is getting the right advice. We must ensure that we are as inclusive as possible when it comes to advisors so we can maximize the number of different viewpoints we are presented with."
- decent_ideas_3:0 "Bureaucracy"
- decent_ideas_3_desc:0 "Allows us to increase our tax revenues by adopting a more bureaucratic administrative system governed by state officials."
- decent_ideas_4:0 "Ecumenism"
- decent_ideas_4_desc:0 "The problem with how to deal with heretics in the realm is always difficult. Although the good old-fashioned fire and sword approach will solve most problems eventually, diplomacy can also succeed. By encouraging dialogue between the various sects, we can reduce misunderstanding and promote peace in the realm."
- decent_ideas_5:0 "Tranquil Coordination"
- decent_ideas_5_desc:0 "Our great country will only advance and evolve if all members of the government coordinate in an orderly fashion."
- decent_ideas_6:0 "Local Bureaucrats"
- decent_ideas_6_desc:0 "As to not overstretch our Bureaucracy we can hire people from local communities to help."
- decent_ideas_7:0 "Expanded Army"
- decent_ideas_7_desc:0 "Expansion of the army protecting our grand state."
+ decent_ideas_1:0 "REPLACE ME"
+ decent_ideas_1_desc:0 ""
+ decent_ideas_2:0 "REPLACE ME"
+ decent_ideas_2_desc:0 ""
+ decent_ideas_3:0 "REPLACE ME"
+ decent_ideas_3_desc:0 ""
+ decent_ideas_4:0 "REPLACE ME"
+ decent_ideas_4_desc:0 ""
+ decent_ideas_5:0 "REPLACE ME"
+ decent_ideas_5_desc:0 ""
+ decent_ideas_6:0 "REPLACE ME"
+ decent_ideas_6_desc:0 ""
+ decent_ideas_7:0 "REPLACE ME"
+ decent_ideas_7_desc:0 ""
 
 # Diplomatic Ideas
+# Espionage ideas
+ claim_fabrication_desc:0 ""
+ state_propaganda_desc:0 ""
+ efficient_spies_desc:0 ""
+ agent_training_desc:0 ""
+ vetting_desc:0 ""
+ privateers_desc:0 ""
+ blackmailing_desc:0 ""
+# Court ideas
+ long_echo_desc:0 ""
+ recognize_hierarchy_desc:0 ""
+ welcoming_ceremonies_desc:0 ""
+ tranquil_coordination_desc:0 ""
+ respected_authority_desc:0 ""
+ palace_of_splendor_desc:0 ""
+ court_embassies_desc:0 ""
+# Diplomatic ideas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  assimilation_ideas:0 "§MAssimilation Ideas§!"
  assimilation_ideas_bonus:0 "Assimilation"
  assimilation_ideas_1:0 "Cultural Regulations"
@@ -92,6 +202,20 @@
 
  maritime_ideas_7:0 "Marine Corps and Officers"
  maritime_ideas_7_desc:0 "With proper training we're able to make our marines into a proper fighting force.\nShock Damage Received: §G-15%§! for marines only\nImpressment Offices grant §G+1%§! Marines Force limit."
+
+
+
+
+
+# Naval Ideas
+ superior_seamanship_desc:0 "§GBonus§!: Grants a §Ydecision§! allowing specialization for one of three ship types."
+
+
+
+
+
+
+
 
 # Military Ideas
  infantry_ideas:0 "§RInfantry Ideas§!"
@@ -163,6 +287,3 @@
  stand_ideas_7_desc:0 "Traditional armies relied on furious discipline to maintain order in the ranks, however, by appealing to unit pride we can reach even higher levels of discipline."
 
  mercenary_ideas:0 "§OMercenary Army Ideas§!"
-
-#Diplomatic Ideas
- superior_seamanship_desc:0 "§GBonus§!: Grants a §Ydecision§! allowing specialization for one of three ship types."
