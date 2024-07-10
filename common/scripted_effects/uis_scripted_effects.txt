@@ -53,4 +53,5 @@ clear_naval_specialization ={
 	remove_country_modifier = naval_light_special
 	remove_country_modifier = naval_heavy_special
 	remove_country_modifier = naval_galley_special
+	clr_country_flag = specialized_navy
 }

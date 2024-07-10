@@ -40,3 +40,8 @@
  desc_revolutions_cent_counter:0 ""
 
  marine_fraction_build:0 "Marine Base"
+
+#Naval Specialization Modifiers
+ naval_light_special:0 "Merchant Navy"
+ naval_galley_sepcial:0 "Galley guys"
+ naval_heavy_ship:0 "big gun"
