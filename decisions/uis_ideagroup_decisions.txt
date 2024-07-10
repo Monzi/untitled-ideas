@@ -163,8 +163,10 @@ country_decisions = {
 	}
 	#Naval Specializations
 	heavy_ship_special = {
+		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
+			NOT = { has_country_flag = specialized_navy }
 		}
 		allow = {
 			NOT = { has_country_flag = specialized_navy }
@@ -183,8 +185,10 @@ country_decisions = {
 	}
 
 	galley_ship_special = {
+		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
+			NOT = { has_country_flag = specialized_navy }
 		}
 		allow = {
 			NOT = { has_country_flag = specialized_navy }
@@ -202,8 +206,10 @@ country_decisions = {
 	}
 
 	light_ship_special = {
+		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
+			NOT = { has_country_flag = specialized_navy }
 		}
 		allow = {
 			NOT = { has_country_flag = specialized_navy }

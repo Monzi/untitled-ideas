@@ -163,3 +163,6 @@
  stand_ideas_7_desc:0 "Traditional armies relied on furious discipline to maintain order in the ranks, however, by appealing to unit pride we can reach even higher levels of discipline."
 
  mercenary_ideas:0 "§OMercenary Army Ideas§!"
+
+#Diplomatic Ideas
+ superior_seamanship_desc:0 "Grants a Decision allowing specialization for one of three ship types."
