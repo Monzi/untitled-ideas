@@ -717,16 +717,16 @@ naval_ideas = {
 	}
 
 	boarding_parties = {
-		global_ship_recruit_speed = 0.2
+		global_ship_recruit_speed = -0.2
 		capture_ship_chance = 0.15 
 	}
 	improved_rams = {
-		navy_tradition_decay = 0.02
+		navy_tradition_decay = -0.02
 		naval_morale = 0.1
 	}
 	naval_cadets = {
 		regiment_disembark_speed = 0.33
-		transport_attrition = 0.5
+		transport_attrition = -0.5
 	}
 	naval_glory = {
 		global_foreign_trade_power = 0.15
