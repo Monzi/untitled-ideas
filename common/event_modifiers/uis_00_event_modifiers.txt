@@ -97,3 +97,26 @@ has_had_sailors_exchange_cooldown = {
 gaining_manpower_from_sailors = {
 	manpower_recovery_speed = 0.75
 }
+
+
+##Light Ship Specialization
+naval_light_special = {
+	naval_tradition_from_trade = 1
+	naval_forcelimit_modifier = 0.25
+	naval_maintenance_modifier = 0.25
+	global_ship_trade_power = 0.25
+}
+#Galley Specialization
+naval_galley_special = {
+	naval_tradition_from_battle = 1
+	galley_power = 0.25
+	galley_hull_size_modifier = 0.25
+	sunk_ship_morale_hit_recieved = 0.15
+}
+#Heavy Ship Specialization
+naval_heavy_special = {
+	naval_tradition_from_battle = 1
+	heavy_ship_power = 0.25
+	disengagement_chance = -0.15
+	heavy_ship_number_of_cannons_modifier = 0.25
+}

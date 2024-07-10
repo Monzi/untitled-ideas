@@ -161,4 +161,56 @@ country_decisions = {
 			factor = 10
 		}
 	}
+	#Naval Specializations
+	heavy_ship_special = {
+		potential = {
+			has_idea_group = naval_ideas
+		}
+		allow = {
+			NOT = { has_country_flag = specialized_navy }
+			full_idea_group = naval_ideas
+		}
+		effect = {
+			add_country_modifier = {
+				name = naval_heavy_special
+				duration = -1
+				
+			}
+			set_country_flag = specialized_navy
+		}
+	}
+
+	galley_ship_special = {
+		potential = {
+			has_idea_group = naval_ideas
+		}
+		allow = {
+			NOT = { has_country_flag = specialized_navy }
+			full_idea_group = naval_ideas
+		}
+		effect = {
+			add_country_modifier = {
+				name = naval_galley_special
+				duration = -1
+			}
+			set_country_flag = specialized_navy
+		}
+	}
+
+	light_ship_special = {
+		potential = {
+			has_idea_group = naval_ideas
+		}
+		allow = {
+			NOT = { has_country_flag = specialized_navy }
+			full_idea_group = naval_ideas
+		}
+		effect = {
+			add_country_modifier = {
+				name = naval_light_special
+				duration = -1
+			}
+			set_country_flag = specialized_navy
+		}
+	}
 }

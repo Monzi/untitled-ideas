@@ -47,3 +47,10 @@ estate_action_GRANT_GENERALSHIP_ACADEMY = {
 		loyalty = 10
 	}
 }
+
+#Naval Ideas
+clear_naval_specialization ={
+	remove_country_modifier = naval_light_special
+	remove_country_modifier = naval_heavy_special
+	remove_country_modifier = naval_galley_special
+}
