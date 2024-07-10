@@ -9,7 +9,27 @@ marine_fraction_build = {
 		owner = {
 			full_idea_group = maritime_ideas
 		}
+		root = {
+			has_building = impressment_offices
+		}
+	}
+	global_sailors_modifier = -0.01
+	allowed_marine_fraction = 0.01
+}
+marine_sailor_base = {
+	potential = {
+		owner = {
+			has_idea_group = maritime_ideas
+		}
 	}
 
-	allowed_marine_fraction = 0.01
+	trigger = {	
+		owner = {
+			full_idea_group = maritime_ideas
+		}
+		ROOT = {
+			has_building = impressment_offices
+		}
+	}
+	global_sailors_modifier = 0.01
 }

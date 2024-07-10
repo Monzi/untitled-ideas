@@ -40,8 +40,10 @@
  desc_revolutions_cent_counter:0 ""
 
  marine_fraction_build:0 "Marine Base"
+#for sailor increase after DLC Check
+ marine_sailor_base:0 "Marine Base"
 
 #Naval Specialization Modifiers
  naval_light_special:0 "Merchant Navy"
- naval_galley_special:0 "Galley guys"
- naval_heavy_special:0 "big gun"
+ naval_galley_special:0 "Patrol Gunboats"
+ naval_heavy_special:0 "Ambitious Heavy Fleet"

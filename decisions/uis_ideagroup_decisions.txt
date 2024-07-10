@@ -163,7 +163,7 @@ country_decisions = {
 	}
 	#Naval Specializations
 	heavy_ship_special = {
-		color = { 0 49 83 }
+		color = { 47 84 164 }
 		potential = {
 			has_idea_group = naval_ideas
 			NOT = { has_country_flag = specialized_navy 
@@ -190,10 +190,21 @@ country_decisions = {
 			add_dip_power = -100
 			set_country_flag = specialized_navy
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				tag = ENG
+				tag = SPA
+				tag = GBR
+				tag = CAS
+				tag = ARA
+			}
+		}
 	}
 
 	galley_ship_special = {
-		color = { 0 49 83 }
+		color = { 47 84 164 }
 		potential = {
 			has_idea_group = naval_ideas
 			NOT = { 
@@ -225,10 +236,22 @@ country_decisions = {
 			add_dip_power = -100
 			set_country_flag = specialized_navy
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				num_of_ports = 10
+			}
+			modifier = {
+				factor = 10
+				galley_fraction = 0.33
+				
+			}
+		}
 	}
 
 	light_ship_special = {
-		color = { 0 49 83 }
+		color = { 47 84 164 }
 		potential = {
 			has_idea_group = naval_ideas
 			NOT = { 
@@ -259,6 +282,22 @@ country_decisions = {
 			}
 			add_dip_power = -100
 			set_country_flag = specialized_navy
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_unlocked_government_reform = {
+					government_reform = merchants_reform
+					government_reform = plutocratic_reform
+					government_reform = arabic_plutocracy_reform
+					government_reform = trading_city
+					government_reform = colonial_government
+				}
+				has_government_attribute = is_pirate_republic_reform
+				tag = VEN
+				tag = GEN
+			}
 		}
 	}
 }

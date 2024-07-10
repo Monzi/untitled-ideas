@@ -91,7 +91,7 @@
  nationalism_ideas_7_desc:0 "Our people have survived everything the world has thrown at them, we have shown our resilience.\nPermanent Casus Belli against any country that owns any province with your culture group.\nAllows §YEarly Nationalism Casus Belli§!\n"
 
  maritime_ideas_7:0 "Marine Corps and Officers"
- maritime_ideas_7_desc:0 "With proper training we're able to make our marines into a proper fighting force.\nShock Damage Received: §G-15%§! for marines only"
+ maritime_ideas_7_desc:0 "With proper training we're able to make our marines into a proper fighting force.\nShock Damage Received: §G-15%§! for marines only\nImpressment Offices grant §G+1%§! Marines Force limit."
 
 # Military Ideas
  infantry_ideas:0 "§RInfantry Ideas§!"

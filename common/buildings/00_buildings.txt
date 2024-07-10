@@ -2756,7 +2756,19 @@ impressment_offices = {
 			type = manpower 
 			value = 1 
 		}
-		add_province_triggered_modifier = marine_fraction_build
+		#DLC Check to not stack modifiers
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+				has_dlc = "Golden Century"
+				has_dlc = "Lions of the North"
+				has_dlc = "Domination"
+			}
+			add_province_triggered_modifier = marine_fraction_build
+		}
+		else = {
+			add_province_triggered_modifier = marine_sailor_base
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2770,6 +2782,7 @@ impressment_offices = {
 			value = 1 
 		}
 		remove_province_triggered_modifier = marine_fraction_build
+		remove_province_triggered_modifier = marine_sailor_base
 	}
 	on_obsolete = {
 	}
