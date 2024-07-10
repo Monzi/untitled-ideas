@@ -8,7 +8,7 @@ innovativeness_ideas = {
 		free_policy = 1
 	}
 
-	patron_of_art  = {
+	patron_of_art = {
 		prestige_decay = -0.01
 	}
 	empiricism = {
@@ -455,7 +455,7 @@ expansion_ideas = {
 	faster_colonists = {
 		global_colonial_growth = 20
 	}
-	vice_roys  = {
+	vice_roys = {
 		global_tariffs = 0.10
  		envoy_travel_time = -0.20
  	}
@@ -463,22 +463,17 @@ expansion_ideas = {
 		diplomats = 1
 		reduced_liberty_desire_on_other_continent = 5
 	}
-	general_colonization_law  = {
+	general_colonization_law = {
 		colonists = 1
 		colonist_placement_chance = 0.05
 		effect = { remove_temporary_colonist = yes }
 	}
-	competetive_merchants  = {
+	competetive_merchants = {
 		global_trade_power = 0.2
 	}
 
 	ai_will_do = {
 		factor = 0.5
-
-		modifier = {
-			factor = 5
-			personality = ai_colonialist
-		}
 		modifier = {
 			factor = 10
 			OR = {
@@ -633,9 +628,6 @@ militarism_ideas = {
 	militarism_ideas7 = { # Strong Hold on Government
 		monthly_reform_progress_modifier = 0.2
 		mil_tech_cost_modifier = -0.1
-		# Anbennar
-		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
-		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
 	}
 
 	ai_will_do = {

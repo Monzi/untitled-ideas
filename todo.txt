@@ -1,13 +1,23 @@
- Backport anbennar update
- Fleshed out academy ideas (estate)
- Fleshed out militarism ideas (government)
- fleshed out assimilation ideas (mughal government)
- Replace Naval ideas with ship ideas in missions
- Rework cav/inf ratio
- Rework Cent
- Rework Decent
- Remove loc. ideas, policies (Desc)
- Redo policies
- Add new idea groups to scripted triggers idea counter
+ TODO:
+ # IDEAS
+ ADM Centralization: rework the modifiers and make it give bonuses to capital region.
+ ADM Decentralization: rework the modifiers and make it give bonuses to territory.
+ DIP Court: make mechanic for court ideas, hold court, estate mage like mechanics.
+ ADM Militarism: make special government with special government mechanic. (Like a Junta)
+ MIL Academy: make more privileges and make disaster so a junta can take power.
+ MIL Quality: for each iron, copper or grain, give bonuses to inf, cannon, horse. (combat ability 0.2)
+ MIL Quantity: button to draft manpower, gives 50% devastate all provinces.
+ DIP Assimilation: make a government reform of mughal government to assimilate cultures.
+ 
+ #POLICIES
+ Check Vanilla policies, and balance them.
+ Redo Untitled policies.
 
- test
+ #BALANCE
+ Recalculate cav/inf ratio so you can't just get 100% from cavalry ideas.
+
+ #LOCALIZATION
+ Remove desc from modifiers used in ideas and policies.
+
+ #FIXES
+ Add new idea groups to scripted triggers idea counter.
