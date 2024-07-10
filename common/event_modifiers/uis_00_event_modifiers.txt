@@ -103,7 +103,7 @@ gaining_manpower_from_sailors = {
 naval_light_special = {
 	naval_tradition_from_trade = 1
 	naval_forcelimit_modifier = 0.25
-	naval_maintenance_modifier = -0.25
+	sailor_maintenance_modifer = -0.25
 	global_ship_trade_power = 0.25
 }
 #Galley Specialization

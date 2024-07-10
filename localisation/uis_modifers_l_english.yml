@@ -43,5 +43,5 @@
 
 #Naval Specialization Modifiers
  naval_light_special:0 "Merchant Navy"
- naval_galley_sepcial:0 "Galley guys"
- naval_heavy_ship:0 "big gun"
+ naval_galley_special:0 "Galley guys"
+ naval_heavy_special:0 "big gun"

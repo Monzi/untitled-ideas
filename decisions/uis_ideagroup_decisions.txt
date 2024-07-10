@@ -166,10 +166,18 @@ country_decisions = {
 		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { has_country_flag = specialized_navy 
+		}
 		}
 		allow = {
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { 
+				OR = {
+					has_country_modifier = naval_light_special
+					has_country_modifier = naval_heavy_special
+					has_country_modifier = naval_galley_special
+
+				}
+		}
 			dip_power = 100
 			full_idea_group = naval_ideas
 		}
@@ -188,10 +196,24 @@ country_decisions = {
 		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { 
+				OR = {
+					has_country_modifier = naval_light_special
+					has_country_modifier = naval_heavy_special
+					has_country_modifier = naval_galley_special
+
+				}
+			}
 		}
 		allow = {
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { 
+				OR = {
+					has_country_modifier = naval_light_special
+					has_country_modifier = naval_heavy_special
+					has_country_modifier = naval_galley_special
+
+				}
+			}
 			dip_power = 100
 			full_idea_group = naval_ideas
 		}
@@ -209,10 +231,24 @@ country_decisions = {
 		color = { 0 49 83 }
 		potential = {
 			has_idea_group = naval_ideas
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { 
+				OR = {
+					has_country_modifier = naval_light_special
+					has_country_modifier = naval_heavy_special
+					has_country_modifier = naval_galley_special
+
+				}
+			}
 		}
 		allow = {
-			NOT = { has_country_flag = specialized_navy }
+			NOT = { 
+				OR = {
+					has_country_modifier = naval_light_special
+					has_country_modifier = naval_heavy_special
+					has_country_modifier = naval_galley_special
+
+				}
+			}
 			dip_power = 100
 			full_idea_group = naval_ideas
 		}
