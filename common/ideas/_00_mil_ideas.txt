@@ -28,7 +28,7 @@ academy_ideas = {
 	academy_ideas_6 = {
 		leader_siege = 1
 	}
-	academy_ideas_7 = { # Establisment of Academies
+	academy_ideas_7 = {
 		possible_mil_policy = 1
 		# Enables Academy Estate
 	}

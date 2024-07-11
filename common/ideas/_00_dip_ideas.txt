@@ -626,7 +626,7 @@ maritime_ideas = {
 		# Allows Marine training decision
 		leader_naval_fire = 1
         leader_naval_shock = 1
-		# Removes Marine Marine penalty
+		# Removes Marines penalty
 		effect = {
 			add_country_modifier = {
 				name = marine_corps
