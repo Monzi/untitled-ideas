@@ -1,0 +1,17 @@
+custom_button = {
+	name = hold_court
+	potential = { has_idea_group = court_ideas }
+	trigger = { full_idea_group = court_ideas }
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = court_window_shown
+			}
+			clr_country_flag = court_window_shown
+		}
+		else = {
+			set_country_flag = court_window_shown
+		}
+	}
+	tooltip = localisation_key #Can use customizable localisation
+}
