@@ -121,3 +121,14 @@ country_event = {
 		name = uis_ideagroups.2002.a
 	}
 }
+
+country_event = {
+	title =  "test"
+	desc = "gaming"
+	id = uis_ideagroups.3000
+	is_triggered_only = yes
+
+	option = {
+		name = "test"
+	}
+}

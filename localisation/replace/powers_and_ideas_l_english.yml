@@ -107,8 +107,8 @@
  cent_ideas_5_desc:0 ""
  cent_ideas_6:0 "REPLACE ME"
  cent_ideas_6_desc:0 ""
- cent_ideas_7:0 "REPLACE ME"
- cent_ideas_7_desc:0 ""
+ cent_ideas_7:0 "Regional Centralization"
+ cent_ideas_7_desc:0 "Gain a conditional modifier in every owned and subject province in home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!"
 # Decentralization ideas
  decentralization_ideas:0 "§lDecentralization Ideas§!"
  decentralization_ideas_bonus:0 "Fully Decentralized"
