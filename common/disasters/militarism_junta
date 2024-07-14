@@ -1,0 +1,147 @@
+uis_militarism_junta = {
+    potential = {
+		full_idea_group = militarism_ideas
+	}
+	can_start = {#might be to many conditions but i want to cover alot of bases to 
+					#not make this something you can "just" flip into
+		or = {
+			employed_advisor = {
+				category = mil
+				skill = 3
+			}
+			has_leader_with = {
+				general = yes
+				total_pips = 12
+			}
+			capital_scope = {
+				controller = {
+					REB = {
+						is_rebel_type = junta_rebels
+					}
+				}
+			}
+		}
+		not = {
+			has_reform = junta_reform
+		}
+		not = {
+			or = {
+				has_government_mechanic = prussian_militarization_mechanic_1
+				has_government_mechanic = prussian_militarization_mechanic_2
+				has_government_mechanic = prussian_militarization_mechanic_3
+			}
+		}
+		not = {
+			mil = 5
+		}
+		and = {
+			stability = -1
+			not = {
+				stability = 0
+			}
+		}
+	}
+	can_stop = {
+		or = {
+			corruption = 21
+			stability = 2
+			mil = 5
+		}
+	}
+	can_end = {
+		and = {
+			mil = 5
+			months_of_ruling = 120
+		}
+	}
+	#most of these are placeholder or not fully thought through
+	progress = {
+		modifier = {
+			factor = 7
+			capital_scope = {
+				controller = {
+					REB = {
+						is_rebel_type = junta_rebels
+					}
+				}
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 0.8
+			legitimacy = 0
+			not = {
+				legitimacy = 20
+			}
+		}
+		modifier = {
+			factor = 0.6
+			legitimacy = 40
+			not = {
+				legitimacy = 60
+			}
+		}
+		modifier = {
+			factor = 0.4
+			legitimacy = 60
+			not = {
+				legitimacy = 80
+			}
+		}
+		modifier = {
+			factor = 0.2
+			legitimacy = 60
+			not = {
+				legitimacy = 80
+			}
+		}
+		modifier = {
+			factor = 0.2
+			and = {
+				has_leader_with = {
+					total_pips = 12
+					
+				}
+				any_owned_province = {
+					unit_has_leader = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 0.4
+			corruption = 0
+			not = {
+				corruption = 5
+			}
+		}
+		modifier = {
+			factor = 0.8
+			corruption = 5
+			not = {
+				corruption = 10
+			}
+		}
+		modifier = {
+			factor = 1.2
+			corruption = 10
+			not = {
+				corruption = 20
+			}
+		}
+		modifier = {
+			factor = 0.4
+			stability = 0
+		}
+		modifier = {
+			factor = 0.8
+			stability = -1
+		}
+		modifier = {
+			factor = 1.2
+			stability = -2
+		}
+	}
+	on_start = uis_ideagroups.4000
+	
+}

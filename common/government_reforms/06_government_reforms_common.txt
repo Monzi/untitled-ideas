@@ -5705,3 +5705,44 @@ assimilation_reform = {
 		}
 	}
 }
+junta_reform = {
+	icon = "placeholder"
+	#should be changed to no when testing is done
+	allow_normal_conversion = yes
+	republic = yes
+	republican_name = yes
+	has_term_election = no
+	locked_government_type = yes
+	government_abilities = {
+		prussian_militarization_mechanic_1
+	}
+
+	#only here for testing should be hidden always until enaction
+	potential = {
+		always = yes
+	}
+	#should only be enactable on disaster or academy rebels enforcing
+	trigger = {
+		
+	}
+
+	modifiers = {#something mil related that isnt way strong, since we also add militarization mechanic
+		land_morale = 0.025
+		monthly_prussian_militarized_society_1 = 1 #ph
+		global_unrest = 2
+	}
+	effect = {
+		if = {
+			limit = { has_estate = estate_academy }
+			add_estate_loyalty = {
+				estate = estate_academy
+				loyalty = 10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_academy
+				influence = 10
+				duration = 3652
+			}
+		}
+	}
+}
