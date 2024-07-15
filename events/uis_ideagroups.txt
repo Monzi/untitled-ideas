@@ -121,3 +121,381 @@ country_event = {
 		name = uis_ideagroups.2002.a
 	}
 }
+
+#country_event = {
+#	title =  "test"
+#	desc = "gaming"
+#	id = uis_ideagroups.3000
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = "test"
+#	}
+#}
+#
+country_event = {
+	title = "Trouble Brewing"
+	desc = "Our military leaders are scheming"
+	picture = SPY_eventPicture
+	id = uis_ideagroups.4000
+	is_triggered_only = yes
+
+	option = {
+		name = "This can't be good."
+		set_variable = {
+			which = junta_progress
+			value = 0
+		}
+		add_country_modifier = {
+			name = uis_trouble_brewing
+			duration = -1
+		}
+		add_stability = -1
+		
+	}
+}
+country_event = {#choice to either pay local landholders to 
+	title = "ph"
+	desc = "ph"
+	picture = SIEGE_eventPicture
+	id = uis_ideagroups.4001
+	
+	mean_time_to_happen = {
+		months =  12
+	}
+	trigger = {
+		has_disaster = uis_militarism_junta
+		not = {
+			has_country_flag = uis_paid_off_junta
+		}
+	}
+
+	option = {#Fight the traitors
+		name = "ph"
+		add_prestige = 10
+		add_yearly_manpower = -1
+		add_stability = -1
+		change_variable = {
+			which = junta_progress
+			value = 9
+		}
+		#should spawn rebels on ONE fort province and immediately occupy it fallback to any random province.
+		if = {
+			limit = { 
+				any_owned_province = {
+					fort_level = 2		
+				}
+			}
+			random_owned_province = {
+				limit = {
+					fort_level = 2					
+				}
+				spawn_rebels = {
+					size = 2
+					type = junta_rebels
+					win = yes
+					should_take_capital = yes
+				}
+			}
+			
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = 2
+					type = junta_rebels
+					win = yes
+					should_take_capital = yes
+				}
+			}
+		}
+	}
+	option = {#pay off traitors with 1 year of income and some corruption gain.
+		name = "ph"
+		add_corruption = 4
+		add_years_of_income = -1
+		add_country_modifier = {
+			name = uis_junta_paid_off
+			duration = -1
+		}
+		change_variable = {
+			which = junta_progress
+			value = 3
+		}
+		set_country_flag = uis_paid_off_junta
+	}
+}
+
+country_event = {
+	title = "ph"
+	desc = "ph"
+	picture = "ph"
+	id = uis_ideagroups.4002
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.8
+			check_variable = {
+				junta_progress = 9
+			}
+		}
+	}
+
+	trigger = {
+		has_disaster = uis_militarism_junta
+	}
+
+	option = {
+		
+	}
+	option = {
+		
+	}
+}
+
+
+country_event = {#Event describing the nobles supporting the junta
+	title = ""
+	desc = ""
+	picture = ""
+	id = uis_ideagroups.4007
+
+	mean_time_to_happen = {
+		months = 20
+		modifier = {
+			factor = 0.8
+			check_variable = {
+				junta_progress = 9
+			}
+		}
+	}
+
+	trigger = {
+		has_disaster = uis_militarism_junta
+		not = {
+			has_country_flag = uis_junta_nobleshandled
+		}
+		if = {
+			limit = { has_estate = estate_nobles }
+			
+			not = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 40
+				}
+			}
+		}
+		else_if = {
+			limit = { has_estate = estate_jains }
+			
+			not = {
+				estate_loyalty = {
+					estate = estate_jains
+					loyalty = 40
+				}
+			}
+		}
+		else_if = {
+			limit = { has_estate = estate_jains }
+			
+			not = {
+				estate_loyalty = {
+					estate = estate_maratha
+					loyalty = 40
+				}
+			}
+		}
+	}
+
+	option = {#Let the nobles gain influence in exchange of slowing down the rebels
+		name = ""
+		if = {
+			limit = { has_estate = estate_nobles }
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 10
+			}
+		}
+		else_if = {
+			limit = { has_estate = estate_jains }
+			add_estate_loyalty = {
+				estate = estate_jains
+				loyalty = 10
+			}
+			change_estate_land_share = {
+				estate = estate_jains
+				share = 10
+			}
+			
+		}
+		else_if = {
+			limit = { has_estate = estate_maratha }
+			add_estate_loyalty = {
+				estate = estate_maratha
+				loyalty = 10
+			}
+			change_estate_land_share = {
+				estate = estate_maratha
+				share = 10
+			}			
+		}
+		add_prestige = 5
+		add_scaled_republican_tradition = 5
+		add_legitimacy = 5
+		add_meritocracy = 5
+		add_horde_unity = 5
+		add_devotion = 5
+		hidden_effect = {
+			change_variable = {
+				which = junta_progress
+				value = 3
+			}
+			set_country_flag = uis_junta_nobleshandled
+		}
+	}
+	option = {#punish the nobles or equivalent
+		name = "ph"
+		if = {
+			limit = { has_estate = estate_nobles }
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = -5
+			}
+		}
+		else_if = {
+			limit = { has_estate = estate_jains }
+			add_estate_loyalty = {
+				estate = estate_jains
+				loyalty = -20
+			}
+			change_estate_land_share = {
+				estate = estate_jains
+				share = -5
+			}
+			
+		}
+		else_if = {
+			limit = { has_estate = estate_maratha }
+			add_estate_loyalty = {
+				estate = estate_maratha
+				loyalty = -20
+			}
+			change_estate_land_share = {
+				estate = estate_maratha
+				share = -5
+			}
+			
+		}
+		else = {
+			add_mil_power = -100
+			add_adm_power = -100
+		}
+		hidden_effect = {
+			change_variable = {
+				which = junta_progress
+				value = 9
+			}
+		}
+		set_country_flag = uis_junta_nobleshandled
+	}
+}
+
+
+
+
+
+country_event = {#Final Event that decides if you let the junta take power or fight the last rebels
+	title = "ph"
+	desc = "ph"
+	picture = ""
+	id = uis_ideagroups.4009
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 240
+		modifier = {
+			factor = 1.2
+			check_variable = {
+				junta_progress = 5
+			}
+		}
+		modifier = {
+			factor = 0.9
+			check_variable = {
+				junta_progress = 15
+			}
+		}
+		modifier = {
+			factor = 0.6
+			check_variable = {
+				junta_progress = 30
+			}
+		}
+		modifier = {
+			factor = 0.1
+			check_variable = {
+				junta_progress = 40
+			}
+		}
+	}
+	trigger = {
+		has_disaster = uis_militarism_junta
+		or = { # ph for if below does not work
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+			has_country_flag = ""
+		}
+	}
+	
+	option = {#Change your government to junta
+		name = "ph"
+		trigger = {
+			check_variable = {#The value of previous events should be able to equal this number if at least 4 events have been completed the hard way
+				junta_progress = 36
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		change_government = republic
+		add_government_reform = junta_reform
+		end_disaster = uis_militarism_junta
+		#clear all disaster flags
+	}
+	option = {#Stay as original government
+		name = "One last dance."
+		ai_chance = {
+			factor = 95
+		}
+		add_legitimacy = 50
+		add_scaled_republican_tradition = 30
+		add_horde_unity = 50
+		add_meritocracy = 30
+		add_devotion = 30
+		add_prestige = 30
+		add_stability = 3
+		#clear all disaster flags
+		capital_scope = {#Should spawn a big stack of rebels near the capital.
+			area = {
+				spawn_rebels = {
+					size = 5
+					type = junta_rebels
+				}
+			}
+		}
+		end_disaster = uis_militarism_junta
+	}
+}

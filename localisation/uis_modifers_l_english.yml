@@ -45,3 +45,12 @@
  cavalry_fully_trained:0 "Fully Trained Cavalry Force"
 # Standing Army Ideas
  upgraded_stand_5:0 "Regular Forced Marches"
+#Centralization
+ centralized_region:0 "Centralized Region"
+ desc_centralized_region:0 ""
+ centralized_subject_local:0 "Centralized Subject"
+ desc_centralized_subject_local:0 ""
+ centralized_subject_loyalty:0 "Centralized Subject"
+ desc_centralized_subject_loyalty:0 ""
+ centralized_subject_foreign:0 "Faraway Subject"
+ desc_centralized_subject_foreign:0 ""

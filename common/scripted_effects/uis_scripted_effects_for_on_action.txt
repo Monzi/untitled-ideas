@@ -1,0 +1,135 @@
+on_province_owner_change_recentralize_region = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_modifier = centralized_region
+			}
+			owner = {
+				is_subject = no
+			}
+		}
+		root = {
+			owner = {
+				add_fully_centralized = yes
+				set_country_flag = ran_overlord_ownerchange
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = {
+				owner = {
+					any_owned_province = {
+						OR = {
+							has_province_modifier = centralized_subject_local
+							has_province_modifier = centralized_subject_foreign
+						}
+					}
+					overlord = {
+						full_idea_group = centralization_ideas
+					}
+				}
+			}			
+		}
+		
+		root = {
+			owner = {
+				overlord = {
+					capital_scope = {
+						hidden_effect = {
+							region = {
+								save_event_target_as = uisregionpchange
+							}
+						}
+					}
+					set_country_flag = uiscreatedevent
+				}
+			}
+		}
+		if = {
+			limit = {
+				root = {
+					owner = {
+						capital_scope = {
+							region = event_target:uisregionpchange
+						}
+					}
+				}
+			}
+			root = {
+				owner = {
+					capital_scope = {
+						region = {
+							limit = {
+								owner = {
+									is_subject = yes
+								}
+							}
+							add_province_modifier = {
+								name = centralized_subject_local
+								duration = -1
+							}
+						}
+					}
+					set_country_flag = uislocal
+				}
+			}
+		}
+		if = {
+			limit = {
+				root = {
+					owner = {
+						capital_scope = {
+							not = {
+								region = event_target:uisregionpchange
+							}
+						}
+					}
+				}
+			}
+			root = {
+				owner = {
+					capital_scope = {
+						region = {
+							limit = {
+								owner = {
+									is_subject = yes
+								}
+							}
+							add_province_modifier = {
+								name = centralized_subject_foreign
+								duration = -1
+							}
+						}
+					}
+					set_country_flag = uisforeign
+				}
+			}
+		}
+
+	}
+}
+on_country_vassal_created_centralize_subject = {
+	if = {
+		limit = {
+			overlord = {
+				full_idea_group = centralization_ideas
+			}
+		}		
+		from = {
+			add_fully_centralized_subject = yes
+		}
+	}
+}
+on_dependecy_gained_centralization = {
+	if = {
+		limit = {
+			ROOT = {
+				full_idea_group = centralization_ideas
+			}
+		}		
+		ROOT = {
+			add_fully_centralized_subject = yes
+		}
+	}
+}

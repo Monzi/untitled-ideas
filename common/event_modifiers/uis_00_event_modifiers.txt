@@ -5,7 +5,43 @@
 # Modifiers for idea groups.
 # ------------------------------------------------------------------------------------------------
 # ADM
-
+#Centralization Ideas
+#Own region modifier
+centralized_region = {
+	local_development_cost = -0.1
+	local_build_cost = -0.1
+	local_build_time = -0.1
+	local_governing_cost = -0.20
+	allowed_num_of_buildings = 1
+}
+#Subjects outside own region
+centralized_subject_foreign = {
+	local_development_cost = -0.05
+	local_build_cost = -0.05
+	local_build_time = -0.05
+}
+#Local subjects
+centralized_subject_loyalty = {
+	liberty_desire = -10
+}
+centralized_subject_local = {
+	local_development_cost = -0.10
+	local_build_cost = -0.10
+	local_build_time = -0.10	
+}
+#Militarism Ideas / Junta coup
+uis_trouble_brewing = {
+	global_unrest = 5
+	stability_cost_modifier = 1
+}
+uis_junta_paid_off = {
+	land_maintenance_modifier = 0.15
+}
+#modifier for rebel occupied province
+uis_local_men_drafted = {
+	local_manpower_modifier = -100
+	local_unrest = 2
+}
 
 # DIP
 # Court Ideas
@@ -138,6 +174,9 @@ cavalry_fully_trained = {
 upgraded_stand_5 = {
 	force_march_free = yes
 }
+
+
+# ADM
 
 
 # Modifiers for policies.
