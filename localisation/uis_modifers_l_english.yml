@@ -5,6 +5,16 @@
 
 
 # DIP
+# Court Ideas
+ cooldown_court_decrees:0 "Court Concluded"
+ court_decree_1:0 "Currency Regulation Ordinance"
+ court_decree_2:0 "Monetary Policy Directive"
+ court_decree_3:0 "Trade Agreement Ratification"
+ court_decree_4:0 "Legal Ruling and Guidance"
+ court_decree_5:0 "War Powers Resolution"
+ court_decree_6:0 "Budget Allocation Ordinance"
+ court_decree_7:0 "Military Uniform Regulation Decree"
+ court_decree_8:0 "Military Base Realignment Decree"
 # Maritime Ideas
  upgraded_marines_cooldown:0 "Naval War Games"
  upgraded_marines:0 "Surprise Landings"

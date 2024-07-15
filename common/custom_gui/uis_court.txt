@@ -1,5 +1,6 @@
 custom_button = {
 	name = hold_court
+	tooltip = hold_court_tooltip
 	potential = { has_idea_group = court_ideas }
 	trigger = { full_idea_group = court_ideas }
 	effect = {
@@ -13,5 +14,251 @@ custom_button = {
 			set_country_flag = court_window_shown
 		}
 	}
-	tooltip = localisation_key #Can use customizable localisation
+}
+
+custom_window = {
+   name = court_custom_window
+   potential = { has_country_flag = court_window_shown }
+}
+
+custom_button = {
+   name = court_custom_window_close_button
+   tooltip = court_custom_window_close_button_tooltip
+   potential = { }
+   trigger = { }
+   effect = { clr_country_flag = court_window_shown }
+}
+
+# Court Decrees
+# Decree 1
+custom_button = {
+	name = court_decree_1_select_button
+	tooltip = court_decree_1_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_1
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_1_seal
+	potential = { has_country_modifier = court_decree_1 }
+}
+custom_icon = {
+	name = court_decree_1_check
+	potential = { has_country_modifier = court_decree_1 }
+}
+# Decree 2
+custom_button = {
+	name = court_decree_2_select_button
+	tooltip = court_decree_2_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_2
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_2_seal
+	potential = { has_country_modifier = court_decree_2 }
+}
+custom_icon = {
+	name = court_decree_2_check
+	potential = { has_country_modifier = court_decree_2 }
+}
+# Decree 3
+custom_button = {
+	name = court_decree_3_select_button
+	tooltip = court_decree_3_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_3
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_3_seal
+	potential = { has_country_modifier = court_decree_3 }
+}
+custom_icon = {
+	name = court_decree_3_check
+	potential = { has_country_modifier = court_decree_3 }
+}
+# Decree 4
+custom_button = {
+	name = court_decree_4_select_button
+	tooltip = court_decree_4_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_4
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_4_seal
+	potential = { has_country_modifier = court_decree_4 }
+}
+custom_icon = {
+	name = court_decree_4_check
+	potential = { has_country_modifier = court_decree_4 }
+}
+# Decree 5
+custom_button = {
+	name = court_decree_5_select_button
+	tooltip = court_decree_5_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_5
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_5_seal
+	potential = { has_country_modifier = court_decree_5 }
+}
+custom_icon = {
+	name = court_decree_5_check
+	potential = { has_country_modifier = court_decree_5 }
+}
+# Decree 6
+custom_button = {
+	name = court_decree_6_select_button
+	tooltip = court_decree_6_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_6
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_6_seal
+	potential = { has_country_modifier = court_decree_6 }
+}
+custom_icon = {
+	name = court_decree_6_check
+	potential = { has_country_modifier = court_decree_6 }
+}
+# Decree 7
+custom_button = {
+	name = court_decree_7_select_button
+	tooltip = court_decree_7_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_7
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_7_seal
+	potential = { has_country_modifier = court_decree_7 }
+}
+custom_icon = {
+	name = court_decree_7_check
+	potential = { has_country_modifier = court_decree_7 }
+}
+# Decree 8
+custom_button = {
+	name = court_decree_8_select_button
+	tooltip = court_decree_8_tooltip
+	potential = { }
+	trigger = {
+		NOT = { has_country_modifier = cooldown_court_decrees }
+	}
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = cooldown_court_decrees
+				duration = 1825
+			}
+		}
+		add_country_modifier = {
+			name = court_decree_8
+			duration = 1825
+		}
+	}
+}
+custom_icon = {
+	name = court_decree_8_seal
+	potential = { has_country_modifier = court_decree_8 }
+}
+custom_icon = {
+	name = court_decree_8_check
+	potential = { has_country_modifier = court_decree_8 }
 }
