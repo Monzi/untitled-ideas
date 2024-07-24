@@ -1,7 +1,7 @@
 custom_button = {
 	name = hold_court
 	tooltip = hold_court_tooltip
-	potential = { has_idea_group = court_ideas }
+	potential = { always = yes }
 	trigger = { full_idea_group = court_ideas }
 	effect = {
 		if = {

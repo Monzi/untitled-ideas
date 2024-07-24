@@ -2,7 +2,7 @@ custom_button = {
 	name = draft_pop
 	tooltip = draft_pop_tooltip
 	potential = {
-		has_idea_group = quantity_ideas
+		always = yes
 	}
 	trigger = {
 		NOT = { has_country_modifier = cooldown_pops_drafted }

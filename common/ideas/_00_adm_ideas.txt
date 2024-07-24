@@ -704,11 +704,12 @@ centralization_ideas = {
 	cent_ideas_7 = {	
 		monthly_reform_progress_modifier = 0.10
 		effect = {
+			custom_tooltip = centralization_ideas_mechanic
 			hidden_effect = {
 				add_fully_centralized = yes		
 				add_fully_centralized_subject = yes
 			}			
-			#clr_country_flag = uisgottoelse			
+			#clr_country_flag = uisgottoelse
 		}
 		removed_effect = {
 			hidden_effect = {

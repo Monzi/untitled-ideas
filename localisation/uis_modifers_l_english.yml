@@ -43,6 +43,10 @@
  fire_tactics:0 "Fire Tactics"
  shock_tactics:0 "Shock Tactics"
  quantity_over_quality_tactics:0 "Quantity over Quality Tactics"
+# Quality Ideas
+ quality_iron:0 "High Quality Iron"
+ quality_wheat:0 "Fertile Ground"
+ quality_copper:0 "High Quality Copper"
 # Quantity Ideas
  cooldown_pops_drafted:0 "Population Drafted"
 # Infantry Ideas

@@ -4406,6 +4406,7 @@ on_province_owner_change = {
 
 	}
 
+	on_province_owner_change_quality_mechanic = yes
 	on_province_owner_change_recentralize_region = yes
 
 	on_province_owner_change_government_effect = yes

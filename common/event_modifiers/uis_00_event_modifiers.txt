@@ -159,6 +159,17 @@ hardened_infantry = {
 	infantry_shock = 0.1
 }
 
+# Quality Ideas
+quality_iron = {
+	infantry_power = 0.002
+}
+quality_wheat = {
+	cavalry_power = 0.001
+}
+quality_copper = {
+	artillery_power = 0.002
+}
+
 # Cavalry Ideas
 cavalry_training_cooldown = {
 	cavalry_power = -0.10

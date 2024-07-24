@@ -274,7 +274,6 @@ centralization_capital_moved = { # Deletes all modifiers and re-applies to new r
 			add_fully_centralized_subject = yes
 		}
 	}
-	
 }
 adandon_centralization = {
 	every_owned_province = {
@@ -299,6 +298,62 @@ forced_draft_button_effect = {
 	hidden_effect = {
 		every_owned_province = {
 			add_devastation = 50
+		}
+	}
+}
+
+# Quality Ideas
+quality_mechanic = {
+	if = {
+		limit = {
+			full_idea_group = quality_ideas
+		}
+		every_owned_province = {
+			limit = {
+				trade_goods = iron
+				NOT = { has_province_modifier = quality_iron }
+			}
+			add_province_modifier = {
+				name = quality_iron
+				duration = -1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				trade_goods = grain
+				NOT = { has_province_modifier = quality_wheat }
+			}
+			add_province_modifier = {
+				name = quality_wheat
+				duration = -1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				trade_goods = copper
+				NOT = { has_province_modifier = quality_copper }
+			}
+			add_province_modifier = {
+				name = quality_copper
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { full_idea_group = quality_ideas }
+		}
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_modifier = quality_iron
+					has_province_modifier = quality_wheat
+					has_province_modifier = quality_copper
+				}
+			}
+			remove_province_modifier = quality_iron
+			remove_province_modifier = quality_wheat
+			remove_province_modifier = quality_copper
 		}
 	}
 }

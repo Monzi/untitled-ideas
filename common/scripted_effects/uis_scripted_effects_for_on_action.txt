@@ -31,7 +31,6 @@ on_province_owner_change_recentralize_region = {
 				}
 			}			
 		}
-		
 		root = {
 			owner = {
 				overlord = {
@@ -106,7 +105,6 @@ on_province_owner_change_recentralize_region = {
 				}
 			}
 		}
-
 	}
 }
 on_country_vassal_created_centralize_subject = {
@@ -130,6 +128,24 @@ on_dependecy_gained_centralization = {
 		}		
 		ROOT = {
 			add_fully_centralized_subject = yes
+		}
+	}
+}
+
+# Quality Ideas
+on_province_owner_change_quality_mechanic = {
+	if = {
+		limit = {
+			root = {
+				owner = {
+					full_idea_group = quality_ideas
+				}
+			}
+		}
+		root = {
+			owner = {
+				quality_mechanic = yes
+			}
 		}
 	}
 }

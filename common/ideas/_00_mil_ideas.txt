@@ -348,13 +348,19 @@ quality_ideas = {
 	}
 	massed_battery = {
 		artillery_power = 0.1
+		effect = {
+			quality_mechanic = yes
+		}
+		removed_effect = {
+			quality_mechanic = yes
+		}
 	}
 
 	ai_will_do = {
 		factor = 3.5
 		modifier = {
 			factor = 2
-			has_strong_mil_national_ideas = yes 
+			has_strong_mil_national_ideas = yes
 		}
 		modifier = { 
 			factor = 0.75
