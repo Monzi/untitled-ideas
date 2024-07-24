@@ -5,4 +5,8 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_forced_draft_button"
+		texturefile = "gfx//interface//forced_draft_button.dds"
+	}
 }

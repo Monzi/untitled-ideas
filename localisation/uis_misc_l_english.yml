@@ -20,3 +20,7 @@
  court_decree_7_tooltip:0 "Military Uniform Regulation Act"
  court_decree_8_title:0 "Military Base Realignment"
  court_decree_8_tooltip:0 "Military Base Realignment"
+
+ draft_pop:0 "Forced Draft"
+ draft_pop_tooltip:0 "§YForced Draft§!"
+ draft_pop_effect_tooltip:0 "Gain §R50§! devastation in all owned provinces."

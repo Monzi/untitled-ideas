@@ -1,0 +1,3 @@
+common
+	scripted_triggers
+		00_scripted_triggers.txt

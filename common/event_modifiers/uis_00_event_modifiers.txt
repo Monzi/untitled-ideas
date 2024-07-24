@@ -146,6 +146,10 @@ quantity_over_quality_tactics = {
 	artillery_power = -0.1
 }
 
+# Quantity Ideas
+cooldown_pops_drafted = {
+}
+
 # Infantry Ideas
 infantry_training_cooldown = {
 	infantry_power = -0.15
@@ -174,9 +178,6 @@ cavalry_fully_trained = {
 upgraded_stand_5 = {
 	force_march_free = yes
 }
-
-
-# ADM
 
 
 # Modifiers for policies.

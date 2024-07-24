@@ -291,3 +291,14 @@ adandon_centralization = {
 		remove_country_modifier = centralized_subject_loyalty
 	}
 }
+
+# Quantity Ideas - Forced Draft Button Effect
+forced_draft_button_effect = {
+	add_yearly_manpower = 2
+	custom_tooltip = draft_pop_effect_tooltip
+	hidden_effect = {
+		every_owned_province = {
+			add_devastation = 50
+		}
+	}
+}

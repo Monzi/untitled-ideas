@@ -2,7 +2,15 @@
 # Modifiers for idea groups.
 # ------------------------------------------------------------------------------------------------
 # ADM
-
+#Centralization
+ centralized_region:0 "Centralized Region"
+ desc_centralized_region:0 ""
+ centralized_subject_local:0 "Centralized Subject"
+ desc_centralized_subject_local:0 ""
+ centralized_subject_loyalty:0 "Centralized Subject"
+ desc_centralized_subject_loyalty:0 ""
+ centralized_subject_foreign:0 "Faraway Subject"
+ desc_centralized_subject_foreign:0 ""
 
 # DIP
 # Court Ideas
@@ -35,6 +43,8 @@
  fire_tactics:0 "Fire Tactics"
  shock_tactics:0 "Shock Tactics"
  quantity_over_quality_tactics:0 "Quantity over Quality Tactics"
+# Quantity Ideas
+ cooldown_pops_drafted:0 "Population Drafted"
 # Infantry Ideas
  infantry_training_cooldown:0 "Infantry Training"
  hardened_infantry:0 "Proper Fighting Force"
@@ -45,12 +55,3 @@
  cavalry_fully_trained:0 "Fully Trained Cavalry Force"
 # Standing Army Ideas
  upgraded_stand_5:0 "Regular Forced Marches"
-#Centralization
- centralized_region:0 "Centralized Region"
- desc_centralized_region:0 ""
- centralized_subject_local:0 "Centralized Subject"
- desc_centralized_subject_local:0 ""
- centralized_subject_loyalty:0 "Centralized Subject"
- desc_centralized_subject_loyalty:0 ""
- centralized_subject_foreign:0 "Faraway Subject"
- desc_centralized_subject_foreign:0 ""
