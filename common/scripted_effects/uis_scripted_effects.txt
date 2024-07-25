@@ -14,11 +14,14 @@ clear_tactic_bonus_modifiers = {
 	remove_country_modifier = quantity_over_quality_tactics
 }
 
-# Cavalry Ideas
-clear_cavalry_bonus_modifiers = {
-	remove_country_modifier = cavalry_partially_trained
-	remove_country_modifier = cavalry_mostly_trained
-	remove_country_modifier = cavalry_fully_trained
+# Infantry / Cavalry Ideas
+clear_army_training_modifiers = {
+	remove_country_modifier = tier1_infantry
+	remove_country_modifier = tier2_infantry
+	remove_country_modifier = tier3_infantry
+	remove_country_modifier = tier1_cavalry
+	remove_country_modifier = tier2_cavalry
+	remove_country_modifier = tier3_cavalry
 }
 
 # Academy Ideas

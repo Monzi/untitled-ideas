@@ -1,0 +1,32 @@
+defined_text = {
+    name = title_army_training
+
+    text = {
+        localisation_key = string_infantry_training_title
+        trigger = {
+            full_idea_group = infantry_ideas
+        }
+    }
+    text = {
+        localisation_key = string_cavalry_training_title
+        trigger = {
+            full_idea_group = cavalry_ideas
+        }
+    }
+}
+defined_text = {
+    name = desc_army_training
+
+    text = {
+        localisation_key = string_infantry_training_desc
+        trigger = {
+            full_idea_group = infantry_ideas
+        }
+    }
+    text = {
+        localisation_key = string_cavalry_training_desc
+        trigger = {
+            full_idea_group = cavalry_ideas
+        }
+    }
+}

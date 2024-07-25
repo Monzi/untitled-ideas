@@ -95,6 +95,7 @@ court_ideas = {
 	court_embassies = {
 		possible_dip_policy = 1
 		monarch_diplomatic_power = 1
+		# Allows Hold Court Mechanic
 	}
 
 	ai_will_do = {

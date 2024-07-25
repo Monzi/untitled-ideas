@@ -38,7 +38,7 @@
 
 # MIL
 # Tactic Ideas
- tactics_cooldown:0 "Tactics Cooldown"
+ tactics_cooldown:0 "Recently Changed Tactics"
  balanced_tactics:0 "Balanced Tactics"
  fire_tactics:0 "Fire Tactics"
  shock_tactics:0 "Shock Tactics"
@@ -49,13 +49,17 @@
  quality_copper:0 "High Quality Copper"
 # Quantity Ideas
  cooldown_pops_drafted:0 "Population Drafted"
-# Infantry Ideas
- infantry_training_cooldown:0 "Infantry Training"
- hardened_infantry:0 "Proper Fighting Force"
-# Cavalry Ideas
- cavalry_training_cooldown:0 "Cavalry Training"
- cavalry_partially_trained:0 "Partially Trained Cavalry Force"
- cavalry_mostly_trained:0 "Mostly Trained Cavalry Force"
- cavalry_fully_trained:0 "Fully Trained Cavalry Force"
+
+# Infantry / Cavalry Ideas
+ army_restructuring:0 "Army Restructuring"
+# Infantry
+ tier1_infantry:0 "Levy Infantry"
+ tier2_infantry:0 "Conscription Infantry"
+ tier3_infantry:0 "Professional Infantry"
+# Cavalry
+ tier1_cavalry:0 "Noble Cavalry"
+ tier2_cavalry:0 "Conscription Cavalry"
+ tier3_cavalry:0 "Professional Cavalry"
+
 # Standing Army Ideas
  upgraded_stand_5:0 "Regular Forced Marches"

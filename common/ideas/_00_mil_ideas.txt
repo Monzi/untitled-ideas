@@ -87,6 +87,12 @@ tactic_ideas = {
 	}
 	tactic_ideas7 = { # Organized Rotations
 		reserves_organisation = 0.10
+		effect = {
+			add_country_modifier = {
+				name = balanced_tactics
+				duration = -1
+			}
+		}
 		removed_effect = {
 			clear_tactic_bonus_modifiers = yes
 		}
@@ -349,7 +355,10 @@ quality_ideas = {
 	massed_battery = {
 		artillery_power = 0.1
 		effect = {
-			quality_mechanic = yes
+			custom_tooltip = quality_ideas_mechanic
+			hidden_effect = {
+				quality_mechanic = yes
+			}
 		}
 		removed_effect = {
 			quality_mechanic = yes
@@ -449,6 +458,7 @@ quantity_ideas = {
 	}
 	expanded_supply_trains = {
 		land_attrition = -0.25
+		# Allows Forced Draft mechanic
 	}
 
 	ai_will_do = {
@@ -506,7 +516,7 @@ infantry_ideas = {
 	}
 
 	bonus = {
-		infantry_fire = 0.05
+		fire_damage = 0.05
 	}
 
 	inf_ideas_1 = {
@@ -525,13 +535,14 @@ infantry_ideas = {
 		reinforce_cost_modifier = -0.10
 	}
 	inf_ideas_6 = {
-		infantry_shock = 0.05
+		shock_damage = 0.05
 	}
 	inf_ideas_7 = {
 		# Allows Infantry training decision
 		shock_damage_received = -0.05
 		removed_effect = {
-			remove_country_modifier = hardened_infantry
+			clear_army_training_modifiers = yes
+			clr_country_flag = finished_army_training
 		}
 	}
 
@@ -596,7 +607,7 @@ cavalry_ideas = {
 	}
 
 	bonus = {
-		cavalry_shock = 0.05
+		shock_damage = 0.05
 	}
 
 	cav_ideas_1 = {
@@ -615,13 +626,14 @@ cavalry_ideas = {
 		cav_to_inf_ratio = 0.20
 	}
 	cav_ideas_6 = {
-		cavalry_fire = 0.05
+		fire_damage = 0.05
 	}
 	cav_ideas_7 = {
 		# Allows Cavalry training decision
 		fire_damage_received = -0.05
 		removed_effect = {
-			clear_cavalry_bonus_modifiers = yes
+			clear_army_training_modifiers = yes
+			clr_country_flag = finished_army_training
 		}
 	}
 
@@ -700,6 +712,9 @@ standingarmy_ideas = {
 		enable_forced_march = yes
 		# After ADM Tech 15:
 		# force_march_free = yes
+		effect = {
+			custom_tooltip = standingarmy_ideas_mechanic
+		}
 		removed_effect = {
 			remove_country_modifier = upgraded_stand_5
 		}

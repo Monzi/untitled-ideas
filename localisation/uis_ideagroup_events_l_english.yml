@@ -1,7 +1,8 @@
 ﻿l_english:
  uis_ideagroups.2001.t:0 "Change Current Tactics"
  uis_ideagroups.2001.d:0 "It is time that we had a look at the tactics we're employing."
- uis_ideagroups.2001.a:0 "Balanced Tactics"
- uis_ideagroups.2001.b:0 "Fire Tactics"
- uis_ideagroups.2001.c:0 "Shock Tactics"
- uis_ideagroups.2001.d:0 "Quantity over Quality Tactics"
+ uis_ideagroups.2001.1:0 "Keep Current Tactics"
+ uis_ideagroups.2001.2:0 "Balanced Tactics"
+ uis_ideagroups.2001.3:0 "Fire Tactics"
+ uis_ideagroups.2001.4:0 "Shock Tactics"
+ uis_ideagroups.2001.5:0 "Quantity over Quality Tactics"

@@ -150,15 +150,6 @@ quantity_over_quality_tactics = {
 cooldown_pops_drafted = {
 }
 
-# Infantry Ideas
-infantry_training_cooldown = {
-	infantry_power = -0.15
-}
-hardened_infantry = {
-	infantry_fire = 0.1
-	infantry_shock = 0.1
-}
-
 # Quality Ideas
 quality_iron = {
 	infantry_power = 0.002
@@ -170,19 +161,36 @@ quality_copper = {
 	artillery_power = 0.002
 }
 
-# Cavalry Ideas
-cavalry_training_cooldown = {
-	cavalry_power = -0.10
-	cavalry_flanking = -0.20
+# Infantry / Cavalry Ideas
+army_restructuring = {
+	infantry_power = -0.15
+	cavalry_power = -0.15
 }
-cavalry_partially_trained = {
-	cav_to_inf_ratio = 0.10
+# Infantry
+tier1_infantry = {
+	infantry_fire = 0.05
+	infantry_shock = 0.05
 }
-cavalry_mostly_trained = {
-	cav_to_inf_ratio = 0.20
+tier2_infantry = {
+	infantry_fire = 0.1
+	infantry_shock = 0.1
 }
-cavalry_fully_trained = {
-	cav_to_inf_ratio = 0.30
+tier3_infantry = {
+	infantry_fire = 0.15
+	infantry_shock = 0.15
+}
+# Cavalry
+tier1_cavalry = {
+	cavalry_fire = 0.05
+	cavalry_shock = 0.05
+}
+tier2_cavalry = {
+	cavalry_fire = 0.1
+	cavalry_shock = 0.1
+}
+tier3_cavalry = {
+	cavalry_fire = 0.15
+	cavalry_shock = 0.15
 }
 
 # Standing Army Ideas

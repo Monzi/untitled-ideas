@@ -143,7 +143,7 @@
  tranquil_coordination_desc:0 ""
  respected_authority_desc:0 ""
  palace_of_splendor_desc:0 ""
- court_embassies_desc:0 ""
+ court_embassies_desc:0 "Allows §YHold Court§! Mechanics"
 # Diplomatic ideas
  grand_banquets_desc:0 ""
  foreign_embassies_desc:0 ""
@@ -176,7 +176,7 @@
  assimilation_ideas_6:0 "REPLACE ME"
  assimilation_ideas_6_desc:0 ""
  assimilation_ideas_7:0 "REPLACE ME"
- assimilation_ideas_7_desc:0 ""
+ assimilation_ideas_7_desc:0 "Allows §YAssimilation§! Reform"
 # Nationalism
  nationalism_ideas:0 "§MNationalism Ideas§!"
  nationalism_ideas_bonus:0 "Nationalism"
@@ -193,7 +193,7 @@
  nationalism_ideas_6:0 "REPLACE ME"
  nationalism_ideas_6_desc:0 ""
  nationalism_ideas_7:0 "REPLACE ME"
- nationalism_ideas_7_desc:0 "Allows §Y'Early Nationalism'§! Casus Belli"
+ nationalism_ideas_7_desc:0 "Allows '§YEarly Nationalism§!' Casus Belli"
 # Exploration ideas
  quest_for_the_new_world_desc:0 ""
  colonial_ventures_desc:0 ""
@@ -218,7 +218,7 @@
  ships_penny_desc:0 ""
  sea_hawks_desc:0 ""
  maritime_ideas_7:0 "REPLACE ME"
- maritime_ideas_7_desc:0 "Removes the Marine Shock Damage Received penalty\nImpressment Offices grant §G+1%§! Marines Force limit."
+ maritime_ideas_7_desc:0 "Removes Marine Shock Damage Received Penalty\nImpressment Offices grant §G+1%§! Marines Force limit"
 # Naval Ideas
  boarding_parties_desc:0 ""
  improved_rams_desc:0 ""
@@ -226,7 +226,7 @@
  naval_glory_desc:0 ""
  press_gangs_desc:0 ""
  oak_forests_for_ships_desc:0 ""
- superior_seamanship_desc:0 "§GBonus§!: Grants a §YDecision§! allowing specialization for one of three ship types."
+ superior_seamanship_desc:0 "Allows §YShips Specialization§! Decision"
 
 # Military Ideas
 # War Academy ideas
@@ -262,7 +262,7 @@
  tactic_ideas6:0 "REPLACE ME"
  tactic_ideas6_desc:0 ""
  tactic_ideas7:0 "REPLACE ME"
- tactic_ideas7_desc:0 ""
+ tactic_ideas7_desc:0 "Allows §YTactics§! Decision"
 # Offensive ideas
  bayonet_leaders_desc:0 ""
  national_conscripts_desc:0 ""
@@ -294,7 +294,7 @@
  camp_followers_desc:0 ""
  garrison_conscription_desc:0 ""
  the_old_and_infirm_desc:0 ""
- expanded_supply_trains_desc:0 ""
+ expanded_supply_trains_desc:0 "Allows §YForced Draft§! Mechanics"
 # Infantry ideas
  infantry_ideas:0 "§RInfantry Ideas§!"
  infantry_ideas_bonus:0 "Infantry Focus"
@@ -311,7 +311,7 @@
  inf_ideas_6:0 "REPLACE ME"
  inf_ideas_6_desc:0 ""
  inf_ideas_7:0 "REPLACE ME"
- inf_ideas_7_desc:0 ""
+ inf_ideas_7_desc:0 "Allows §YInfantry Training§! Decision"
 # Cavalry ideas
  cavalry_ideas:0 "§RCavalry Ideas§!"
  cavalry_ideas_bonus:0 "Cavalry Focus"
@@ -328,7 +328,7 @@
  cav_ideas_6:0 "REPLACE ME"
  cav_ideas_6_desc:0 ""
  cav_ideas_7:0 "REPLACE ME"
- cav_ideas_7_desc:0 ""
+ cav_ideas_7_desc:0 "Allows §YCavalry Training§! Decision"
 # Standing Army ideas
  standingarmy_ideas:0 "§OStanding Army Ideas§!"
  standingarmy_ideas_bonus:0 "A Professional Army"
