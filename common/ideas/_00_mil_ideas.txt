@@ -623,7 +623,7 @@ cavalry_ideas = {
 		leader_land_shock = 1
 	}
 	cav_ideas_5 = {
-		cav_to_inf_ratio = 0.20
+		cav_to_inf_ratio = 0.15
 	}
 	cav_ideas_6 = {
 		fire_damage = 0.05
