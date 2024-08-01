@@ -3,5 +3,6 @@ spriteTypes = {
 		name = "GFX_disaster_uis_militarism_junta"
 		texturefile = "gfx//interface//disasters//uis_junta.dds"
 		noOfFrames = 3
+		loadType = "INGAME"
 	}
 }

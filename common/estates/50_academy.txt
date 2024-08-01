@@ -74,16 +74,7 @@ estate_academy = {
 			has_any_estate_disaster_active = yes
 		}
 		loyalty = -20
-	}	
-	
-	# Custom Names
-	# Example
-	# custom_name = {
-	# 	desc = estate_magisters
-	# 	trigger = {
-	# 		has_estate_privilege = estate_mages_organization_magisterium
-	# 	}
-	# }
+	}
 
 	color = { 73 108 205 }
 
