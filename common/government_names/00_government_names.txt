@@ -1,0 +1,30 @@
+junta_localization = {
+	rank = {
+		1 = JUNTA
+		2 = GRAND_JUNTA
+		3 = ARMY_WITHSTATE
+	}
+	ruler_male = {
+		1 = JUNTA_GENERAL
+		2 = JUNTA_MARSHAL
+		3 = JUNTA_SUPREMEGENERAL
+	}
+	ruler_female = {
+		1 = F_JUNTA_GENERAL
+		2 = F_JUNTA_MARSHAL
+		3 = F_JUNTA_SUPREMEGENERAL
+	}
+	consort_female = {
+		1 = UIS_CONSORT
+		2 = UIS_CONSORT
+		3 = UIS_CONSORT
+	}
+	consort_male = {
+		1 = UIS_CONSORT
+		2 = UIS_CONSORT
+		3 = UIS_CONSORT
+	}
+	trigger = {
+		has_reform = junta_reform
+	}
+}

@@ -11,6 +11,11 @@
  desc_centralized_subject_loyalty:0 ""
  centralized_subject_foreign:0 "Faraway Subject"
  desc_centralized_subject_foreign:0 ""
+#Militarism / Junta
+ uis_lost_to_junta_rebels:0 "ph"
+ uis_trouble_brewing:0 "trouble"
+ uis_junta_paid_off:0 "paidoff"
+ uis_local_men_drafted:0 "localmendrafted"
 
 # DIP
 # Court Ideas

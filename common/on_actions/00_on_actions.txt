@@ -562,6 +562,18 @@ on_battle_won_province = {
 #Unit Scope OnAction for Battle Won
 on_battle_won_unit = {
 	on_battle_won_unit_effect = yes
+	#untitled ideas
+	if = {
+		limit = {
+			unit_owner = {
+				full_idea_group = militarism_ideas
+				has_disaster = uis_militarism_junta
+			}
+		}
+		root = {
+			on_battle_won_unit_juntarebels = yes
+		}
+	}
 	if = {
 		limit = {
 			unit_owner = { ai = no } #Scopes to Unit Owner from Unit Scope

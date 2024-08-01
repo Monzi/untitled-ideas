@@ -10,7 +10,7 @@ country_decisions = {
 		}
 		effect = {
 			country_event = {
-				id = uis_ideagroups.4009
+				id = ai_only_events.0001
 			}
 		}
 		ai_will_do = {

@@ -42,6 +42,20 @@ uis_local_men_drafted = {
 	local_manpower_modifier = -100
 	local_unrest = 2
 }
+uis_lost_to_junta_rebels = {
+	global_unrest = -1
+	land_maintenance_modifier = 0.15
+}
+uis_junta_intolerance = {
+	tolerance_heathen = -2
+	tolerance_heretic = -2
+	global_unrest = 1
+}
+uis_junta_strengthened_guard = {
+	country_military_power = -2
+	global_regiment_cost = 0.1
+	global_spy_defence = 0.25
+}
 
 # DIP
 # Court Ideas

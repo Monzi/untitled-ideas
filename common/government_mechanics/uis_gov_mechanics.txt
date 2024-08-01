@@ -1,0 +1,67 @@
+uis_junta_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		has_dlc = "Domination"
+		has_reform = junta_reform
+	}
+	
+	powers = {
+		uis_junta_militarization = {
+			max = 100
+			scaled_modifier = {
+				modifier = {
+					land_morale = 0.05
+					manpower_recovery_speed = 0.1
+					academy_loyalty_modifier = 20
+					mil_advisor_cost = -0.25
+					monthly_uis_junta_militarization = -0.1
+				}
+			}
+		}
+	}
+	interactions = {
+		boost_militarization_uis_junta_mechanic = {
+			gui = prussian_militarization_gov_mech_1_2
+			cost_type = uis_junta_militarization
+			trigger = {
+				mil_power = 50
+				not = {
+					has_government_power = {
+						mechanic_type = uis_junta_mechanic
+						power_type = uis_junta_militarization
+						value = 100
+					}
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = uis_junta_mechanic
+					power_type = uis_junta_militarization
+					value = 10
+				}
+				add_mil_power = -50
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					has_government_power = {
+						mechanic_type = uis_junta_mechanic
+						power_type = uis_junta_militarization
+						value = 90
+					}
+				}
+				modifier = {
+					factor = 0
+					not = { mil_power = 600 }
+				}
+				modifier = {
+					factor = 0
+					not = { mil = 4 }
+				}
+			}
+		}
+	}
+}
