@@ -801,7 +801,7 @@ decentralization_ideas = {
 	}
 
 	bonus = {
-		territories_governing_cost = -0.1
+		min_autonomy_in_territories = 0.20
 	}
 
 	decent_ideas_1 = {
@@ -816,6 +816,7 @@ decentralization_ideas = {
 	}
 	decent_ideas_4 = {
 		liberty_desire_from_subject_development = -0.25
+		territories_governing_cost = -0.1
 	}
 	decent_ideas_5 = {
 		vassal_sailors_bonus = 0.20

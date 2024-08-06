@@ -1777,6 +1777,71 @@ soyurghal_subject_type = {
 	}
 }
 
+# Untitled Ideas
+# Decent vassel
+# REPLACEME = {
+# 	copy_from = default
+
+# 	# Graphics
+# 	sprite = GFX_icon_REPLACEME_subject_type
+# 	diplomacy_overlord_sprite = GFX_diplomacy_lead_REPLACEME_subject_type
+# 	diplomacy_subject_sprite = GFX_diplomacy_am_REPLACEME_subject_type
+
+# 	# Properties
+# 	created_by_overlord = yes
+# 	extend_trading_range = yes
+# 	transfer_trade_power = yes
+# 	joins_overlords_wars = no
+# 	can_be_integrated = yes
+# 	takes_diplo_slot = no
+# 	can_release_in_peace = no
+# 	overlord_protects_external = yes
+# 	can_transfer_in_peace = no
+# 	gets_help_with_rebels = yes
+
+# 	max_government_rank = 1
+
+# 	base_liberty_desire = -25.0
+# 	liberty_desire_negative_prestige = 0.0
+# 	liberty_desire_development_ratio = 0.1
+# 	liberty_desire_same_dynasty = -25.0
+# 	liberty_desire_revolution = 0
+# 	pays_overlord = 2.0
+# 	forcelimit_to_overlord = 0.2
+# 	naval_forcelimit_to_overlord = 0.2
+# 	manpower_to_overlord = 0.2
+# 	sailors_to_overlord = 0.2
+# 	annex_cost_per_development = 6.0
+
+# 	relative_power_class = 1
+
+# 	restoration_cb = cb_disloyal_vassal
+
+# 	# Subject Interactions:
+# 	customize_subject = yes
+# 	replace_governor = yes
+# 	divert_trade = yes
+# 	seize_territory = yes
+# 	enforce_culture = yes
+# 	siphon_income = yes
+# 	seize_territory = yes
+# 	conscript_general = yes
+# 	request_extra_levies = yes
+# 	grant_administrative_autonomy = yes
+
+# 	# allows event modifiers
+#         # the vanilla modifiers aren't defined as event modifiers though
+# 	modifier_subject = {
+# 		modifier = subject_type_nation
+# 	}
+# 	modifier_overlord = {
+# 		modifier = subject_type_subject
+# 	}
+#         #looks in 00_opinion_modifers
+# 	overlord_opinion_modifier = is_subject_type
+# 	subject_opinion_modifier = is_subject_type
+# }
+
 # Completely scripted subject type (no code used). Add any number of these. Check common/new_diplomatic_actions for how to make visible in game.
 dummy =
 {
