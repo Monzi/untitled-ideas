@@ -27,7 +27,7 @@
 ##Junta Rebels
  junta_rebels_name:0 "$COUNTRY$ Junta Rebels"
  junta_rebels_title:0 "Junta"
- junta_rebels_desc:0 "The military wishes to seize power and enforce a junta."
+ junta_rebels_desc:0 "Enact a junta."
  junta_rebels_army:0 "Junta Army"
  junta_rebels_demands:0 "If the rebels enforce their demands, the country will change to a Junta, which is prohibits switching government."
 #Junta Disaster Title
@@ -38,3 +38,4 @@
  centralization_ideas_mechanic:0 "Gain a conditional modifier in every owned and subject province in home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!"
  quality_ideas_mechanic:0 "Gain province modifiers in provinces with Iron, Grain and Copper increasing the the strenght of our army."
  standingarmy_ideas_mechanic:0 "After ADM Tech 15:\nAllows Free Forced March"
+ uis_junta_tooltip:0 "Junta rebels will draft the local manpower from provinces they occupy, adding a 5 year modifier taking away all local manpower for that province."
