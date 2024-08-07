@@ -801,32 +801,31 @@ decentralization_ideas = {
 	}
 
 	bonus = {
-		governing_capacity_modifier = 0.20
+		min_autonomy_in_territories = 0.20
 	}
 
 	decent_ideas_1 = {
-		great_project_upgrade_cost = -0.1
-		great_project_upgrade_time = -0.1
+		move_capital_cost_modifier = -0.1
+		expand_administration_cost = 0.1
 	}
 	decent_ideas_2 = {
-		expand_administration_cost = -0.30
+		vassal_manpower_bonus = 0.20
 	}
 	decent_ideas_3 = {
-		global_tax_modifier = 0.10
+		vassal_forcelimit_bonus = 0.10
 	}
 	decent_ideas_4 = {
+		liberty_desire_from_subject_development = -0.25
 		territories_governing_cost = -0.1
 	}
 	decent_ideas_5 = {
-		reform_progress_growth = 0.15
+		vassal_sailors_bonus = 0.20
 	}
 	decent_ideas_6 = {
-		min_autonomy_in_territories = -0.10
+		vassal_naval_forcelimit_bonus = 0.10
 	}
 	decent_ideas_7 = {
-		vassal_forcelimit_bonus = 0.2
-		global_manpower_modifier = 0.10
-		global_sailors_modifier = 0.10
+		monthly_reform_progress_modifier = 0.1
 	}
 
 	ai_will_do = {
