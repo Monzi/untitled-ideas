@@ -911,7 +911,7 @@ country_event = {#Final Event that decides if you let the junta take power or fi
 	}
 	
 	option = {#Change your government to junta
-		name = "ph"
+		name = "ph 2"
 		trigger = {
 			or = {
 				check_variable = {#The value of previous events should be able to equal this number if at least 4 events have been completed the hard way
