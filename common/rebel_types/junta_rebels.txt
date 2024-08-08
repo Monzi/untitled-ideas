@@ -37,6 +37,9 @@ junta_rebels = {
 			owner = {
 				has_disaster = uis_militarism_junta
 			}
+			root = {
+				base_manpower = 6
+			}
 		}
 		modifier = {
 			factor = 0
@@ -92,7 +95,7 @@ junta_rebels = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			units_in_province = 5
+			units_in_province = 15
 		}
 		modifier = {
 			factor = 0.001

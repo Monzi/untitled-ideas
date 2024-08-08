@@ -61,7 +61,6 @@ uis_militarism_junta = {
 	}
 	can_stop = {
 		or = {
-			corruption = 21
 			stability = 3
 			mil = 5
 		}
@@ -232,5 +231,5 @@ uis_militarism_junta = {
 		}
 	}
 	on_start = uis_ideagroups.4000
-	on_end = uis_ideagroups.4002
+	
 }

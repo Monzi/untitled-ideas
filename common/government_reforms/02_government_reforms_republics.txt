@@ -4118,7 +4118,8 @@ junta_reform = {
 	lock_level_when_selected = yes
 	republic = yes
 	republican_name = yes
-	has_term_election = no
+	has_term_election = yes
+	duration = 8
 	
 
 	conditional = {
@@ -4138,7 +4139,7 @@ junta_reform = {
 	#should only be enactable on disaster or academy rebels enforcing
 	modifiers = {#something mil related that isnt way strong, since we also add militarization mechanic
 		discipline = 0.025
-		monthly_prussian_militarized_society_1 = 0.5 #ph
+		monthly_uis_junta_militarization = 0.05 #ph
 		global_unrest = 4
 		max_absolutism = 20
 		monarch_military_power = 2
@@ -4146,14 +4147,16 @@ junta_reform = {
 		monarch_diplomatic_power = -1
 		republican_tradition = -1
 		
+		
 	}
 	custom_attributes = {
 		#generals_become_rulers = yes
 		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
 		cannot_become_dictatorship = yes
-		force_general_leader = yes
+		rulers_can_be_generals = yes
+		
 		
 	}
 	effect = {
@@ -4173,27 +4176,6 @@ junta_reform = {
 			add_estate_loyalty = {
 				estate = all
 				loyalty = 5
-			}
-		}
-		hidden_effect = {
-			set_country_flag = uis_junta_elections
-			kill_ruler = yes
-			if = {
-				limit = { num_of_generals = 1 }
-				define_leader_to_ruler = {
-					type = general
-					adm = 2
-					dip = 2
-					mil = 5
-					}
-			}
-			else = {
-				define_ruler = {
-					adm = 2
-					dip = 2
-					mil = 5
-					max_age = 40
-				}
 			}
 		}
 	}
