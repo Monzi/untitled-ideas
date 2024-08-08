@@ -159,7 +159,7 @@ cent_merc = {
 	}
 
 	merc_leader_army_tradition = 0.5
-	allow_mercenaries_to_split = yes
+	mercenary_discipline = 0.05
 
 	effect = {}
 	removed_effect = {}
@@ -227,8 +227,8 @@ nat_merc = {
 		full_idea_group = mercenary_ideas
 	}
 
+	mercenary_cost = -0.10
 	mercenary_manpower = 0.10
-	mercenary_discipline = 0.05
 
 	effect = {}
 	removed_effect = {}
@@ -296,8 +296,8 @@ spy_aca = {
 		full_idea_group = academy_ideas
 	}
 
-	global_spy_defence = 0.1
-	backrow_artillery_damage = 0.10
+	spy_offence = 0.15
+	global_spy_defence = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -415,7 +415,7 @@ assi_stand = {
 	}
 
 	may_return_manpower_on_disband = yes
-	manpower_in_accepted_culture_provinces = 0.10
+	manpower_in_accepted_culture_provinces = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -438,7 +438,7 @@ nat_stand = {
 	}
 
 	may_return_manpower_on_disband = yes
-	manpower_in_culture_group_provinces = 0.1
+	manpower_in_culture_group_provinces = 0.20
 
 	effect = {}
 	removed_effect = {}
@@ -598,7 +598,6 @@ assi_horde = {
 
 	cavalry_power = 0.05
 	nomadic_tribes_loyalty_modifier = 0.1
-	num_accepted_cultures = 1
 
 	effect = {}
 	removed_effect = {}
@@ -620,8 +619,7 @@ assi_indi = {
 		full_idea_group = indigenous_ideas
 	}
 
-	tribal_development_growth = 0.015
-	num_accepted_cultures = 1
+	tribal_development_growth = 0.025
 
 	effect = {}
 	removed_effect = {}
@@ -689,8 +687,9 @@ assi_quality = {
 		full_idea_group = quality_ideas
 	}
 
+	infantry_power = 0.05
+	cavalry_power = 0.05
 	artillery_power = 0.10
-	num_accepted_cultures = 1
 
 	effect = {}
 	removed_effect = {}
@@ -758,9 +757,8 @@ nat_horde = {
 		full_idea_group = horde_gov_ideas
 	}
 
-	cav_to_inf_ratio = 0.25
+	cav_to_inf_ratio = 0.10
 	cavalry_cost = -0.05
-	culture_conversion_cost = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -783,7 +781,7 @@ nat_divine = {
 	}
 
 	land_morale = 0.1
-	culture_conversion_cost = -0.05
+	culture_conversion_time = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -806,7 +804,7 @@ nat_off = {
 	}
 
 	morale_damage = 0.05
-	culture_conversion_cost = -0.05
+	land_morale = 0.05
 
 	effect = {}
 	removed_effect = {}
@@ -852,7 +850,7 @@ nat_quality = {
 	}
 
 	artillery_power = 0.10
-	culture_conversion_cost = -0.05
+	culture_conversion_time = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1035,7 +1033,6 @@ mari_cav = {
 		full_idea_group = cavalry_ideas
 	}
 
-	landing_penalty = -1
 	regiment_disembark_speed = 0.25
 
 	effect = {}
@@ -1286,7 +1283,6 @@ indu_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	
 	discipline = 0.05
 
 	effect = {}
@@ -1309,10 +1305,10 @@ inno_aca = {
 		full_idea_group = academy_ideas
 	}
 
-	max_general_fire = 1
-	max_general_shock = 1
-	max_admiral_fire = 1
-	max_admiral_shock = 1
+	max_general_siege = 1
+	max_general_maneuver = 1
+	max_admiral_siege = 1
+	max_admiral_maneuver = 1
 
 	effect = {}
 	removed_effect = {}
@@ -1452,7 +1448,7 @@ infra_aca = {
 	}
 
 	may_recruit_female_generals = yes
-	own_territory_dice_roll_bonus = 1
+	army_tradition_decay = -0.01
 
 	effect = {}
 	removed_effect = {}

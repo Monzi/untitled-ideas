@@ -170,7 +170,7 @@ naval_inf = {
 	}
 
 	regiment_disembark_speed = 0.20
-	transport_attrition = -1
+	transport_attrition = -0.5
 
 	effect = {}
 	removed_effect = {}
@@ -629,8 +629,7 @@ reli_assi = {
 		full_idea_group = assimilation_ideas
 	}
 
-	tolerance_heretic = 1
-	tolerance_heathen = 1
+	tolerance_own = 0.5
 	num_accepted_cultures = 1
 
 	effect = {}
@@ -654,7 +653,6 @@ expan_assi = {
 	}
 
 	colonists = 1
-	num_accepted_cultures = 1
 
 	effect = {}
 	removed_effect = {}
@@ -677,7 +675,8 @@ hum_assi = {
 	}
 
 	years_of_nationalism = -5
-	num_accepted_cultures = 1
+	tolerance_heathen = 0.5
+	tolerance_heretic = 0.5
 
 	effect = {}
 	removed_effect = {}
@@ -702,7 +701,7 @@ assi_ari = {
 	nobles_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
 	maratha_loyalty_modifier = 0.1
-	num_accepted_cultures = 1
+	promote_culture_cost = -0.15
 
 	effect = {}
 	removed_effect = {}
@@ -773,8 +772,8 @@ assi_quant = {
 		full_idea_group = quantity_ideas
 	}
 
-	manpower_in_accepted_culture_provinces = 0.10
-	num_accepted_cultures = 1
+	manpower_in_accepted_culture_provinces = 0.15
+	promote_culture_cost = -0.10
 
 	effect = {}
 	removed_effect = {}
@@ -866,7 +865,7 @@ expan_nat = {
 	}
 
 	global_colonial_growth = 25
-	culture_conversion_cost = -0.05
+	culture_conversion_time = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -958,7 +957,7 @@ nat_aca = {
 	}
 
 	morale_damage_received = -0.05
-	culture_conversion_cost = -0.05
+	overextension_impact_modifier = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -981,7 +980,7 @@ nat_ari = {
 	}
 
 	unjustified_demands = -0.20
-	culture_conversion_cost = -0.05
+	years_of_nationalism = -5
 
 	effect = {}
 	removed_effect = {}
@@ -1027,7 +1026,7 @@ nat_indi = {
 	}
 
 	province_warscore_cost = -0.25
-	culture_conversion_cost = -0.05
+	culture_conversion_cost = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1073,7 +1072,7 @@ trade_aca = {
 	}
 
 	merchants = 1
-	trade_efficiency = 0.1
+	trade_efficiency = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -1096,7 +1095,7 @@ indu_mari = {
 	}
 
 	global_ship_cost = -0.1
-	global_ship_recruit_speed = -0.1
+	global_ship_recruit_speed = -0.15
 
 	effect = {}
 	removed_effect = {}
