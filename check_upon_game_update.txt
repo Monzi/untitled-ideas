@@ -8,11 +8,15 @@ common
 		06_government_reforms_common.txt
 	governments
 		00_governments.txt
+	ideas
+		00_basic_ideas.txt
 	on_actions
 		00_on_actions.txt
+	policies
+		00_adm.txt
+		00_dip.txt
+		00_mil.txt
 	scripted_triggers
 		00_scripted_triggers.txt
-	subject_types
-		00_subject_types.txt
 	technologies
 		adm.txt

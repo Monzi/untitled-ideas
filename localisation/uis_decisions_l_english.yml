@@ -22,7 +22,3 @@
  string_infantry_training_desc:0 "Rigorously trained troops make for a proper fighting force."
  string_cavalry_training_title:0 "Cavalry Training"
  string_cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."
-
-# POLICIES
- exchange_sailors_to_manpower_title:0 "REPLACE ME"
- exchange_sailors_to_manpower_desc:0 "REPLACE ME"

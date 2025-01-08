@@ -690,7 +690,7 @@ centralization_ideas = {
 		imperial_mandate = 0.1
 	}
 	cent_ideas_3 = {
-		same_culture_advisor_cost = -0.25	
+		same_culture_advisor_cost = -0.25
 	}
 	cent_ideas_4 = {
 		diplomatic_upkeep = 1
@@ -699,7 +699,7 @@ centralization_ideas = {
 		yearly_corruption = -0.05
 	}
 	cent_ideas_6 = {
-		expand_administration_cost = -0.5
+		expand_administration_cost = -0.25
 	}
 	cent_ideas_7 = {	
 		monthly_reform_progress_modifier = 0.10
@@ -801,31 +801,34 @@ decentralization_ideas = {
 	}
 
 	bonus = {
-		min_autonomy_in_territories = 0.20
+		governing_capacity_modifier = 0.1
+		allow_client_states = yes
 	}
 
 	decent_ideas_1 = {
-		move_capital_cost_modifier = -0.1
-		expand_administration_cost = 0.1
+		move_capital_cost_modifier = -0.10
+		expand_administration_cost = -0.5
 	}
 	decent_ideas_2 = {
-		vassal_manpower_bonus = 0.20
+		diplomats = 1
+		envoy_travel_time = -0.15
 	}
 	decent_ideas_3 = {
-		vassal_forcelimit_bonus = 0.10
+		great_project_upgrade_time = -0.1
 	}
 	decent_ideas_4 = {
 		liberty_desire_from_subject_development = -0.25
 		territories_governing_cost = -0.1
 	}
 	decent_ideas_5 = {
-		vassal_sailors_bonus = 0.20
+		merchants = 1
+		caravan_power = 0.1
 	}
 	decent_ideas_6 = {
-		vassal_naval_forcelimit_bonus = 0.10
+		monthly_reform_progress_modifier = 0.1
 	}
 	decent_ideas_7 = {
-		monthly_reform_progress_modifier = 0.1
+		min_autonomy_in_territories = -0.20
 	}
 
 	ai_will_do = {

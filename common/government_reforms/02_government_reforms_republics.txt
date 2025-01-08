@@ -4113,15 +4113,13 @@ ven_promissione_ducale_reform = {
 #Untitled Ideas T1 Reforms
 junta_reform = {
 	icon = "prussian_monarchy"
-	#vvv should be changed to no when testing is done vvv
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	republic = yes
 	republican_name = yes
 	has_term_election = yes
 	duration = 8
 	
-
 	conditional = {
 		allow = { has_dlc = "Domination" }
 		government_abilities = {
@@ -4131,11 +4129,6 @@ junta_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 25
 	can_form_trade_league = no
-	#only here for testing should be hidden always until enacted
-	potential = {
-		always = yes
-		#has_reform = junta_reform
-	}
 	#should only be enactable on disaster or academy rebels enforcing
 	modifiers = {#something mil related that isnt way strong, since we also add militarization mechanic
 		discipline = 0.025
@@ -4146,8 +4139,6 @@ junta_reform = {
 		monarch_admin_power = -1
 		monarch_diplomatic_power = -1
 		republican_tradition = -1
-		
-		
 	}
 	custom_attributes = {
 		#generals_become_rulers = yes
@@ -4156,8 +4147,6 @@ junta_reform = {
 		enables_aristocratic_idea_group = yes
 		cannot_become_dictatorship = yes
 		rulers_can_be_generals = yes
-		
-		
 	}
 	effect = {
 		if = {

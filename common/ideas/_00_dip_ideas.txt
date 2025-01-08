@@ -307,10 +307,11 @@ nationalism_ideas = {
 		same_culture_advisor_cost = -0.15
 	}
 	nationalism_ideas_3 = {
+		reinforce_speed = 0.2
 		reinforce_cost_modifier = -0.2
 	}
 	nationalism_ideas_4 = {
-		years_of_nationalism = -5
+		war_exhaustion = -0.05
 	}
 	nationalism_ideas_5 = {
 		land_morale = 0.1

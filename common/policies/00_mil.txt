@@ -1803,6 +1803,29 @@ decent_cav = {
 	}
 }
 
+decent_quant = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = decentralization_ideas
+		has_idea_group = quantity_ideas
+	}
+
+	allow = {
+		full_idea_group = decentralization_ideas
+		full_idea_group = quantity_ideas
+	}
+
+	land_forcelimit_modifier = 0.10
+	land_maintenance_modifier = -0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 #### Vanilla Policies ####
 privy_council_establishment_act = {
 	monarch_power = MIL

@@ -1,6 +1,7 @@
 uis_militarism_junta = {
 	
     potential = {
+		always = no
 		has_any_disaster = no
 		#OR = {
 		#	has_idea_group = militarism_ideas
@@ -231,5 +232,4 @@ uis_militarism_junta = {
 		}
 	}
 	on_start = uis_ideagroups.4000
-	
 }
