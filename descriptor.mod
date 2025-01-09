@@ -1,5 +1,5 @@
-version="4.6b"
-name="Untitled ideas BETA"
+version="2.0 BETA"
+name="Untitled Ideas BETA"
 dependencies={
 	"UI a la Artemis"
 }
