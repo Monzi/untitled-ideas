@@ -1,4 +1,372 @@
 #### Untitled Policies ####
+nat_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = nationalism_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = nationalism_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	culture_conversion_time = -0.1
+	morale_damage_received = -0.025
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+mari_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = maritime_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = maritime_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	can_transport_units = yes
+	transport_attrition = -0.2
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+naval_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = naval_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = naval_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	global_sailors_modifier = 0.1
+	capture_ship_chance = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+horde_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	movement_speed = 0.10
+	cavalry_fire = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+aca_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = academy_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = academy_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	max_general_maneuver = 1
+	leader_land_manuever = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+tac_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = tactic_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = tactic_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	movement_speed = 0.10
+	reserves_organisation = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+off_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = offensive_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = offensive_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	fire_damage = 0.1
+	unjustified_demands = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+def_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = defensive_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = defensive_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	shock_damage_received = -0.05
+	morale_damage_received = -0.025
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+inf_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = infantry_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = infantry_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	infantry_power = 0.05
+	recover_army_morale_speed = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+cav_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = cavalry_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = cavalry_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	cavalry_power = 0.05
+	reinforce_speed = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+stand_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = standingarmy_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = standingarmy_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	morale_damage_received = -0.025
+	land_attrition = -0.10 
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+merc_mil = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = mercenary_ideas
+		has_idea_group = militarism_ideas
+	}
+
+	allow = {
+		full_idea_group = mercenary_ideas
+		full_idea_group = militarism_ideas
+	}
+
+	mercenary_cost = -0.10 
+	drill_gain_modifier = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+expan_tac = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = expansion_ideas
+		has_idea_group = tactic_ideas
+	}
+
+	allow = {
+		full_idea_group = expansion_ideas
+		full_idea_group = tactic_ideas
+	}
+
+	native_assimilation = 0.1
+	land_morale = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+adm_tac = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = administrative_ideas
+		has_idea_group = tactic_ideas
+	}
+
+	allow = {
+		full_idea_group = administrative_ideas
+		full_idea_group = tactic_ideas
+	}
+
+	reinforce_cost_modifier = -0.15
+	governing_capacity = 100
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+assi_tac = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = assimilation_ideas
+		has_idea_group = tactic_ideas
+	}
+
+	allow = {
+		full_idea_group = assimilation_ideas
+		full_idea_group = tactic_ideas
+	}
+
+	discipline = 0.025
+	global_regiment_recruit_speed = -0.10 
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+nat_tac = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = nationalism_ideas
+		has_idea_group = tactic_ideas
+	}
+
+	allow = {
+		full_idea_group = nationalism_ideas
+		full_idea_group = tactic_ideas
+	}
+
+	culture_conversion_time = -0.15
+	reinforce_speed = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 skilled_cartographers = {
 	monarch_power = MIL
 	
