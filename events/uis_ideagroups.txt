@@ -1202,9 +1202,24 @@ country_event = {
 				}
 			}
 		}
+		country_event = {
+			id = uis_ideagroups.0002
+		}
 	}
 
 	option = {
 		name = uis_ideagroups.0001.a
+	}
+}
+
+country_event = {
+	id = uis_ideagroups.0002
+	title = uis_ideagroups.0002.t
+	desc = uis_ideagroups.0002.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = uis_ideagroups.0002.a
 	}
 }

@@ -51,3 +51,7 @@
  desc_uis_ideagroups.4009:0 "desc ph"
  uis_ideagroups.4009.a:0 "a"
  uis_ideagroups.4009.b:0 "b"
+# Training inf/cav
+ uis_ideagroups.0002.t:0 "The army has been restructured"
+ uis_ideagroups.0002.d:0 "Now that the army has been restructured, our power has grown and our enemies will fear us!"
+ uis_ideagroups.0002.a:0 "This is good!"
