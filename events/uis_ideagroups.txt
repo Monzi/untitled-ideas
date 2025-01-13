@@ -3,60 +3,49 @@ namespace = uis_ideagroups
 # Admin Ideas						  #
 #######################################
 country_event = {
-	title = uis_ideagroups.4000
-	desc = desc_uis_ideagroups.4000
-	picture = BATTLE_eventPicture
 	id = uis_ideagroups.4000
+	title = uis_ideagroups.4000.t
+	desc = uis_ideagroups.4000.d
+	picture = BATTLE_eventPicture
 	is_triggered_only = yes
 
 	immediate = {
-		capital_scope = {
-			region = {
-				random_province = {
-					spawn_rebels = {
-						size = 2
-						type = junta_rebels
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = uis_ideagroups.4000.a
+
+		set_country_flag = uis_junta_disaster_started
 		set_variable = {
 			which = junta_progress
 			value = 0
 		}
-		add_country_modifier = {
-			name = uis_junta_takeover_begun
-			duration = -1
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				is_in_capital_area = yes				
+			}
+			spawn_rebels = {
+				size = 2
+				type = junta_rebels
+			}
 		}
-		hidden_effect = {
-			remove_country_modifier = uis_trouble_brewing
-		}
+		remove_country_modifier = uis_trouble_brewing		
 		add_stability = -2
-		set_country_flag = uis_junta_disaster_started
-		custom_tooltip = uis_junta_tooltip
+		country_event = {
+			id = uis_ideagroups.4001
+			days = 60
+			random = 15
+		}
+	}
+	option = {
+		name = uis_ideagroups.4000.a
 	}
 }
 country_event = {#choice to either pay local landholders to back down from the rebellion or spawn rebels
-	title = uis_ideagroups.4001
-	desc = desc_uis_ideagroups.4001
-	picture = SIEGE_eventPicture
 	id = uis_ideagroups.4001
+	title = uis_ideagroups.4001.t
+	desc = uis_ideagroups.4001.d
+	picture = SIEGE_eventPicture
 	
-	mean_time_to_happen = {
-		months =  12
-		modifier = {
-			factor = 4
-			has_country_modifier = uis_junta_forts_paid
-		}
-	}
-	trigger = {
-		has_disaster = uis_militarism_junta
-		
-	}
-
+	is_triggered_only = yes
+	
 	option = {#Fight the traitors
 		name = uis_ideagroups.4001.a
 		add_prestige = 10
@@ -113,13 +102,63 @@ country_event = {#choice to either pay local landholders to back down from the r
 			name = uis_junta_paid_off
 			duration = -1
 		}
-		change_variable = {
-			which = junta_progress
-			value = 4
-		}
 		add_country_modifier = {
 			name = uis_junta_forts_paid
-			duration = 1825
+			duration = -1
+		}
+		hidden_effect = {
+			change_variable = {
+				which = junta_progress
+				value = 4
+			}
+		}	
+	}
+	after = {
+
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_estate = estate_nobles
+						NOT = {
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						has_estate = estate_rajput
+						NOT = {
+							estate_loyalty = {
+								estate = estate_rajput
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						has_estate = estate_maratha
+						NOT = {
+							estate_loyalty = {
+								estate = estate_maratha
+								loyalty = 60
+							}
+						}
+					}
+				}
+			}
+			country_event = {
+				id = uis_ideagroups.4003
+				days = 60
+				random = 15
+			}
+		}
+		else = {
+			country_event = {
+				id = uis_ideagroups.4004
+				days = 60
+				random = 15
+			}
 		}
 	}
 }
@@ -129,7 +168,7 @@ country_event = {
 	desc = desc_uis_ideagroups.4002
 	picture = SPY_eventPicture
 	id = uis_ideagroups.4002
-
+	
 	mean_time_to_happen = {
 		months = 2
 	}
@@ -156,277 +195,208 @@ country_event = {
 }
 
 country_event = {#Event describing the nobles supporting the junta
-	title = uis_ideagroups.4003
-	desc = desc_uis_ideagroups.4003
+	id = uis_ideagroups.4003	
+	title = uis_ideagroups.4003.t
+	desc = uis_ideagroups.4003.d
 	picture = ""
-	id = uis_ideagroups.4003
-
-	mean_time_to_happen = {
-		months = 20
-		modifier = {
-			factor = 2
-			has_country_flag = uis_junta_nobleshandled
-		}
-		modifier = {
-			factor = 0.8
-			check_variable = {
-				junta_progress = 9
-			}
-		}
-		modifier = {
-			factor = 0.6
-			check_variable = {
-				junta_progress = 18
-			}
-		}
-		modifier = {
-			factor = 0.4
-			check_variable = {
-				junta_progress = 27
-			}
-		}
-	}
-
-	trigger = {
-		has_disaster = uis_militarism_junta
-		if = {
-			limit = { has_estate = estate_nobles }
-			
-			not = {
-				estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 60
-				}
-			}
-		}
-		else_if = {
-			limit = { has_estate = estate_rajput }
-			
-			not = {
-				estate_loyalty = {
-					estate = estate_rajput
-					loyalty = 60
-				}
-			}
-		}
-		else_if = {
-			limit = { has_estate = estate_rajput }
-			
-			not = {
-				estate_loyalty = {
-					estate = estate_maratha
-					loyalty = 60
-				}
-			}
-		}
-	}
+	
+	is_triggered_only = yes
 
 	option = {#Let the nobles gain influence in exchange of slowing down the rebels
-		name = uis_ideagroups.4003.a
-		if = {
-			limit = { has_estate = estate_nobles }
-			add_estate_loyalty = {
+		name = uis_ideagroups.4003.1
+		trigger = {
+			has_estate = estate_nobles
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 10
+		}
+		junta_event_option_4003A_effect = yes
+	}
+	option = {
+		name = uis_ideagroups.4003.2
+		trigger = {
+			has_estate = estate_rajput
+		}
+		add_estate_loyalty = {
+			estate = estate_rajput
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_rajput
+			share = 10
+		}
+		junta_event_option_4003A_effect = yes
+	}
+	option = {
+		name = uis_ideagroups.4003.3
+		trigger = {
+			has_Estate = estate_maratha
+		}
+		add_estate_loyalty = {
+			estate = estate_maratha
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_maratha
+			share = 10
+		}
+		junta_event_option_4003A_effect = yes
+	}
+
+	option = {#punish the nobles or equivalent
+		name = uis_ideagroups.4003.4
+		trigger = { has_estate = estate_nobles }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -5
+		}
+		random_owned_province = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			spawn_rebels = {
+				size = 2
 				estate = estate_nobles
-				loyalty = 10
-			}
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = 10
 			}
 		}
-		else_if = {
-			limit = { has_estate = estate_rajput }
-			add_estate_loyalty = {
+		junta_event_option_4003B_effect = yes
+	}
+	option = {
+		name = uis_ideagroups.4003.5
+		trigger = { has_estate = estate_rajput }
+		add_estate_loyalty = {
+			estate = estate_rajput
+			loyalty = -20
+		}
+		change_estate_land_share = {
+			estate = estate_rajput
+			share = -5
+		}
+		random_owned_province = {
+			limit = {
+				has_estate = estate_rajput
+			}
+			spawn_rebels = {
+				size = 2
 				estate = estate_rajput
-				loyalty = 10
 			}
-			change_estate_land_share = {
-				estate = estate_rajput
-				share = 10
-			}
-			
 		}
-		else_if = {
-			limit = { has_estate = estate_maratha }
-			add_estate_loyalty = {
-				estate = estate_maratha
-				loyalty = 10
-			}
-			change_estate_land_share = {
-				estate = estate_maratha
-				share = 10
-			}			
+		junta_event_option_4003B_effect = yes
+	}
+	option = {
+		name = uis_ideagroups.4003.6
+		trigger = {	has_estate = estate_maratha	}
+		add_estate_loyalty = {
+			estate = estate_maratha
+			loyalty = -20
 		}
-		add_prestige = -5
-		add_scaled_republican_tradition = 5
-		add_legitimacy = 5
-		add_meritocracy = 5
-		add_horde_unity = 5
-		add_devotion = 5
-		hidden_effect = {
-			change_variable = {
-				which = junta_progress
-				value = 4
+		change_estate_land_share = {
+			estate = estate_maratha
+			share = -5
+		}
+		random_owned_province = {
+			limit = {
+				has_estate = estate_maratha
 			}
-			set_country_flag = uis_junta_nobleshandled
-			add_country_modifier = {
-				name = uis_junta_nobles_handled
-				duration = 1825
+			spawn_rebels = {
+				size = 2
+				estate = estate_maratha
+			}
+		}
+		junta_event_option_4003B_effect = yes
+	}	
+	option = {
+		name = uis_ideagroups.4003.7
+		trigger = {
+			NOT = {
+				OR = {
+					has_estate = estate_nobles
+					has_estate = estate_rajput
+					has_estate = estate_maratha
+				}
+			}
+		}
+		junta_event_option_4003B_effect = yes
+		add_mil_power = -100
+		add_adm_power = -100
+	}
+	after = {
+		country_event = {
+			id = uis_ideagroups.4004
+		}
+	}
+}
+country_event = {#Junta convinces peasantry that they would be better off under their rule
+	id = uis_ideagroups.4004
+	title = uis_ideagroups.4004.t
+	desc = desc_uis_ideagroups.4004.d
+	picture = ""
+	
+	is_triggered_only = yes
+	immediate = {
+		capital_scope = {
+			region = {
+				save_event_target_as = uis_regional_peasant_rebels
 			}
 		}
 	}
-	option = {#punish the nobles or equivalent
-		name = uis_ideagroups.4003.b
-		if = {
-			limit = { has_estate = estate_nobles }
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_nobles
-				share = -5
-			}
-			random_owned_province = {
-				limit = {
-					has_estate = estate_nobles
-				}
-				spawn_rebels = {
-					size = 2
-					estate = estate_nobles
-				}
-			}
+
+	option = {#Spawn peasants
+		name = uis_ideagroups.4004.1
+		trigger_switch = {
+			on_trigger = num_of_cities
+			30 = { uis_regional_peasant_rebels_size3 = yes }
+			20 = { uis_regional_peasant_rebels_size2 = yes }
+			1 = { uis_regional_peasant_rebels_size1 = yes }			
 		}
-		else_if = {
-			limit = { has_estate = estate_rajput }
-			add_estate_loyalty = {
-				estate = estate_rajput
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_rajput
-				share = -5
-			}
-			random_owned_province = {
-				limit = {
-					has_estate = estate_rajput
-				}
-				spawn_rebels = {
-					size = 2
-					estate = estate_rajput
-				}
-			}
-			
-		}
-		else_if = {
-			limit = { has_estate = estate_maratha }
-			add_estate_loyalty = {
-				estate = estate_maratha
-				loyalty = -20
-			}
-			change_estate_land_share = {
-				estate = estate_maratha
-				share = -5
-			}
-			random_owned_province = {
-				limit = {
-					has_estate = estate_maratha
-				}
-				spawn_rebels = {
-					size = 2
-					estate = estate_maratha
-				}
-			}
-			
-		}
-		else = {
-			add_mil_power = -100
-			add_adm_power = -100
-		}
+		add_prestige = 5
+		add_corruption = -1
 		hidden_effect = {
 			change_variable = {
 				which = junta_progress
 				value = 9
 			}
 		}
-		set_country_flag = uis_junta_noblessupportjunta
-	}
-}
-country_event = {#Junta convinces peasantry that they would be better off under their rule
-	title = uis_ideagroups.4004
-	desc = desc_uis_ideagroups.4004
-	picture = ""
-	id = uis_ideagroups.4004
-	mean_time_to_happen = {
-		months = 24
-		modifier = {
-			factor = 0.8
-			check_variable = {
-				junta_progress = 9
-			}
-		}
-		modifier = {
-			factor = 0.6
-			check_variable = {
-				junta_progress = 18
-			}
-		}
-		modifier = {
-			factor = 0.4
-			check_variable = {
-				junta_progress = 27
-			}
-		}
-	}
-	trigger = {
-		has_disaster = uis_militarism_junta
-	}
-
-	option = {#Spawn peasants
-		name = uis_ideagroups.4004.a
-		capital_scope = {
-			region = {
-				random_province = {
-					spawn_rebels = {
-						size = 3
-						type = anti_tax_rebels					
-					}
-				}
-				random_province = {
-					spawn_rebels = {
-						size = 2
-						type = anti_tax_rebels					
-					}
-				}
-			}
-		}
-		add_prestige = 5
-		add_corruption = -1
-		change_variable = {
-			which = junta_progress
-			value = 9
-		}
 	}
 	option = {#Peaceful option
 		name = uis_ideagroups.4004.b
-		every_owned_province = {
-			add_local_autonomy = 15
-		}
+		custom_tooltip = uis_junta_event_4004b
 		add_years_of_income = -1
 		add_corruption = 2
-		change_variable = {
-			which = junta_progress
-			value = 4
+		hidden_effect = {
+			every_owned_province = {
+				add_local_autonomy = 10
+			}
+			
+			change_variable = {
+				which = junta_progress
+				value = 4
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = uis_ideagroups.4005
+			days = 60
+			random = 15
 		}
 	}
 }
 country_event = {#Rebel General Captured
-	title = uis_ideagroups.4005
-	desc = desc_uis_ideagroups.4005
-	picture = SPY_eventPicture
 	id = uis_ideagroups.4005
+	title = uis_ideagroups.4005.t
+	desc = uis_ideagroups.4005.d
+	picture = SPY_eventPicture	
 
-	fire_only_once = yes
 	is_triggered_only = yes
 	#mean_time_to_happen = {
 	#	months = 20
@@ -453,12 +423,6 @@ country_event = {#Rebel General Captured
 	#		}
 	#	}
 	#}
-	trigger = {
-		has_disaster = uis_militarism_junta
-		not = {
-			has_country_flag = uis_junta_dealtwithrebelleader
-		}
-	}
 	#immediate = {
 	#	kill_leader = {
 	#		type = general

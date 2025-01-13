@@ -35,8 +35,16 @@ uis_militarism_junta = {
 				skill = 3
 				category = MIL
 			}
-			has_leader_with = {
-				total_pips = 12
+			AND = {
+				NOT = {
+					has_leader_with = {
+						total_pips = 12
+						is_monarch_leader = yes
+					}
+				}
+				has_leader_with = {
+					total_pips = 12
+				}
 			}
 		}
 	}
@@ -53,7 +61,9 @@ uis_militarism_junta = {
 				}
 			}
 			else = {
-				has_mil_advisor = no
+				NOT = {
+					has_mil_advisor = yes
+				}
 				NOT = {
 					has_leader_with = {
 						total_pips = 12
@@ -90,7 +100,18 @@ uis_militarism_junta = {
 			else = {
 				AND = {
 					has_mil_advisor = no
-					NOT = {
+					#NOT = {
+					#	has_leader_with = {
+					#		total_pips = 12
+					#	}
+					#}
+					AND = {
+						NOT = {
+							has_leader_with = {
+								total_pips = 12
+								is_monarch_leader = yes
+							}
+						}
 						has_leader_with = {
 							total_pips = 12
 						}
@@ -125,22 +146,22 @@ uis_militarism_junta = {
 		}
 		modifier = {
 			factor = 0.5
-			has_leader_with = {
-				total_pips = 12
-				### PLACEHOLDER VVVV ###
-				is_monarch_leader = no
-			}
-			#AND = {
-			#	NOT = {
-			#		has_leader_with = {
-			#			total_pips = 12
-			#			is_monarch_leader = yes
-			#		}
-			#	}
-			#	has_leader_with = {
-			#		total_pips = 12
-			#	}
+			#has_leader_with = {
+			#	total_pips = 12
+			#	### PLACEHOLDER VVVV ###
+			#	is_monarch_leader = no
 			#}
+			AND = {
+				NOT = {
+					has_leader_with = {
+						total_pips = 12
+						is_monarch_leader = yes
+					}
+				}
+				has_leader_with = {
+					total_pips = 12
+				}
+			}
 			
 		}
 		modifier = {
@@ -184,6 +205,12 @@ uis_militarism_junta = {
 			}
 		}
 
+	}
+
+	modifier = {
+		global_regiment_cost = 0.25
+		global_unrest = 5
+		stability_cost_modifier = 1
 	}
 	on_start = uis_ideagroups.4000
 }

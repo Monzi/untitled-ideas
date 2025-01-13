@@ -360,3 +360,104 @@ quality_mechanic = {
 		}
 	}
 }
+junta_event_option_4003A_effect = {
+	add_prestige = -5
+	add_scaled_republican_tradition = 5
+	add_legitimacy = 5
+	add_meritocracy = 5
+	add_devotion = 5
+	add_country_modifier = {
+		name = uis_junta_nobles_handled
+		duration = 1825
+	}
+	hidden_effect = {
+		change_variable = {
+			which = junta_progress
+			value = 4
+		}
+		set_country_flag = uis_junta_nobleshandled
+	}
+}
+junta_event_option_4003B_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = junta_progress
+			value = 9
+		}
+	}
+	set_country_flag = uis_junta_noblessupportjunta
+}
+junta_event_chain_cleanup = {
+	clr_country_flag = uis_junta_nobleshandled
+	clr_country_flag = uis_junta_ally_help
+	clr_country_flag = uis_junta_dealtwithrebelleader
+	clr_country_flag = uis_junta_noblessupportjunta
+	clr_country_flag = uis_junta_disaster_started
+}
+#generic effect to spawn peasants in same region as capital but not in capital
+uis_regional_peasant_rebels_size1 = {
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = anti_tax_rebels
+		}
+	}
+}
+uis_regional_peasant_rebels_size2 = {
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = anti_tax_rebels
+		}
+	}
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = anti_tax_rebels
+		}
+	}
+}
+uis_regional_peasant_rebels_size3 = {
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = junta_rebels
+		}
+	}
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = anti_tax_rebels
+		}
+	}
+	random_owned_province = {
+		limit = {
+			is_capital = no
+			region = event_target:uis_regional_peasant_rebels
+		}
+		spawn_rebels = {
+			size = 2
+			type = anti_tax_rebels
+		}
+	}
+}
