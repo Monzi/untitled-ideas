@@ -1,5 +1,5 @@
 estate_academy = {
-	icon = 2
+	icon = 16
 
 	# If true, country will get estate
 	trigger = {	
@@ -8,15 +8,13 @@ estate_academy = {
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		war_exhaustion = -0.10
-		leader_cost = -0.10
+		leader_cost = -0.25
 		free_leader_pool = 2
 		yearly_army_professionalism = 0.002
 	}
 	country_modifier_neutral = {
 		leader_cost = -0.10
 		free_leader_pool = 1
-		yearly_army_professionalism = 0.001
 	}	
 	country_modifier_angry = {
 		leader_cost = 0.10
@@ -76,7 +74,7 @@ estate_academy = {
 		loyalty = -20
 	}
 
-	color = { 73 108 205 }
+	color = { 159 119 32 }
 
 	privileges = {
 		estate_academy_right_of_counsel

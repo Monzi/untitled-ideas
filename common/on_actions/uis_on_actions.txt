@@ -1,0 +1,41 @@
+#Unit Scope OnAction for Battle Won
+on_battle_won_unit = {
+	if = {
+		limit = {
+			unit_owner = {
+				full_idea_group = militarism_ideas
+				has_disaster = uis_militarism_junta
+			}
+		}
+		root = {
+			on_battle_won_unit_juntarebels = yes
+		}
+	}
+}
+
+# province
+# FROM = old owner
+on_province_owner_change = {
+	on_province_owner_change_quality_mechanic = yes
+	on_province_owner_change_recentralize_region = yes
+}
+
+# ROOT = Overlord, FROM = Minor
+on_dependency_gained = {
+	on_dependecy_gained_centralization = yes
+}
+
+# ROOT = Overlord, FROM = Minor
+on_dependency_lost = {
+	uis_central_dependencylost = yes
+}
+
+# ROOT = New vassal, FROM = Overlord
+on_create_vassal = {
+	on_country_vassal_created_centralize_subject = yes
+}
+
+#ROOT = new capital province, FROM = old capital
+on_capital_moved = {
+	centralization_capital_moved = yes
+}
