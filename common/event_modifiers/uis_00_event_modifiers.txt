@@ -234,6 +234,17 @@ upgraded_stand_5 = {
 	force_march_free = yes
 }
 
+# Academy Estate Modifiers
+uis_academy_commissions = {
+	army_tradition = 0.5
+	yearly_army_professionalism = 0.002
+}
+#province modifier for prestigious academy
+uis_prestige_academy = {
+	prestige = 0.5
+	yearly_army_professionalism = 0.02
+	mil_advisor_cost = 0.15
+}
 
 # Modifiers for policies.
 # ------------------------------------------------------------------------------------------------

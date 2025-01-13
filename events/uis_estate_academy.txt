@@ -1,0 +1,591 @@
+### ACADEMY ESTATE EVENTS ###
+
+namespace = academy_estate_events
+
+#Academy demands commission
+
+country_event = {
+	id = uis_academy_events.1
+	title = uis_academy_events.1.t
+	desc = uis_academy_events.1.d
+	picture = "ph"
+
+	trigger = {
+		has_estate = estate_academy
+		estate_influence = {
+			estate = estate_academy
+			influence = 70
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_academy_commisions
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_denied_academy_commisions
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	#grant commissions
+	option = {
+		
+		name = uis_academy_events.1.a 
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_academy
+						loyalty = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 1.2
+				estate_loyalty = {
+					estate = estate_academy
+					loyalty = 50
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_academy
+						loyalty = 60
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 30
+					}
+				}
+			}	
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = 15
+		}
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_jains				
+			}
+			add_estate_loyalty = {
+				estate = estate_jains
+				loyalty = -20
+			}
+		}
+		add_country_modifier = {
+			name = uis_academy_commissions
+			duration = 7300
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = uis_estate_academy_commisions
+			influence = 15
+			duration = 7300
+		}
+	}
+	#deny commission
+	option = {
+		name = uis_academy_events.1.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				has_estate = estate_nobles
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_estate = estate_jains
+				NOT = {
+					estate_loyalty = {
+						estate = estate_jains
+						loyalty = 40
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_academy
+						loyalty = 30
+					}
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = -20
+		}
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 15
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_jains
+			}
+			add_estate_loyalty = {
+				estate = estate_jains
+				loyalty = 15
+			}
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = uis_estate_denied_academy_commisions
+			influence = -10
+			duration = 7300
+		}
+	}
+}
+
+#Gaining influence event
+country_event = {
+	id = uis_academy_events.2
+	title = uis_academy_events.2.t
+	desc = uis_academy_events.2.d
+	picture = "p"
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_estate = estate_academy
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_academy_gain_influence
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_academy_lose_influence
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = uis_academy_events.2.a
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = uis_estate_academy_gain_influence
+			influence = 10
+			#15y
+			duration = 5475
+		}
+	}
+}
+#losing influence
+country_event = {
+	id = uis_academy_events.3
+	title = uis_academy_events.3.t
+	desc = uis_academy_events.3.d
+	picture = "p"
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_estate = estate_academy
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_academy_gain_influence
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = uis_estate_academy_lose_influence
+			}
+		}
+		estate_influence = {
+			estate = estate_academy
+			influence = 20
+		}
+	}
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = uis_academy_events.3.a
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = uis_estate_academy_lose_influence
+			influence = -15
+			#15y
+			duration = 5475
+		}
+	}
+}
+#seize land rebellion #maybe unnecessary
+
+#gain general, admiral or advisors
+country_event = {
+	id = uis_academy_events.4
+	title = uis_academy_events.4.t
+	desc = uis_academy_events.4.d
+	picture = "ph"
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_estate = estate_academy
+		estate_loyalty = {
+			estate = estate_academy
+			loyalty = 75
+		}
+		estate_influence = {
+			estate = estate_academy
+			influence = 60
+		}
+		estate_territory = {
+			estate = estate_academy
+			territory = 1
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { num_of_ports = 1 }
+				random_list = {
+					25 = { set_country_flag = academy_general }
+					25 = { set_country_flag = academy_admiral }
+					25 = { set_country_flag = academy_naval_r }
+					25 = { set_country_flag = academy_army_r }
+				}
+			}
+			if = {
+				limit = { NOT = { num_of_ports = 1 } }
+				random_list = {
+					50 = { set_country_flag = academy_general }
+					50 = { set_country_flag = academy_army_r }
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_territory = no
+					is_city = yes
+				}
+				save_event_target_as = academy_province
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = uis_academy_events.4.a
+		trigger_switch = {
+			on_trigger = has_country_flag
+			academy_general = {
+				create_general = {
+					tradition = 75
+				}
+				clr_country_flag = academy_general
+			}
+			academy_admiral = {
+				create_admiral = {
+					tradition = 75
+				}
+				clr_country_flag = academy_admiral
+			}
+			academy_naval_r = {
+				if = {
+					limit = {
+						NOT = { monthly_income = 25 }
+					}
+					define_advisor = {
+						type = naval_reformer
+						culture = event_target:academy_province
+						religion = event_target:academy_province
+						skill = 2
+					}
+				}
+				if = {
+					limit = {
+						monthly_income = 25
+					}
+					define_advisor = {
+						type = naval_reformer
+						culture = event_target:academy_province
+						religion = event_target:academy_province
+						skill = 3
+					}
+				}
+				clr_country_flag = academy_naval_r
+			}
+			academy_army_r = {
+				if = {
+					limit = {
+						NOT = { monthly_income = 25 }
+					}
+					define_advisor = {
+						type = army_reformer
+						culture = event_target:academy_province
+						religion = event_target:academy_province
+						skill = 2
+					}
+				}
+				if = {
+					limit = {
+						monthly_income = 25
+					}
+					define_advisor = {
+						type = army_reformer
+						culture = event_target:academy_province
+						religion = event_target:academy_province
+						skill = 3
+					}
+				}
+				clr_country_flag = academy_army_r
+			}
+		}
+	}
+}
+#prestigious academy
+country_event = {
+	id = uis_academy_events.5
+	title = uis_academy_events.5.t
+	desc = uis_academy_events.5.d
+	picture = "ph"
+
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		estate_influence = {
+			estate = estate_academy
+			influence = 60
+		}
+		estate_territory = {
+			estate = estate_academy
+			territory = 5
+		}
+		prestige = 25
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = UIS_GRANTED_PRESTIGE_ACADEMY
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = UIS_DENIED_PRESTIGE_ACADEMY
+			}
+		}
+		any_owned_province = {
+			is_city = yes
+			is_territory = no
+			OR = {
+				has_building = training_fields
+				has_building = barracks
+				has_building = soldier_households
+				has_building = regimental_camp
+				has_building = conscription_center
+				has_building = university
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_city = yes
+					is_territory = no
+					OR = {
+						has_building = training_fields
+						has_building = barracks
+						has_building = soldier_households
+						has_building = regimental_camp
+						has_building = conscription_center
+						has_building = university
+						
+					}
+				}
+				save_event_target_as = uis_academy_prestige_province
+			}
+		}
+	}
+	#fund the academy
+	option = {
+		name = uis_academy_events.5.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				personality = ai_militarist
+			}
+		}
+		add_years_of_income = -2
+		add_prestige = 10
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = UIS_GRANTED_PRESTIGE_ACADEMY
+			influence = 10
+			duration = 7300
+		}
+		event_target:uis_academy_prestige_province = {
+			add_province_modifier = {
+				name = uis_prestige_academy
+				duration = 3650
+			}
+		}
+	}
+	#do not
+	option = {
+		name = uis_academy_events.5.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = {
+					years_of_income = 2
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = UIS_DENIED_PRESTIGE_ACADEMY
+			influence = -10
+			duration = 3650
+		}
+	}
+}
+#academy demnand more autonomy
+country_event = {
+	id = uis_academy_events.6
+	title = uis_academy_events.6.t
+	desc = uis_academy_events.6.d
+	picture = "ph"
+
+	is_triggered_only = yes
+	
+
+	immediate = {
+		hidden_effect = {
+			while = {
+				limit = {
+					NOT = {
+						development_in_provinces = {
+							has_province_flag = uis_academy_estate_revolt
+							value = estate
+							estate = estate_academy
+						}
+					}
+					any_owned_province = {
+						is_territory = no
+						is_capital = no
+						is_city = yes
+						NOT = { has_province_flag = uis_academy_estate_revolt }
+					}
+					check_reducing_estate_revolt_size_trigger = {
+						FLAG = uis_academy_estate_revolt
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_territory = no
+						is_capital = no
+						is_city = yes
+						NOT = { has_province_flag = uis_academy_estate_revolt }
+					}
+					set_province_flag = uis_academy_estate_revolt
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = uis_academy_events.6.a
+		ai_chance = {
+			factor = 1
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = UIS_ACADEMY_GRANTED_AUTONOMY
+			influence = 10
+			duration = 5475
+		}
+		every_owned_province = {
+			limit = { has_province_flag = uis_academy_estate_revolt }
+			add_local_autonomy = 33
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_flag = uis_academy_estate_revolt }
+				clr_province_flag = uis_academy_estate_revolt
+			}
+		}
+	}
+	option = {
+		name = uis_academy_events.6.b
+		ai_chance = {
+			factor = 0
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = UIS_ACADEMY_DENIED_AUTONOMY
+			influence = -10
+			duration = 5475
+		}
+		every_owned_province = {
+			limit = { has_province_flag = uis_academy_estate_revolt }
+			clr_province_flag = uis_academy_estate_revolt
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+		}
+	}
+}
