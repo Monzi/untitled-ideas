@@ -1,117 +1,172 @@
 uis_militarism_junta = {
 	
     potential = {
-		always = no
-		has_any_disaster = no
-		#OR = {
-		#	has_idea_group = militarism_ideas
-		#	has_estate = estate_academy
-		#}
-		#not = {
-		#	#has_reform = junta_reform
-		#	has_unlocked_government_reform = {
-		#		government_reform = junta_reform
-		#	}
-		#	
-		#}
-	}
-	can_start = {#might be to many conditions but i want to cover alot of bases to 
-					#not make this something you can "just" flip into
-		or = {
+		OR = {
 			full_idea_group = militarism_ideas
 			has_estate = estate_academy
 		}
-		or = {			
-			and = {#Basically checks for if your legitmacy is low OR you have a non-monarchy government type
-					#and you have a high skill general and advisor.
-				has_leader_with = {
-					general = yes
-					total_pips = 12
-				}
-				employed_advisor = {
-					category = mil
-					skill = 3
-				}
-				or = {
-					not = {
-						legitimacy = 60
-					}
-					government = republic
-					government = theocracy
-					government = tribal
-					is_nomad = yes					
-				}
-			}
-			capital_scope = {
-				controller = {
-					REB = {
-						is_rebel_type = junta_rebels
-					}
-				}
+		NOT = {
+			OR = {
+				has_reform = junta_reform
+				has_reform = military_dictatorship
+				has_reform = prussian_republic_reform
+				has_reform = prussian_monarchy
+				has_reform = holy_horde_reform
 			}
 		}
-		not = {
-			mil = 5
-		}
-		and = {
-			stability = -2
-			not = {
-				stability = -1
+		is_nomad = no
+	}
+	can_start = {
+		has_any_disaster = no
+		is_at_war = no
+		
+		if = {
+			limit = {
+				has_estate = estate_academy			
+			}
+			estate_influence = {
+				estate = estate_academy
+				influence = 100
+			}
+		}		
+		else = {
+			full_idea_group = militarism_ideas
+			employed_advisor = {
+				skill = 3
+				category = MIL
+			}
+			has_leader_with = {
+				total_pips = 12
 			}
 		}
 	}
 	can_stop = {
-		or = {
-			stability = 3
-			mil = 5
-		}
-	}
-	can_end = {
-		and = {
-			mil = 5
-			months_of_ruling = 120
-		}
-	}
-	#most of these are placeholder or not fully thought through
-	progress = {
-		modifier = {
-			factor = 7
-			capital_scope = {
-				controller = {
-					REB = {
-						is_rebel_type = junta_rebels
+		OR = {
+			has_any_disaster = yes
+			if = {
+				limit = { has_estate = estate_academy }
+				NOT = {
+					estate_influence = {
+						estate = estate_academy
+						influence = 100
 					}
 				}
 			}
-		}
-		modifier = {
-			factor = 3
-			capital_scope = {
-				has_siege = yes
-
+			else = {
+				has_mil_advisor = no
+				NOT = {
+					has_leader_with = {
+						total_pips = 12
+					}
+				}
+				NOT = {
+					legitimacy = 50
+				}
 			}
 			
 		}
+	}
+	can_end = { #NEED ON_ACTION TO REMOVE FLAG ON SWITCH GOV
+		custom_trigger_tooltip = {
+			tooltip = UIS_JUNTA_DISASTER_TOOLTIP
+			has_country_flag = uis_junta_in_power
+		}
+	}
+	#most of these are placeholder or not fully thought through
+
+	down_progress = {
+		factor = 0
 		modifier = {
-			factor = 3
-			estate_loyalty = {
-				estate = estate_academy
-				loyalty = 0
-			}
-			not = {
-				estate_loyalty = {
-					estate = estate_academy
-					loyalty = 20
+			factor = 1
+			if = {
+				limit = { has_estate = estate_academy }
+				NOT = {
+					estate_influence = {
+						estate = estate_academy
+						influence = 100
+					}
 				}
+			}
+			else = {
+				AND = {
+					has_mil_advisor = no
+					NOT = {
+						has_leader_with = {
+							total_pips = 12
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 0.5
+			employed_advisor = {
+				category = MIL
+				skill = 3
 			}
 		}
 		modifier = {
 			factor = 1
-			estate_loyalty = {
-				estate = estate_academy
-				loyalty = 20
+			employed_advisor = {
+				category = MIL
+				skill = 4
 			}
-			not = {
+		}
+		modifier = {
+			factor = 1.5
+			employed_advisor = {
+				category = MIL
+				skill = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_leader_with = {
+				total_pips = 12
+				### PLACEHOLDER VVVV ###
+				is_monarch_leader = no
+			}
+			#AND = {
+			#	NOT = {
+			#		has_leader_with = {
+			#			total_pips = 12
+			#			is_monarch_leader = yes
+			#		}
+			#	}
+			#	has_leader_with = {
+			#		total_pips = 12
+			#	}
+			#}
+			
+		}
+		modifier = {
+			factor = 1
+			has_leaders = {
+				value = 3
+				type = general
+				include_monarch = no
+				include_heir = no				
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			has_estate = estate_academy
+			NOT = {
+				estate_loyalty = {
+					estate = estate_academy
+					loyalty = 60
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_estate = estate_academy
+			NOT = {
 				estate_loyalty = {
 					estate = estate_academy
 					loyalty = 40
@@ -119,117 +174,16 @@ uis_militarism_junta = {
 			}
 		}
 		modifier = {
-			factor = 0.4
-			estate_influence = {
-				estate = estate_academy
-				influence = 60
-			}
-			not = {
-				estate_influence = {
-					estate = estate_academy
-					influence = 80
-				}
-			}
-		}
-		modifier = {
-			factor = 2
-			estate_influence = {
-				estate = estate_academy
-				influence = 80
-			}
-			not = {
-				estate_influence = {
-					estate = estate_academy
-					influence = 100
-				}
-			}
-		}
-		modifier = {
-			factor = 6
-			estate_influence = {
-				estate = estate_academy
-				influence = 100
-			}
-		}
-		
-		modifier = {
 			factor = 1
-			not = {
-				legitimacy = 20
-			}
-		}
-		modifier = {
-			factor = 0.8
-			not = {
-				legitimacy = 40
-			}
-		}
-		modifier = {
-			factor = 0.6
-			not = {
-				legitimacy = 60
-			}
-		}
-		modifier = {
-			factor = 0.4
-			not = {
-				legitimacy = 80
-			}
-		}
-		modifier = {
-			factor = 0.2
-			has_leader_with = {
-				total_pips = 12
-				general = yes
-			}
-		}
-		modifier = {
-			factor = 0.2
-			employed_advisor = {
-				category = MIL
-				skill = 3
-			}
-		}
-		modifier = {
-			factor = 0.4
-			corruption = 0.1
-			hidden_trigger = {
-				not = {
-					corruption = 5
+			has_estate = estate_academy
+			NOT = {
+				estate_loyalty = {
+					estate = estate_academy
+					loyalty = 20
 				}
 			}
 		}
-		modifier = {
-			factor = 0.8
-			corruption = 5
-			hidden_trigger = {
-				not = {
-					corruption = 10
-				}
-			}
-		}
-		modifier = {
-			factor = 1.2
-			corruption = 10				
-		}
-		modifier = {
-			factor = 0.4
-			stability = 0
-		}
-		modifier = {
-			factor = 0.8
-			stability = -1
-			not = {
-				stability = 0
-			}
-		}
-		modifier = {
-			factor = 1.2
-			stability = -2
-			not = {
-				stability = -1
-			}
-		}
+
 	}
 	on_start = uis_ideagroups.4000
 }
