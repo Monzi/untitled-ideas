@@ -220,7 +220,7 @@ hum_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	military_tactics = 0.025
+	military_tactics = 0.005
 	tolerance_of_heretics_capacity = 1
 	tolerance_of_heathens_capacity = 1
 
@@ -267,8 +267,8 @@ indu_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	production_efficiency = 0.05
-	military_tactics = 0.025
+	production_efficiency = 0.10
+	military_tactics = 0.005
 
 	effect = {}
 	removed_effect = {}
@@ -290,8 +290,8 @@ infra_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	centralize_state_cost = -0.1
-	military_tactics = 0.025
+	centralize_state_cost = -0.15
+	military_tactics = 0.005
 
 	effect = {}
 	removed_effect = {}
@@ -313,8 +313,8 @@ cent_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	state_governing_cost = -0.1
-	military_tactics = 0.02
+	state_governing_cost = -0.15
+	military_tactics = 0.005
 
 	effect = {}
 	removed_effect = {}
@@ -336,8 +336,8 @@ decent_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	territories_governing_cost = -0.1
-	military_tactics = 0.02
+	territories_governing_cost = -0.20
+	military_tactics = 0.005
 
 	effect = {}
 	removed_effect = {}
@@ -1475,7 +1475,7 @@ cent_quality = {
 	devotion = 1
 	horde_unity = 1
 	meritocracy = 1
-	military_tactics = 0.05
+	military_tactics = 0.02
 	monthly_militarized_society = 0.05
 	monthly_uis_junta_militarization = 0.05
 

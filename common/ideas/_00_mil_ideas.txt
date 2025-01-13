@@ -695,6 +695,7 @@ standingarmy_ideas = {
 	}
 
 	stand_ideas_1 = {
+		
 		garrison_size = 0.25
 		global_supply_limit_modifier = 0.1
 	}

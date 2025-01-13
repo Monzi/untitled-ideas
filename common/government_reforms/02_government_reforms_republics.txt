@@ -4119,6 +4119,14 @@ junta_reform = {
 	republican_name = yes
 	has_term_election = yes
 	duration = 8
+
+	potential = {
+		always = no
+	}
+
+	trigger = {
+		always = no
+	}
 	
 	conditional = {
 		allow = { has_dlc = "Domination" }

@@ -341,7 +341,7 @@ industrial_ideas = {
 		development_cost_modifier = -0.05
 	}
 	industrial_ideas_5 = {
-		global_prosperity_growth = 0.1
+		global_prosperity_growth = 0.5
 		global_monthly_devastation = -0.1
 	}
 	industrial_ideas_6 = {

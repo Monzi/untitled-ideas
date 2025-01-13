@@ -13,7 +13,7 @@ uis_junta_mechanic = {
 				modifier = {
 					land_morale = 0.05
 					manpower_recovery_speed = 0.1
-					academy_loyalty_modifier = 20
+					academy_loyalty_modifier = 0.20
 					mil_advisor_cost = -0.25
 					monthly_uis_junta_militarization = -0.1
 				}
