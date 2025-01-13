@@ -39,3 +39,8 @@ on_create_vassal = {
 on_capital_moved = {
 	centralization_capital_moved = yes
 }
+
+# When a non-native changes government type
+on_government_change = {
+	clr_country_flag = uis_junta_in_power
+}
