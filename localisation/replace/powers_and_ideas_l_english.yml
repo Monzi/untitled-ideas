@@ -30,7 +30,7 @@
  bureaucracy_desc:0 ""
  national_bank_desc:0 ""
  merchant_passes_desc:0 ""
- efficient_mining_desc:0 ""
+ efficient_mining_desc:0 "Inflation Reduction from Loan Repayment: §G-0.05§!"
  debt_and_loans_desc:0 ""
  nationalistic_enthusiasm_desc:0 ""
  smithian_economics_desc:0 "Development from Manufactories: §G+1§!"
@@ -141,7 +141,7 @@
  recognize_hierarchy_desc:0 ""
  welcoming_ceremonies_desc:0 ""
  tranquil_coordination_desc:0 ""
- respected_authority_desc:0 ""
+ respected_authority_desc:0 "Reduced Max Absolutism Impact from Privileges: §G-20.0%§!"
  palace_of_splendor_desc:0 ""
  court_embassies_desc:0 "Allows §YHold Court§! Mechanics"
 # Diplomatic ideas
@@ -354,7 +354,7 @@
  nation_of_war_desc:0 ""
  organised_mercenary_recruitment_desc:0 ""
  expanded_contracts_desc:0 ""
- seasoned_veterans_desc:0 ""
+ seasoned_veterans_desc:0 "Mercenary Companies no longer reduce §YArmy Professionalism§! when hired"
 
 # Government Ideas
 # Aristocratic ideas

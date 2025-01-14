@@ -149,8 +149,12 @@
  assimilation_reform_aboriginal_australian_assimilated_desc:0 ""
 
 
-
-
-
  junta_reform:0 "Junta Dictatorship"
  junta_reform_desc:0 "Army generals are in control of the country, and exert their power through a strong military, though the commoners are rarely happy."
+
+ ability_uis_junta_mechanic:0 "Junta Militarization"
+ uis_junta_militarization:0 "Junta Militarization"
+ uis_junta_boost_militarization:0 "Boost Militarization"
+ uis_junta_boost_militarization_desc:0 ""
+ uis_junta_militarization_gain_modifier:0 "Junta Militarization Gain Modifier"
+ monthly_uis_junta_militarization:0 "Monthly Junta Militarized Society"

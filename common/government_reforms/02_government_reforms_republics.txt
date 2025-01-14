@@ -2080,6 +2080,7 @@ nepotism_reform = {
 				has_reform = military_rulership_reform
 				has_reform = prussian_republic
 				has_reform = prussian_republic_reform
+				has_reform = junta_reform
 			}
 		}
 	}
@@ -2446,6 +2447,7 @@ lottery_reform = {
 				has_reform = military_rulership_reform
 				has_reform = prussian_republic
 				has_reform = prussian_republic_reform
+				has_reform = junta_reform
 			}
 		}
 	}
@@ -2504,6 +2506,7 @@ devotee_to_the_people_reform = {
 			has_reform = military_rulership_reform
 			has_reform = prussian_republic
 			has_reform = prussian_republic_reform
+			has_reform = junta_reform
 		}
 	}
 	trigger = {
@@ -2516,6 +2519,7 @@ devotee_to_the_people_reform = {
 			has_reform = military_rulership_reform
 			has_reform = prussian_republic
 			has_reform = prussian_republic_reform
+			has_reform = junta_reform
 		}
 	}
 	modifiers = {
@@ -3587,6 +3591,7 @@ admiralty_reform = {
 	trigger = {
 		num_of_ports = 1
 		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = { has_reform = junta_reform }
 	}
 	modifiers = {
 		leader_naval_fire = 1
@@ -3612,6 +3617,9 @@ military_rulership_reform = {
 		is_revolutionary = no
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 	}
+	trigger = {
+		NOT = { has_reform = junta_reform }
+	}
 	modifiers = {
 		leader_land_shock = 1
 		army_tradition = 0.5
@@ -3633,6 +3641,9 @@ dynastic_rulership_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
+	}
+	trigger = {
+		NOT = { has_reform = junta_reform }
 	}
 	modifiers = {
 		diplomatic_reputation = 2
@@ -4117,43 +4128,29 @@ junta_reform = {
 	lock_level_when_selected = yes
 	republic = yes
 	republican_name = yes
-	has_term_election = yes
-	duration = 8
+	has_term_election = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	can_form_trade_league = no
 
-	potential = {
-		always = no
+	modifiers = {
+		monthly_uis_junta_militarization = 0.05
+		max_absolutism = 20
+		max_absolutism_effect = 0.15
+		monarch_military_power = 1
 	}
 
-	trigger = {
-		always = no
-	}
-	
 	conditional = {
 		allow = { has_dlc = "Domination" }
 		government_abilities = {
 			uis_junta_mechanic
 		}
 	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 25
-	can_form_trade_league = no
-	#should only be enactable on disaster or academy rebels enforcing
-	modifiers = {#something mil related that isnt way strong, since we also add militarization mechanic
-		discipline = 0.025
-		monthly_uis_junta_militarization = 0.05 #ph
-		global_unrest = 4
-		max_absolutism = 20
-		monarch_military_power = 2
-		monarch_admin_power = -1
-		monarch_diplomatic_power = -1
-		republican_tradition = -1
-	}
 	custom_attributes = {
-		#generals_become_rulers = yes
-		locked_government_type = yes
 		enables_plutocratic_idea_group = no
 		enables_aristocratic_idea_group = yes
 		cannot_become_dictatorship = yes
+		generals_become_rulers = yes
 		rulers_can_be_generals = yes
 	}
 	effect = {
@@ -4177,6 +4174,6 @@ junta_reform = {
 		}
 	}
 	removed_effect = {
-		clr_country_flag = uis_junta_elections
+		set_country_flag = has_had_junta_reform
 	}
 }

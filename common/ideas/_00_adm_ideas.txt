@@ -600,6 +600,7 @@ militarism_ideas = {
 	}
 	
 	bonus = {
+		monthly_uis_junta_militarization = 0.02
 		max_absolutism_effect = 0.05
 		all_estate_loyalty_equilibrium = 0.1
 		num_of_pronoiars = 1
