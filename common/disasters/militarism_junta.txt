@@ -15,21 +15,22 @@ uis_militarism_junta = {
 			full_idea_group = militarism_ideas
 			has_estate = estate_academy
 		}
-		OR = {
-			NOT = {has_country_flag = had_junta_disaster}
-			NOT = {has_country_flag = has_had_junta_reform}
+		hidden_trigger = {
+			OR = {
+				NOT = {has_country_flag = had_junta_disaster}
+				NOT = {has_country_flag = has_had_junta_reform}
+			}
 		}
-
 	}
 	can_start = {
 		is_at_war = no
 		has_any_disaster = no
-		OR = {
-			NOT = {has_country_flag = had_junta_disaster}
-			NOT = {has_country_flag = has_had_junta_reform}	
+		hidden_trigger = {
+			OR = {
+				NOT = {has_country_flag = had_junta_disaster}
+				NOT = {has_country_flag = has_had_junta_reform}	
+			}
 		}
-
-
 		if = {
 			limit = {
 				has_estate = estate_academy			
