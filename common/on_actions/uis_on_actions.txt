@@ -43,3 +43,52 @@ on_capital_moved = {
 on_government_change = {
 	clr_country_flag = uis_junta_in_power
 }
+
+on_five_year_pulse = {
+	random_events = {
+		# Industrial
+		#100 = uis_ideagroups.5000
+
+
+		# Militarism
+		#100 = 
+
+
+		# Centralization
+		#100 = 
+
+
+		# Decentralization
+		#100 = 
+
+
+		# Assimilation
+		#100 = 
+
+
+		# Nationalism
+		#100 = 
+
+
+		# Academy
+		#100 = 
+
+
+		# Tactic
+		#100 = 
+
+
+		# Infantry
+		#100 = 
+
+
+		# Cavalry
+		#100 = 
+
+
+		# Standing Army
+		#100 = 
+
+		1000 = 0
+	}
+}
