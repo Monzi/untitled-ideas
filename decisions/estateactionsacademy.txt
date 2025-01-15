@@ -41,4 +41,28 @@ country_decisions = {
 			}
 		}
 	}
+	###junta bug test
+	junta_debug_decision = {
+		ai_will_do = {
+			factor = 0
+		}
+		potential = {
+			always = no
+		}
+		allow = {
+			check_variable = {
+				which = uis_junta_rebels_defeated
+			}
+			always = yes
+			
+		}
+		effect = {
+			random_owned_province = {
+				spawn_rebels = {
+					size = 0.5
+					type = junta_rebels
+				}
+			}
+		}
+	}
 }

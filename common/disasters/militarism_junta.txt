@@ -1,25 +1,35 @@
 uis_militarism_junta = {
 	
     potential = {
+		is_nomad = no
+		OR = {
+			NOT = {has_reform = presidential_despot_reform}
+			NOT = {has_reform = military_dictatorship_reform}
+			NOT = {has_reform = admiralty_reform}
+			NOT = {has_reform = military_rulership_reform}
+			NOT = {has_reform = prussian_republic}
+			NOT = {has_reform = prussian_republic_reform}
+			NOT = {has_reform = junta_reform}		
+		}
 		OR = {
 			full_idea_group = militarism_ideas
 			has_estate = estate_academy
 		}
-		NOT = {
-			OR = {
-				has_reform = junta_reform
-				has_reform = military_dictatorship
-				has_reform = prussian_republic_reform
-				has_reform = prussian_monarchy
-				has_reform = holy_horde_reform
-			}
+		OR = {
+			NOT = {has_country_flag = had_junta_disaster}
+			NOT = {has_country_flag = has_had_junta_reform}
 		}
-		is_nomad = no
+
 	}
 	can_start = {
-		has_any_disaster = no
 		is_at_war = no
-		
+		has_any_disaster = no
+		OR = {
+			NOT = {has_country_flag = had_junta_disaster}
+			NOT = {has_country_flag = has_had_junta_reform}	
+		}
+
+
 		if = {
 			limit = {
 				has_estate = estate_academy			
@@ -30,14 +40,31 @@ uis_militarism_junta = {
 			}
 		}		
 		else = {
-			full_idea_group = militarism_ideas
-			employed_advisor = {
-				skill = 3
-				category = MIL
-			}
-			has_leader_with = {
-				total_pips = 12
-			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = uis_junta_disaster_mil3_advisor_employed
+					employed_advisor = {
+						skill = 3
+						category = MIL
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = uis_junta_disaster_better_gen_than_ruler
+					AND = {
+						NOT = {
+							has_leader_with = {
+								total_pips = 12
+								is_monarch_leader = yes
+							}
+						}
+						has_leader_with = {
+							total_pips = 12
+						}
+					}
+				}
+			}		
+			full_idea_group = militarism_ideas			
+			
 		}
 	}
 	can_stop = {
@@ -53,23 +80,17 @@ uis_militarism_junta = {
 				}
 			}
 			else = {
-				has_mil_advisor = no
+				NOT = {
+					employed_advisor = {
+						category = MIL
+					}
+				}
 				NOT = {
 					has_leader_with = {
 						total_pips = 12
 					}
 				}
-				NOT = {
-					legitimacy = 50
-				}
 			}
-			
-		}
-	}
-	can_end = { #NEED ON_ACTION TO REMOVE FLAG ON SWITCH GOV
-		custom_trigger_tooltip = {
-			tooltip = UIS_JUNTA_DISASTER_TOOLTIP
-			has_country_flag = uis_junta_in_power
 		}
 	}
 	#most of these are placeholder or not fully thought through
@@ -88,8 +109,24 @@ uis_militarism_junta = {
 				}
 			}
 			else = {
-				AND = {
-					has_mil_advisor = no
+				NOT = {
+					employed_advisor = {
+						category = mil
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = uis_junta_disaster_better_gen_than_ruler
+						has_leader_with = {
+							total_pips = 12
+						}
+						NOT = {
+							has_leader_with = {
+								total_pips = 12
+								is_monarch_leader = yes
+							}
+						}
+					}
 					NOT = {
 						has_leader_with = {
 							total_pips = 12
@@ -103,48 +140,53 @@ uis_militarism_junta = {
 
 	progress = {
 		modifier = {
-			factor = 0.5
-			employed_advisor = {
-				category = MIL
-				skill = 3
-			}
-		}
-		modifier = {
 			factor = 1
-			employed_advisor = {
-				category = MIL
-				skill = 4
+			custom_trigger_tooltip = {
+				tooltip = uis_junta_disaster_mil3_advisor_employed
+				employed_advisor = {
+					category = MIL
+					skill = 3
+				}
+			}		
+		}
+		modifier = {
+			factor = 2
+			custom_trigger_tooltip = {
+				tooltip = uis_junta_disaster_mil4_advisor_employed
+				employed_advisor = {
+					category = MIL
+					skill = 4
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			custom_trigger_tooltip = {
+				tooltip = uis_junta_disaster_mil5_advisor_employed
+				employed_advisor = {
+					category = MIL
+					skill = 5
+				}
+			}			
+		}
+		modifier = {
+			factor = 2
+			custom_trigger_tooltip = {
+				tooltip = uis_junta_disaster_better_gen_than_ruler
+				NOT = {
+					has_leader_with = {
+						total_pips = 12
+						is_monarch_leader = yes
+					}
+				}
+				has_leader_with = {
+					total_pips = 12
+				}
+				is_monarch_leader = yes
 			}
 		}
 		modifier = {
-			factor = 1.5
-			employed_advisor = {
-				category = MIL
-				skill = 5
-			}
-		}
-		modifier = {
-			factor = 0.5
-			has_leader_with = {
-				total_pips = 12
-				### PLACEHOLDER VVVV ###
-				is_monarch_leader = no
-			}
-			#AND = {
-			#	NOT = {
-			#		has_leader_with = {
-			#			total_pips = 12
-			#			is_monarch_leader = yes
-			#		}
-			#	}
-			#	has_leader_with = {
-			#		total_pips = 12
-			#	}
-			#}
-			
-		}
-		modifier = {
-			factor = 1
+			factor = 2
 			has_leaders = {
 				value = 3
 				type = general
@@ -153,8 +195,9 @@ uis_militarism_junta = {
 			}
 		}
 		
+		
 		modifier = {
-			factor = 0.5
+			factor = 1
 			has_estate = estate_academy
 			NOT = {
 				estate_loyalty = {
@@ -164,7 +207,7 @@ uis_militarism_junta = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1
 			has_estate = estate_academy
 			NOT = {
 				estate_loyalty = {
@@ -174,7 +217,7 @@ uis_militarism_junta = {
 			}
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			has_estate = estate_academy
 			NOT = {
 				estate_loyalty = {
@@ -184,6 +227,18 @@ uis_militarism_junta = {
 			}
 		}
 
+	}
+	can_end = {#disaster is ended through event 4009
+		custom_trigger_tooltip = {
+			tooltip = UIS_JUNTA_DISASTER_TOOLTIP
+			always = no
+		}
+	}
+
+	modifier = {
+		global_regiment_cost = 0.25
+		global_unrest = 5
+		stability_cost_modifier = 1
 	}
 	on_start = uis_ideagroups.4000
 }

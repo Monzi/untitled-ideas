@@ -1,32 +1,69 @@
 defined_text = {
-    name = title_army_training
+	name = title_army_training
 
-    text = {
-        localisation_key = string_infantry_training_title
-        trigger = {
-            full_idea_group = infantry_ideas
-        }
-    }
-    text = {
-        localisation_key = string_cavalry_training_title
-        trigger = {
-            full_idea_group = cavalry_ideas
-        }
-    }
+	text = {
+		localisation_key = string_infantry_training_title
+		trigger = {
+			full_idea_group = infantry_ideas
+		}
+	}
+	text = {
+		localisation_key = string_cavalry_training_title
+		trigger = {
+			full_idea_group = cavalry_ideas
+		}
+	}
 }
 defined_text = {
-    name = desc_army_training
+	name = desc_army_training
 
-    text = {
-        localisation_key = string_infantry_training_desc
-        trigger = {
-            full_idea_group = infantry_ideas
-        }
-    }
-    text = {
-        localisation_key = string_cavalry_training_desc
-        trigger = {
-            full_idea_group = cavalry_ideas
-        }
-    }
+	text = {
+		localisation_key = string_infantry_training_desc
+		trigger = {
+			full_idea_group = infantry_ideas
+		}
+	}
+	text = {
+		localisation_key = string_cavalry_training_desc
+		trigger = {
+			full_idea_group = cavalry_ideas
+		}
+	}
+}
+defined_text = {
+	name = uis_junta_nobles_event_switch
+	text = {
+		localisation_key = string_junta_noble_title
+		trigger = {
+			has_estate = estate_nobles
+		}
+	}
+	text = {
+		localisation_key = string_junta_rajput_title
+		trigger = {
+			has_estate = estate_rajput
+			NOT = {
+				has_estate = estate_nobles
+			}
+		}
+	}
+	text = {
+		localisation_key = string_junta_maratha_title
+		trigger = {
+			has_estate = estate_maratha
+			NOT = {
+				has_estate = estate_nobles
+			}
+		}
+	}
+	text = {
+		localisation_key = string_junta_no_nobles_estate
+		trigger = {
+			NOT = {
+				has_estate = estate_nobles
+				has_estate = estate_rajput
+				has_estate = estate_maratha
+			}
+		}
+	}
 }

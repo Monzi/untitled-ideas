@@ -139,19 +139,21 @@ junta_rebels = {
 			name = uis_local_men_drafted
 			duration = 1826
 		}
-		owner = {
+		from = {
+			if = {
+				limit = {
+					has_disaster = uis_militarism_junta
+				}
+				change_variable = {
+					which = junta_progress
+					value = 0.25
+				}
+			}
 			if = {
 				limit = { has_estate = estate_academy }
 				change_estate_land_share = {
 					estate = estate_academy
-					share = 5.0
-					province = root
-				}
-			}
-			else = {
-				change_estate_land_share = {
-					estate = all
-					share = 5.0
+					share = 0.5
 					province = root
 				}
 			}
@@ -159,46 +161,28 @@ junta_rebels = {
 	}
 
 	can_negotiate_trigger = {
-		or = {
-			check_variable = {
-				junta_progress = 30
-			}
-			and = {
-				has_estate = estate_academy
-				and = {
-					not = {
-						estate_loyalty = {
-							estate = estate_academy
-							loyalty = 30
-						}
-					}
-					estate_loyalty = {
-						estate = estate_academy
-						loyalty = 0
-					}
-				}
-				estate_influence = {
-					estate = estate_academy
-					influence = 60
-				}
-			}
-		}
+		always = no
 	}
 
 	can_enforce_trigger = {
-		always = yes
+		has_disaster = uis_militarism_junta
+		check_variable = {
+			junta_progress = 25
+		}
 	}
 
-	demands_description = "junta_rebels_demands"
+	demands_description = junta_rebels_demands
 
 	demands_enforced_effect = {
 		hidden_effect = {
 			add_country_modifier = {
 				name = uis_lost_to_junta_rebels
-				duration = 10
+				duration = 5475
 				hidden = yes
 			}
 		}
+		kill_heir = { allow_new_heir = no }
+		kill_ruler = yes
 		every_owned_province = {
 			limit = {
 				has_rebel_faction = junta_rebels
@@ -222,5 +206,9 @@ junta_rebels = {
 				loyalty = 30
 			}
 		}
+		hidden_effect = {
+			junta_event_chain_cleanup = yes
+		}
+
 	}
 }
