@@ -131,26 +131,61 @@ on_dependecy_gained_centralization = {
 		}
 	}
 }
-on_battle_won_unit_juntarebels = {
+junta_event_battle_won_unit_effect = {
 	if = {
 		limit = {
+			unit_owner = {
+				has_country_flag = uis_junta_disaster_started
+			}
+			is_ruler_commanding_unit = yes
 			enemy_unit = {
 				unit_owner = {
 					tag = REB
-					#thismaynotwork
-					is_rebel_type = junta_rebels
-				}
-			}
-			root = {
-				unit_owner = {
-					not = {
-						has_country_flag = uis_junta_dealtwithrebelleader
-					}
 				}
 			}
 		}
-		country_event = {
-			id = uis_ideagroups.4005
+		unit_owner = {
+			change_variable = {
+				which = uis_junta_rebels_defeated
+				value = 1					
+			}
+		}
+	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_country_flag = uis_junta_disaster_started
+				NOT = {
+					has_country_flag = uis_junta_dealtwithrebelleader
+				}
+				check_variable = {
+					which = uis_junta_rebels_defeated
+					value = 4
+				}
+				NOT = {
+					check_variable = {
+						which = uis_junta_rebels_defeated
+						value = 5
+					}
+				}
+			}
+			is_ruler_commanding_unit = yes
+			enemy_unit = {
+				unit_owner = {
+					TAG = REB
+				}
+			}
+		}
+		ROOT = {
+			unit_owner = {
+				set_saved_name = {
+					key = rebel_leader
+					type = advisor
+				}
+				country_event = {#Offer Defection event
+					id = uis_ideagroups.40051
+				}
+			}
 		}
 	}
 }

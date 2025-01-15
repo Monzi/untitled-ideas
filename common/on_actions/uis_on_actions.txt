@@ -1,16 +1,15 @@
 #Unit Scope OnAction for Battle Won
 on_battle_won_unit = {
-	if = {
-		limit = {
-			unit_owner = {
-				full_idea_group = militarism_ideas
-				has_disaster = uis_militarism_junta
-			}
-		}
-		root = {
-			on_battle_won_unit_juntarebels = yes
-		}
-	}
+#	if = {
+#		limit = {
+#			unit_owner = {
+#				has_country_flag = uis_junta_disaster_started
+#			}
+#		}
+#		
+#	}
+	junta_event_battle_won_unit_effect = yes
+	
 }
 
 # province

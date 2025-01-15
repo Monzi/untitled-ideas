@@ -367,13 +367,14 @@ junta_event_option_4003A_effect = {
 	add_meritocracy = 5
 	add_devotion = 5
 	add_country_modifier = {
+		hidden = yes
 		name = uis_junta_nobles_handled
 		duration = 1825
 	}
 	hidden_effect = {
 		change_variable = {
 			which = junta_progress
-			value = 4
+			value = 9
 		}
 		set_country_flag = uis_junta_nobleshandled
 	}
@@ -382,7 +383,7 @@ junta_event_option_4003B_effect = {
 	hidden_effect = {
 		change_variable = {
 			which = junta_progress
-			value = 9
+			value = 4
 		}
 	}
 	set_country_flag = uis_junta_noblessupportjunta
@@ -393,6 +394,14 @@ junta_event_chain_cleanup = {
 	clr_country_flag = uis_junta_dealtwithrebelleader
 	clr_country_flag = uis_junta_noblessupportjunta
 	clr_country_flag = uis_junta_disaster_started
+	clr_country_flag = uis_junta_requesthelp
+	clr_country_flag = uis_junta_ally_help
+	clr_country_flag = had_junta_religious_rebels
+	remove_country_modifier = uis_junta_forts_paid
+	remove_country_modifier = uis_junta_intolerance
+	set_country_flag = had_junta_disaster
+	clear_saved_name = rebel_leader
+	end_disaster = uis_militarism_junta
 }
 #generic effect to spawn peasants in same region as capital but not in capital
 uis_regional_peasant_rebels_size1 = {
@@ -437,7 +446,7 @@ uis_regional_peasant_rebels_size3 = {
 		}
 		spawn_rebels = {
 			size = 2
-			type = junta_rebels
+			type = anti_tax_rebels
 		}
 	}
 	random_owned_province = {

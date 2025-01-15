@@ -1,6 +1,8 @@
 ﻿l_english:
 # IDEA GROUPS
 # ADM
+ junta_debug_decision_title:0 "rebel leader progress"
+ junta_debug_decision_desc:0 "[Root.uis_junta_rebels_defeated.GetName] [Root.uis_junta_rebels_defeated.GetValue] progress"
 
 
 # DIP

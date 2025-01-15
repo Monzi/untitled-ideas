@@ -11,11 +11,12 @@
  desc_centralized_subject_loyalty:0 ""
  centralized_subject_foreign:0 "Faraway Subject"
  desc_centralized_subject_foreign:0 ""
-#Militarism / Junta
- uis_lost_to_junta_rebels:0 "ph"
- uis_trouble_brewing:0 "Trobule Brewing"
- uis_junta_paid_off:0 "paidoff"
- uis_local_men_drafted:0 "localmendrafted"
+#Militarism / Junta Rebels and Disaster
+ uis_lost_to_junta_rebels:0 "Junta Rebels enforced demands"
+ uis_junta_forts_paid:0 "Castle Holders Paid Off"
+ uis_local_men_drafted:0 "Local Soldiers Drafted"
+ uis_junta_nobles_handled:0 "Increased Land Rights"
+ uis_junta_strengthened_guard:0 "Elite Royal Guard"
 
 # DIP
 # Court Ideas

@@ -1,3 +1,4 @@
-l_english:
- uis_militarism_junta:0 "Military Coup"
- desc_uis_militarism_junta:0 ""
+﻿l_english:
+#Junta Disaster Title
+ uis_militarism_junta:0 "Military Takeover"
+ desc_uis_militarism_junta:0 "The military will stage a coup to oust $MONARCH$ from power and set up a junta government."
