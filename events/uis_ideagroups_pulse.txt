@@ -1,0 +1,34 @@
+namespace = uis_ideagroup_pulse
+
+# Pulse Idea Events
+# Industrial			Range 0-19
+
+
+# Militarism			Range 20-39
+
+
+# Centralization		Range 40-59
+
+
+# Decentralization		Range 60-79
+
+
+# Assimilation			Range 80-99
+
+
+# Nationalism			Range 100-119
+
+
+# Academy				Range 120-139
+
+
+# Tactic				Range 140-159
+
+
+# Infantry				Range 160-179
+
+
+# Cavalry				Range 180-199
+
+
+# Standing Army			Range 200-219

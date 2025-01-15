@@ -1380,37 +1380,3 @@ country_event = {
 		name = uis_ideagroups.0002.a
 	}
 }
-
-
-# Pulse Idea Events
-# Industrial			Range 5000-5099
-
-
-# Militarism			Range 5100-5199
-
-
-# Centralization		Range 5200-5299
-
-
-# Decentralization		Range 5300-5399
-
-
-# Assimilation			Range 5400-5499
-
-
-# Nationalism			Range 5500-5599
-
-
-# Academy				Range 5600-5699
-
-
-# Tactic				Range 5700-5799
-
-
-# Infantry				Range 5800-5899
-
-
-# Cavalry				Range 5900-5999
-
-
-# Standing Army			Range 6000-6099

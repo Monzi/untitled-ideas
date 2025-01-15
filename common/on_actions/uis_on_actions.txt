@@ -42,7 +42,7 @@ on_capital_moved = {
 on_five_year_pulse = {
 	random_events = {
 		# Industrial
-		#100 = uis_ideagroups.5000
+		#100 = uis_ideagroup_pulse.0
 
 
 		# Militarism
