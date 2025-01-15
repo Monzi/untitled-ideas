@@ -5,6 +5,14 @@
  academy_loyalty_modifier:0 "Academy Loyalty Equilibrium"
  academy_influence_modifier:0 "Academy Influence"
  academy_privilege_slots:0 "Academy Max Privileges"
+ uis_estate_academy_gain_influence:0 "REPLACE_ME"
+ uis_estate_academy_lose_influence:0 "REPLACE_ME"
+ UIS_GRANTED_PRESTIGE_ACADEMY:0 "Built Academy"
+ UIS_DENIED_PRESTIGE_ACADEMY:0 "Denied Funding"
+ UIS_ACADEMY_GRANTED_AUTONOMY:0 "Ganted Autonomy"
+ UIS_ACADEMY_DENIED_AUTONOMY:0 "Reduced our Autonomy"
+ uis_estate_academy_commisions:0 "Granted Army Commissions"
+ uis_estate_denied_academy_commisions:0 "Denied Army Commissions"
 
 # Agendas
  estate_academy_hire_advisor:0 "Hire a Military Advisor"
