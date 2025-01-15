@@ -39,7 +39,16 @@ on_capital_moved = {
 	centralization_capital_moved = yes
 }
 
-# When a non-native changes government type
-on_government_change = {
-	clr_country_flag = uis_junta_in_power
+on_five_year_pulse_2 = {
+	random_events = {
+		#Academy Estate Pulse Events
+		100 = uis_academy_events.1
+		100 = uis_academy_events.2
+		100 = uis_academy_events.3
+		100 = uis_academy_events.4
+		100 = uis_academy_events.5
+		100 = uis_academy_events.6
+	#	100 = 
+
+	}
 }

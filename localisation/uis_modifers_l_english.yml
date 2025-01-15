@@ -69,3 +69,7 @@
 
 # Standing Army Ideas
  upgraded_stand_5:0 "Regular Forced Marches"
+
+# Academy Ideas
+ uis_prestige_academy:0 "Prestigious Academy"
+ uis_academy_commissions:0 "Military Commissions"
