@@ -35,3 +35,5 @@
 
  estate_academy_officer_graduation_title:0 "[Root.GetAcademyName]: Grant Generalship"
  estate_academy_officer_graduation_desc:0 "[Root.EstateDecisionDescription]"
+
+ EST_VAL_UNIVERSITY:0 "University: §Y$VAL$%§!"
