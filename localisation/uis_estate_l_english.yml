@@ -9,8 +9,10 @@
  uis_estate_academy_lose_influence:0 "REPLACE_ME"
  UIS_GRANTED_PRESTIGE_ACADEMY:0 "Built Academy"
  UIS_DENIED_PRESTIGE_ACADEMY:0 "Denied Funding"
- UIS_ACADEMY_GRANTED_AUTONOMY:0 "Ganted Autonomy"
- UIS_ACADEMY_DENIED_AUTONOMY:0 "Reduced our Autonomy"
+ UIS_ACADEMY_GRANTED_AUTONOMY:0 "Granted Autonomy"
+ UIS_ACADEMY_DENIED_AUTONOMY:0 "Curtailed Power"
+ UIS_ACADEMY_NOBLES_OVER_ACADEMY:0 "Noble Officers"
+ UIS_ACADEMY_BURGHERS_OVER_ACADEMY:0 "Burgher Officers"
  uis_estate_academy_commisions:0 "Granted Army Commissions"
  uis_estate_denied_academy_commisions:0 "Denied Army Commissions"
 

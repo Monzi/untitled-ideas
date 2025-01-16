@@ -1,6 +1,6 @@
 ### ACADEMY ESTATE EVENTS ###
 
-namespace = academy_estate_events
+namespace = uis_academy_events
 
 #Academy demands commission
 
@@ -31,13 +31,15 @@ country_event = {
 	}
 
 	is_triggered_only = yes
+
 	mean_time_to_happen = {
 		days = 1
 	}
+
 	#grant commissions
 	option = {
 		
-		name = uis_academy_events.1.a 
+		name = uis_academy_events.1.1
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -108,7 +110,7 @@ country_event = {
 	}
 	#deny commission
 	option = {
-		name = uis_academy_events.1.b
+		name = uis_academy_events.1.2
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -179,7 +181,6 @@ country_event = {
 	desc = uis_academy_events.2.d
 	picture = "p"
 
-	is_triggered_only = yes
 
 	trigger = {
 		has_estate = estate_academy
@@ -196,12 +197,14 @@ country_event = {
 			}
 		}
 	}
+	is_triggered_only = yes
+
 	mean_time_to_happen = {
 		days = 1		
 	}
 
 	option = {
-		name = uis_academy_events.2.a
+		name = uis_academy_events.2.1
 		add_estate_influence_modifier = {
 			estate = estate_academy
 			desc = uis_estate_academy_gain_influence
@@ -217,8 +220,6 @@ country_event = {
 	title = uis_academy_events.3.t
 	desc = uis_academy_events.3.d
 	picture = "p"
-
-	is_triggered_only = yes
 
 	trigger = {
 		has_estate = estate_academy
@@ -239,12 +240,15 @@ country_event = {
 			influence = 20
 		}
 	}
+
+	is_triggered_only = yes
+
 	mean_time_to_happen = {
 		days = 1		
 	}
 
 	option = {
-		name = uis_academy_events.3.a
+		name = uis_academy_events.3.1
 		add_estate_influence_modifier = {
 			estate = estate_academy
 			desc = uis_estate_academy_lose_influence
@@ -256,20 +260,18 @@ country_event = {
 }
 #seize land rebellion #maybe unnecessary
 
-#gain general, admiral or advisors
+#gain general, admiral or advisor
 country_event = {
 	id = uis_academy_events.4
 	title = uis_academy_events.4.t
 	desc = uis_academy_events.4.d
 	picture = "ph"
 
-	is_triggered_only = yes
-
 	trigger = {
 		has_estate = estate_academy
 		estate_loyalty = {
 			estate = estate_academy
-			loyalty = 75
+			loyalty = 60
 		}
 		estate_influence = {
 			estate = estate_academy
@@ -279,6 +281,12 @@ country_event = {
 			estate = estate_academy
 			territory = 1
 		}
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
 	}
 
 	immediate = {
@@ -309,12 +317,8 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		days = 1
-	}
-
 	option = {
-		name = uis_academy_events.4.a
+		name = uis_academy_events.4.1
 		trigger_switch = {
 			on_trigger = has_country_flag
 			academy_general = {
@@ -339,6 +343,7 @@ country_event = {
 						culture = event_target:academy_province
 						religion = event_target:academy_province
 						skill = 2
+						cost_multiplier = -0.5
 					}
 				}
 				if = {
@@ -350,6 +355,7 @@ country_event = {
 						culture = event_target:academy_province
 						religion = event_target:academy_province
 						skill = 3
+						cost_multiplier = -0.5
 					}
 				}
 				clr_country_flag = academy_naval_r
@@ -364,6 +370,7 @@ country_event = {
 						culture = event_target:academy_province
 						religion = event_target:academy_province
 						skill = 2
+						cost_multiplier = -0.5
 					}
 				}
 				if = {
@@ -375,6 +382,7 @@ country_event = {
 						culture = event_target:academy_province
 						religion = event_target:academy_province
 						skill = 3
+						cost_multiplier = -0.5
 					}
 				}
 				clr_country_flag = academy_army_r
@@ -389,10 +397,6 @@ country_event = {
 	desc = uis_academy_events.5.d
 	picture = "ph"
 
-	is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 1
-	}
 	trigger = {
 		estate_influence = {
 			estate = estate_academy
@@ -418,6 +422,7 @@ country_event = {
 		any_owned_province = {
 			is_city = yes
 			is_territory = no
+			base_manpower = 5
 			OR = {
 				has_building = training_fields
 				has_building = barracks
@@ -429,12 +434,19 @@ country_event = {
 		}
 	}
 
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
 					is_city = yes
 					is_territory = no
+					base_manpower = 5
 					OR = {
 						has_building = training_fields
 						has_building = barracks
@@ -451,12 +463,24 @@ country_event = {
 	}
 	#fund the academy
 	option = {
-		name = uis_academy_events.5.a
+		name = uis_academy_events.5.1
 		ai_chance = {
 			factor = 1
 			modifier = {
 				factor = 5
 				personality = ai_militarist
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					ruler_has_personality = great_engineer_personality
+					ruler_has_personality = architectural_visionary_personality
+				}
+			}
+			modifier = {
+				factor = 5
+				years_of_income = 2.1
+				NOT = { ruler_has_personality = architectural_visionary_personality }
 			}
 		}
 		add_years_of_income = -2
@@ -476,11 +500,11 @@ country_event = {
 	}
 	#do not
 	option = {
-		name = uis_academy_events.5.b
+		name = uis_academy_events.5.2
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 2
+				factor = 50
 				NOT = {
 					years_of_income = 2
 				}
@@ -505,8 +529,32 @@ country_event = {
 	desc = uis_academy_events.6.d
 	picture = "ph"
 
+	trigger = {
+		has_estate = estate_academy
+		estate_territory = {
+			estate = estate_academy
+			territory = 1
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = UIS_ACADEMY_GRANTED_AUTONOMY
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_academy
+				modifier = UIS_ACADEMY_DENIED_AUTONOMY
+			}
+		}
+		any_owned_province = {
+			is_territory = no
+			is_capital = no
+			is_city = yes
+		}
+	}
+
 	is_triggered_only = yes
-	
 
 	immediate = {
 		hidden_effect = {
@@ -547,7 +595,7 @@ country_event = {
 	}
 
 	option = {
-		name = uis_academy_events.6.a
+		name = uis_academy_events.6.1
 		ai_chance = {
 			factor = 1
 		}
@@ -569,7 +617,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = uis_academy_events.6.b
+		name = uis_academy_events.6.2
 		ai_chance = {
 			factor = 0
 		}
@@ -584,8 +632,176 @@ country_event = {
 			clr_province_flag = uis_academy_estate_revolt
 			spawn_rebels = {
 				size = 1
-				type = particularist_rebels
+				type = junta_rebels
 			}
 		}
+	}
+}
+
+ # Low loyalty academy @ war / options for loyal estates to mitigate negative!
+country_event = {
+	id = uis_academy_events.7
+	title = uis_academy_events.7.t
+	desc = uis_academy_events.7.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_estate = estate_academy
+		is_at_war = yes
+		NOT = {
+			estate_loyalty = {
+				estate = estate_academy
+				loyalty = 30
+			}
+		}
+		NOT = {
+			has_country_modifier = uis_disloyal_academy_scholars
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_nobles
+				modifier = UIS_ACADEMY_NOBLES_OVER_ACADEMY
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_burghers
+				modifier = UIS_ACADEMY_BURGHERS_OVER_ACADEMY
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_vaisyas
+				modifier = UIS_ACADEMY_BURGHERS_OVER_ACADEMY
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = uis_academy_events.7.1
+		ai_chance = {
+			factor = 1
+		}
+		add_country_modifier = {
+			name = uis_disloyal_academy_scholars
+			duration = 3650
+		}
+	}
+	option = {#put nobles incharge
+		name = uis_academy_events.7.2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_academy
+						loyalty = 35
+					}
+				}
+			}
+		}
+		trigger = {
+			has_estate = estate_nobles
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			desc = UIS_ACADEMY_NOBLES_OVER_ACADEMY
+			influence = -10
+			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			influence = 10
+			duration = 3650
+			estate = estate_nobles
+			desc = UIS_ACADEMY_NOBLES_OVER_ACADEMY
+		}
+	}
+	option = {# put burgher/equivalent in charge
+		name = uis_academy_events.7.3
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				NOT = {
+					estate_loyalty = {
+						estate = estate_academy
+						loyalty = 35
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					has_estate = estate_burghers
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+				}
+				AND = {
+					has_estate = estate_vaisyas
+					estate_loyalty = {
+						estate = estate_vaisyas
+						loyalty = 60
+					}
+				}
+			}
+		}
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_influence_modifier = {
+				estate = estate_burghers
+				influence = 10
+				duration = 3650
+				desc = UIS_ACADEMY_BURGHERS_OVER_ACADEMY
+			}
+		}
+		if = {
+			limit = { has_estate = estate_vaisyas }
+			add_estate_influence_modifier = {
+				estate = estate_vaisyas
+				influence = 10
+				duration = 3650
+				desc = UIS_ACADEMY_BURGHERS_OVER_ACADEMY
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_academy
+			influence = -10
+			duration = 3650
+			desc = UIS_ACADEMY_BURGHERS_OVER_ACADEMY
+		}
+	}
+}
+province_event = { # Event for when rebels rise up by seizing land (i think)
+	id = uis_academy_events.8
+	title = uis_academy_events.8.t
+	desc = uis_academy_events.8.d
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {#we just need to say "ok" to this
+		name = uis_academy_events.8.1
 	}
 }

@@ -121,10 +121,6 @@ country_event = {#choice to either pay local landholders to back down from the r
 		add_corruption = 2
 		add_years_of_income = -2
 		add_country_modifier = {
-			name = uis_junta_paid_off
-			duration = -1
-		}
-		add_country_modifier = {
 			name = uis_junta_forts_paid
 			duration = -1
 		}

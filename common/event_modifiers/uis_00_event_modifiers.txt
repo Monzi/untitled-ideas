@@ -230,6 +230,11 @@ uis_prestige_academy = {
 	yearly_army_professionalism = 0.02
 	mil_advisor_cost = 0.15
 }
+#Country modifier for disloyal scholars
+uis_disloyal_academy_scholars = {
+	yearly_army_professionalism = -0.01
+	general_cost = 0.25
+}
 
 # Modifiers for policies.
 # ------------------------------------------------------------------------------------------------
