@@ -2,7 +2,10 @@ namespace = uis_ideagroup_pulse
 
 # Pulse Idea Events
 # Industrial			Range 0-19
-
+# Booming Industry C-G
+# Industrial downturn C-B
+# Local industrial downturn P-B
+# Industrial collapse P-B
 
 # Militarism			Range 20-39
 
