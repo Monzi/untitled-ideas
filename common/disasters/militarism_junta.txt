@@ -2,35 +2,41 @@ uis_militarism_junta = {
 	
     potential = {
 		is_nomad = no
-		OR = {
-			NOT = {has_reform = presidential_despot_reform}
-			NOT = {has_reform = military_dictatorship_reform}
-			NOT = {has_reform = admiralty_reform}
-			NOT = {has_reform = military_rulership_reform}
-			NOT = {has_reform = prussian_republic}
-			NOT = {has_reform = prussian_republic_reform}
-			NOT = {has_reform = junta_reform}		
+		NOT = {
+			OR = {
+				has_country_flag = had_junta_disaster
+				has_country_flag = has_had_junta_reform
+			}
+		}
+		NOT = {
+			OR = {
+				has_reform = presidential_despot_reform
+				has_reform = military_dictatorship_reform
+				has_reform = admiralty_reform
+				has_reform = military_rulership_reform
+				has_reform = prussian_republic
+				has_reform = prussian_republic_reform
+				has_reform = junta_reform
+			}
 		}
 		OR = {
 			full_idea_group = militarism_ideas
 			has_estate = estate_academy
 		}
-		hidden_trigger = {
-			OR = {
-				NOT = {has_country_flag = had_junta_disaster}
-				NOT = {has_country_flag = has_had_junta_reform}
-			}
-		}
 	}
 	can_start = {
 		is_at_war = no
 		has_any_disaster = no
-		hidden_trigger = {
-			OR = {
-				NOT = {has_country_flag = had_junta_disaster}
-				NOT = {has_country_flag = has_had_junta_reform}	
+		NOT = {
+			custom_trigger_tooltip = {
+				tooltip = UIS_JUNTA_FINISHED_DISASTER_TOOLTIP
+				OR = {
+					has_country_flag = had_junta_disaster
+					has_country_flag = has_had_junta_reform
+				}
 			}
 		}
+		
 		if = {
 			limit = {
 				has_estate = estate_academy			
@@ -70,6 +76,15 @@ uis_militarism_junta = {
 	}
 	can_stop = {
 		OR = {
+			has_country_flag = had_junta_disaster
+			has_country_flag = has_had_junta_reform
+			has_reform = presidential_despot_reform
+			has_reform = military_dictatorship_reform
+			has_reform = admiralty_reform
+			has_reform = military_rulership_reform
+			has_reform = prussian_republic
+			has_reform = prussian_republic_reform
+			has_reform = junta_reform
 			has_any_disaster = yes
 			if = {
 				limit = { has_estate = estate_academy }
@@ -91,7 +106,7 @@ uis_militarism_junta = {
 						total_pips = 12
 					}
 				}
-			}
+			}								
 		}
 	}
 	#most of these are placeholder or not fully thought through
