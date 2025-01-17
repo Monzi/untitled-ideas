@@ -180,6 +180,7 @@ junta_rebels = {
 				duration = 5475
 				hidden = yes
 			}
+			set_country_flag = had_junta_disaster
 		}
 		kill_heir = { allow_new_heir = no }
 		kill_ruler = yes
@@ -189,6 +190,7 @@ junta_rebels = {
 			}
 			add_local_autonomy = 20
 		}
+
 		add_prestige = -50
 		change_government = republic
 		#placeholder name
