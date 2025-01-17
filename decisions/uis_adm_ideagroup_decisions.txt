@@ -1,3 +1,22 @@
 country_decisions = {
-	
+	uis_stop_junta = {
+		major = yes
+		ai_will_do = {
+			factor = 100
+		}
+		potential = {
+			has_disaster = uis_militarism_junta
+		}
+		allow = {
+			had_country_flag = {
+				flag = uis_junta_disaster_started
+				days = 730
+			}
+		}
+		effect = {
+			country_event = {
+				id = uis_ideagroups.4009
+			}
+		}
+	}
 }
