@@ -220,7 +220,7 @@ hum_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	military_tactics = 0.005
+	military_tactics = 0.01
 	tolerance_of_heretics_capacity = 1
 	tolerance_of_heathens_capacity = 1
 
@@ -268,7 +268,7 @@ indu_tac = {
 	}
 
 	production_efficiency = 0.10
-	military_tactics = 0.005
+	military_tactics = 0.01
 
 	effect = {}
 	removed_effect = {}
@@ -291,7 +291,7 @@ infra_tac = {
 	}
 
 	centralize_state_cost = -0.15
-	military_tactics = 0.005
+	military_tactics = 0.01
 
 	effect = {}
 	removed_effect = {}
@@ -314,7 +314,7 @@ cent_tac = {
 	}
 
 	state_governing_cost = -0.15
-	military_tactics = 0.005
+	military_tactics = 0.01
 
 	effect = {}
 	removed_effect = {}
@@ -337,7 +337,7 @@ decent_tac = {
 	}
 
 	territories_governing_cost = -0.20
-	military_tactics = 0.005
+	military_tactics = 0.01
 
 	effect = {}
 	removed_effect = {}

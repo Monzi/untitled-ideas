@@ -48,3 +48,4 @@
  uis_junta_disaster_mil4_advisor_employed:0 "Military Advisor of skill §Y4§! or higher is employed"
  uis_junta_disaster_mil5_advisor_employed:0 "Military Advisor of skill §Y5§! is employed"
  UIS_JUNTA_DISASTER_TOOLTIP:0 "Can be stopped by rebels enforcing their demands or defeating Junta rebels in battle and completing the disaster event chain."
+ UIS_JUNTA_REFORM_TRIGGER_TOOLTIP:0 "This reform is only available after a military coup"

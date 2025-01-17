@@ -4133,6 +4133,21 @@ junta_reform = {
 	nation_designer_cost = 25
 	can_form_trade_league = no
 
+	potential = {
+		OR = {
+			has_idea_group = militarism_ideas
+			has_estate = estate_academy
+		}
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = UIS_JUNTA_REFORM_TRIGGER_TOOLTIP
+			has_country_flag = had_junta_disaster
+			NOT = { has_country_flag = has_had_junta_reform }
+		}
+	}
+
 	modifiers = {
 		monthly_uis_junta_militarization = 0.05
 		max_absolutism = 20

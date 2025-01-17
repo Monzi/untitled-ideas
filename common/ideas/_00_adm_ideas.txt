@@ -272,7 +272,7 @@ economic_ideas = {
  	}
 
 	 ai_will_do = {
-		factor = 0.35
+		factor = 0.4
 		modifier = {
 			factor = 2
 			inflation = 5
@@ -352,7 +352,7 @@ industrial_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.7
+		factor = 0.6
 		modifier = {
 			factor = 1.1
 			personality = ai_capitalist
@@ -632,7 +632,7 @@ militarism_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.0
+		factor = 0.4
 		modifier = {
 			factor = 2
 			has_strong_mil_national_ideas = yes 
@@ -721,7 +721,7 @@ centralization_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.6
+		factor = 0.5
 
 		modifier = {
 			factor = 5
@@ -833,7 +833,7 @@ decentralization_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.8
+		factor = 0.6
 
 		modifier = {
 			factor = 1.5

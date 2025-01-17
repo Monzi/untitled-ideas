@@ -34,7 +34,7 @@ academy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 3.6
 		modifier = {
 			factor = 2
 			has_strong_mil_national_ideas = yes 
@@ -99,7 +99,7 @@ tactic_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 3.5
+		factor = 3.4
 		modifier = {
 			factor = 2
 			has_strong_mil_national_ideas = yes 
@@ -638,7 +638,7 @@ cavalry_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 2.5
+		factor = 3.0
 		
 		modifier = {
 			factor = 1.25
