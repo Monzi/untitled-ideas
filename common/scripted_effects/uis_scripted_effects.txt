@@ -399,7 +399,6 @@ junta_event_chain_cleanup = {
 	clr_country_flag = had_junta_religious_rebels
 	remove_country_modifier = uis_junta_forts_paid
 	remove_country_modifier = uis_junta_intolerance
-	set_country_flag = had_junta_disaster
 	clear_saved_name = rebel_leader
 	end_disaster = uis_militarism_junta
 }
