@@ -638,7 +638,7 @@ country_event = {#Asking an ally for help
 	}
 	option = {#kill rebs
 	name = uis_ideagroups.4006.b
-		random_province = {
+		random_owned_province = {
 			spawn_rebels = {
 				size = 2
 				type = junta_rebels
@@ -649,8 +649,27 @@ country_event = {#Asking an ally for help
 				which = junta_progress
 				value = 9
 			}
-			country_event = {
-				id = randomeventsstapehordes.25
+			if = {
+				limit = {
+					has_disaster = uis_militarism_junta
+					any_owned_province = {
+						is_owned_by_trade_company = no
+						has_owner_religion = no
+					}
+				}
+				country_event = {
+					id = uis_ideagroups.4007
+					days = 120
+					random = 30
+				}
+			}
+			else_if = {
+				limit = { has_disaster = uis_militarism_junta }
+				country_event = {
+					id = uis_ideagroups.4008
+					days = 30
+					random = 30
+				}
 			}
 		}
 	}
