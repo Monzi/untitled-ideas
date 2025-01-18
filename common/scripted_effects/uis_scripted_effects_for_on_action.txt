@@ -147,7 +147,7 @@ junta_event_battle_won_unit_effect = {
 		unit_owner = {
 			change_variable = {
 				which = uis_junta_rebels_defeated
-				value = 1					
+				value = 1
 			}
 		}
 	}

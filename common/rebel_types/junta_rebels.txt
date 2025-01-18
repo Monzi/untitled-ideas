@@ -167,7 +167,7 @@ junta_rebels = {
 	can_enforce_trigger = {
 		has_disaster = uis_militarism_junta
 		check_variable = {
-			junta_progress = 25
+			junta_progress = 50
 		}
 	}
 

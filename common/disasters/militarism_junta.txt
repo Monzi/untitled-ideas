@@ -251,6 +251,15 @@ uis_militarism_junta = {
 		}
 	}
 
+	on_monthly = {
+		events = {
+			
+		}
+		random_events = {
+			
+		}
+	}
+
 	modifier = {
 		global_regiment_cost = 0.25
 		global_unrest = 5

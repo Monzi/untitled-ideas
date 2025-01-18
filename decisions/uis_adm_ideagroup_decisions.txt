@@ -19,25 +19,25 @@ country_decisions = {
 			}
 		}
 	}
-	uis_flag_debug = {
-		major = yes
-		potential = {
-			always = yes
-		}
-		allow = {
-			always = yes
-			ai = no
-		}
-		effect = {
-			if = {
-				limit = {
-					has_country_flag = had_junta_disaster
-				}
-				clr_country_flag = had_junta_disaster
-			}
-			else = {
-				set_country_flag = had_junta_disaster
-			}
-		}
-	}
+	#uis_flag_debug = {
+	#	major = yes
+	#	potential = {
+	#		always = yes
+	#	}
+	#	allow = {
+	#		always = yes
+	#		ai = no
+	#	}
+	#	effect = {
+	#		if = {
+	#			limit = {
+	#				has_country_flag = had_junta_disaster
+	#			}
+	#			clr_country_flag = had_junta_disaster
+	#		}
+	#		else = {
+	#			set_country_flag = had_junta_disaster
+	#		}
+	#	}
+	#}
 }
