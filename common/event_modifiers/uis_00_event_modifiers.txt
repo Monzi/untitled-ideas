@@ -15,14 +15,14 @@ centralized_region = {
 	allowed_num_of_buildings = 1
 }
 #Subjects outside own region
-centralized_subject_foreign = {
-	local_development_cost = -0.05
-	local_build_cost = -0.05
-	local_build_time = -0.05
-}
+#centralized_subject_foreign = {
+#	local_development_cost = -0.05
+#	local_build_cost = -0.05
+#	local_build_time = -0.05
+#}
 #Local subjects
 centralized_subject_loyalty = {
-	liberty_desire = -10
+	liberty_desire = -5
 }
 centralized_subject_local = {
 	local_development_cost = -0.10
@@ -32,8 +32,7 @@ centralized_subject_local = {
 #Militarism Ideas / Junta coup
 uis_junta_forts_paid = {
 	fort_maintenance_modifier = 0.25
-	land_maintenance_modifier = 0.15
-	global_tax_modifier = -0.15
+	global_tax_modifier = -0.10
 }
 uis_junta_nobles_handled = {
 	nobles_loyalty_modifier = 0.05
@@ -53,6 +52,9 @@ uis_junta_intolerance = {
 	tolerance_heathen = -2
 	tolerance_heretic = -2
 	global_unrest = 1
+}
+uis_recent_junta_uprising = {
+	
 }
 #modifier for rebel occupied province
 uis_local_men_drafted = {

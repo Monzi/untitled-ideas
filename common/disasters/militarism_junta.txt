@@ -253,17 +253,25 @@ uis_militarism_junta = {
 
 	on_monthly = {
 		events = {
-			
+			uis_ideagroups.4009
+			uis_ideagroups.4008
+			uis_ideagroups.4002
 		}
 		random_events = {
-			
+			1000 = 0
+			100 = uis_ideagroups.40022
+			100 = uis_ideagroups.4001
+			100 = uis_ideagroups.4003
+			100 = uis_ideagroups.4004
+			200 = uis_ideagroups.4006
+			200 = uis_ideagroups.4007
 		}
 	}
-
 	modifier = {
 		global_regiment_cost = 0.25
 		global_unrest = 5
 		stability_cost_modifier = 1
 	}
 	on_start = uis_ideagroups.4000
+	on_end = uis_ideagroups.4010
 }

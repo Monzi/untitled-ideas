@@ -20,7 +20,7 @@ country_decisions = {
 		}
 	}
 	#uis_flag_debug = {
-	#	major = yes
+	#
 	#	potential = {
 	#		always = yes
 	#	}
@@ -40,4 +40,41 @@ country_decisions = {
 	#		}
 	#	}
 	#}
+	uis_junta_readiness_check = {
+		color = {
+			155
+			0
+			0
+		}
+		potential = {
+			has_disaster = uis_militarism_junta
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = UIS_JUNTA_DECISION_TOOLTIP
+				NOT = {
+					has_country_flag = uis_junta_end_by_decision
+				}
+				had_country_flag = {
+					flag = uis_junta_disaster_started
+					days = 730
+				}
+				NOT = {
+					check_variable = {
+						which = junta_readiness
+						value = 10
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = uis_junta_end_by_decision
+			country_event = {
+				id = uis_ideagroups.4009
+			}
+		}
+	}
 }

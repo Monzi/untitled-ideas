@@ -3,6 +3,9 @@
 # ADM
  junta_debug_decision_title:0 "rebel leader progress"
  junta_debug_decision_desc:0 "[Root.uis_junta_rebels_defeated.GetName] [Root.uis_junta_rebels_defeated.GetValue] progress"
+ uis_junta_readiness_check_title:0 "Curtail the Junta"
+ uis_junta_readiness_check_desc:0 ""
+ UIS_JUNTA_DECISION_TOOLTIP:0 "End the Military Takeover disaster by lowering [Root.junta_readiness.GetName] below 10\nCurrent [Root.junta_readiness.GetName]: [Root.junta_readiness.GetValue]"
 
 
 # DIP
