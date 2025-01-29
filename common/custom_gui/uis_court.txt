@@ -2,7 +2,10 @@ custom_button = { # Hold court button inside countrygovernmentview.gui
 	name = hold_court
 	tooltip = hold_court_tooltip
 	potential = { always = yes }
-	trigger = { full_idea_group = court_ideas }
+	trigger = {
+		always = yes # Only for debugging
+		#full_idea_group = court_ideas
+	}
 	effect = {
 		set_country_flag = court_nav_default
 		if = {
@@ -41,6 +44,15 @@ custom_button = { # Realm
 		clear_previous_nav_flag = yes
 		set_country_flag = court_nav_realm
 	}
+	frame = {
+		number = 2
+		trigger = {
+			OR = {
+				has_country_flag = court_nav_default
+				has_country_flag = court_nav_realm
+			}
+		}
+	}
 }
 
 custom_button = { # Economy
@@ -51,6 +63,10 @@ custom_button = { # Economy
 	effect = {
 		clear_previous_nav_flag = yes
 		set_country_flag = court_nav_economy
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_economy }
 	}
 }
 
@@ -63,6 +79,10 @@ custom_button = { # Diplomacy
 		clear_previous_nav_flag = yes
 		set_country_flag = court_nav_diplomacy
 	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_diplomacy }
+	}
 }
 
 custom_button = { # Military
@@ -73,6 +93,10 @@ custom_button = { # Military
 	effect = {
 		clear_previous_nav_flag = yes
 		set_country_flag = court_nav_military
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_military }
 	}
 }
 

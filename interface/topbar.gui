@@ -584,8 +584,8 @@ guiTypes = {
 			windowType = {
 				name = "court_top_nav"
 				backGround = ""
-				position = { x=0 y=0 } # RETUNE INGAME
-				size = { x=0 y=0 } # RETUNE INGAME
+				position = { x=24 y=115 } # RETUNE INGAME
+				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
@@ -594,34 +594,34 @@ guiTypes = {
 				fullScreen = no
 
 				guiButtonType = { # Realm
-					name = court_top_nav_realm
+					name = "court_top_nav_realm"
 					scripted = yes
-					quadTextureSprite = "" # REPLACE WITH TEXTURE
-					position = { x=0 y=0 } # RETUNE INGAME
+					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					position = { x=0 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 				}
 				guiButtonType = { # Economy
-					name = court_top_nav_economy
+					name = "court_top_nav_economy"
 					scripted = yes
-					quadTextureSprite = "" # REPLACE WITH TEXTURE
-					position = { x=40 y=0 } # RETUNE INGAME
+					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					position = { x=65 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 				}
 				guiButtonType = { # Diplomacy
-					name = court_top_nav_diplomacy
+					name = "court_top_nav_diplomacy"
 					scripted = yes
-					quadTextureSprite = "" # REPLACE WITH TEXTURE
-					position = { x=80 y=0 } # RETUNE INGAME
+					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					position = { x=130 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 				}
 				guiButtonType = { # Military
-					name = court_top_nav_military
+					name = "court_top_nav_military"
 					scripted = yes
-					quadTextureSprite = "" # REPLACE WITH TEXTURE
-					position = { x=120 y=0 } # RETUNE INGAME
+					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					position = { x=195 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 				}
@@ -631,8 +631,8 @@ guiTypes = {
 				name = "court_nav_content_realm"
 				scripted = yes
 				backGround = ""
-				position = { x=0 y=0 } # RETUNE INGAME
-				size = { x=0 y=0 } # RETUNE INGAME
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
@@ -640,11 +640,11 @@ guiTypes = {
 				verticalBorder = ""
 				fullScreen = no
 
-				windowType = { # Comment here
+				windowType = { # Realm Decree 1
 					name = "court_realm_decree_1"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -677,11 +677,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Realm Decree 2
 					name = "court_realm_decree_2"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -714,11 +714,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Realm Decree 3
 					name = "court_realm_decree_3"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -751,11 +751,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Realm Decree 4
 					name = "court_realm_decree_4"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -794,8 +794,8 @@ guiTypes = {
 				name = "court_nav_content_economy"
 				scripted = yes
 				backGround = ""
-				position = { x=0 y=0 } # RETUNE INGAME
-				size = { x=0 y=0 } # RETUNE INGAME
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
@@ -803,11 +803,11 @@ guiTypes = {
 				verticalBorder = ""
 				fullScreen = no
 
-				windowType = { # Comment here
+				windowType = { # Economy Decree 1
 					name = "court_economy_decree_1"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -840,11 +840,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Economy Decree 2
 					name = "court_economy_decree_2"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -877,11 +877,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Economy Decree 3
 					name = "court_economy_decree_3"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -914,11 +914,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Economy Decree 4
 					name = "court_economy_decree_4"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -957,8 +957,8 @@ guiTypes = {
 				name = "court_nav_content_diplomacy"
 				scripted = yes
 				backGround = ""
-				position = { x=0 y=0 } # RETUNE INGAME
-				size = { x=0 y=0 } # RETUNE INGAME
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
@@ -966,11 +966,11 @@ guiTypes = {
 				verticalBorder = ""
 				fullScreen = no
 
-				windowType = { # Comment here
+				windowType = { # Diplomacy Decree 1
 					name = "court_diplomacy_decree_1"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1003,11 +1003,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Diplomacy Decree 2
 					name = "court_diplomacy_decree_2"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1040,11 +1040,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Diplomacy Decree 3
 					name = "court_diplomacy_decree_3"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1077,11 +1077,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Diplomacy Decree 4
 					name = "court_diplomacy_decree_4"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1120,8 +1120,8 @@ guiTypes = {
 				name = "court_nav_content_military"
 				scripted = yes
 				backGround = ""
-				position = { x=0 y=0 } # RETUNE INGAME
-				size = { x=0 y=0 } # RETUNE INGAME
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
@@ -1129,11 +1129,11 @@ guiTypes = {
 				verticalBorder = ""
 				fullScreen = no
 
-				windowType = { # Comment here
+				windowType = { # Military Decree 1
 					name = "court_military_decree_1"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1166,11 +1166,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Military Decree 2
 					name = "court_military_decree_2"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1203,11 +1203,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Military Decree 3
 					name = "court_military_decree_3"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1240,11 +1240,11 @@ guiTypes = {
 						position = { x=200 y=10 }
 					}
 				}
-				windowType = { # Comment here
+				windowType = { # Military Decree 4
 					name = "court_military_decree_4"
 					backGround = ""
-					position = { x=20 y=180 } # RETUNE INGAME
-					size = { x=255 y=48 } # RETUNE INGAME
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
 					moveable = 0
 					dontRender = ""
@@ -1279,296 +1279,6 @@ guiTypes = {
 				}
 			}
 
-			### Decree Entry
-			# windowType = { #1
-			# 	name = "court_decree_1_entry"
-			# 	backGround=""
-			# 	position = { x=20 y=180 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_1_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_1_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_1_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_1_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #2
-			# 	name = "court_decree_2_entry"
-			# 	backGround=""
-			# 	position = { x=20 y=230 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_2_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_2_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_2_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_2_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #3
-			# 	name = "court_decree_3_entry"
-			# 	backGround=""
-			# 	position = { x=20 y=280 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_3_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_3_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_3_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_3_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #4
-			# 	name = "court_decree_4_entry"
-			# 	backGround=""
-			# 	position = { x=20 y=330 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_4_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_4_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_4_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_4_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #5
-			# 	name = "court_decree_5_entry"
-			# 	backGround=""
-			# 	position = { x=275 y=180 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_5_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_5_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_5_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_5_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #6
-			# 	name = "court_decree_6_entry"
-			# 	backGround=""
-			# 	position = { x=275 y=230 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_6_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_6_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_6_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_6_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #7
-			# 	name = "court_decree_7_entry"
-			# 	backGround=""
-			# 	position = { x=275 y=280 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_7_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_7_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_7_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_7_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-			# windowType = { #8
-			# 	name = "court_decree_8_entry"
-			# 	backGround=""
-			# 	position = { x=275 y=330 }
-			# 	size = { x=255 y=48 }
-			# 	moveable = 0
-			# 	dontRender = ""
-			# 	horizontalBorder= ""
-			# 	verticalBorder= ""
-			# 	fullScreen = no
-
-			# 	guiButtonType = {
-			# 		name = "court_decree_8_select_button"
-			# 		scripted = yes
-			# 		quadTextureSprite ="GFX_decree_button"
-			# 		position = { x=0 y=0 }
-			# 		Orientation = "UPPER_LEFT"
-			# 		buttonText = "court_decree_8_title"
-			# 		buttonFont = "vic_18_black"
-			# 		clicksound = click
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_8_seal"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_seal"
-			# 		alwaystransparent = yes
-			# 		position = { x= 186 y = 2 }
-			# 	}
-			# 	iconType = {
-			# 		name = "court_decree_8_check"
-			# 		scripted = yes
-			# 		spriteType ="GFX_decree_button_check"
-			# 		alwaystransparent = yes
-			# 		position = { x= 200 y = 10 }
-			# 	}
-			# }
-	
 			guiButtonType = {
 				name = "court_custom_window_close_button"
 				scripted = yes
@@ -1583,10 +1293,6 @@ guiTypes = {
 				shortcut = "ESCAPE"
 			}
 		}
-
-
-
-
 
 
 
