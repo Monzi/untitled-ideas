@@ -1,0 +1,7 @@
+clear_previous_nav_flag = {
+	clr_country_flag = court_nav_default
+	clr_country_flag = court_nav_realm
+	clr_country_flag = court_nav_economy
+	clr_country_flag = court_nav_diplomacy
+	clr_country_flag = court_nav_military
+}

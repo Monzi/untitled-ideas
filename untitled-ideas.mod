@@ -9,5 +9,5 @@ tags={
 }
 picture="thumbnail.png"
 supported_version="v1.37.*.*"
-path="C:/Users/Christian/Documents/Paradox Interactive/Europa Universalis IV/mod/untitled-ideas"
+path="mod/untitled-ideas"
 remote_file_id="3402737877"

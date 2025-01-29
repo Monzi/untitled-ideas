@@ -70,39 +70,93 @@ uis_lost_to_junta_rebels = {
 # Court Ideas
 cooldown_court_decrees = {
 }
-court_decree_1 = { # Currency Regulation Ordinance
-	inflation_action_cost = -0.20
-	inflation_reduction = 0.1
+# Realm Decrees
+court_realm_decree_1 = {
+	# Modifiers here...
 }
-court_decree_2 = { # Monetary Policy Directive
-	interest = -1
+court_realm_decree_2 = {
+	# Modifiers here...
 }
-court_decree_3 = { # Trade Agreement Ratification
-	trade_efficiency = 0.1
-	trade_steering = 0.1
+court_realm_decree_3 = {
+	# Modifiers here...
 }
-court_decree_4 = { # Legal Ruling and Guidance
-	legitimacy = 1
-	republican_tradition = 0.15
-	devotion = 1
-	horde_unity = 1
-	meritocracy = 1
-	imperial_mandate = 0.1
+court_realm_decree_4 = {
+	# Modifiers here...
 }
-court_decree_5 = { # War Powers Resolution
-	war_taxes_cost_modifier = -1
-	global_regiment_recruit_speed = -0.15
+# Economy Decrees
+court_economy_decree_1 = {
+	# Modifiers here...
 }
-court_decree_6 = { # Budget Allocation Ordinance
-	global_regiment_cost = -0.15
+court_economy_decree_2 = {
+	# Modifiers here...
 }
-court_decree_7 = { # Military Uniform Regulation Decree
-	yearly_army_professionalism = 0.001
+court_economy_decree_3 = {
+	# Modifiers here...
 }
-court_decree_8 = { # Military Base Realignment Decree
-	fort_maintenance_modifier = -0.25
-	global_garrison_growth = 0.50
+court_economy_decree_4 = {
+	# Modifiers here...
 }
+# Diplomacy Decrees
+court_diplomacy_decree_1 = {
+	# Modifiers here...
+}
+court_diplomacy_decree_2 = {
+	# Modifiers here...
+}
+court_diplomacy_decree_3 = {
+	# Modifiers here...
+}
+court_diplomacy_decree_4 = {
+	# Modifiers here...
+}
+# Military Decrees
+court_military_decree_1 = {
+	# Modifiers here...
+}
+court_military_decree_2 = {
+	# Modifiers here...
+}
+court_military_decree_3 = {
+	# Modifiers here...
+}
+court_military_decree_4 = {
+	# Modifiers here...
+}
+
+# NOT USED - Try to reuse
+# court_decree_1 = { # Currency Regulation Ordinance
+# 	inflation_action_cost = -0.20
+# 	inflation_reduction = 0.1
+# }
+# court_decree_2 = { # Monetary Policy Directive
+# 	interest = -1
+# }
+# court_decree_3 = { # Trade Agreement Ratification
+# 	trade_efficiency = 0.1
+# 	trade_steering = 0.1
+# }
+# court_decree_4 = { # Legal Ruling and Guidance
+# 	legitimacy = 1
+# 	republican_tradition = 0.15
+# 	devotion = 1
+# 	horde_unity = 1
+# 	meritocracy = 1
+# 	imperial_mandate = 0.1
+# }
+# court_decree_5 = { # War Powers Resolution
+# 	war_taxes_cost_modifier = -1
+# 	global_regiment_recruit_speed = -0.15
+# }
+# court_decree_6 = { # Budget Allocation Ordinance
+# 	global_regiment_cost = -0.15
+# }
+# court_decree_7 = { # Military Uniform Regulation Decree
+# 	yearly_army_professionalism = 0.001
+# }
+# court_decree_8 = { # Military Base Realignment Decree
+# 	fort_maintenance_modifier = -0.25
+# 	global_garrison_growth = 0.50
+# }
 # Maritime Ideas
 upgraded_marines_cooldown = {
 	discipline = -0.05
@@ -206,14 +260,17 @@ tier3_infantry = {
 tier1_cavalry = {
 	cavalry_fire = 0.05
 	cavalry_shock = 0.05
+	cav_to_inf_ratio = 0.05
 }
 tier2_cavalry = {
 	cavalry_fire = 0.1
 	cavalry_shock = 0.1
+	cav_to_inf_ratio = 0.10
 }
 tier3_cavalry = {
 	cavalry_fire = 0.15
 	cavalry_shock = 0.15
+	cav_to_inf_ratio = 0.15
 }
 
 # Standing Army Ideas
