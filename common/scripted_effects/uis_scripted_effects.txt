@@ -296,11 +296,11 @@ adandon_centralization = {
 
 # Quantity Ideas - Forced Draft Button Effect
 forced_draft_button_effect = {
-	add_yearly_manpower = 2
+	add_yearly_manpower = 5
 	custom_tooltip = draft_pop_effect_tooltip
 	hidden_effect = {
 		every_owned_province = {
-			add_devastation = 50
+			add_devastation = 25
 		}
 	}
 }

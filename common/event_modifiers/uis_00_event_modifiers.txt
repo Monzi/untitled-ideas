@@ -206,14 +206,17 @@ tier3_infantry = {
 tier1_cavalry = {
 	cavalry_fire = 0.05
 	cavalry_shock = 0.05
+	cav_to_inf_ratio = 0.05
 }
 tier2_cavalry = {
 	cavalry_fire = 0.1
 	cavalry_shock = 0.1
+	cav_to_inf_ratio = 0.10
 }
 tier3_cavalry = {
 	cavalry_fire = 0.15
 	cavalry_shock = 0.15
+	cav_to_inf_ratio = 0.15
 }
 
 # Standing Army Ideas
