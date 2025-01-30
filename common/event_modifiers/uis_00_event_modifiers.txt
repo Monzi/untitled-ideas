@@ -68,8 +68,6 @@ uis_lost_to_junta_rebels = {
 
 # DIP
 # Court Ideas
-cooldown_court_decrees = {
-}
 # Realm Decrees
 court_realm_decree_1 = {
 	# Modifiers here...
@@ -93,7 +91,26 @@ court_economy_decree_2 = {
 court_economy_decree_3 = {
 	# Modifiers here...
 }
-court_economy_decree_4 = {
+# ADM advisor decrees
+court_economy_decree_artist = {
+	# Modifiers here...
+}
+court_economy_decree_inquisitor = {
+	# Modifiers here...
+}
+court_economy_decree_master_of_mint = {
+	# Modifiers here...
+}
+court_economy_decree_natural_scientist = {
+	# Modifiers here...
+}
+court_economy_decree_philosopher = {
+	# Modifiers here...
+}
+court_economy_decree_theologian = {
+	# Modifiers here...
+}
+court_economy_decree_treasurer = {
 	# Modifiers here...
 }
 # Diplomacy Decrees
@@ -106,7 +123,26 @@ court_diplomacy_decree_2 = {
 court_diplomacy_decree_3 = {
 	# Modifiers here...
 }
-court_diplomacy_decree_4 = {
+# DIP advisor decrees
+court_diplomacy_decree_colonial_governor = {
+	# Modifiers here...
+}
+court_diplomacy_decree_diplomat = {
+	# Modifiers here...
+}
+court_diplomacy_decree_naval_reformer = {
+	# Modifiers here...
+}
+court_diplomacy_decree_navigator = {
+	# Modifiers here...
+}
+court_diplomacy_decree_spymaster = {
+	# Modifiers here...
+}
+court_diplomacy_decree_statesman = {
+	# Modifiers here...
+}
+court_diplomacy_decree_trader = {
 	# Modifiers here...
 }
 # Military Decrees
@@ -119,7 +155,26 @@ court_military_decree_2 = {
 court_military_decree_3 = {
 	# Modifiers here...
 }
-court_military_decree_4 = {
+# MIL advisor decrees
+court_military_decree_army_organiser = {
+	# Modifiers here...
+}
+court_military_decree_army_reformer = {
+	# Modifiers here...
+}
+court_military_decree_commandant = {
+	# Modifiers here...
+}
+court_military_decree_grand_captain = {
+	# Modifiers here...
+}
+court_military_decree_recruitmaster = {
+	# Modifiers here...
+}
+court_military_decree_fortification_expert = {
+	# Modifiers here...
+}
+court_military_decree_quartermaster = {
 	# Modifiers here...
 }
 

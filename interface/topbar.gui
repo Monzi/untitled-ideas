@@ -568,11 +568,11 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 	
-			instantTextBoxType= {
-				position = { x = 0 y = 45}
-				name = "title"
+			instantTextBoxType = {
+				name = "court_custom_window_title"
+				position = { x=0 y=45 }
 				font = "vic_29s"
-				borderSize = {x = 0 y = 0}
+				borderSize = { x=0 y=0}
 				maxWidth = 548
 				maxHeight = 20
 				text = "court_custom_window_title"
@@ -584,7 +584,7 @@ guiTypes = {
 			windowType = {
 				name = "court_top_nav"
 				backGround = ""
-				position = { x=24 y=115 } # RETUNE INGAME
+				position = { x=24 y=115 }
 				size = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 				moveable = 0
@@ -625,6 +625,37 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 					clicksound = click
 				}
+			}
+
+			iconType = { # Tab title background
+				name = "court_nav_title_banner"
+				spriteType = "" # REPLACE WITH TEXTURE
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = { # Tab title
+				name = "court_nav_title"
+				position = { x=0 y=0 }
+				orientation = "UPPER_LEFT"
+				maxWidth = 548
+				maxHeight = 20
+				font = "vic_29s"
+				borderSize = { x=0 y=0 }
+				format = center
+				text = "court_nav_title"
+			}
+
+			instantTextBoxType = { # Active modifiers
+				name = "court_active_modifiers"
+				position = { x=0 y=0 }
+				orientation = "UPPER_LEFT"
+				maxWidth = 548
+				maxHeight = 20
+				font = "vic_29s"
+				borderSize = { x=0 y=0 }
+				format = center
+				text = "court_active_modifiers"
 			}
 
 			windowType = { # Realm

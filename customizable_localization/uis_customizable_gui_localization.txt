@@ -1,0 +1,496 @@
+defined_text = { # Custom GUI: Court Interface
+	name = gui_court_nav_title
+	text = {
+		localisation_key = string_realm_nav_title
+		trigger = {
+			OR = {
+				has_country_flag = court_nav_default
+				has_country_flag = court_nav_realm
+			}
+		}
+	}
+	text = {
+		localisation_key = string_economy_nav_title
+		trigger = {
+			has_country_flag = court_nav_economy
+		}
+	}
+	text = {
+		localisation_key = string_diplomacy_nav_title
+		trigger = {
+			has_country_flag = court_nav_diplomacy
+		}
+	}
+	text = {
+		localisation_key = string_military_nav_title
+		trigger = {
+			has_country_flag = court_nav_military
+		}
+	}
+}
+
+defined_text = { # Active Modifier for realm decrees
+	name = gui_court_active_realm_modifier
+	text = {
+		localisation_key = string_court_realm_decree_1
+		trigger = {
+			has_ruler_modifier = court_realm_decree_1
+		}
+	}
+	text = {
+		localisation_key = string_court_realm_decree_2
+		trigger = {
+			has_ruler_modifier = court_realm_decree_2
+		}
+	}
+	text = {
+		localisation_key = string_court_realm_decree_3
+		trigger = {
+			has_ruler_modifier = court_realm_decree_3
+		}
+	}
+	text = {
+		localisation_key = string_court_realm_decree_4
+		trigger = {
+			has_ruler_modifier = court_realm_decree_4
+		}
+	}
+}
+defined_text = { # Active Modifier for economy decrees
+	name = gui_court_active_economy_modifier
+	text = {
+		localisation_key = string_court_economy_decree_1
+		trigger = {
+			has_ruler_modifier = court_economy_decree_1
+		}
+	}
+	text = {
+		localisation_key = string_court_economy_decree_2
+		trigger = {
+			has_ruler_modifier = court_economy_decree_2
+		}
+	}
+	text = {
+		localisation_key = string_court_economy_decree_3
+		trigger = {
+			has_ruler_modifier = court_economy_decree_3
+		}
+	}
+	text = { # Replace with advisor ones
+		localisation_key = string_court_economy_decree_artist
+		trigger = {
+			has_ruler_modifier = court_economy_decree_artist
+		}
+	}
+}
+defined_text = { # Active Modifier for diplomacy decrees
+	name = gui_court_active_diplomacy_modifier
+	text = {
+		localisation_key = string_court_diplomacy_decree_1
+		trigger = {
+			has_ruler_modifier = court_diplomacy_decree_1
+		}
+	}
+	text = {
+		localisation_key = string_court_diplomacy_decree_2
+		trigger = {
+			has_ruler_modifier = court_diplomacy_decree_2
+		}
+	}
+	text = {
+		localisation_key = string_court_diplomacy_decree_3
+		trigger = {
+			has_ruler_modifier = court_diplomacy_decree_3
+		}
+	}
+	text = { # Replace with advisor ones
+		localisation_key = string_court_diplomacy_decree_4
+		trigger = {
+			has_ruler_modifier = court_diplomacy_decree_4
+		}
+	}
+}
+defined_text = { # Active Modifier for military decrees
+	name = gui_court_active_military_modifier
+	text = {
+		localisation_key = string_court_military_decree_1
+		trigger = {
+			has_ruler_modifier = court_military_decree_1
+		}
+	}
+	text = {
+		localisation_key = string_court_military_decree_2
+		trigger = {
+			has_ruler_modifier = court_military_decree_2
+		}
+	}
+	text = {
+		localisation_key = string_court_military_decree_3
+		trigger = {
+			has_ruler_modifier = court_military_decree_3
+		}
+	}
+	text = { # Replace with advisor ones
+		localisation_key = string_court_military_decree_4
+		trigger = {
+			has_ruler_modifier = court_military_decree_4
+		}
+	}
+}
+
+defined_text = { # ADM Title
+	name = court_economy_decree_adm_title
+	text = {
+		localisation_key = string_court_artist_title
+		trigger = {
+			employed_advisor = {
+				type = artist
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_inquisitor_title
+		trigger = {
+			employed_advisor = {
+				type = inquisitor
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_master_of_mint_title
+		trigger = {
+			employed_advisor = {
+				type = master_of_mint
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_natural_scientist_title
+		trigger = {
+			employed_advisor = {
+				type = natural_scientist
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_philosopher_title
+		trigger = {
+			employed_advisor = {
+				type = philosopher
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_theologian_title
+		trigger = {
+			employed_advisor = {
+				type = theologian
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_treasurer_title
+		trigger = {
+			employed_advisor = {
+				type = treasurer
+			}
+		}
+	}
+}
+defined_text = { # ADM Desc
+	name = court_economy_decree_adm_desc
+	text = {
+		localisation_key = string_court_artist_desc
+		trigger = {
+			employed_advisor = {
+				type = artist
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_inquisitor_desc
+		trigger = {
+			employed_advisor = {
+				type = inquisitor
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_master_of_mint_desc
+		trigger = {
+			employed_advisor = {
+				type = master_of_mint
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_natural_scientist_desc
+		trigger = {
+			employed_advisor = {
+				type = natural_scientist
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_philosopher_desc
+		trigger = {
+			employed_advisor = {
+				type = philosopher
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_theologian_desc
+		trigger = {
+			employed_advisor = {
+				type = theologian
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_treasurer_desc
+		trigger = {
+			employed_advisor = {
+				type = treasurer
+			}
+		}
+	}
+}
+
+defined_text = { # DIP Title
+	name = court_diplomacy_decree_dip_title
+	text = {
+		localisation_key = string_court_colonial_governor_title
+		trigger = {
+			employed_advisor = {
+				type = colonial_governor
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_diplomat_title
+		trigger = {
+			employed_advisor = {
+				type = diplomat
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_naval_reformer_title
+		trigger = {
+			employed_advisor = {
+				type = naval_reformer
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_navigator_title
+		trigger = {
+			employed_advisor = {
+				type = navigator
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_spymaster_title
+		trigger = {
+			employed_advisor = {
+				type = spymaster
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_statesman_title
+		trigger = {
+			employed_advisor = {
+				type = statesman
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_trader_title
+		trigger = {
+			employed_advisor = {
+				type = trader
+			}
+		}
+	}
+}
+defined_text = { # DIP Desc
+	name = court_diplomacy_decree_dip_desc
+	text = {
+		localisation_key = string_court_colonial_governor_desc
+		trigger = {
+			employed_advisor = {
+				type = colonial_governor
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_diplomat_desc
+		trigger = {
+			employed_advisor = {
+				type = diplomat
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_naval_reformer_desc
+		trigger = {
+			employed_advisor = {
+				type = naval_reformer
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_navigator_desc
+		trigger = {
+			employed_advisor = {
+				type = navigator
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_spymaster_desc
+		trigger = {
+			employed_advisor = {
+				type = spymaster
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_statesman_desc
+		trigger = {
+			employed_advisor = {
+				type = statesman
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_trader_desc
+		trigger = {
+			employed_advisor = {
+				type = trader
+			}
+		}
+	}
+}
+
+defined_text = { # MIL Title
+	name = court_military_decree_mil_title
+	text = {
+		localisation_key = string_court_army_organiser_title
+		trigger = {
+			employed_advisor = {
+				type = army_organiser
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_army_reformer_title
+		trigger = {
+			employed_advisor = {
+				type = army_reformer
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_commandant_title
+		trigger = {
+			employed_advisor = {
+				type = commandant
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_grand_captain_title
+		trigger = {
+			employed_advisor = {
+				type = grand_captain
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_recruitmaster_title
+		trigger = {
+			employed_advisor = {
+				type = recruitmaster
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_fortification_expert_title
+		trigger = {
+			employed_advisor = {
+				type = fortification_expert
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_quartermaster_title
+		trigger = {
+			employed_advisor = {
+				type = quartermaster
+			}
+		}
+	}
+}
+defined_text = { # MIL Desc
+	name = court_military_decree_mil_desc
+	text = {
+		localisation_key = string_court_army_organiser_desc
+		trigger = {
+			employed_advisor = {
+				type = army_organiser
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_army_reformer_desc
+		trigger = {
+			employed_advisor = {
+				type = army_reformer
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_commandant_desc
+		trigger = {
+			employed_advisor = {
+				type = commandant
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_grand_captain_desc
+		trigger = {
+			employed_advisor = {
+				type = grand_captain
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_recruitmaster_desc
+		trigger = {
+			employed_advisor = {
+				type = recruitmaster
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_fortification_expert_desc
+		trigger = {
+			employed_advisor = {
+				type = fortification_expert
+			}
+		}
+	}
+	text = {
+		localisation_key = string_court_quartermaster_desc
+		trigger = {
+			employed_advisor = {
+				type = quartermaster
+			}
+		}
+	}
+}
