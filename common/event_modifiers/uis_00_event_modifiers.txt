@@ -14,21 +14,6 @@ centralized_region = {
 	local_governing_cost = -0.20
 	allowed_num_of_buildings = 1
 }
-#Subjects outside own region
-#centralized_subject_foreign = {
-#	local_development_cost = -0.05
-#	local_build_cost = -0.05
-#	local_build_time = -0.05
-#}
-#Local subjects
-centralized_subject_loyalty = {
-	liberty_desire = -5
-}
-centralized_subject_local = {
-	local_development_cost = -0.10
-	local_build_cost = -0.10
-	local_build_time = -0.10	
-}
 #Militarism Ideas / Junta coup
 uis_junta_forts_paid = {
 	fort_maintenance_modifier = 0.25
@@ -348,20 +333,4 @@ uis_prestige_academy = {
 uis_disloyal_academy_scholars = {
 	yearly_army_professionalism = -0.01
 	general_cost = 0.25
-}
-
-# Modifiers for policies.
-# ------------------------------------------------------------------------------------------------
-# ADM
-
-
-# DIP
-
-
-# MIL
-# Marines in the Army
-has_had_sailors_exchange_cooldown = {
-}
-gaining_manpower_from_sailors = {
-	manpower_recovery_speed = 0.75
 }

@@ -596,7 +596,7 @@ guiTypes = {
 				guiButtonType = { # Realm
 					name = "court_top_nav_realm"
 					scripted = yes
-					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					quadTextureSprite = "GFX_court_tab_realm"
 					position = { x=0 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
@@ -604,7 +604,7 @@ guiTypes = {
 				guiButtonType = { # Economy
 					name = "court_top_nav_economy"
 					scripted = yes
-					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					quadTextureSprite = "GFX_court_tab_economy"
 					position = { x=65 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
@@ -612,7 +612,7 @@ guiTypes = {
 				guiButtonType = { # Diplomacy
 					name = "court_top_nav_diplomacy"
 					scripted = yes
-					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					quadTextureSprite = "GFX_court_tab_diplomacy"
 					position = { x=130 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
@@ -620,7 +620,7 @@ guiTypes = {
 				guiButtonType = { # Military
 					name = "court_top_nav_military"
 					scripted = yes
-					quadTextureSprite = "GFX_institution_tab_feudalism" # REPLACE WITH TEXTURE
+					quadTextureSprite = "GFX_court_tab_military"
 					position = { x=195 y=0 }
 					Orientation = "UPPER_LEFT"
 					clicksound = click
@@ -629,33 +629,33 @@ guiTypes = {
 
 			iconType = { # Tab title background
 				name = "court_nav_title_banner"
-				spriteType = "" # REPLACE WITH TEXTURE
-				position = { x = 0 y = 0 }
+				spriteType = "GFX_institution_red_banner"
+				position = { x=15 y=190 }
 				Orientation = "UPPER_LEFT"
 			}
 
 			instantTextBoxType = { # Tab title
 				name = "court_nav_title"
-				position = { x=0 y=0 }
+				scripted = yes
+				position = { x=35 y=198 }
 				orientation = "UPPER_LEFT"
 				maxWidth = 548
 				maxHeight = 20
 				font = "vic_29s"
 				borderSize = { x=0 y=0 }
-				format = center
-				text = "court_nav_title"
+				format = left
 			}
 
 			instantTextBoxType = { # Active modifiers
 				name = "court_active_modifiers"
-				position = { x=0 y=0 }
+				scripted = yes
+				position = { x=35 y=240 }
 				orientation = "UPPER_LEFT"
 				maxWidth = 548
 				maxHeight = 20
-				font = "vic_29s"
+				font = "vic_18"
 				borderSize = { x=0 y=0 }
-				format = center
-				text = "court_active_modifiers"
+				format = left
 			}
 
 			windowType = { # Realm
@@ -968,6 +968,20 @@ guiTypes = {
 						clicksound = click
 					}
 					iconType = {
+						name = "court_economy_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
+					}
+					iconType = {
 						name = "court_economy_decree_4_seal"
 						scripted = yes
 						spriteType = "GFX_decree_button_seal"
@@ -1131,6 +1145,20 @@ guiTypes = {
 						clicksound = click
 					}
 					iconType = {
+						name = "court_diplomacy_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
+					}
+					iconType = {
 						name = "court_diplomacy_decree_4_seal"
 						scripted = yes
 						spriteType = "GFX_decree_button_seal"
@@ -1292,6 +1320,20 @@ guiTypes = {
 						buttonText = "court_military_decree_4_title"
 						buttonFont = "vic_18_black"
 						clicksound = click
+					}
+					iconType = {
+						name = "court_military_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
 					}
 					iconType = {
 						name = "court_military_decree_4_seal"
