@@ -92,7 +92,7 @@
  quality_wheat:0 "Fertile Ground"
  quality_copper:0 "High Quality Copper"
 # Quantity Ideas
- cooldown_pops_drafted:0 "Population Drafted"
+ pops_drafted:0 "Population Drafted"
 
 # Infantry / Cavalry Ideas
  army_restructuring:0 "Army Restructuring"

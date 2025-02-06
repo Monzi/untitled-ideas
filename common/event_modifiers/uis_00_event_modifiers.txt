@@ -264,7 +264,9 @@ quantity_over_quality_tactics = {
 }
 
 # Quantity Ideas
-cooldown_pops_drafted = {
+pops_drafted = {
+	local_manpower_modifier = -100
+	local_unrest = 2
 }
 
 # Quality Ideas
