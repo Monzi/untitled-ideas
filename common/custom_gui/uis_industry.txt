@@ -1,0 +1,100 @@
+# Change Trade good
+custom_button = { # Change Province Trade Good
+	name = industry_change_trade_good_button
+	tooltip = x
+	potential = { always = yes }
+	trigger = {
+		always = yes
+		#full_idea_group = industrial_ideas
+	}
+	effect = {
+		country_event = {
+			id = uis_ideagroups.1050
+		}
+	}
+}
+
+custom_window = {
+	name = industry_change_trade_good_window
+	potential = { has_country_flag = industry_change_trade_good_window_open }
+}
+
+#effect = {
+#	if = { # Farmlands, Drylands
+#		limit = {
+#			OR = {
+#				has_terrain = farmlands
+#				has_terrain = drylands
+#			}
+#		}
+#		set_country_flag = industry_change_trade_good_farming
+#		# Add 'Change farmed produce' event here...
+#		# Grain
+#		# Wine*
+#		# Spices*
+#		# Tea*
+#		# Cocoa*
+#		# Coffee*
+#		# Cotton*
+#		# Sugar*
+#		# Tobacco*
+#		# Dyes*
+#		# Cloves*
+#	}
+#	else_if = { # Grasslands, Steppe, Savannah
+#		limit = {
+#			OR = {
+#				has_terrain = grasslands
+#				has_terrain = steppe
+#				has_terrain = savannah
+#			}
+#		}
+#		# Add effect here...
+#		# Wool
+#		# Ivory*
+#	}
+#	else_if = { # Forest, Woods, Jungle
+#		limit = {
+#			OR = {
+#				has_terrain = forest
+#				has_terrain = woods
+#				has_terrain = jungle
+#			}
+#		}
+#		# Add effect here...
+#		# Tropical wood*
+#		# Fur*
+#	}
+#	else_if = { # Hills, Highlands, Mountain
+#		limit = {
+#			OR = {
+#				has_terrain = hills
+#				has_terrain = highlands
+#				has_terrain = mountain
+#			}
+#		}
+#		# Add 'Dig for resources' event here...
+#		# Gold
+#		# Copper
+#		# Iron
+#		# Salt
+#		# Coal
+#		# Gems
+#	}
+#	else_if = { # Coastline, Coastal Desert
+#		limit = {
+#			OR = {
+#				has_terrain = coastline
+#				has_terrain = coastal_desert
+#			}
+#		}
+#		# Add effect here...
+#		# Fish
+#		# Naval supplies
+#		# Salt
+#	}
+#}
+
+# Desert
+# Marsh
+# Glacial
