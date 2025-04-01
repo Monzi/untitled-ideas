@@ -1,13 +1,15 @@
-custom_button = {
+custom_button = { # Hold court button inside countrygovernmentview.gui
 	name = hold_court
 	tooltip = hold_court_tooltip
 	potential = { always = yes }
-	trigger = { full_idea_group = court_ideas }
+	trigger = {
+		always = yes # Only for debugging
+		#full_idea_group = court_ideas
+	}
 	effect = {
+		set_country_flag = court_nav_default
 		if = {
-			limit = {
-				has_country_flag = court_window_shown
-			}
+			limit = { has_country_flag = court_window_shown }
 			clr_country_flag = court_window_shown
 		}
 		else = {
@@ -16,249 +18,938 @@ custom_button = {
 	}
 }
 
-custom_window = {
+custom_window = { # Base interface layer
    name = court_custom_window
    potential = { has_country_flag = court_window_shown }
 }
 
-custom_button = {
-   name = court_custom_window_close_button
-   tooltip = court_custom_window_close_button_tooltip
-   potential = { }
-   trigger = { }
-   effect = { clr_country_flag = court_window_shown }
+custom_button = { # Close button inside interface
+	name = court_custom_window_close_button
+	tooltip = court_custom_window_close_button_tooltip
+	potential = { }
+	trigger = { }
+	effect = {
+		clr_country_flag = court_window_shown
+		clr_country_flag = court_nav_default
+	}
 }
 
-# Court Decrees
+custom_text_box = {
+	name = court_nav_title
+	potential = { always = yes }
+}
+
+custom_text_box = {
+	name = court_active_modifiers
+	potential = { always = yes }
+}
+
+# Top navigation
+custom_button = { # Realm
+	name = court_top_nav_realm
+	tooltip = court_top_nav_realm_tooltip
+	potential = { }
+	trigger = { }
+	effect = {
+		clear_previous_nav_flag = yes
+		set_country_flag = court_nav_realm
+	}
+	frame = {
+		number = 2
+		trigger = {
+			OR = {
+				has_country_flag = court_nav_default
+				has_country_flag = court_nav_realm
+			}
+		}
+	}
+}
+
+custom_button = { # Economy
+	name = court_top_nav_economy
+	tooltip = court_top_nav_economy_tooltip
+	potential = { }
+	trigger = { }
+	effect = {
+		clear_previous_nav_flag = yes
+		set_country_flag = court_nav_economy
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_economy }
+	}
+}
+
+custom_button = { # Diplomacy
+	name = court_top_nav_diplomacy
+	tooltip = court_top_nav_diplomacy_tooltip
+	potential = { }
+	trigger = { }
+	effect = {
+		clear_previous_nav_flag = yes
+		set_country_flag = court_nav_diplomacy
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_diplomacy }
+	}
+}
+
+custom_button = { # Military
+	name = court_top_nav_military
+	tooltip = court_top_nav_military_tooltip
+	potential = { }
+	trigger = { }
+	effect = {
+		clear_previous_nav_flag = yes
+		set_country_flag = court_nav_military
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_flag = court_nav_military }
+	}
+}
+
+# Content windows tied to top navigation
+custom_window = { # Realm
+	name = court_nav_content_realm
+	potential = {
+		OR = {
+			has_country_flag = court_nav_default
+			has_country_flag = court_nav_realm
+		}
+	}
+}
+
+custom_window = { # Economy
+	name = court_nav_content_economy
+	potential = { has_country_flag = court_nav_economy }
+}
+
+custom_window = { # Diplomacy
+	name = court_nav_content_diplomacy
+	potential = { has_country_flag = court_nav_diplomacy }
+}
+
+custom_window = { # Military
+	name = court_nav_content_military
+	potential = { has_country_flag = court_nav_military }
+}
+
+# Court Realm Decrees
 # Decree 1
 custom_button = {
-	name = court_decree_1_select_button
-	tooltip = court_decree_1_tooltip
+	name = court_realm_decree_1_button
+	tooltip = court_realm_decree_1_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_realm_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_realm_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_1
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_realm_decree_1
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_1_seal
-	potential = { has_country_modifier = court_decree_1 }
+	name = court_realm_decree_1_seal
+	potential = { has_ruler_modifier = court_realm_decree_1 }
 }
 custom_icon = {
-	name = court_decree_1_check
-	potential = { has_country_modifier = court_decree_1 }
+	name = court_realm_decree_1_check
+	potential = { has_ruler_modifier = court_realm_decree_1 }
 }
 # Decree 2
 custom_button = {
-	name = court_decree_2_select_button
-	tooltip = court_decree_2_tooltip
+	name = court_realm_decree_2_button
+	tooltip = court_realm_decree_2_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_realm_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_realm_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_2
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_realm_decree_2
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_2_seal
-	potential = { has_country_modifier = court_decree_2 }
+	name = court_realm_decree_2_seal
+	potential = { has_ruler_modifier = court_realm_decree_2 }
 }
 custom_icon = {
-	name = court_decree_2_check
-	potential = { has_country_modifier = court_decree_2 }
+	name = court_realm_decree_2_check
+	potential = { has_ruler_modifier = court_realm_decree_2 }
 }
 # Decree 3
 custom_button = {
-	name = court_decree_3_select_button
-	tooltip = court_decree_3_tooltip
+	name = court_realm_decree_3_button
+	tooltip = court_realm_decree_3_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_realm_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_realm_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_3
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_realm_decree_3
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_3_seal
-	potential = { has_country_modifier = court_decree_3 }
+	name = court_realm_decree_3_seal
+	potential = { has_ruler_modifier = court_realm_decree_3 }
 }
 custom_icon = {
-	name = court_decree_3_check
-	potential = { has_country_modifier = court_decree_3 }
+	name = court_realm_decree_3_check
+	potential = { has_ruler_modifier = court_realm_decree_3 }
 }
 # Decree 4
 custom_button = {
-	name = court_decree_4_select_button
-	tooltip = court_decree_4_tooltip
+	name = court_realm_decree_4_button
+	tooltip = court_realm_decree_4_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_realm_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_realm_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_4
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_realm_decree_4
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_4_seal
-	potential = { has_country_modifier = court_decree_4 }
+	name = court_realm_decree_4_seal
+	potential = { has_ruler_modifier = court_realm_decree_4 }
 }
 custom_icon = {
-	name = court_decree_4_check
-	potential = { has_country_modifier = court_decree_4 }
+	name = court_realm_decree_4_check
+	potential = { has_ruler_modifier = court_realm_decree_4 }
 }
-# Decree 5
+# Court Economy Decrees
+# Decree 1
 custom_button = {
-	name = court_decree_5_select_button
-	tooltip = court_decree_5_tooltip
+	name = court_economy_decree_1_button
+	tooltip = court_economy_decree_1_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_economy_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_economy_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_5
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_economy_decree_1
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_5_seal
-	potential = { has_country_modifier = court_decree_5 }
+	name = court_economy_decree_1_seal
+	potential = { has_ruler_modifier = court_economy_decree_1 }
 }
 custom_icon = {
-	name = court_decree_5_check
-	potential = { has_country_modifier = court_decree_5 }
+	name = court_economy_decree_1_check
+	potential = { has_ruler_modifier = court_economy_decree_1 }
 }
-# Decree 6
+# Decree 2
 custom_button = {
-	name = court_decree_6_select_button
-	tooltip = court_decree_6_tooltip
+	name = court_economy_decree_2_button
+	tooltip = court_economy_decree_2_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_economy_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_economy_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_6
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_economy_decree_2
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_6_seal
-	potential = { has_country_modifier = court_decree_6 }
+	name = court_economy_decree_2_seal
+	potential = { has_ruler_modifier = court_economy_decree_2 }
 }
 custom_icon = {
-	name = court_decree_6_check
-	potential = { has_country_modifier = court_decree_6 }
+	name = court_economy_decree_2_check
+	potential = { has_ruler_modifier = court_economy_decree_2 }
 }
-# Decree 7
+# Decree 3
 custom_button = {
-	name = court_decree_7_select_button
-	tooltip = court_decree_7_tooltip
+	name = court_economy_decree_3_button
+	tooltip = court_economy_decree_3_tooltip
 	potential = { }
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_economy_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
-			}
+			set_ruler_flag = court_economy_decree_taken
 		}
-		add_country_modifier = {
-			name = court_decree_7
-			duration = 1825
+		add_ruler_modifier = {
+			name = court_economy_decree_3
+			duration = -1
+			hidden = yes
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_7_seal
-	potential = { has_country_modifier = court_decree_7 }
+	name = court_economy_decree_3_seal
+	potential = { has_ruler_modifier = court_economy_decree_3 }
 }
 custom_icon = {
-	name = court_decree_7_check
-	potential = { has_country_modifier = court_decree_7 }
+	name = court_economy_decree_3_check
+	potential = { has_ruler_modifier = court_economy_decree_3 }
 }
-# Decree 8
+# Decree 4 | Advisor
 custom_button = {
-	name = court_decree_8_select_button
-	tooltip = court_decree_8_tooltip
-	potential = { }
+	name = court_economy_decree_4_button
+	tooltip = court_economy_decree_4_tooltip
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = ADM
+			}
+			has_ruler_flag = court_adm_advisor_decree
+		}
+	}
 	trigger = {
-		NOT = { has_country_modifier = cooldown_court_decrees }
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_economy_decree_taken }
+		}
 	}
 	effect = {
 		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+			set_ruler_flag = court_economy_decree_taken
+			set_ruler_flag = court_adm_advisor_decree
+		}
+		if = {
+			limit = {
+				employed_advisor = {
+					type = artist
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_artist
+				duration = -1
+				hidden = yes
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_8
-			duration = 1825
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = inquisitor
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_inquisitor
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = master_of_mint
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_master_of_mint
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = natural_scientist
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_natural_scientist
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = philosopher
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_philosopher
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = theologian
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_theologian
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = treasurer
+				}
+			}
+			add_ruler_modifier = {
+				name = court_economy_decree_treasurer
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+# Advisor seal
+custom_icon = {
+	name = court_economy_decree_advisor_seal
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = ADM
+			}
+			has_ruler_flag = court_adm_advisor_decree
 		}
 	}
 }
 custom_icon = {
-	name = court_decree_8_seal
-	potential = { has_country_modifier = court_decree_8 }
+	name = court_economy_decree_advisor_mark
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = ADM
+			}
+			has_ruler_flag = court_adm_advisor_decree
+		}
+	}
+}
+# Taken seal
+custom_icon = {
+	name = court_economy_decree_4_seal
+	potential = { has_ruler_flag = court_adm_advisor_decree }
 }
 custom_icon = {
-	name = court_decree_8_check
-	potential = { has_country_modifier = court_decree_8 }
+	name = court_economy_decree_4_check
+	potential = { has_ruler_flag = court_adm_advisor_decree }
+}
+# Court Diplomacy Decrees
+# Decree 1
+custom_button = {
+	name = court_diplomacy_decree_1_button
+	tooltip = court_diplomacy_decree_1_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_diplomacy_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_diplomacy_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_diplomacy_decree_1_seal
+	potential = { has_ruler_modifier = court_diplomacy_decree_1 }
+}
+custom_icon = {
+	name = court_diplomacy_decree_1_check
+	potential = { has_ruler_modifier = court_diplomacy_decree_1 }
+}
+# Decree 2
+custom_button = {
+	name = court_diplomacy_decree_2_button
+	tooltip = court_diplomacy_decree_2_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_diplomacy_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_diplomacy_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_2
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_diplomacy_decree_2_seal
+	potential = { has_ruler_modifier = court_diplomacy_decree_2 }
+}
+custom_icon = {
+	name = court_diplomacy_decree_2_check
+	potential = { has_ruler_modifier = court_diplomacy_decree_2 }
+}
+# Decree 3
+custom_button = {
+	name = court_diplomacy_decree_3_button
+	tooltip = court_diplomacy_decree_3_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_diplomacy_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_diplomacy_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_3
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_diplomacy_decree_3_seal
+	potential = { has_ruler_modifier = court_diplomacy_decree_3 }
+}
+custom_icon = {
+	name = court_diplomacy_decree_3_check
+	potential = { has_ruler_modifier = court_diplomacy_decree_3 }
+}
+# Decree 4 | Advisor
+custom_button = {
+	name = court_diplomacy_decree_4_button
+	tooltip = court_diplomacy_decree_4_tooltip
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = DIP
+			}
+			has_ruler_flag = court_dip_advisor_decree
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_diplomacy_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_diplomacy_decree_taken
+			set_ruler_flag = court_dip_advisor_decree
+		}
+		if = {
+			limit = {
+				employed_advisor = {
+					type = colonial_governor
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_colonial_governor
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = diplomat
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_diplomat
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = naval_reformer
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_naval_reformer
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = navigator
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_navigator
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = spymaster
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_spymaster
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = statesman
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_statesman
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = trader
+				}
+			}
+			add_ruler_modifier = {
+				name = court_diplomacy_decree_trader
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+# Advisor seal
+custom_icon = {
+	name = court_diplomacy_decree_advisor_seal
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = DIP
+			}
+			has_ruler_flag = court_dip_advisor_decree
+		}
+	}
+}
+custom_icon = {
+	name = court_diplomacy_decree_advisor_mark
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = DIP
+			}
+			has_ruler_flag = court_dip_advisor_decree
+		}
+	}
+}
+# Taken seal
+custom_icon = {
+	name = court_diplomacy_decree_4_seal
+	potential = { has_ruler_flag = court_dip_advisor_decree }
+}
+custom_icon = {
+	name = court_diplomacy_decree_4_check
+	potential = { has_ruler_flag = court_dip_advisor_decree }
+}
+# Court Military Decrees
+# Decree 1
+custom_button = {
+	name = court_military_decree_1_button
+	tooltip = court_military_decree_1_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_military_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_military_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_military_decree_1_seal
+	potential = { has_ruler_modifier = court_military_decree_1 }
+}
+custom_icon = {
+	name = court_military_decree_1_check
+	potential = { has_ruler_modifier = court_military_decree_1 }
+}
+# Decree 2
+custom_button = {
+	name = court_military_decree_2_button
+	tooltip = court_military_decree_2_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_military_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_military_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_2
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_military_decree_2_seal
+	potential = { has_ruler_modifier = court_military_decree_2 }
+}
+custom_icon = {
+	name = court_military_decree_2_check
+	potential = { has_ruler_modifier = court_military_decree_2 }
+}
+# Decree 3
+custom_button = {
+	name = court_military_decree_3_button
+	tooltip = court_military_decree_3_tooltip
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_military_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_military_decree_taken
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_3
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+custom_icon = {
+	name = court_military_decree_3_seal
+	potential = { has_ruler_modifier = court_military_decree_3 }
+}
+custom_icon = {
+	name = court_military_decree_3_check
+	potential = { has_ruler_modifier = court_military_decree_3 }
+}
+# Decree 4 | Advisor
+custom_button = {
+	name = court_military_decree_4_button
+	tooltip = court_military_decree_4_tooltip
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = MIL
+			}
+			has_ruler_flag = court_mil_advisor_decree
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = court_custom_tooltip
+			NOT = { has_ruler_flag = court_military_decree_taken }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_ruler_flag = court_military_decree_taken
+			set_ruler_flag = court_mil_advisor_decree
+		}
+		if = {
+			limit = {
+				employed_advisor = {
+					type = army_organiser
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_army_organiser
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = army_reformer
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_army_reformer
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = commandant
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_commandant
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = grand_captain
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_grand_captain
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = recruitmaster
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_recruitmaster
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = fortification_expert
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_fortification_expert
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				employed_advisor = {
+					type = quartermaster
+				}
+			}
+			add_ruler_modifier = {
+				name = court_military_decree_quartermaster
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+# Advisor seal
+custom_icon = {
+	name = court_military_decree_advisor_seal
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = MIL
+			}
+			has_ruler_flag = court_mil_advisor_decree
+		}
+	}
+}
+custom_icon = {
+	name = court_military_decree_advisor_mark
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = MIL
+			}
+			has_ruler_flag = court_mil_advisor_decree
+		}
+	}
+}
+# Taken seal
+custom_icon = {
+	name = court_military_decree_4_seal
+	potential = { has_ruler_flag = court_mil_advisor_decree }
+}
+custom_icon = {
+	name = court_military_decree_4_check
+	potential = { has_ruler_flag = court_mil_advisor_decree }
 }

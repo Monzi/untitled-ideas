@@ -5,6 +5,37 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+
+	spriteType = {
+		name = "GFX_court_tab_realm"
+		texturefile = "gfx/interface/court_tab_realm.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_economy"
+		texturefile = "gfx/interface/court_tab_economy.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_diplomacy"
+		texturefile = "gfx/interface/court_tab_diplomacy.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_military"
+		texturefile = "gfx/interface/court_tab_military.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_decree_advisor_mark"
+		texturefile = "gfx//interface//decree_advisor_mark.dds"
+	}
+
 	spriteType = {
 		name = "GFX_forced_draft_button"
 		texturefile = "gfx//interface//forced_draft_button.dds"

@@ -1,4 +1,4 @@
-defined_text = {
+defined_text = { # Army Training Title
 	name = title_army_training
 
 	text = {
@@ -14,7 +14,7 @@ defined_text = {
 		}
 	}
 }
-defined_text = {
+defined_text = { # Army Training Desc
 	name = desc_army_training
 
 	text = {
@@ -30,7 +30,8 @@ defined_text = {
 		}
 	}
 }
-defined_text = {
+
+defined_text = { # Junta Disaster
 	name = uis_junta_nobles_event_switch
 	text = {
 		localisation_key = string_junta_noble_title

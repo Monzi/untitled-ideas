@@ -568,11 +568,11 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 	
-			instantTextBoxType= {
-				position = { x = 0 y = 45}
-				name = "title"
+			instantTextBoxType = {
+				name = "court_custom_window_title"
+				position = { x=0 y=45 }
 				font = "vic_29s"
-				borderSize = {x = 0 y = 0}
+				borderSize = { x=0 y=0}
 				maxWidth = 548
 				maxHeight = 20
 				text = "court_custom_window_title"
@@ -580,296 +580,778 @@ guiTypes = {
 				format = center
 			}
 
-			### Decree Entry
-			windowType = { #1
-				name = "court_decree_1_entry"
-				backGround=""
-				position = { x=20 y=180 }
-				size = { x=255 y=48 }
+			# Top navigation
+			windowType = {
+				name = "court_top_nav"
+				backGround = ""
+				position = { x=24 y=115 }
+				size = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
+				horizontalBorder = ""
+				verticalBorder = ""
 				fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_1_select_button"
+				guiButtonType = { # Realm
+					name = "court_top_nav_realm"
 					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
+					quadTextureSprite = "GFX_court_tab_realm"
 					position = { x=0 y=0 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_1_title"
-					buttonFont = "vic_18_black"
 					clicksound = click
 				}
-				iconType = {
-					name = "court_decree_1_seal"
+				guiButtonType = { # Economy
+					name = "court_top_nav_economy"
 					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
+					quadTextureSprite = "GFX_court_tab_economy"
+					position = { x=65 y=0 }
+					Orientation = "UPPER_LEFT"
+					clicksound = click
 				}
-				iconType = {
-					name = "court_decree_1_check"
+				guiButtonType = { # Diplomacy
+					name = "court_top_nav_diplomacy"
 					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
+					quadTextureSprite = "GFX_court_tab_diplomacy"
+					position = { x=130 y=0 }
+					Orientation = "UPPER_LEFT"
+					clicksound = click
+				}
+				guiButtonType = { # Military
+					name = "court_top_nav_military"
+					scripted = yes
+					quadTextureSprite = "GFX_court_tab_military"
+					position = { x=195 y=0 }
+					Orientation = "UPPER_LEFT"
+					clicksound = click
 				}
 			}
-			windowType = { #2
-				name = "court_decree_2_entry"
-				backGround=""
-				position = { x=20 y=230 }
-				size = { x=255 y=48 }
+
+			iconType = { # Tab title background
+				name = "court_nav_title_banner"
+				spriteType = "GFX_institution_red_banner"
+				position = { x=15 y=190 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = { # Tab title
+				name = "court_nav_title"
+				scripted = yes
+				position = { x=35 y=198 }
+				orientation = "UPPER_LEFT"
+				maxWidth = 548
+				maxHeight = 20
+				font = "vic_29s"
+				borderSize = { x=0 y=0 }
+				format = left
+			}
+
+			instantTextBoxType = { # Active modifiers
+				name = "court_active_modifiers"
+				scripted = yes
+				position = { x=35 y=240 }
+				orientation = "UPPER_LEFT"
+				maxWidth = 548
+				maxHeight = 20
+				font = "vic_18"
+				borderSize = { x=0 y=0 }
+				format = left
+			}
+
+			windowType = { # Realm
+				name = "court_nav_content_realm"
+				scripted = yes
+				backGround = ""
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
+				horizontalBorder = ""
+				verticalBorder = ""
 				fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_2_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+				windowType = { # Realm Decree 1
+					name = "court_realm_decree_1"
+					backGround = ""
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_2_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_realm_decree_1_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_realm_decree_1_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_realm_decree_1_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_realm_decree_1_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_2_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
+				windowType = { # Realm Decree 2
+					name = "court_realm_decree_2"
+					backGround = ""
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_realm_decree_2_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_realm_decree_2_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_realm_decree_2_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_realm_decree_2_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_2_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
+				windowType = { # Realm Decree 3
+					name = "court_realm_decree_3"
+					backGround = ""
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_realm_decree_3_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_realm_decree_3_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_realm_decree_3_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_realm_decree_3_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Realm Decree 4
+					name = "court_realm_decree_4"
+					backGround = ""
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_realm_decree_4_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_realm_decree_4_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_realm_decree_4_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_realm_decree_4_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
 			}
-			windowType = { #3
-				name = "court_decree_3_entry"
-				backGround=""
-				position = { x=20 y=280 }
-				size = { x=255 y=48 }
+
+			windowType = { # Economy
+				name = "court_nav_content_economy"
+				scripted = yes
+				backGround = ""
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
+				horizontalBorder = ""
+				verticalBorder = ""
 				fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_3_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+				windowType = { # Economy Decree 1
+					name = "court_economy_decree_1"
+					backGround = ""
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_3_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_economy_decree_1_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_economy_decree_1_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_economy_decree_1_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_1_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_3_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
+				windowType = { # Economy Decree 2
+					name = "court_economy_decree_2"
+					backGround = ""
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_economy_decree_2_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_economy_decree_2_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_economy_decree_2_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_2_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_3_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
+				windowType = { # Economy Decree 3
+					name = "court_economy_decree_3"
+					backGround = ""
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_economy_decree_3_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_economy_decree_3_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_economy_decree_3_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_3_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Economy Decree 4
+					name = "court_economy_decree_4"
+					backGround = ""
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_economy_decree_4_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_economy_decree_4_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_economy_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
+					}
+					iconType = {
+						name = "court_economy_decree_4_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_economy_decree_4_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
 			}
-			windowType = { #4
-				name = "court_decree_4_entry"
-				backGround=""
-				position = { x=20 y=330 }
-				size = { x=255 y=48 }
+
+			windowType = { # Diplomacy
+				name = "court_nav_content_diplomacy"
+				scripted = yes
+				backGround = ""
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
+				horizontalBorder = ""
+				verticalBorder = ""
 				fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_4_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+				windowType = { # Diplomacy Decree 1
+					name = "court_diplomacy_decree_1"
+					backGround = ""
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_4_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_diplomacy_decree_1_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_diplomacy_decree_1_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_diplomacy_decree_1_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_1_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_4_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
+				windowType = { # Diplomacy Decree 2
+					name = "court_diplomacy_decree_2"
+					backGround = ""
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_diplomacy_decree_2_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_diplomacy_decree_2_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_diplomacy_decree_2_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_2_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
-				iconType = {
-					name = "court_decree_4_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
+				windowType = { # Diplomacy Decree 3
+					name = "court_diplomacy_decree_3"
+					backGround = ""
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_diplomacy_decree_3_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_diplomacy_decree_3_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_diplomacy_decree_3_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_3_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Diplomacy Decree 4
+					name = "court_diplomacy_decree_4"
+					backGround = ""
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
+					Orientation = "UPPER_LEFT"
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_diplomacy_decree_4_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_diplomacy_decree_4_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_diplomacy_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_4_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_diplomacy_decree_4_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
 			}
-			windowType = { #5
-				name = "court_decree_5_entry"
-				backGround=""
-				position = { x=275 y=180 }
-				size = { x=255 y=48 }
+
+			windowType = { # Military
+				name = "court_nav_content_military"
+				scripted = yes
+				backGround = ""
+				position = { x=0 y=0 }
+				size = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
 				moveable = 0
 				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
+				horizontalBorder = ""
+				verticalBorder = ""
 				fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_5_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+				windowType = { # Military Decree 1
+					name = "court_military_decree_1"
+					backGround = ""
+					position = { x=275 y=180 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_5_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
-				}
-				iconType = {
-					name = "court_decree_5_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
-				}
-				iconType = {
-					name = "court_decree_5_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
-				}
-			}
-			windowType = { #6
-				name = "court_decree_6_entry"
-				backGround=""
-				position = { x=275 y=230 }
-				size = { x=255 y=48 }
-				moveable = 0
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_6_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+					guiButtonType = {
+						name = "court_military_decree_1_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_military_decree_1_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_military_decree_1_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_1_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Military Decree 2
+					name = "court_military_decree_2"
+					backGround = ""
+					position = { x=275 y=230 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_6_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
-				}
-				iconType = {
-					name = "court_decree_6_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
-				}
-				iconType = {
-					name = "court_decree_6_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
-				}
-			}
-			windowType = { #7
-				name = "court_decree_7_entry"
-				backGround=""
-				position = { x=275 y=280 }
-				size = { x=255 y=48 }
-				moveable = 0
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_7_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+					guiButtonType = {
+						name = "court_military_decree_2_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_military_decree_2_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_military_decree_2_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_2_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Military Decree 3
+					name = "court_military_decree_3"
+					backGround = ""
+					position = { x=275 y=280 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_7_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
-				}
-				iconType = {
-					name = "court_decree_7_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
-				}
-				iconType = {
-					name = "court_decree_7_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
-				}
-			}
-			windowType = { #8
-				name = "court_decree_8_entry"
-				backGround=""
-				position = { x=275 y=330 }
-				size = { x=255 y=48 }
-				moveable = 0
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
 
-				guiButtonType = {
-					name = "court_decree_8_select_button"
-					scripted = yes
-					quadTextureSprite ="GFX_decree_button"
-					position = { x=0 y=0 }
+					guiButtonType = {
+						name = "court_military_decree_3_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_military_decree_3_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_military_decree_3_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_3_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
+				}
+				windowType = { # Military Decree 4
+					name = "court_military_decree_4"
+					backGround = ""
+					position = { x=275 y=330 }
+					size = { x=255 y=48 }
 					Orientation = "UPPER_LEFT"
-					buttonText = "court_decree_8_title"
-					buttonFont = "vic_18_black"
-					clicksound = click
-				}
-				iconType = {
-					name = "court_decree_8_seal"
-					scripted = yes
-					spriteType ="GFX_decree_button_seal"
-					alwaystransparent = yes
-					position = { x= 186 y = 2 }
-				}
-				iconType = {
-					name = "court_decree_8_check"
-					scripted = yes
-					spriteType ="GFX_decree_button_check"
-					alwaystransparent = yes
-					position = { x= 200 y = 10 }
+					moveable = 0
+					dontRender = ""
+					horizontalBorder = ""
+					verticalBorder = ""
+					fullScreen = no
+
+					guiButtonType = {
+						name = "court_military_decree_4_button"
+						scripted = yes
+						quadTextureSprite = "GFX_decree_button"
+						position = { x=0 y=0 }
+						Orientation = "UPPER_LEFT"
+						buttonText = "court_military_decree_4_title"
+						buttonFont = "vic_18_black"
+						clicksound = click
+					}
+					iconType = {
+						name = "court_military_decree_advisor_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=20  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_advisor_mark"
+						scripted = yes
+						spriteType = "GFX_decree_advisor_mark"
+						alwaystransparent = yes
+						position = { x=34 y=10 }
+					}
+					iconType = {
+						name = "court_military_decree_4_seal"
+						scripted = yes
+						spriteType = "GFX_decree_button_seal"
+						alwaystransparent = yes
+						position = { x=186  y=2 }
+					}
+					iconType = {
+						name = "court_military_decree_4_check"
+						scripted = yes
+						spriteType = "GFX_decree_button_check"
+						alwaystransparent = yes
+						position = { x=200 y=10 }
+					}
 				}
 			}
-	
+
 			guiButtonType = {
 				name = "court_custom_window_close_button"
 				scripted = yes
@@ -884,10 +1366,6 @@ guiTypes = {
 				shortcut = "ESCAPE"
 			}
 		}
-
-
-
-
 
 
 
