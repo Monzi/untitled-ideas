@@ -1,6 +1,6 @@
 #### Military Ideas ####
 
-# War Academy ideas
+# Academy ideas
 academy_ideas = {
 	category = MIL
 

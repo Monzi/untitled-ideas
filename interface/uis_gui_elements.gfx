@@ -1,4 +1,53 @@
 spriteTypes = {
+	# Court Mechanic
+	spriteType = {
+		name = "GFX_court_custom_window_bg"
+		texturefile = "gfx//interface//court_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_court_tab_realm"
+		texturefile = "gfx/interface/court_tab_realm.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_economy"
+		texturefile = "gfx/interface/court_tab_economy.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_diplomacy"
+		texturefile = "gfx/interface/court_tab_diplomacy.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_court_tab_military"
+		texturefile = "gfx/interface/court_tab_military.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_decree_advisor_mark"
+		texturefile = "gfx//interface//decree_advisor_mark.dds"
+	}
+
+	# Quantity Mechanic
+	spriteType = {
+		name = "GFX_forced_draft_button"
+		texturefile = "gfx//interface//button_popsdraft.dds"
+	}
+	spriteType = {
+		name = "GFX_state_forced_draft_button"
+		texturefile = "gfx//interface//button_statepopsdraft.dds"
+	}
+
+	# Idea Icons
 	# Admin Ideas
 	spriteType = {
 		name = "GFX_idea_industrial_ideas"
@@ -78,5 +127,19 @@ spriteTypes = {
 		noOfFrames = 1
 		
 		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	# Government Reform Icons
+	spriteType = {
+		name = "government_reform_assimilation_reform"
+		texturefile = "gfx//interface//government_reform_icons//assimilation_reform.dds"
+	}
+
+	# Junta Disaster
+	spriteType = {
+		name = "GFX_disaster_uis_militarism_junta"
+		texturefile = "gfx//interface//disasters//uis_junta.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
 }

@@ -1,0 +1,31 @@
+make_decentralized_client_vassal = {
+	category = influence
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = client_vassal
+				is_subject_of_type = client_march
+			}
+		}
+	}
+
+	is_allowed = {
+		is_at_war = no
+	}
+
+	on_accept = {
+		create_subject = {
+			subject = FROM
+			subject_type = decentralized_client_vassal
+		}
+	}
+
+	on_decline = { # Subject cannot decline
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}

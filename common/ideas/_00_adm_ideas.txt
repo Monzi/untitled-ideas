@@ -707,16 +707,14 @@ centralization_ideas = {
 		effect = {
 			custom_tooltip = centralization_ideas_mechanic
 			hidden_effect = {
-				add_fully_centralized = yes		
-				add_fully_centralized_subject = yes
-			}			
-			#clr_country_flag = uisgottoelse
+				centralization_mechanic = yes
+				subject_centralization_mechanic = yes
+			}
 		}
 		removed_effect = {
 			hidden_effect = {
-				adandon_centralization = yes
+				abandon_centralization_mechanic = yes
 			}
-			
 		}
 	}
 
@@ -731,6 +729,15 @@ centralization_ideas = {
 				tag = FLA
 				tag = BRB
 				tag = RIG
+				tag = JAP
+				tag = KOR
+				tag = PER
+				tag = TIM
+				tag = VEN
+				tag = GEN
+				tag = LAN
+				tag = TUS
+				tag = MNG
 			}
 		}
 		modifier = {
@@ -803,7 +810,7 @@ decentralization_ideas = {
 
 	bonus = {
 		governing_capacity_modifier = 0.1
-		allow_client_states = yes
+		min_autonomy_in_territories = -0.20
 	}
 
 	decent_ideas_1 = {
@@ -815,7 +822,7 @@ decentralization_ideas = {
 		envoy_travel_time = -0.15
 	}
 	decent_ideas_3 = {
-		great_project_upgrade_time = -0.1
+		build_time = -0.10
 	}
 	decent_ideas_4 = {
 		liberty_desire_from_subject_development = -0.25
@@ -829,7 +836,10 @@ decentralization_ideas = {
 		monthly_reform_progress_modifier = 0.1
 	}
 	decent_ideas_7 = {
-		min_autonomy_in_territories = -0.20
+		allow_client_states = yes
+		effect = {
+			custom_tooltip = decentralization_ideas_mechanic
+		}
 	}
 
 	ai_will_do = {

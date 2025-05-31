@@ -108,34 +108,40 @@ add_marine_base = {
 	}
 }
 
-#Centralization Regional Effect
-add_fully_centralized = {
+# Centralization Regional Effect
+centralization_mechanic = {
 	capital_scope = {
 		region = {
 			limit = { 
-				owned_by = root
-				owner = {
-					full_idea_group = centralization_ideas
-				}
+				owned_by = ROOT
 			}
 			add_province_modifier = {
 				name = centralized_region
 				duration = -1
 				hidden = yes
 			}						
-			#add_province_triggered_modifier = centralized_region
 		}
-		
 	}
-
-	
+	every_owned_province = {
+		limit = {
+			NOT = {
+				OR = {
+					is_owned_by_trade_company = yes
+					has_province_modifier = centralized_region
+				}
+			}
+		}
+		add_province_modifier = {
+			name = not_centralized_region
+			duration = -1
+		}
+	}
 }
-#mostly bug free 
-add_fully_centralized_subject = {
+subject_centralization_mechanic = {
 	hidden_effect = {
 		capital_scope = {
 			region = {
-				save_event_target_as = tarRegion
+				save_event_target_as = targetRegion
 			}
 		}	
 	}
@@ -143,154 +149,38 @@ add_fully_centralized_subject = {
 		if = {
 			limit = {
 				capital_scope = {
-					region = event_target:tarRegion
+					region = event_target:targetRegion
 				}
 			}
 			capital_scope = {
 				region = {
 					limit = {
 						owner = {
-							is_subject_of = root
+							is_subject_of = ROOT
 						}
 					}
 					add_province_modifier = {
-						name = centralized_subject_local
+						name = centralized_region
 						duration = -1
+						hidden = yes
 					}
 				}					
 			}
-			add_country_modifier = {
-				name = centralized_subject_loyalty
-				duration = -1			
-			}
-		}
-		
-		#else_if = {
-		#	limit = {
-		#		capital_scope = {
-		#			not = {
-		#				region = event_target:tarRegion
-		#			}
-		#		}
-		#	}
-		#	capital_scope = {
-		#		region = {
-		#			limit = {
-		#				owned_by = this
-		#			}
-		#			add_province_modifier = {
-		#				name = centralized_subject_foreign
-		#				duration = -1
-		#			}
-		#		}
-		#	}
-		#}
-	}
-}
-uis_central_dependencylost = {
-	#set_country_flag = uis_debug_outsideif
-	FROM = {
-		if = { #Should run on adbandoning or annexing vassals
-			limit = {
-				FROM = {
-					OR = {
-						any_owned_province = {
-							OR = {
-	#							has_province_modifier = centralized_subject_foreign
-								has_province_modifier = centralized_subject_local
-							}
-						}
-						has_country_modifier = centralized_subject_loyalty		
-					}
-				}
-			}
-			
-			every_owned_province = {
-				limit = {
-					OR = {
-	#					has_province_modifier = centralized_subject_foreign
-						has_province_modifier = centralized_subject_local
-					}
-				}
-	#			remove_province_modifier = centralized_subject_foreign
-				remove_province_modifier = centralized_subject_local
-			}
-			remove_country_modifier = centralized_subject_loyalty
-			#set_country_flag = uis_debug_afterowned
-		}
-	}
-	
-	
-	if = { #Catch for annexing or losing dependencies to not lose all subject modifiers
-		limit = {
-			root = {
-				not = {
-					full_idea_group = centralization_ideas
-				}
-			}
-			any_subject_country = {				
-				OR = {
-					has_country_modifier = centralized_subject_loyalty
-					capital_scope = {
-						OR = {
-		#					has_province_modifier = centralized_subject_foreign
-							has_province_modifier = centralized_subject_local
-						}
-					}
-				}
-			}
-		}
-		root = {
-			#set_country_flag = uis_debug_overlord
-		}
-		every_subject_country = {
-			every_owned_province = {
-				limit = {
-					OR = {
-		#				has_province_modifier = centralized_subject_foreign
-						has_province_modifier = centralized_subject_local
-					}
-				}
-		#		remove_province_modifier = centralized_subject_foreign
-				remove_province_modifier = centralized_subject_local
-				#set_province_flag = uis_debug_provinceremoved
-			}
-			#set_country_flag = uis_debug_removed_provinceflags
-			remove_country_modifier = centralized_subject_loyalty
 		}
 	}
 }
-centralization_capital_moved = { # Deletes all modifiers and re-applies to new region.
-	owner = {
-		every_owned_province = {
-			remove_province_modifier = centralized_region
-		}
-		every_subject_country = {
-			every_owned_province = {
-	#			remove_province_modifier = centralized_subject_foreign
-				remove_province_modifier = centralized_subject_local
-			}
-			remove_country_modifier = centralized_subject_loyalty
-		}
-		hidden_effect = {
-			add_fully_centralized = yes
-			add_fully_centralized_subject = yes
-		}
-	}
-}
-adandon_centralization = {
+abandon_centralization_mechanic = {
 	every_owned_province = {
-		limit = {
-			has_province_modifier = centralized_region
-		}
 		remove_province_modifier = centralized_region
+		remove_province_modifier = not_centralized_region
 	}
 	every_subject_country = {
 		every_owned_province = {
-	#		remove_province_modifier = centralized_subject_foreign
-			remove_province_modifier = centralized_subject_local
+			limit = {
+				has_province_modifier = centralized_region
+			}
+			remove_province_modifier = centralized_region
 		}
-		remove_country_modifier = centralized_subject_loyalty
 	}
 }
 

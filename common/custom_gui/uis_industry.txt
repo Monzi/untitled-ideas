@@ -1,3 +1,5 @@
+# Focus on good made from artisans
+
 # Change Trade good
 custom_button = { # Change Province Trade Good
 	name = industry_change_trade_good_button

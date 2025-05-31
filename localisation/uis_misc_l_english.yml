@@ -152,7 +152,11 @@
 
  draft_pop:0 "Forced Draft"
  draft_pop_tooltip:0 "§YForced Draft§!"
- draft_pop_effect_tooltip:0 "Gain §R50§! devastation in all owned provinces."
+ pops_drafted_effect_CT:0 "Gain §G2§! years worth of manpower from this province"
+ draft_pop_statewide:0 "Statewide Forced Draft"
+ draft_pop_statewide_tooltip:0 "§YStatewide Forced Draft§!"
+ statewide_pops_drafted_effect_CT:0 "Gain §G2§! years worth of manpower from every province in this state"
+
 ##Junta Rebels
  junta_rebels_name:0 "$COUNTRY$ Junta Rebels"
  junta_rebels_title:0 "Junta"
@@ -167,7 +171,8 @@
  string_junta_no_nobles_estate:0 "Power Holders"
 
 # Custom toolips
- centralization_ideas_mechanic:0 "Gain a conditional modifier in every owned and subject province in home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!"
+ centralization_ideas_mechanic:0 "Gain a conditional modifier in every owned and subject province in home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!\nAdditionally any province not in home region has:\nMinimum Local Autonomy: §R+15.0§!"
+ decentralization_ideas_mechanic:0 "Allows §YClient States§! to be turned into §YDecentralized Client States§!"
  quality_ideas_mechanic:0 "Gain province modifiers in provinces with Iron, Grain and Copper increasing the the strenght of our army."
  standingarmy_ideas_mechanic:0 "After ADM Tech 15:\nAllows Free Forced March"
  uis_junta_event_4004b:0 "Add §R+10%§! Local Autonomy in every owned province."

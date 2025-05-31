@@ -5,8 +5,8 @@
 # Modifiers for idea groups.
 # ------------------------------------------------------------------------------------------------
 # ADM
-#Centralization Ideas
-#Own region modifier
+# Centralization Ideas
+# Own region modifier
 centralized_region = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
@@ -14,7 +14,10 @@ centralized_region = {
 	local_governing_cost = -0.20
 	allowed_num_of_buildings = 1
 }
-#Militarism Ideas / Junta coup
+not_centralized_region = {
+	min_local_autonomy = 15
+}
+# Militarism Ideas / Junta coup
 uis_junta_forts_paid = {
 	fort_maintenance_modifier = 0.25
 	global_tax_modifier = -0.10
@@ -41,7 +44,7 @@ uis_junta_intolerance = {
 uis_recent_junta_uprising = {
 	
 }
-#modifier for rebel occupied province
+# modifier for rebel occupied province
 uis_local_men_drafted = {
 	local_manpower_modifier = -100
 	local_unrest = 2
@@ -157,7 +160,7 @@ court_military_decree_recruitmaster = {
 	# Modifiers here...
 }
 court_military_decree_fortification_expert = {
-	# Modifiers here...
+	siege_ability = 0.10
 }
 court_military_decree_quartermaster = {
 	# Modifiers here...
@@ -265,8 +268,8 @@ quantity_over_quality_tactics = {
 
 # Quantity Ideas
 pops_drafted = {
-	local_manpower_modifier = -100
 	local_unrest = 2
+	local_manpower_modifier = -100
 }
 
 # Quality Ideas

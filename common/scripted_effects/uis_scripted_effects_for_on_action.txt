@@ -1,144 +1,41 @@
-on_province_owner_change_recentralize_region = {
+centralization_mechanic_on_province_owner_change = {
 	if = {
 		limit = {
-			NOT = {
-				has_province_modifier = centralized_region
-			}
-			owner = {
-				is_subject = no
-				full_idea_group = centralization_ideas
-			}
-		}
-		root = {
-			owner = {
-				add_fully_centralized = yes
-				#set_country_flag = ran_overlord_ownerchange
-			}
-		}
-	}
-	if = {
-		limit = {
-			root = {
+			OR = {
 				owner = {
-					is_subject = yes
+					full_idea_group = centralization_ideas
+				}
+				owner = {
 					overlord = {
 						full_idea_group = centralization_ideas
 					}
 				}
 			}
 		}
-		root = {
+		ROOT = {
 			owner = {
-				overlord = {
-					add_fully_centralized_subject = yes
+				if = {
+					limit = { full_idea_group = centralization_ideas }
+					centralization_mechanic = yes
 				}
+				subject_centralization_mechanic = yes
 			}
 		}
 	}
-#	else_if = {
-#		limit = {
-#			ROOT = {
-#				owner = {
-#					any_owned_province = {
-#						OR = {
-#							has_province_modifier = centralized_subject_local
-#	#						has_province_modifier = centralized_subject_foreign
-#						}
-#					}
-#					overlord = {
-#						full_idea_group = centralization_ideas
-#					}
-#				}
-#			}			
-#		}
-#		root = {
-#			owner = {
-#				overlord = {
-#					capital_scope = {
-#						region = {
-#							save_event_target_as = uisregionpchange
-#						}
-#					}
-#					#set_country_flag = uiscreatedevent
-#				}
-#			}
-#		}
-#		if = {
-#			limit = {
-#				root = {
-#					owner = {
-#						capital_scope = {
-#							region = event_target:uisregionpchange
-#						}
-#					}
-#				}
-#			}
-#			root = {
-#				owner = {
-#					capital_scope = {
-#						region = {
-#							limit = {
-#								owner = {
-#									is_subject = yes
-#								}
-#								owned_by = this
-#							}
-#							add_province_modifier = {
-#								name = centralized_subject_local
-#								duration = -1
-#							}
-#						}
-#					}
-#					#set_country_flag = uislocal
-#				}
-#			}
-#		}
-	#	if = {
-	#		limit = {
-	#			root = {
-	#				owner = {
-	#					capital_scope = {
-	#						not = {
-	#							region = event_target:uisregionpchange
-	#						}
-	#					}
-	#				}
-	#			}
-	#		}
-	#		root = {
-	#			owner = {
-	#				capital_scope = {
-	#					region = {
-	#						limit = {
-	#							owner = {
-	#								is_subject = yes
-	#							}
-	#						}
-	#						add_province_modifier = {
-	#							name = centralized_subject_foreign
-	#							duration = -1
-	#						}
-	#					}
-	#				}
-	#				#set_country_flag = uisforeign
-	#			}
-	#		}
-	#	}
-	#}
 }
-on_country_vassal_created_centralize_subject = {
+centralization_mechanic_on_create_vassal = {
 	if = {
 		limit = {
-			overlord = {
+			FROM = {
 				full_idea_group = centralization_ideas
 			}
 		}		
-		from = {
-			add_fully_centralized_subject = yes
+		ROOT = {
+			subject_centralization_mechanic = yes
 		}
 	}
 }
-on_dependecy_gained_centralization = {
+centralization_mechanic_on_dependecy_gained = {
 	if = {
 		limit = {
 			ROOT = {
@@ -146,10 +43,67 @@ on_dependecy_gained_centralization = {
 			}
 		}		
 		ROOT = {
-			add_fully_centralized_subject = yes
+			subject_centralization_mechanic = yes
 		}
 	}
 }
+centralization_mechanic_on_dependency_lost = {
+	FROM = {
+		if = { # Should run on abandoning or annexing vassals
+			limit = {
+				FROM = {
+					any_owned_province = {
+						has_province_modifier = centralized_region
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_province_modifier = centralized_region
+				}
+				remove_province_modifier = centralized_region
+			}
+		}
+	}
+}
+centralization_mechanic_on_added_to_company = {
+	if = {
+		limit = { has_province_modifier = not_centralized_region }
+		remove_province_modifier = not_centralized_region
+	}
+}
+centralization_mechanic_on_removed_from_company = {
+	if = {
+		limit = {
+			FROM = { full_idea_group = centralization_ideas }
+		}
+		add_province_modifier = {
+			name = not_centralized_region
+			duration = -1
+		}
+	}
+}
+centralization_mechanic_capital_moved = { # Deletes all modifiers and re-applies to new region.
+	owner = {
+		every_owned_province = {
+			remove_province_modifier = centralized_region
+			remove_province_modifier = not_centralized_region
+		}
+		every_subject_country = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = centralized_region
+				}
+				remove_province_modifier = centralized_region
+			}
+		}
+		hidden_effect = {
+			centralization_mechanic = yes
+			subject_centralization_mechanic = yes
+		}
+	}
+}
+# Junta Disaster
 junta_event_battle_won_unit_effect = {
 	if = {
 		limit = {
