@@ -1,11 +1,3 @@
-# Naval Ideas
-clear_naval_specialization ={
-	remove_country_modifier = naval_light_special
-	remove_country_modifier = naval_heavy_special
-	remove_country_modifier = naval_galley_special
-	clr_country_flag = specialized_navy
-}
-
 # Tactic Ideas
 clear_tactic_bonus_modifiers = {
 	remove_country_modifier = balanced_tactics
