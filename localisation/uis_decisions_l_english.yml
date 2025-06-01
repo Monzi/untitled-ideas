@@ -7,16 +7,9 @@
  uis_junta_readiness_check_desc:0 ""
  UIS_JUNTA_DECISION_TOOLTIP:0 "End the Military Takeover disaster by lowering [Root.junta_readiness.GetName] below 10\nCurrent [Root.junta_readiness.GetName]: [Root.junta_readiness.GetValue]"
 
-
 # DIP
  marine_upgrade_title:0 "Landing War Games"
  marine_upgrade_desc:0 "We should prepare our marines for naval landings in the future."
- heavy_ship_special_title:0 "Focus on Heavy Ships"
- heavy_ship_special_desc:0 ""
- galley_ship_special_title:0 "Focus on Galleys"
- galley_ship_special_desc:0 ""
- light_ship_special_title:0 "Focus on the Merchant Navy"
- light_ship_special_desc:0 ""
 
 # MIL
  switch_tactics_title:0 "Change Current Tactics"
@@ -27,3 +20,7 @@
  string_infantry_training_desc:0 "Rigorously trained troops make for a proper fighting force."
  string_cavalry_training_title:0 "Cavalry Training"
  string_cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."
+
+ hold_court_notification_title:0 "Notification: Available Court Decrees"
+ hold_court_notification_desc:0 "There are one or more Court Decrees available"
+ hold_court_notification_TT:0 "There are one or more Court Decrees available"

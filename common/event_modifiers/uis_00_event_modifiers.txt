@@ -211,40 +211,6 @@ court_military_decree_quartermaster = {
 	global_supply_limit_modifier = 0.25
 }
 
-# NOT USED - Try to reuse
-# court_decree_1 = { # Currency Regulation Ordinance
-# 	inflation_action_cost = -0.20
-# 	inflation_reduction = 0.1
-# }
-# court_decree_2 = { # Monetary Policy Directive
-# 	interest = -1
-# }
-# court_decree_3 = { # Trade Agreement Ratification
-# 	trade_efficiency = 0.1
-# 	trade_steering = 0.1
-# }
-# court_decree_4 = { # Legal Ruling and Guidance
-# 	legitimacy = 1
-# 	republican_tradition = 0.15
-# 	devotion = 1
-# 	horde_unity = 1
-# 	meritocracy = 1
-# 	imperial_mandate = 0.1
-# }
-# court_decree_5 = { # War Powers Resolution
-# 	war_taxes_cost_modifier = -1
-# 	global_regiment_recruit_speed = -0.15
-# }
-# court_decree_6 = { # Budget Allocation Ordinance
-# 	global_regiment_cost = -0.15
-# }
-# court_decree_7 = { # Military Uniform Regulation Decree
-# 	yearly_army_professionalism = 0.001
-# }
-# court_decree_8 = { # Military Base Realignment Decree
-# 	fort_maintenance_modifier = -0.25
-# 	global_garrison_growth = 0.50
-# }
 # Maritime Ideas
 upgraded_marines_cooldown = {
 	discipline = -0.05
@@ -257,29 +223,6 @@ upgraded_marines = {
 marine_corps = {
 	shock_damage_received = -0.10
 	is_marine_modifier = yes
-}
-
-# Naval Ideas
-# Light Ship Specialization
-naval_light_special = {
-	naval_tradition_from_trade = 1
-	naval_forcelimit_modifier = 0.25
-	sailor_maintenance_modifer = -0.25
-	global_ship_trade_power = 0.33
-}
-# Galley Specialization
-naval_galley_special = {
-	naval_tradition_from_battle = 1
-	galley_power = 0.25
-	galley_hull_size_modifier = 0.25
-	sunk_ship_morale_hit_recieved = -0.15
-}
-# Heavy Ship Specialization
-naval_heavy_special = {
-	naval_tradition_from_battle = 1
-	heavy_ship_power = 0.25
-	disengagement_chance = 0.15
-	heavy_ship_number_of_cannons_modifier = 0.25
 }
 
 # MIL

@@ -6,217 +6,615 @@ country_event = {
 	desc = ai_only_events.0001.d
 	is_triggered_only = yes
 
+	# Realm options
 	option = {
 		name = ai_only_events.0001.1
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_realm_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_1
-			duration = 1825
+		add_ruler_modifier = { # Stability and internal peace
+			name = court_realm_decree_1
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				inflation = 5
-			}
-			modifier = {
-				factor = 30
-				inflation = 10
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.2
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_realm_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_2
-			duration = 1825
+		add_ruler_modifier = { # Economic Matters
+			name = court_realm_decree_2
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				num_of_loans = 6
-			}
-			modifier = {
-				factor = 30
-				num_of_loans = 12
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.3
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_realm_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_3
-			duration = 1825
+		add_ruler_modifier = { # Mlitary Focus
+			name = court_realm_decree_3
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				trade_income_percentage = 0.05
-			}
-			modifier = {
-				factor = 30
-				trade_income_percentage = 0.10
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.4
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_realm_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_4
-			duration = 1825
+		add_ruler_modifier = { # Reformist focus
+			name = court_realm_decree_4
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				OR = {
-					NOT = { legitimacy = 50 }
-					NOT = { republican_tradition = 50 }
-					NOT = { devotion = 50 }
-					NOT = { horde_unity = 50 }
-					NOT = { meritocracy = 50 }
-					NOT = { imperial_mandate = 50 }
-				}
-			}
-			modifier = {
-				factor = 30
-				OR = {
-					NOT = { legitimacy = 25 }
-					NOT = { republican_tradition = 25 }
-					NOT = { devotion = 25 }
-					NOT = { horde_unity = 25 }
-					NOT = { meritocracy = 25 }
-					NOT = { imperial_mandate = 25 }
-				}
-			}
+			factor = 25
 		}
 	}
+	# Economy options
 	option = {
 		name = ai_only_events.0001.5
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_5
-			duration = 1825
+		add_ruler_modifier = { # Production and Trade
+			name = court_economy_decree_1
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				is_at_war = yes
-			}
-			modifier = {
-				factor = 30
-				is_at_war = yes
-				num_of_loans = 5
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.6
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_6
-			duration = 1825
+		add_ruler_modifier = { # National tax and inflation
+			name = court_economy_decree_2
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				manpower_percentage = 0.60
-			}
-			modifier = {
-				factor = 30
-				manpower_percentage = 0.90
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.7
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_7
-			duration = 1825
+		add_ruler_modifier = { # Developping and Scaling
+			name = court_economy_decree_3
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				NOT = { army_professionalism = 0.10 }
-			}
-			modifier = {
-				factor = 30
-				NOT = { army_professionalism = 0.05 }
-			}
+			factor = 25
 		}
 	}
 	option = {
 		name = ai_only_events.0001.8
-		hidden_effect = {
-			add_country_modifier = {
-				name = cooldown_court_decrees
-				duration = 1825
+		trigger = {
+			employed_advisor = {
+				type = artist
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
 			}
 		}
-		add_country_modifier = {
-			name = court_decree_8
-			duration = 1825
+		add_ruler_modifier = { 
+			name = court_economy_decree_artist
+			duration = -1
 		}
+		
 		ai_chance = {
-			factor = 12
-			modifier = {
-				factor = 20
-				num_of_owned_provinces_with = {
-					value = 5
-					fort_level = 2
-				}
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.9
+		trigger = {
+			employed_advisor = {
+				type = inquisitor
 			}
-			modifier = {
-				factor = 30
-				num_of_owned_provinces_with = {
-					value = 10
-					fort_level = 2
-				}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
 			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_inquisitor
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.10
+		trigger = {
+			employed_advisor = {
+				type = master_of_mint
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
+			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_master_of_mint
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.11
+		trigger = {
+			employed_advisor = {
+				type = natural_scientist
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
+			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_natural_scientist
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.12
+		trigger = {
+			employed_advisor = {
+				type = philosopher
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
+			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_philosopher
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.13
+		trigger = {
+			employed_advisor = {
+				type = theologian
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
+			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_theologian
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.14
+		trigger = {
+			employed_advisor = {
+				type = treasurer
+			}
+			NOT = {
+				has_ruler_flag = court_economy_decree_taken
+			}
+		}
+		add_ruler_modifier = { 
+			name = court_economy_decree_treasurer
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	# Diplomacy options
+	option = {
+		name = ai_only_events.0001.15
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Inward Focus
+			name = court_diplomacy_decree_1
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.16
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Networking Focus
+			name = court_diplomacy_decree_2
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.17
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Expansion focus
+			name = court_diplomacy_decree_3
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.18
+		trigger = {
+			employed_advisor = {
+				type = colonial_governor
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_colonial_governor
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.19
+		trigger = {
+			employed_advisor = {
+				type = diplomat
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_diplomat
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.20
+		trigger = {
+			employed_advisor = {
+				type = naval_reformer
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_naval_reformer
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.21
+		trigger = {
+			employed_advisor = {
+				type = navigator
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_navigator
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.22
+		trigger = {
+			employed_advisor = {
+				type = spymaster
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_spymaster
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.23
+		trigger = {
+			employed_advisor = {
+				type = statesman
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_statesman
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.24
+		trigger = {
+			employed_advisor = {
+				type = trader
+			}
+			NOT = {
+				has_ruler_flag = court_diplomacy_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_diplomacy_decree_trader
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	# Military options
+	option = {
+		name = ai_only_events.0001.25
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Balanced Outlook
+			name = court_military_decree_1
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.26
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Aggressive stance
+			name = court_military_decree_2
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.27
+		trigger = {
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = { # Defensive Stance
+			name = court_military_decree_3
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.28
+		trigger = {
+			employed_advisor = {
+				type = army_organiser
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_army_organiser
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.29
+		trigger = {
+			employed_advisor = {
+				type = army_reformer
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_army_reformer
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.30
+		trigger = {
+			employed_advisor = {
+				type = commandant
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_commandant
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.31
+		trigger = {
+			employed_advisor = {
+				type = grand_captain
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_grand_captain
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.32
+		trigger = {
+			employed_advisor = {
+				type = recruitmaster
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_recruitmaster
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.33
+		trigger = {
+			employed_advisor = {
+				type = fortification_expert
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_fortification_expert
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	option = {
+		name = ai_only_events.0001.34
+		trigger = {
+			employed_advisor = {
+				type = quartermaster
+			}
+			NOT = {
+				has_ruler_flag = court_military_decree_taken
+			}
+		}
+		add_ruler_modifier = {
+			name = court_military_decree_quartermaster
+			duration = -1
+		}
+		
+		ai_chance = {
+			factor = 25
 		}
 	}
 }

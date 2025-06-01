@@ -5,6 +5,7 @@ custom_button = {
 		owned_by = FROM
 	}
 	trigger = {
+		controlled_by = owner
 		NOT = { has_province_modifier = pops_drafted }
 		owner = {
 			full_idea_group = quantity_ideas
@@ -38,6 +39,7 @@ custom_button = {
 		owned_by = FROM
 	}
 	trigger = {
+		controlled_by = owner
 		NOT = { has_province_modifier = pops_drafted }
 		owner = {
 			full_idea_group = quantity_ideas

@@ -1,0 +1,37 @@
+country_decisions = {
+	hold_court_notification = { # shows a notification to the player, that one or more court decrees have not been picked
+		color = { 199 199 199 }
+		potential = {
+			ai = no
+			full_idea_group = court_ideas
+			NOT = {
+				AND = {
+					has_ruler_flag = court_realm_decree_taken
+					has_ruler_flag = court_economy_decree_taken
+					has_ruler_flag = court_diplomacy_decree_taken
+					has_ruler_flag = court_military_decree_taken
+				}
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = hold_court_notification_TT
+			}
+			hidden_trigger = {
+				NOT = {
+					AND = {
+						has_ruler_flag = court_realm_decree_taken
+						has_ruler_flag = court_economy_decree_taken
+						has_ruler_flag = court_diplomacy_decree_taken
+						has_ruler_flag = court_military_decree_taken
+					}
+				}
+			}
+		}
+		effect = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
