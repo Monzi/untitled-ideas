@@ -963,7 +963,6 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
-						#buttonText = "court_economy_decree_4_title"
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
@@ -1148,7 +1147,6 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
-						buttonText = "court_diplomacy_decree_4_title"
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
@@ -1333,7 +1331,6 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
-						buttonText = "court_military_decree_4_title"
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
