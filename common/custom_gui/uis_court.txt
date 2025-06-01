@@ -30,7 +30,7 @@ custom_button = { # Close button inside interface
 	trigger = { }
 	effect = {
 		clr_country_flag = court_window_shown
-		clr_country_flag = court_nav_default
+		clear_previous_nav_flag = yes
 	}
 }
 
@@ -457,6 +457,18 @@ custom_button = {
 		}
 	}
 }
+# Button text
+custom_text_box = {
+	name = court_economy_decree_4_button_text
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = ADM
+			}
+			has_ruler_flag = court_adm_advisor_decree
+		}
+	}
+}
 # Advisor seal
 custom_icon = {
 	name = court_economy_decree_advisor_seal
@@ -689,6 +701,18 @@ custom_button = {
 		}
 	}
 }
+# Button text
+custom_text_box = {
+	name = court_diplomacy_decree_4_button_text
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = DIP
+			}
+			has_ruler_flag = court_dip_advisor_decree
+		}
+	}
+}
 # Advisor seal
 custom_icon = {
 	name = court_diplomacy_decree_advisor_seal
@@ -918,6 +942,18 @@ custom_button = {
 				duration = -1
 				#hidden = yes
 			}
+		}
+	}
+}
+# Button text
+custom_text_box = {
+	name = court_military_decree_4_button_text
+	potential = {
+		OR = {
+			employed_advisor = {
+				category = MIL
+			}
+			has_ruler_flag = court_mil_advisor_decree
 		}
 	}
 }

@@ -963,23 +963,31 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
-						buttonText = "court_economy_decree_4_title"
+						#buttonText = "court_economy_decree_4_title"
 						buttonFont = "vic_18_black"
 						clicksound = click
+					}
+					instantTextBoxType = {
+						name = "court_economy_decree_4_button_text"
+						scripted = yes
+						position = { x=80 y=15 }
+						Orientation = "UPPER_LEFT"
+						font = "vic_18_black"
+						alwaystransparent = yes
 					}
 					iconType = {
 						name = "court_economy_decree_advisor_seal"
 						scripted = yes
 						spriteType = "GFX_decree_button_seal"
 						alwaystransparent = yes
-						position = { x=20  y=2 }
+						position = { x=15  y=2 }
 					}
 					iconType = {
 						name = "court_economy_decree_advisor_mark"
 						scripted = yes
 						spriteType = "GFX_decree_advisor_mark"
 						alwaystransparent = yes
-						position = { x=34 y=10 }
+						position = { x=29 y=10 }
 					}
 					iconType = {
 						name = "court_economy_decree_4_seal"
@@ -1144,19 +1152,27 @@ guiTypes = {
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
+					instantTextBoxType = {
+						name = "court_diplomacy_decree_4_button_text"
+						scripted = yes
+						position = { x=80 y=15 }
+						Orientation = "UPPER_LEFT"
+						font = "vic_18_black"
+						alwaystransparent = yes
+					}
 					iconType = {
 						name = "court_diplomacy_decree_advisor_seal"
 						scripted = yes
 						spriteType = "GFX_decree_button_seal"
 						alwaystransparent = yes
-						position = { x=20  y=2 }
+						position = { x=15  y=2 }
 					}
 					iconType = {
 						name = "court_diplomacy_decree_advisor_mark"
 						scripted = yes
 						spriteType = "GFX_decree_advisor_mark"
 						alwaystransparent = yes
-						position = { x=34 y=10 }
+						position = { x=29 y=10 }
 					}
 					iconType = {
 						name = "court_diplomacy_decree_4_seal"
@@ -1321,19 +1337,27 @@ guiTypes = {
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
+					instantTextBoxType = {
+						name = "court_military_decree_4_button_text"
+						scripted = yes
+						position = { x=80 y=15 }
+						Orientation = "UPPER_LEFT"
+						font = "vic_18_black"
+						alwaystransparent = yes
+					}
 					iconType = {
 						name = "court_military_decree_advisor_seal"
 						scripted = yes
 						spriteType = "GFX_decree_button_seal"
 						alwaystransparent = yes
-						position = { x=20  y=2 }
+						position = { x=15  y=2 }
 					}
 					iconType = {
 						name = "court_military_decree_advisor_mark"
 						scripted = yes
 						spriteType = "GFX_decree_advisor_mark"
 						alwaystransparent = yes
-						position = { x=34 y=10 }
+						position = { x=29 y=10 }
 					}
 					iconType = {
 						name = "court_military_decree_4_seal"
