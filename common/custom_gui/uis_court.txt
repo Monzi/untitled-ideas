@@ -3,8 +3,8 @@ custom_button = { # Hold court button inside countrygovernmentview.gui
 	tooltip = hold_court_tooltip
 	potential = { always = yes }
 	trigger = {
-		always = yes # Only for debugging
-		#full_idea_group = court_ideas
+		#always = yes # Only for debugging
+		full_idea_group = court_ideas
 	}
 	effect = {
 		set_country_flag = court_nav_default
