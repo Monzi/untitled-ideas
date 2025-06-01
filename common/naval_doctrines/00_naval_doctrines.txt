@@ -731,7 +731,7 @@ naval_light_special = { # Light Ship Specialization
 	effect = {}
 	removed_effect = {}
 	
-	button_gfx = 1
+	button_gfx = 32
 }
 
 naval_galley_special = { # Galley Specialization
@@ -749,7 +749,7 @@ naval_galley_special = { # Galley Specialization
 	effect = {}
 	removed_effect = {}
 	
-	button_gfx = 1
+	button_gfx = 33
 }
 
 naval_heavy_special = { # Heavy Ship Specialization
@@ -760,12 +760,12 @@ naval_heavy_special = { # Heavy Ship Specialization
 	cost = 0.1 # money cost per each sailor employed in the whole navy
 	country_modifier = {
 		naval_tradition_from_battle = 1
-		heavy_ship_power = 0.25
+		heavy_ship_power = 0.15
 		disengagement_chance = 0.15
 		heavy_ship_number_of_cannons_modifier = 0.25
 	}
 	effect = {}
 	removed_effect = {}
 	
-	button_gfx = 1
+	button_gfx = 34
 }
