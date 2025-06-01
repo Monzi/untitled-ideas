@@ -54,8 +54,8 @@
  string_court_military_decree_fortification_expert:0 "fortification_expert"
  string_court_military_decree_quartermaster:0 "quartermaster"
 # Court Realm Decrees
- court_realm_decree_1_title:0 "Replace title"
- court_realm_decree_1_tooltip:0 "Replace tooltip"
+ court_realm_decree_1_title:0 "Internal Focus"
+ court_realm_decree_1_tooltip:0 "decree 1 toolt"
  court_realm_decree_2_title:0 "Replace title"
  court_realm_decree_2_tooltip:0 "Replace tooltip"
  court_realm_decree_3_title:0 "Replace title"

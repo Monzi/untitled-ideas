@@ -155,7 +155,7 @@ custom_button = {
 		add_ruler_modifier = {
 			name = court_realm_decree_1
 			duration = -1
-			hidden = yes
+			#hidden = yes
 		}
 	}
 }
