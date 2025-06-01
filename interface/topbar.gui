@@ -963,13 +963,14 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
+						buttonText = ""
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
 					instantTextBoxType = {
 						name = "court_economy_decree_4_button_text"
 						scripted = yes
-						position = { x=80 y=15 }
+						position = { x=70 y=15 }
 						Orientation = "UPPER_LEFT"
 						font = "vic_18_black"
 						alwaystransparent = yes
@@ -1147,13 +1148,14 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
+						buttonText = ""
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
 					instantTextBoxType = {
 						name = "court_diplomacy_decree_4_button_text"
 						scripted = yes
-						position = { x=80 y=15 }
+						position = { x=70 y=15 }
 						Orientation = "UPPER_LEFT"
 						font = "vic_18_black"
 						alwaystransparent = yes
@@ -1331,13 +1333,14 @@ guiTypes = {
 						quadTextureSprite = "GFX_decree_button"
 						position = { x=0 y=0 }
 						Orientation = "UPPER_LEFT"
+						buttonText = ""
 						buttonFont = "vic_18_black"
 						clicksound = click
 					}
 					instantTextBoxType = {
 						name = "court_military_decree_4_button_text"
 						scripted = yes
-						position = { x=80 y=15 }
+						position = { x=70 y=15 }
 						Orientation = "UPPER_LEFT"
 						font = "vic_18_black"
 						alwaystransparent = yes
