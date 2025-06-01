@@ -59,7 +59,7 @@
  court_realm_decree_2_title:0 "Diplomatic Focus"
  court_realm_decree_2_tooltip:0 "dectee 2 tt"
  court_realm_decree_3_title:0 "Military Focus"
- court_realm_decree_3_tooltip:0 "decreee 3 tt"
+ court_realm_decree_3_tooltip:0 "decreee 3"
  court_realm_decree_4_title:0 "Reformist Focus"
  court_realm_decree_4_tooltip:0 "Replace tooltip"
 # Court Economy Decrees
@@ -131,6 +131,24 @@
  string_court_recruitmaster_desc:0 ""
  string_court_fortification_expert_desc:0 ""
  string_court_quartermaster_desc:0 ""
+
+# NOT USED - Try to reuse
+#  court_decree_1_title:0 "Currency Regulation Ordinance"
+#  court_decree_1_tooltip:0 "Currency Regulation Ordinance"
+#  court_decree_2_title:0 "Monetary Policy Directive"
+#  court_decree_2_tooltip:0 "Monetary Policy Directive"
+#  court_decree_3_title:0 "Trade Agreement Ratification"
+#  court_decree_3_tooltip:0 "Trade Agreement Ratification"
+#  court_decree_4_title:0 "Legal Ruling and Guidance"
+#  court_decree_4_tooltip:0 "Legal Ruling and Guidance"
+#  court_decree_5_title:0 "War Powers Resolution"
+#  court_decree_5_tooltip:0 "War Powers Resolution"
+#  court_decree_6_title:0 "Budget Allocation Ordinance"
+#  court_decree_6_tooltip:0 "Budget Allocation Ordinance"
+#  court_decree_7_title:0 "Military Uniform Regulations Act"
+#  court_decree_7_tooltip:0 "Military Uniform Regulation Act"
+#  court_decree_8_title:0 "Military Base Realignment"
+#  court_decree_8_tooltip:0 "Military Base Realignment"
 
  draft_pop:0 "Forced Draft"
  draft_pop_tooltip:0 "§YForced Draft§!"
