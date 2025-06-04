@@ -1,11 +1,4 @@
 ﻿l_english:
- uis_ideagroups.2001.t:0 "Change Current Tactics"
- uis_ideagroups.2001.d:0 "It is time that we had a look at the tactics we're employing."
- uis_ideagroups.2001.1:0 "Keep Current Tactics"
- uis_ideagroups.2001.2:0 "Balanced Tactics"
- uis_ideagroups.2001.3:0 "Fire Tactics"
- uis_ideagroups.2001.4:0 "Shock Tactics"
- uis_ideagroups.2001.5:0 "Quantity over Quality Tactics"
  #Junta Chain
  uis_ideagroups.4000.t:0 "Military revolts!"
  uis_ideagroups.4000.d:0 "Our military leaders have entered open revolt against our [Root.Monarch.GetTitle]'s rule, they plan to overthrow it and install their own junta government!\n\nJunta rebels will draft the local manpower from provinces they occupy, adding a 5 year modifier taking away all local manpower for that province."

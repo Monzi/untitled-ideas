@@ -12,8 +12,6 @@
  marine_upgrade_desc:0 "We should prepare our marines for naval landings in the future."
 
 # MIL
- switch_tactics_title:0 "Change Current Tactics"
- switch_tactics_desc:0 "It is time that we had a look at the tactics we're employing."
  army_training_title:0 "[Root.title_army_training]"
  army_training_desc:0 "[Root.desc_army_training]"
  string_infantry_training_title:0 "Infantry Training"
@@ -21,6 +19,11 @@
  string_cavalry_training_title:0 "Cavalry Training"
  string_cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."
 
+# Notifications
+# Court Mechanic
  hold_court_notification_title:0 "Notification: Available Court Decrees"
  hold_court_notification_desc:0 "There are one or more Court Decrees available"
  hold_court_notification_TT:0 "There are one or more Court Decrees available"
+# Tactics Mechanic
+ switch_tactics_notification_title:0 "Notification: Can change Tactics"
+ switch_tactics_notification_desc:0 "It's time we had a look at the tactics that we employ."

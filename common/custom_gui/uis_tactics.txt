@@ -1,0 +1,74 @@
+custom_button = {
+	name = fire_tactics_button
+	tooltip = fire_tactics_button_TT
+	potential = { always = yes }
+	trigger = {
+		full_idea_group = tactic_ideas
+		NOT = { has_country_modifier = tactics_cooldown }
+		hidden_trigger = {
+			NOT = { has_country_modifier = fire_tactics }
+		}
+	}
+	effect = {
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = fire_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = fire_tactics }
+	}
+}
+
+custom_button = {
+	name = balanced_tactics_button
+	tooltip = balanced_tactics_button_TT
+	potential = { always = yes }
+	trigger = {
+		full_idea_group = tactic_ideas
+		NOT = { has_country_modifier = tactics_cooldown }
+		hidden_trigger = {
+			NOT = { has_country_modifier = balanced_tactics }
+		}
+	}
+	effect = {
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = balanced_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = balanced_tactics }
+	}
+}
+
+custom_button = {
+	name = shock_tactics_button
+	tooltip = shock_tactics_button_TT
+	potential = { always = yes }
+	trigger = {
+		full_idea_group = tactic_ideas
+		NOT = { has_country_modifier = tactics_cooldown }
+		hidden_trigger = {
+			NOT = { has_country_modifier = shock_tactics }
+		}
+	}
+	effect = {
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = shock_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+	}
+	frame = {
+		number = 2
+		trigger = { has_country_modifier = shock_tactics }
+	}
+}

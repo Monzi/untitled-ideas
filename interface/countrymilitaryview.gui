@@ -1656,8 +1656,25 @@ guiTypes = {
 		}	
 
 
-
-
+		# Untitled Ideas, Tactics mechanic
+		guiButtonType =	{
+			name = "fire_tactics_button"
+			quadTextureSprite= "GFX_tactics_fire_button"
+			position = { x=11 y=511 }
+			scripted = yes
+		}
+		guiButtonType =	{
+			name = "balanced_tactics_button"
+			quadTextureSprite= "GFX_tactics_balanced_button"
+			position = { x=58 y=511 }
+			scripted = yes
+		}
+		guiButtonType =	{
+			name = "shock_tactics_button"
+			quadTextureSprite= "GFX_tactics_shock_button"
+			position = { x=105 y=511 }
+			scripted = yes
+		}
 		
 		guiButtonType =	{
 			name = "mothball_all"
@@ -1674,7 +1691,7 @@ guiTypes = {
             }
             if_resolution = {
 			min_height = 1048
-			position = { x=11 y =511 }
+			position = { x=11 y =561 }
 			}			
 			
 		}
@@ -1694,7 +1711,7 @@ guiTypes = {
             }
             if_resolution = {
 			min_height = 1048
-			position = { x=58 y =511 }
+			position = { x=58 y =561 }
 			}
 			
 		}
@@ -1713,9 +1730,8 @@ guiTypes = {
             }
             if_resolution = {
 			min_height = 1048
-			position = { x=155 y =511 }
+			position = { x=155 y =561 }
 			}
-			
 		}
 		
 		iconType = {
@@ -1732,7 +1748,7 @@ guiTypes = {
             }
             if_resolution = {
 				min_height = 1048
-				position = { x=115 y =511 }
+				position = { x=115 y =561 }
 			}
 		}
 
@@ -1751,7 +1767,7 @@ guiTypes = {
 			#	position = { x=105 y =531 }
 			#}
 			
-			position = { x=105 y =534 }
+			position = { x=105 y =584 }
 			textureFile = ""
 			font = "vic_18"
 			text = "99/99 Forts Active"	
@@ -1783,7 +1799,7 @@ guiTypes = {
             }
             if_resolution = {
 			min_height = 1048
-			position = { x=12 y =560 }
+			position = { x=12 y =610 }
 			}						
 			quadTextureSprite ="GFX_checkbox_gold_24"	
 			tooltip = ""
@@ -1810,7 +1826,7 @@ guiTypes = {
             }
             if_resolution = {
 			min_height = 1048
-			position = { x=32 y =560 }
+			position = { x=32 y =610 }
 			maxWidth = 164
 			maxHeight = 120
 			}				

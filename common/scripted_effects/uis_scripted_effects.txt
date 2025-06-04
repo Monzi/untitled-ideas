@@ -1,13 +1,18 @@
 # Tactic Ideas
-clear_tactic_bonus_modifiers = {
+tactic_cooldown_modifier = { # Controls how long the cooldown is between switching tactics
+	add_country_modifier = {
+		name = tactics_cooldown
+		duration = 1826 # Days
+	}
+}
+clear_tactic_bonus_modifiers = { # Clears all tactics modifiers
 	remove_country_modifier = balanced_tactics
 	remove_country_modifier = fire_tactics
 	remove_country_modifier = shock_tactics
-	remove_country_modifier = quantity_over_quality_tactics
 }
 
 # Infantry / Cavalry Ideas
-clear_army_training_modifiers = {
+clear_army_training_modifiers = { # Clears all training modifiers
 	remove_country_modifier = tier1_infantry
 	remove_country_modifier = tier2_infantry
 	remove_country_modifier = tier3_infantry

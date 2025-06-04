@@ -29,6 +29,28 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				set_country_flag = court_nav_default
+				set_country_flag = court_window_shown
+			}
+			custom_tooltip = hold_court_tooltip
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	switch_tactics_notification = { # shows a notification to the player, that they can switch tactics
+		color = { 199 199 199 }
+		potential = {
+			ai = no
+			full_idea_group = tactic_ideas
+			NOT = { has_country_modifier = tactics_cooldown }
+		}
+		allow = {
+			NOT = { has_country_modifier = tactics_cooldown }
+		}
+		effect = {
+			# Cannot take you to the countrymilitaryview.gui
 		}
 		ai_will_do = {
 			factor = 0

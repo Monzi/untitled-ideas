@@ -251,12 +251,6 @@ shock_tactics = {
 	movement_speed = 0.20
 	morale_damage = 0.015
 }
-quantity_over_quality_tactics = {
-	manpower_recovery_speed = 0.30
-	infantry_power = -0.1
-	cavalry_power = -0.1
-	artillery_power = -0.1
-}
 
 # Quantity Ideas
 pops_drafted = {

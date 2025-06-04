@@ -141,6 +141,15 @@
  naval_heavy_special:0 "Ambitious Heavy Fleet"
  naval_heavy_special_desc:0 ""
 
+# Tactics Ideas
+ balanced_tactics_button_TT:0 "Balanced Tactics"
+ desc_balanced_tactics:0 "Switch to Balanced Tactics"
+ fire_tactics_button_TT:0 "Fire Tactics"
+ desc_fire_tactics:0 "Switch to Fire Tactics"
+ shock_tactics_button_TT:0 "Shock Tactics"
+ desc_shock_tactics:0 "Switch to Shock Tactics"
+
+# Quantity Ideas
  draft_pop:0 "Forced Draft"
  draft_pop_tooltip:0 "§YForced Draft§!"
  pops_drafted_effect_CT:0 "Gain §G2§! years worth of manpower from this province"

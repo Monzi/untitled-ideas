@@ -96,6 +96,10 @@ court_ideas = {
 		possible_dip_policy = 1
 		monarch_diplomatic_power = 1
 		# Allows Hold Court Mechanic
+		removed_effect = {
+			clr_country_flag = court_window_shown
+			clear_previous_nav_flag = yes
+		}
 	}
 
 	ai_will_do = {

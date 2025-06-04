@@ -135,7 +135,7 @@ offensive_ideas = {
 	category = MIL
 
 	bonus = {
-		assault_fort_cost_modifier = -0.50
+		assault_fort_ability = 0.25
 		recover_army_morale_speed = 0.1
 		qizilbash_loyalty_modifier = 0.1
 	}
@@ -155,7 +155,6 @@ offensive_ideas = {
 	}
 	engineer_corps = {
 		siege_ability = 0.20
-		assault_fort_ability = 0.33
 	}
 	grand_army = {
 		global_supply_limit_modifier = 0.10

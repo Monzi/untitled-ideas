@@ -1,34 +1,4 @@
 country_decisions = {
-	# Tactic Ideas
-	switch_tactics = {
-		color = { 79 42 46 }
-		potential = {
-			full_idea_group = tactic_ideas
-		}
-		allow = {
-			army_tradition = 15
-			full_idea_group = tactic_ideas
-			NOT = { has_country_modifier = tactics_cooldown }
-		}
-		effect = {
-			add_army_tradition = -10
-			country_event = {
-				id = uis_ideagroups.2001
-			}
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { army_tradition = 30 }
-			}
-			modifier = {
-				factor = 0
-				is_at_war = yes
-			}
-		}
-	}
-
 	# Infantry / Cavalry Ideas
 	army_training = {
 		color = { 184 34 44 }

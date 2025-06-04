@@ -1,9 +1,7 @@
 namespace = ai_only_events
 
-country_event = {
+country_event = { # Court Ideas
 	id = ai_only_events.0001
-	title = ai_only_events.0001.t
-	desc = ai_only_events.0001.d
 	is_triggered_only = yes
 
 	# Realm options
@@ -616,5 +614,84 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
+	}
+}
+
+country_event = { # Tactics Ideas
+	id = ai_only_events.0002
+	is_triggered_only = yes
+
+	option = { # Balanced tactics
+		name = ai_only_events.0002.1
+		trigger = {
+			NOT = { has_country_modifier = balanced_tactics }
+		}
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = balanced_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+		ai_chance = { factor = 0 }
+	}
+	option = { # Fire tactics
+		name = ai_only_events.0002.2
+		trigger = {
+			NOT = { has_country_modifier = fire_tactics }
+		}
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = fire_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+		ai_chance = {
+			factor = 25
+			modifier = { 
+				factor = 50
+				OR = { 
+					has_global_modifier_value = { 
+						which = infantry_power 
+						value = 0.2
+					}
+					has_global_modifier_value = { 
+						which = artillery_power 
+						value = 0.1
+					}
+					has_global_modifier_value = { 
+						which = army_tradition
+						value = 0.01
+					}
+				}
+				
+			}
+		}
+	}
+	option = { # Shock tactics
+		name = ai_only_events.0002.3
+		trigger = {
+			NOT = { has_country_modifier = shock_tactics }
+		}
+		clear_tactic_bonus_modifiers = yes
+		add_country_modifier = {
+			name = shock_tactics
+			duration = -1
+		}
+		tactic_cooldown_modifier = yes
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 25
+				has_global_modifier_value = {
+					which = cavalry_power 
+					value = 0.20
+				}
+			}
+			modifier = {
+				factor = 25
+				cavalry_fraction = 0.3
+			}
+		}
+		
 	}
 }

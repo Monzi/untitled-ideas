@@ -37,6 +37,23 @@ spriteTypes = {
 		texturefile = "gfx//interface//decree_advisor_mark.dds"
 	}
 
+	# Tactics Mechanic
+	spriteType = {
+		name = "GFX_tactics_balanced_button"
+		texturefile = "gfx//interface//tactics_balanced_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_tactics_fire_button"
+		texturefile = "gfx//interface//tactics_fire_button.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_tactics_shock_button"
+		texturefile = "gfx//interface//tactics_shock_button.dds"
+		noOfFrames = 2
+	}
+
 	# Quantity Mechanic
 	spriteType = {
 		name = "GFX_forced_draft_button"
