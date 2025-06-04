@@ -61,6 +61,7 @@
  marine_fraction_build:0 "Marine Base"
 # For sailor increase after DLC Check
  marine_sailor_base:0 "Marine Base"
+ uis_marine_capital:0 "Marine Capital"
 
 # MIL
 # Tactic Ideas

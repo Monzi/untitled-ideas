@@ -33,3 +33,39 @@ marine_sailor_base = {
 	}
 	global_sailors_modifier = 0.01
 }
+# V Some things i was experimenting with
+#uis_marine_capital = {
+#	potential = {
+#		OR = {
+#			has_dlc = "Rule Britannia"
+#			has_dlc = "Golden Century"
+#			has_dlc = "Lions of the North"
+#			has_dlc = "Domination"
+#		}
+#		owner = {
+#			has_idea_group = maritime_ideas
+#		}	
+#	}
+#	trigger = {
+#		OR = {
+#			has_building = dock
+#			has_building = drydock
+#			has_building = impressment_offices
+#		}
+#		
+#		owner = {
+#			full_idea_group = maritime_ideas
+#			num_of_marines = 100
+#			OR = {
+#				dock = 15
+#				drydock = 15
+#				impressment_offices = 15
+#			}
+#		}
+#	}
+#	is_marine_modifier = yes
+#	discipline = 0.10
+#	shock_damage_received = -0.1
+#	movement_speed = 0.1
+#	regiment_manpower_usage = -0.3
+#}

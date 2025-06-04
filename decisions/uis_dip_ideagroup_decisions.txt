@@ -1,29 +1,43 @@
 country_decisions = {
 	# Maritime Ideas
-	marine_upgrade = {
+	enact_marine_government = {
 		color = { 47 84 164 }
+		ai_importance = 100
+		major = yes
 		potential = {
 			full_idea_group = maritime_ideas
+			NOT = {
+				has_government_mechanic = uis_maritime_mechanic
+				has_country_flag = uis_buildings_counted
+			}
+			OR = {
+				has_reform = amphibious_specialization_reform
+				has_reform = royal_marines_reform
+				reform_level = 5
+			}
 		}
 		allow = {
-			navy_tradition = 15
-			full_idea_group = maritime_ideas
-			NOT = { has_country_modifier = upgraded_marines }
+			government_reform_progress = 50
 		}
 		effect = {
-			add_navy_tradition = -10
-			add_dip_power = -200
-			add_country_modifier = {
-				name = upgraded_marines
-				duration = -1
+			custom_tooltip = uis_enact_marine_government
+			hidden_effect = {
+				if = {
+					limit = { has_reform = amphibious_specialization_reform }
+					remove_government_reform = amphibious_specialization_reform
+					add_government_reform = amphibious_specialization_reform
+				}
+				else_if = {
+					limit = { has_reform = royal_marines_reform }
+					remove_government_reform = royal_marines_reform
+					add_government_reform = royal_marines_reform
+				}
+				else = {
+					add_government_reform = amphibious_specialization_reform
+					change_government_reform_progress = -50
+				}
 			}
-			add_country_modifier = {
-				name = upgraded_marines_cooldown
-				duration = 1826
-			}
-		}
-		ai_will_do = {
-			factor = 10
+			
 		}
 	}
 }

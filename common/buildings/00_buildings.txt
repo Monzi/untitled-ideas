@@ -739,6 +739,20 @@ dock = {
 			type = production
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 1
+				}
+			}
+		}
 	}
 	
 	on_destroyed = {
@@ -756,6 +770,20 @@ dock = {
 			building = dock
 			type = production
 			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = -1
+				}
+			}
 		}
 	}
 	on_obsolete = {
@@ -1918,6 +1946,20 @@ drydock = {
 			value = 2
 			upgrade_value = 1
 		}
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 1
+				}
+			}
+		}
 	}
 	
 	on_destroyed = {
@@ -1935,6 +1977,20 @@ drydock = {
 			building = drydock
 			type = production
 			value = 2
+		}
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = -1
+				}
+			}
 		}
 	}
 	on_obsolete = {
@@ -2756,7 +2812,20 @@ impressment_offices = {
 			type = manpower 
 			value = 1 
 		}
-		add_marine_base = yes
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 1
+				}
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2769,7 +2838,20 @@ impressment_offices = {
 			type = manpower 
 			value = 1 
 		}
-		remove_marine_base = yes
+		if = {
+			limit = {
+				FROM = {
+					full_idea_group = maritime_ideas
+				}
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = -1
+				}
+			}
+		}
 	}
 	on_obsolete = {
 	}

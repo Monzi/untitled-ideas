@@ -186,3 +186,7 @@
  UIS_JUNTA_DECISION_TOOLTIP:0 ""
  UIS_JUNTA_DECISION_TOOLTIP_DESC:0 ""
  junta_readiness:0 "Junta Readiness"
+#tooltip for marine government tooltip
+ uis_enact_marine_government:0 "Enables §YMarine Professionalism§! Mechanic"
+#tooltip for maritime ideagroup bonus
+ maritime_unlocks_government_notifier:0 "Unlocks a unique government mechanic empowering §YMarines§!!"
