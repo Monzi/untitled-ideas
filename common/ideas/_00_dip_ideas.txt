@@ -628,21 +628,25 @@ maritime_ideas = {
 		free_leader_pool = 1
 	}
 	maritime_ideas_7 = {
-		# Impressment Offices gives 1% Marine fraction
-		# Allows Marine training decision
 		leader_naval_fire = 1
         leader_naval_shock = 1
-		# Removes Marines penalty
 		effect = {
-			add_country_modifier = {
-				name = marine_corps
-				duration = -1
-				hidden = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_reform = royal_marines_reform
+							has_reform = amphibious_specialization_reform
+						}
+						NOT = {
+							has_country_flag = uis_buildings_counted
+						}
+					}
+					country_event = {
+						id = uis_ideagroups_maritime.0001
+					}
+				}
 			}
-		}
-		removed_effect = {
-			remove_country_modifier = upgraded_marines
-			remove_country_modifier = marine_corps
 		}
 	}
 

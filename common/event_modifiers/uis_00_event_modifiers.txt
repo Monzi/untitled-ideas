@@ -215,20 +215,6 @@ court_military_decree_quartermaster = {
 	global_supply_limit_modifier = 0.25
 }
 
-# Maritime Ideas
-upgraded_marines_cooldown = {
-	discipline = -0.05
-	is_marine_modifier = yes
-}
-upgraded_marines = {
-	landing_penalty = -1
-	is_marine_modifier = yes
-}
-marine_corps = {
-	shock_damage_received = -0.10
-	is_marine_modifier = yes
-}
-
 # MIL
 # Tactic Ideas
 tactics_cooldown = {
