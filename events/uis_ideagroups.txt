@@ -1253,20 +1253,21 @@ country_event = {
 		name = uis_ideagroups.0002.a
 	}
 }
-#testing of some things
-#country_event = {
-#	id = uis_ideagroups_maritime.0001
-#	hidden = yes
-#	is_triggered_only = yes
-#	option = {
-#		ai_chance = {
-#			factor = 100
-#		}
-#		name = uis_ideagroups_maritime.a
-#		maritime_ideas_building_counter = yes
+#
+country_event = {
+	id = uis_ideagroups_maritime.0001
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = uis_ideagroups_maritime.a
+		maritime_ideas_building_counter = yes
+#		VVV testing of some things VVV
 #		capital_scope = {
 #			add_province_triggered_modifier = uis_marine_capital
 #		}
-#		#set_country_flag = clicked_maritime_flag
-#	}
-#}
+		#set_country_flag = clicked_maritime_flag
+	}
+}
