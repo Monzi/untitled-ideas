@@ -1,0 +1,32 @@
+custom_button = { # Button that shows the unit_tree_window
+	name = unit_tree_window_button
+	tooltip = unit_tree_window_button_TT
+	potential = { always = no }
+	trigger = { always = yes } # Always while debugging
+	effect = {
+		if = {
+			limit = { has_country_flag = unit_tree_window_shown }
+			clr_country_flag = unit_tree_window_shown
+		}
+		else = {
+			set_country_flag = unit_tree_window_shown
+		}
+
+		# Debugging
+		set_variable = {
+			which = trainingExperience
+			value = 30
+		}
+	}
+}
+
+custom_window = {
+	name = unit_tree_window
+	potential = { has_country_flag = unit_tree_window_shown }
+}
+
+custom_icon = {
+	name = unit_tree_experience_progressbar
+	potential = { always = yes }
+	frame_variable = "trainingExperience"
+}

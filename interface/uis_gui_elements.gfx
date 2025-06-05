@@ -37,21 +37,34 @@ spriteTypes = {
 		texturefile = "gfx//interface//decree_advisor_mark.dds"
 	}
 
+	# Training Mechanic
+	spriteType = {
+		name = "GFX_country_unit_tree_bg"
+		texturefile = "gfx//interface//country_military_view_unit_tree_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_unit_tree_experience_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx//interface//unit_tree_exp_progress.dds"
+		textureFile2 = "gfx\\interface\\institutions\\institution_progress_transparent.dds"
+		size = { x = 238 y = 12 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_unit_tree_experience_progressbar_frame"
+		texturefile = "gfx//interface//unit_tree_exp_frame.dds"
+		alwaystransparent = yes
+	}
+
 	# Tactics Mechanic
 	spriteType = {
-		name = "GFX_tactics_balanced_button"
-		texturefile = "gfx//interface//tactics_balanced_button.dds"
-		noOfFrames = 2
-	}
-	spriteType = {
-		name = "GFX_tactics_fire_button"
-		texturefile = "gfx//interface//tactics_fire_button.dds"
-		noOfFrames = 2
-	}
-	spriteType = {
-		name = "GFX_tactics_shock_button"
-		texturefile = "gfx//interface//tactics_shock_button.dds"
-		noOfFrames = 2
+		name = "GFX_tactics_button_strip"
+		texturefile = "gfx//interface//tactics_button_strip.dds"
+		noOfFrames = 3
 	}
 
 	# Quantity Mechanic

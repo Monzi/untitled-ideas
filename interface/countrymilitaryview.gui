@@ -288,7 +288,6 @@ guiTypes = {
 			format = centre
 		}
 		
-		
 		instantTextBoxType = {
 			name = "unit_types_label"
 			position = { x = 44 y =115 }
@@ -1658,21 +1657,24 @@ guiTypes = {
 
 		# Untitled Ideas, Tactics mechanic
 		guiButtonType =	{
-			name = "fire_tactics_button"
-			quadTextureSprite= "GFX_tactics_fire_button"
-			position = { x=11 y=511 }
-			scripted = yes
-		}
-		guiButtonType =	{
 			name = "balanced_tactics_button"
-			quadTextureSprite= "GFX_tactics_balanced_button"
+			quadTextureSprite= "GFX_tactics_button_strip"
+			frame = 2
 			position = { x=58 y=511 }
 			scripted = yes
 		}
 		guiButtonType =	{
+			name = "fire_tactics_button"
+			quadTextureSprite= "GFX_tactics_button_strip"
+			frame = 1
+			position = { x=15 y=511 }
+			scripted = yes
+		}
+		guiButtonType =	{
 			name = "shock_tactics_button"
-			quadTextureSprite= "GFX_tactics_shock_button"
-			position = { x=105 y=511 }
+			quadTextureSprite= "GFX_tactics_button_strip"
+			frame = 3
+			position = { x=101 y=511 }
 			scripted = yes
 		}
 		
@@ -1783,7 +1785,8 @@ guiTypes = {
 			name = "naval_doctrine_button"
 			quadTextureSprite= "GFX_naval_doctrine_icons_small"
 			frame = 1
-			position = { x=27 y =200 }
+			position = { x=27 y =203 }
+			scale = 0.90
 		}
 
 		guiButtonType = {
@@ -1870,6 +1873,77 @@ guiTypes = {
 			}
 
 
+		}
+
+		# Untitled Ideas, Training - Unit tree
+		guiButtonType = {
+			name = "unit_tree_window_button"
+			quadTextureSprite= "GFX_naval_doctrine_icons_small"
+			frame = 1
+			scale = 0.90
+			#spriteType = ""
+			position = { x=27 y =113 }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
+
+		windowType = {
+			name = "unit_tree_window"
+			position = { x=-7 y=-26 }
+			Orientation = "UPPER_LEFT"
+			moveable = 0
+			scripted = yes
+
+			iconType = {
+				name = "unit_tree_window_bg"
+				spriteType = "GFX_country_unit_tree_bg"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Experience
+			instantTextBoxType = { # Experience title
+				name = "unit_tree_experience_title"
+				position = { x=260 y=234 }
+				text = "Experience"
+				font = "vic_18"
+				format = centre
+			}
+			iconType = { # Experience Progressbar
+				name = "unit_tree_experience_progressbar"
+				spriteType = "GFX_unit_tree_experience_progressbar"
+				position = { x=300 y=263 }
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+			iconType = { # Experience Progressbar frame
+				name = "unit_tree_experience_progressbar_frame"
+				spriteType = "GFX_unit_tree_experience_progressbar_frame"
+				position = { x=289 y=260 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			# Banner titles
+			instantTextBoxType = {
+				name = "unit_tree_infantry_title"
+				position = { x=0 y=340 }
+				text = "Infantry"
+				font = "vic_22"
+				format = centre
+			}
+			instantTextBoxType = {
+				name = "unit_tree_cavalry_title"
+				position = { x=185 y=340 }
+				text = "Cavalry"
+				font = "vic_22"
+				format = centre
+			}
+			instantTextBoxType = {
+				name = "unit_tree_cannon_title"
+				position = { x=370 y=340 }
+				text = "Cannon"
+				font = "vic_22"
+				format = centre
+			}
 		}
 	}
 
