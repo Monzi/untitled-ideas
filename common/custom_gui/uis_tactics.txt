@@ -18,8 +18,8 @@ custom_button = {
 		tactic_cooldown_modifier = yes
 	}
 	frame = {
-		number = 2
-		trigger = { has_country_modifier = fire_tactics }
+		number = 1
+		trigger = { always = yes }
 	}
 }
 
@@ -44,7 +44,7 @@ custom_button = {
 	}
 	frame = {
 		number = 2
-		trigger = { has_country_modifier = balanced_tactics }
+		trigger = { always = yes }
 	}
 }
 
@@ -68,7 +68,7 @@ custom_button = {
 		tactic_cooldown_modifier = yes
 	}
 	frame = {
-		number = 2
-		trigger = { has_country_modifier = shock_tactics }
+		number = 3
+		trigger = { always = yes }
 	}
 }
