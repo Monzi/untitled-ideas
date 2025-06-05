@@ -1,0 +1,13 @@
+pulse_infantry_discount = {
+	infantry_cost = -0.20
+	cavalry_cost = 0.20
+}
+
+pulse_infantry_big_bad = {
+	infantry_power = -0.1
+	land_forcelimit_modifier = -0.1
+}
+pulse_infantry_big_good = {
+	infantry_power = 0.1
+	land_forcelimit_modifier = 0.1
+}

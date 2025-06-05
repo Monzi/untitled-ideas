@@ -29,7 +29,86 @@ namespace = uis_ideagroup_pulse
 
 
 # Infantry				Range 160-179
+country_event = {#increases cost of cav, decreases cost of infantry
+	id = uis_ideagroups.infantypulse.0001
+	title = uis_ideagroups.infantypulse.0001.t
+	desc = uis_ideagroups.infantypulse.0001.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = infantry_ideas
+		NOT = {
+			has_country_modifier = pulse_infantry_discount
+		}
+	}
 
+	option = {
+		name = uis_ideagroups.infantypulse.0001.a
+		add_country_modifier = {
+			name = pulse_infantry_discount
+			duration = 3650
+		}
+	}
+}
+country_event = {# Random chance to increase or decrease army power
+	id = uis_ideagroups.infantypulse.0002
+	title = uis_ideagroups.infantypulse.0002.t
+	desc = uis_ideagroups.infantypulse.0002.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		random_list = {
+			50 = {
+				set_country_flag = uis_pulse_event_big_bad_army
+			}
+			50 = {
+				set_country_flag = uis_pulse_event_big_good_army
+			}
+		}
+	}
+	trigger = {
+		has_idea_group = infantry_ideas
+		NOT = {
+			OR = {
+				has_country_modifier = pulse_infantry_big_bad
+				has_country_modifier = pulse_infantry_big_good
+			}
+		}
+		num_of_infantry = 120
+	}
+	option = {
+		name = uis_ideagroups.infantrypulse.0002.a
+		trigger = {	has_country_flag = uis_pulse_event_big_bad_army	}
+		add_country_modifier = {
+			name = pulse_infantry_big_bad
+			duration = 3650
+		}
+	}
+	option = {
+		name = uis_ideagroups.infantrypulse.0002.a
+		trigger = {	has_country_flag = uis_pulse_event_big_good_army }
+		add_country_modifier = {
+			name = pulse_infantry_big_good
+			duration = 3650
+		}
+	}
+}
+country_event = {#
+	id = uis_ideagroups.infantypulse.0003
+	title = uis_ideagroups.infantypulse.0003.t
+	desc = uis_ideagroups.infantypulse.0003.d
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_idea_group = infantry_ideas
+		
+	}
+
+	option = {
+		name = uis_ideagroups.infantrypulse.0003.a
+		
+	}
+}
 
 # Cavalry				Range 180-199
 
