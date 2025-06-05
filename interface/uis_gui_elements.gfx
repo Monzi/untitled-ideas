@@ -159,4 +159,44 @@ spriteTypes = {
 		noOfFrames = 3
 		loadType = "INGAME"
 	}
+	#Maritime Buttons
+	windowType = {
+		name = "maritime_boost_bar"
+		size = { x = 100 y = 50 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "maritime_marine_raider_button"
+		size = { x = 100 y = 50 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "maritime_marine_boats_buttons"
+		size = { x = 100 y = 50 }
+		moveable = 0
+
+		# Interaction button, graphics replaced from the interaction icon specification
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_russian_ability_ADM"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
 }

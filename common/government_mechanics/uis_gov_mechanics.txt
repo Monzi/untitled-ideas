@@ -38,7 +38,7 @@ uis_junta_mechanic = {
 			center = no
 			trigger = {
 				mil_power = 50
-				not = {
+				NOT = {
 					has_government_power = {
 						mechanic_type = uis_junta_mechanic
 						power_type = uis_junta_militarization
@@ -78,6 +78,8 @@ uis_junta_mechanic = {
 	}
 }
 uis_maritime_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
 	available = {
 		has_dlc = "Domination"
 		full_idea_group = maritime_ideas
@@ -97,6 +99,85 @@ uis_maritime_mechanic = {
 					capture_ship_chance = 0.2
 					movement_speed_in_fleet_modifier = 1
 				}
+			}
+		}
+	}
+	interactions = {
+		uis_maritime_marine_raiders = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_march_divided_fight_united
+			cost_type = uis_maritime_power
+			trigger = {
+				has_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 50
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = -50
+				}
+				add_country_modifier = {
+					name = maritime_marine_raiders
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 0
+			}
+		}
+		uis_maritime_marine_boats = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_rewrite_military_manual
+			cost_type = uis_maritime_power
+			trigger = {
+				has_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 50
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = -50
+				}
+				add_country_modifier = {
+					name = maritime_marine_navy
+					duration = 1825
+				}
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 0
+			}
+		}
+		uis_maritime_mechanic_boost_professionalism = {
+			gui = prussian_militarization_gov_mech_3_interaction
+			icon = GFX_prussian_militarization_upgrade
+			cost_type = uis_maritime_power
+			trigger = {
+				dip_power = 50
+				NOT = {
+					has_government_power = {
+						mechanic_type = uis_maritime_mechanic
+						power_type = uis_maritime_power
+						value = 100
+					}
+				}
+			}
+			effect = {
+				add_government_power = {
+					mechanic_type = uis_maritime_mechanic
+					power_type = uis_maritime_power
+					value = 10
+				}
+				add_dip_power = -50
 			}
 		}
 	}
