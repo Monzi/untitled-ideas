@@ -90,6 +90,7 @@ uis_maritime_mechanic = {
 			show_before_interactions = yes
 			scaled_modifier = {#The modifier giving bonuses
 				modifier = {
+					allowed_marine_fraction = 1
 					global_naval_barrage_cost = -1
 					transport_cost = -0.75
 					sailors_recovery_speed = 0.33
