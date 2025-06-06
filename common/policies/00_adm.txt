@@ -313,7 +313,7 @@ cent_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	state_governing_cost = -0.15
+	state_governing_cost = -0.1
 	military_tactics = 0.01
 
 	effect = {}
