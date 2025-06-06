@@ -29,3 +29,141 @@ make_decentralized_client_vassal = {
 		always = yes
 	}
 }
+
+su_manage_colony_borders = {
+	category = colonial
+
+	require_acceptance = no
+	
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = colony
+				is_subject_of_type = crown_colony
+				is_subject_of_type = private_enterprise
+				is_subject_of_type = self_governing_colony
+			}
+		}
+	}
+	
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+			any_owned_province = {
+				NOT = {
+					colonial_region = capital
+				}
+			}
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					NOT = {
+						colonial_region = capital
+					}
+				}
+				cede_province = ROOT
+				add_core = ROOT
+				remove_core = FROM
+			}
+		}
+	}
+	
+	on_decline = {
+	}
+	
+	ai_will_do = {
+		FROM = {
+			ai = yes
+		}
+	}
+}
+
+su_manage_colonies = {
+	category = colonial
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = colony
+				is_subject_of_type = crown_colony
+				is_subject_of_type = private_enterprise
+				is_subject_of_type = self_governing_colony
+			}
+		}
+	}
+
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+			is_subject_of = ROOT
+			OR = {
+				is_subject_of_type = colony
+				is_subject_of_type = crown_colony
+				is_subject_of_type = private_enterprise
+				is_subject_of_type = self_governing_colony
+			}
+			any_country = {
+				is_at_war = no
+				is_subject_of = ROOT
+				OR = {
+					is_subject_of_type = colony
+					is_subject_of_type = crown_colony
+					is_subject_of_type = private_enterprise
+					is_subject_of_type = self_governing_colony 
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		FROM = {
+			capital_scope ={
+				save_event_target_as = capital_region
+			}
+			save_event_target_as = su_primary_colony
+		}
+		every_subject_country = {
+			limit = {
+				OR = {
+					is_subject_of_type = colony
+					is_subject_of_type = crown_colony
+					is_subject_of_type = private_enterprise
+					is_subject_of_type = self_governing_colony 
+				}
+				capital_scope = {
+					colonial_region = event_target:capital_region
+				}
+			}
+			event_target:su_primary_colony = {
+				inherit = PREV
+			}
+		}
+	}
+	
+	on_decline = {
+	}
+
+	ai_will_do = {
+		NOT = { # AI will not use this if it has any colony that is a player
+			any_subject_country = {
+				ai = no
+				OR= {
+					is_subject_of_type = colony
+					is_subject_of_type = crown_colony
+					is_subject_of_type = private_enterprise
+					is_subject_of_type = self_governing_colony 
+				}
+			}
+		}
+	}
+}

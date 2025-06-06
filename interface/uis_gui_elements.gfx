@@ -172,6 +172,7 @@ spriteTypes = {
 		noOfFrames = 3
 		loadType = "INGAME"
 	}
+
 	#Maritime Buttons
 	windowType = {
 		name = "maritime_boost_bar"
@@ -211,5 +212,13 @@ spriteTypes = {
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}
+	}
+
+	# Request Occupation
+	spriteType = {
+		name = "GFX_request_occupation_button"
+		texturefile = "gfx/interface/request_occupation_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
 	}
 }

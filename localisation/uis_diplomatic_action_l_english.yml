@@ -2,3 +2,11 @@
  make_decentralized_client_vassal_title:0 "Make Decentralized Client State"
  make_decentralized_client_vassal_desc:0 "We make our Client State into a decentralized part of our country."
  make_decentralized_client_vassal_tooltip:0 "We make our Client State into a decentralized part of our country."
+
+ DIPLOMACYACTION_CATEGORY_colonial:0 "Colonial actions"
+ su_manage_colony_borders_title:0 "Redraw Colonial Borders"
+ su_manage_colony_borders_desc:0 "Our §Ycolony§! will hand over any province that it controls outside of it's colonial region."
+ su_manage_colony_borders_tooltip:0 "We will draw up new borders for our colony."
+ su_manage_colonies_title:0 "Combine Colonies"
+ su_manage_colonies_desc:0 "If any of our other colonies have their capital in the same colonial region as §Ythis colony§!, it will then be combined with §Ythis colony§!."
+ su_manage_colonies_tooltip:0 "We will combine any colonies that share a colonial region."
