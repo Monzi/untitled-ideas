@@ -70,7 +70,7 @@ tactic_ideas = {
 		army_tradition_from_battle = 0.50
 	}
 	tactic_ideas2 = { # Efficient Maneuvering
-		movement_speed = 0.10
+		movement_speed = 0.05
 	}
 	tactic_ideas3 = { # Readied Reserves
 		reinforce_cost_modifier = -0.10

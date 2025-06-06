@@ -1938,9 +1938,9 @@ guiTypes = {
 				format = centre
 			}
 			instantTextBoxType = {
-				name = "unit_tree_cannon_title"
+				name = "unit_tree_artillery_title"
 				position = { x=370 y=340 }
-				text = "Cannon"
+				text = "Artillery"
 				font = "vic_22"
 				format = centre
 			}

@@ -157,6 +157,11 @@
  draft_pop_statewide_tooltip:0 "§YStatewide Forced Draft§!"
  statewide_pops_drafted_effect_CT:0 "Gain §G2§! years worth of manpower from every province in this state"
 
+# Training Ideas (INF/CAV)
+ unit_tree_window_button_TT:0 "Open Training Interface"
+ EXP_GAIN:0 "Gain §G1.00%§! Experience"
+ EXP_LOSS:0 "Lose §R1.00%§! Experience"
+
 ##Junta Rebels
  junta_rebels_name:0 "$COUNTRY$ Junta Rebels"
  junta_rebels_title:0 "Junta"

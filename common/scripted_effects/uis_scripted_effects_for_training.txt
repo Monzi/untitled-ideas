@@ -1,0 +1,53 @@
+# Initialize trainingExperience variable
+initialize_training_variable = {
+	set_variable = {
+		which = trainingExperience
+		value = 0
+	}
+}
+
+# Add Experience
+add_exp_progress = {
+	custom_tooltip = EXP_GAIN
+	hidden_effect = {
+		change_variable = {
+			which = trainingExperience
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = trainingExperience
+				value = 100
+			}
+		}
+		set_variable = {
+			which = trainingExperience
+			value = 100
+		}
+	}
+}
+
+# Subtract Experience
+subtract_exp_progress = {
+	custom_tooltip = EXP_LOSS
+	hidden_effect = {
+		subtract_variable = {
+			which = trainingExperience
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = trainingExperience
+				value = 0
+			}
+		}
+		set_variable = {
+			which = trainingExperience
+			value = 0
+		}
+	}
+}

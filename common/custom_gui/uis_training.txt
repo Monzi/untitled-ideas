@@ -11,12 +11,6 @@ custom_button = { # Button that shows the unit_tree_window
 		else = {
 			set_country_flag = unit_tree_window_shown
 		}
-
-		# Debugging
-		set_variable = {
-			which = trainingExperience
-			value = 30
-		}
 	}
 }
 

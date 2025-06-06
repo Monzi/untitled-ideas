@@ -2,7 +2,7 @@
 tactic_cooldown_modifier = { # Controls how long the cooldown is between switching tactics
 	add_country_modifier = {
 		name = tactics_cooldown
-		duration = 1826 # Days
+		duration = 3653 # Days
 	}
 }
 clear_tactic_bonus_modifiers = { # Clears all tactics modifiers
