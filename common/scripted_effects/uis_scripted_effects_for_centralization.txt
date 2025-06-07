@@ -1,0 +1,90 @@
+# Centralization Regional Effect
+centralization_mechanic = {
+	capital_scope = {
+		region = {
+			limit = {
+				owned_by = ROOT
+				NOT = { has_province_modifier = centralized_region }
+			}
+			add_province_modifier = {
+				name = centralized_region
+				duration = -1
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			NOT = {
+				OR = {
+					is_owned_by_trade_company = yes
+					has_province_modifier = centralized_region
+					has_province_modifier = outside_centralized_region
+				}
+			}
+		}
+		add_province_modifier = {
+			name = outside_centralized_region
+			duration = -1
+		}
+	}
+}
+
+abandon_centralization_mechanic = {
+	every_owned_province = {
+		remove_province_modifier = centralized_region
+		remove_province_modifier = outside_centralized_region
+	}
+}
+
+######################
+##### On Actions #####
+######################
+centralization_mechanic_on_added_to_company = {
+	if = {
+		limit = {
+			FROM = { full_idea_group = centralization_ideas }
+			has_province_modifier = outside_centralized_region
+		}
+		remove_province_modifier = outside_centralized_region
+	}
+}
+centralization_mechanic_on_removed_from_company = {
+	if = {
+		limit = {
+			FROM = { full_idea_group = centralization_ideas }
+		}
+		owner = {
+			centralization_mechanic = yes
+		}
+	}
+}
+
+centralization_mechanic_on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				full_idea_group = centralization_ideas
+			}
+		}
+		ROOT = {
+			owner = {
+				centralization_mechanic = yes
+			}
+		}
+	}
+}
+
+centralization_mechanic_capital_moved = { # Deletes all modifiers and re-applies to new region.
+	if = {
+		limit = { owner = { full_idea_group = centralization_ideas } }
+		owner = {
+			every_owned_province = {
+				remove_province_modifier = centralized_region
+				remove_province_modifier = outside_centralized_region
+			}
+			hidden_effect = {
+				centralization_mechanic = yes
+			}
+		}
+	}
+}

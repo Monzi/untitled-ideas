@@ -5,8 +5,8 @@
 #Centralization
  centralized_region:0 "Centralized Region"
  desc_centralized_region:0 ""
- not_centralized_region:0 "Outside Centralized Region"
- desc_not_centralized_region:0 ""
+ outside_centralized_region:0 "Outside Centralized Region"
+ desc_outside_centralized_region:0 ""
 #Militarism / Junta Rebels and Disaster
  uis_lost_to_junta_rebels:0 "Junta Rebels enforced demands"
  uis_junta_forts_paid:0 "Castle Holders Paid Off"
@@ -95,3 +95,7 @@
  uis_prestige_academy:0 "Prestigious Academy"
  uis_academy_commissions:0 "Military Commissions"
  uis_disloyal_academy_scholars:0 "Military Scholars Scorned"
+
+# Building - State House
+ state_house_autonomy_offset:0 "State House"
+ state_house_autonomy_effect_TT:0 "Every Province in State:\nMinimum Local Autonomy: §G-5.00§!"

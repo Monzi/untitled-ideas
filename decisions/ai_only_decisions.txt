@@ -25,6 +25,29 @@ country_decisions = {
 		}
 	}
 
+	ai_take_assimilation_reform = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			ai = yes
+			full_idea_group = assimilation_ideas
+			government_reform_progress = 50
+			num_of_owned_provinces_with = {
+				value = 15
+				has_owner_accepted_culture = no
+				NOT = { culture = root }
+			}
+		}
+		effect = {
+			add_government_reform = assimilation_reform
+			change_government_reform_progress = -50
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
 	ai_switch_tactics = {
 		potential = {
 			ai = yes

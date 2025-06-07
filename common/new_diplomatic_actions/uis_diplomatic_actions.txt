@@ -2,6 +2,9 @@ make_decentralized_client_vassal = {
 	category = influence
 
 	is_visible = {
+		ROOT = {
+			full_idea_group = decentralization_ideas
+		}
 		FROM = {
 			is_subject_of = ROOT
 			OR = {
@@ -12,6 +15,9 @@ make_decentralized_client_vassal = {
 	}
 
 	is_allowed = {
+		ROOT = {
+			dip_tech = 23
+		}
 		is_at_war = no
 	}
 

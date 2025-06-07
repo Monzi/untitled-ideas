@@ -707,7 +707,6 @@ centralization_ideas = {
 			custom_tooltip = centralization_ideas_mechanic
 			hidden_effect = {
 				centralization_mechanic = yes
-				subject_centralization_mechanic = yes
 			}
 		}
 		removed_effect = {
@@ -787,12 +786,6 @@ centralization_ideas = {
 					full_idea_group = infrastructure_ideas
 				}
 				NOT = { num_of_cities = 23 }
-			}
-		}
-		modifier = {
-			factor = 0
-			overlord = {
-				has_idea_group = centralization_ideas
 			}
 		}
 	}

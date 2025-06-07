@@ -176,8 +176,8 @@
  string_junta_no_nobles_estate:0 "Power Holders"
 
 # Custom toolips
- centralization_ideas_mechanic:0 "Gain a conditional modifier in every owned and subject province in home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!\nAdditionally any province not in home region has:\nMinimum Local Autonomy: §R+15.0§!"
- decentralization_ideas_mechanic:0 "Allows §YClient States§! to be turned into §YDecentralized Client States§!"
+ centralization_ideas_mechanic:0 "Gain a conditional modifier in every owned province in your home region granting:\nDevelopment Cost §G-10.0%§!\nConstruction Cost §G-10.0%§!\nConstruction Time §G-10.0%§!\nLocal Governing Cost §G-20.0%§!\nNumber of possible buildings§G+1§!\nAdditionally any province not in your home region has:\nMinimum Local Autonomy: §R+10.0§!"
+ decentralization_ideas_mechanic:0 "Allows §YClient States§! to be turned into §YDecentralized Client States§! After DIP Tech 23"
  quality_ideas_mechanic:0 "Gain province modifiers in provinces with Iron, Grain and Copper increasing the the strenght of our army."
  standingarmy_ideas_mechanic:0 "After ADM Tech 15:\nAllows Free Forced March"
  uis_junta_event_4004b:0 "Add §R+10%§! Local Autonomy in every owned province."

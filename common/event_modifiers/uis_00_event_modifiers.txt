@@ -14,8 +14,11 @@ centralized_region = {
 	local_governing_cost = -0.20
 	allowed_num_of_buildings = 1
 }
-not_centralized_region = {
-	min_local_autonomy = 15
+outside_centralized_region = {
+	min_local_autonomy = 10
+}
+state_house_autonomy_offset = {
+	min_local_autonomy = -5
 }
 # Militarism Ideas / Junta coup
 uis_junta_forts_paid = {

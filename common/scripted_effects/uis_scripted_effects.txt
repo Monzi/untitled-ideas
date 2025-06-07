@@ -21,6 +21,29 @@ clear_army_training_modifiers = { # Clears all training modifiers
 	remove_country_modifier = tier3_cavalry
 }
 
+# Building - State House
+state_house_autonomy_effect = {
+	custom_tooltip = state_house_autonomy_effect_TT
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = state_house
+			}
+			every_province_in_state = {
+				add_permanent_province_modifier = {
+					name = state_house_autonomy_offset
+					duration = -1
+				}
+			}
+		}
+		else = {
+			every_province_in_state = {
+				remove_province_modifier = state_house_autonomy_offset
+			}
+		}
+	}
+}
+
 # Academy Ideas
 estate_action_GRANT_GENERALSHIP_ACADEMY = {
 	if = {
@@ -172,87 +195,11 @@ maritime_ideas_building_counter = {#checks how many docks/drydocks/impressmentof
 #	remove_country_modifier = PLACEHOLDER
 #}
 
-# Centralization Regional Effect
-centralization_mechanic = {
-	capital_scope = {
-		region = {
-			limit = { 
-				owned_by = ROOT
-			}
-			add_province_modifier = {
-				name = centralized_region
-				duration = -1
-				hidden = yes
-			}						
-		}
-	}
-	every_owned_province = {
-		limit = {
-			NOT = {
-				OR = {
-					is_owned_by_trade_company = yes
-					has_province_modifier = centralized_region
-				}
-			}
-		}
-		add_province_modifier = {
-			name = not_centralized_region
-			duration = -1
-		}
-	}
-}
-subject_centralization_mechanic = {
-	hidden_effect = {
-		capital_scope = {
-			region = {
-				save_event_target_as = targetRegion
-			}
-		}	
-	}
-	every_subject_country = {
-		if = {
-			limit = {
-				capital_scope = {
-					region = event_target:targetRegion
-				}
-			}
-			capital_scope = {
-				region = {
-					limit = {
-						owner = {
-							is_subject_of = ROOT
-						}
-					}
-					add_province_modifier = {
-						name = centralized_region
-						duration = -1
-						hidden = yes
-					}
-				}					
-			}
-		}
-	}
-}
-abandon_centralization_mechanic = {
-	every_owned_province = {
-		remove_province_modifier = centralized_region
-		remove_province_modifier = not_centralized_region
-	}
-	every_subject_country = {
-		every_owned_province = {
-			limit = {
-				has_province_modifier = centralized_region
-			}
-			remove_province_modifier = centralized_region
-		}
-	}
-}
-
 # Quality Ideas
 quality_mechanic = {
 	if = {
 		limit = {
-			full_idea_group = quality_ideas
+			owner = { full_idea_group = quality_ideas }
 		}
 		every_owned_province = {
 			limit = {

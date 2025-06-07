@@ -1,7 +1,7 @@
 custom_button = { # Button that shows the unit_tree_window
 	name = unit_tree_window_button
 	tooltip = unit_tree_window_button_TT
-	potential = { always = no }
+	potential = { always = yes }
 	trigger = { always = yes } # Always while debugging
 	effect = {
 		if = {

@@ -15,38 +15,24 @@ on_battle_won_unit = {
 # province
 # ROOT = PROV, FROM = COUNTRY
 on_added_to_trade_company = {
-	centralization_mechanic_on_added_to_company = yes
+	centralization_mechanic_on_added_to_company = yes # centralization Mechanic
 }
 
 # ROOT = PROV, FROM = COUNTRY
 on_removed_from_company = {
-	centralization_mechanic_on_removed_from_company = yes
+	centralization_mechanic_on_removed_from_company = yes # centralization Mechanic
 }
 
-# FROM = old owner
+# ROOT = PROV, # FROM = old owner
 on_province_owner_change = {
-	on_province_owner_change_quality_mechanic = yes
-	centralization_mechanic_on_province_owner_change = yes
-}
-
-# ROOT = Overlord, FROM = Minor
-on_dependency_gained = {
-	centralization_mechanic_on_dependecy_gained = yes
-}
-
-# ROOT = Overlord, FROM = Minor
-on_dependency_lost = {
-	centralization_mechanic_on_dependency_lost = yes
-}
-
-# ROOT = New vassal, FROM = Overlord
-on_create_vassal = {
-	centralization_mechanic_on_create_vassal = yes
+	centralization_mechanic_on_province_owner_change = yes # centralization Mechanic
+	on_province_owner_change_quality_mechanic = yes # Quality Mechanic
+	state_house_autonomy_effect = yes # Building - State House
 }
 
 # ROOT = new capital province, FROM = old capital
 on_capital_moved = {
-	centralization_mechanic_capital_moved = yes
+	centralization_mechanic_capital_moved = yes # centralization Mechanic
 }
 
 on_revoke_estate_land = { # Should fire province event for academy if their land is seized at low loyalty

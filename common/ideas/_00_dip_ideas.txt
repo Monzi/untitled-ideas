@@ -266,7 +266,7 @@ assimilation_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.55
+		factor = 0.5
 
 		modifier = {
 			factor = 1.5
@@ -330,11 +330,51 @@ nationalism_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.50
+		factor = 0.30
 
+		modifier = {
+			factor = 5
+			personality = ai_militarist
+			culture_group = germanic
+			culture_group = turko_semitic
+		}
+		modifier = {
+			factor = 4
+			personality = ai_militarist
+			culture_group = dravidian
+			culture_group = western_aryan
+			culture_group = eastern_aryan
+		}
 		modifier = {
 			factor = 3
 			personality = ai_militarist
+			culture_group = latin
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+			culture_group = east_slavic
+			culture_group = iranian
+			culture_group = malay
+			culture_group = cushitic
+		}
+		modifier = {
+			factor = 1
+			personality = ai_militarist
+			NOT = {
+				OR = {
+					culture_group = germanic
+					culture_group = turko_semitic
+					culture_group = dravidian
+					culture_group = western_aryan
+					culture_group = eastern_aryan
+					culture_group = latin
+					culture_group = east_slavic
+					culture_group = iranian
+					culture_group = malay
+					culture_group = cushitic
+				}
+			}
 		}
 		modifier = {
 			factor = 2
@@ -651,7 +691,7 @@ maritime_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 0.55
+		factor = 0.50
 		modifier = {
 			factor = 0
 			is_tribal = yes

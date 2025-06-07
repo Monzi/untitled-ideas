@@ -2904,7 +2904,7 @@ state_house = {
 
 	modifier = {
 		statewide_governing_cost = -0.2
-		min_local_autonomy = -5
+		#min_local_autonomy = -5 # Moved to on_built
 		local_governing_cost = -0.15
 		local_governing_cost_increase = -10
 		allowed_num_of_buildings = 1
@@ -2923,6 +2923,7 @@ state_house = {
 			type = tax
 			value = 2
 		}
+		state_house_autonomy_effect = yes
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -2930,6 +2931,7 @@ state_house = {
 			type = tax
 			value = 2
 		}
+		state_house_autonomy_effect = yes
 	}
 	on_obsolete = {
 	}
@@ -2938,4 +2940,3 @@ state_house = {
 		factor = 1
 	}
 }
-
