@@ -1,0 +1,9 @@
+#trade_kill = {
+#    potential = {
+#        always = yes
+#    }
+#    trigger = {
+#        always = yes
+#    }
+#    global_foreign_trade_power = -1
+#}
