@@ -125,7 +125,7 @@ court_economy_decree_artist = {
 }
 court_economy_decree_inquisitor = {
 	missionaries = 1
-	global_missionary_strength = 1
+	global_missionary_strength = 0.01
 }
 court_economy_decree_master_of_mint = {
 	monthly_gold_inflation_modifier = -0.5

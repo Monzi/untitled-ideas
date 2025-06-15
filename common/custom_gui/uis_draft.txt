@@ -3,6 +3,7 @@ custom_button = {
 	tooltip = draft_pop_tooltip
 	potential = {
 		owned_by = FROM
+		controlled_by = FROM
 	}
 	trigger = {
 		controlled_by = owner
@@ -37,6 +38,7 @@ custom_button = {
 	tooltip = draft_pop_statewide_tooltip
 	potential = {
 		owned_by = FROM
+		controlled_by = FROM
 	}
 	trigger = {
 		controlled_by = owner
