@@ -105,7 +105,7 @@ court_realm_decree_4 = {
 # Economy Decrees
 court_economy_decree_1 = {
 	# Production and Trade
-	trade_goods_size_modifier = 0.15
+	global_trade_goods_size_modifier = 0.15
 	global_own_trade_power = 0.15
 }
 court_economy_decree_2 = {
@@ -136,7 +136,7 @@ court_economy_decree_natural_scientist = {
 	global_institution_spread = 0.25
 }
 court_economy_decree_philosopher = {
-	idea_cost = -0.1
+	idea_cost = -0.05
 }
 court_economy_decree_theologian = {
 	tolerance_heathen = 1
@@ -177,8 +177,8 @@ court_diplomacy_decree_navigator = {
 	movement_speed_in_fleet_modifier = 0.5
 }
 court_diplomacy_decree_spymaster = {
-	can_claim_states = yes
 	spy_action_cost_modifier = -0.25
+	global_spy_defence = 0.33
 }
 court_diplomacy_decree_statesman = {
 	monthly_favor_modifier = 0.2
@@ -198,7 +198,7 @@ court_military_decree_1 = {
 court_military_decree_2 = {
 	# Aggressive stance
 	global_attacker_dice_roll_bonus = 1
-	defensiveness = -0.20
+	garrison_size = -0.25
 	drill_decay_modifier = -0.5
 }
 court_military_decree_3 = {
@@ -210,7 +210,7 @@ court_military_decree_3 = {
 }
 # MIL advisor decrees
 court_military_decree_army_organiser = {
-	land_attrition = -0.25
+	land_attrition = -0.2
 }
 court_military_decree_army_reformer = {
 	recover_army_morale_speed = 0.15
@@ -231,7 +231,7 @@ court_military_decree_fortification_expert = {
 }
 court_military_decree_quartermaster = {
 	reinforce_cost_modifier = -0.25
-	global_supply_limit_modifier = 0.25
+	global_supply_limit_modifier = 0.5
 }
 
 # MIL
