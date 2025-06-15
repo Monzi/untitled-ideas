@@ -111,22 +111,16 @@ su_manage_colonies = {
 		is_at_war = no
 		FROM = {
 			is_at_war = no
+		}
+		any_subject_country = {
+			NOT = { tag = FROM }
+			is_at_war = no
 			is_subject_of = ROOT
 			OR = {
 				is_subject_of_type = colony
 				is_subject_of_type = crown_colony
 				is_subject_of_type = private_enterprise
-				is_subject_of_type = self_governing_colony
-			}
-			any_country = {
-				is_at_war = no
-				is_subject_of = ROOT
-				OR = {
-					is_subject_of_type = colony
-					is_subject_of_type = crown_colony
-					is_subject_of_type = private_enterprise
-					is_subject_of_type = self_governing_colony 
-				}
+				is_subject_of_type = self_governing_colony 
 			}
 		}
 	}
@@ -136,10 +130,10 @@ su_manage_colonies = {
 			capital_scope ={
 				save_event_target_as = capital_region
 			}
-			save_event_target_as = su_primary_colony
 		}
 		every_subject_country = {
 			limit = {
+				NOT = { tag = FROM }
 				OR = {
 					is_subject_of_type = colony
 					is_subject_of_type = crown_colony
@@ -150,7 +144,7 @@ su_manage_colonies = {
 					colonial_region = event_target:capital_region
 				}
 			}
-			event_target:su_primary_colony = {
+			FROM = {
 				inherit = PREV
 			}
 		}
@@ -160,15 +154,9 @@ su_manage_colonies = {
 	}
 
 	ai_will_do = {
-		NOT = { # AI will not use this if it has any colony that is a player
+		NOT = { # AI will not use this on colonies controlled by a player
 			any_subject_country = {
 				ai = no
-				OR= {
-					is_subject_of_type = colony
-					is_subject_of_type = crown_colony
-					is_subject_of_type = private_enterprise
-					is_subject_of_type = self_governing_colony 
-				}
 			}
 		}
 	}

@@ -1,9 +1,14 @@
-#trade_kill = {
-#    potential = {
-#        always = yes
-#    }
-#    trigger = {
-#        always = yes
-#    }
-#    global_foreign_trade_power = -1
-#}
+# Triggered modifiers are here.
+# these are checked for each countries once/month and then applied.
+#
+# Effects are fully scriptable here.
+
+trade_abroad_malus = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		always = yes
+	}
+	global_foreign_trade_power = -1
+}

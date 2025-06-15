@@ -206,3 +206,5 @@
  maritime_unlocks_government_notifier:0 "Unlocks a unique government mechanic empowering §YMarines§!!"
 # Transfer occupation
  transfer_occupation_from_ally_button_tooltip: "Click to request control of the province from a war ally."
+
+ trade_abroad_malus:0 "Abroad Trade Malus"
