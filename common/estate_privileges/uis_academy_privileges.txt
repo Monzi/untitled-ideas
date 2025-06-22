@@ -1,22 +1,1622 @@
-estate_academy_right_of_counsel = {
-	icon = estate_nobles_GER_diploma_andreanum
-	max_absolutism = -10
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
-	loyalty = 0.1
-	influence = 0.1
-	penalties = {
-	}
-	benefits = {
+estate_academy_create_academy = { # Starting Priv
+	icon = privilege_military
+	land_share = 0
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
 	}
 	conditional_modifier = {
-		trigger = { has_government_mechanic = russian_modernization_mechanic }
-		modifier = { monthly_russian_modernization = -0.05 }
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	
+	can_select = {
+		root = {
+			full_idea_group = academy_ideas
+		}
+	}
+	is_valid = {
+		full_idea_group = academy_ideas
+	}
+	can_revoke = {
+		NOT = {
+			has_estate_privilege = estate_academy_expand_academy
+		}
+	}
+	benefits = {
+		academy_privilege_slots = 1
 	}
 	ai_will_do = {
 		factor = 10
+	}
+}
+###########################################
+#############Expand Priv###################
+###########################################
+estate_academy_expand_academy = {
+	icon = privilege_military
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 10
+	can_select = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+		academy_privilege_slots = 1
+	}
+	ai_will_do = {
+		factor = 0
 		modifier = {
-			factor = 0
-			is_absolutism_active = yes
+			factor = 2
+			crown_land_share = 15
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+###############################################################
+
+############### Create Specialist Branch ######################
+
+###############################################################
+estate_academy_establish_specialist_branch = {
+	icon = privilege_artillery
+	max_absolutism = -5
+	loyalty = -0.05
+	influence = 10
+	land_share = -5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		OR = {
+			num_of_banners = 1
+			num_of_carolean = 1
+			num_of_cawa = 1
+			num_of_cossacks = 1
+			num_of_janissaries = 1
+			num_of_mamluks = 1
+			num_of_musketeer = 1
+			num_of_qizilbash = 1
+			num_of_rajput = 1
+			num_of_revolutionary_guard = 1
+			num_of_samurai = 1
+			num_of_streltsy = 1
+			num_of_tercio = 1
+			num_of_hussars = 1
+		}
+	}
+	benefits = {
+		special_unit_cost_modifier = -0.15
+		special_unit_forcelimit = 0.2
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 5
+			OR = {
+			num_of_banners = 1
+			num_of_carolean = 1
+			num_of_cawa = 1
+			num_of_cossacks = 1
+			num_of_janissaries = 1
+			num_of_mamluks = 1
+			num_of_musketeer = 1
+			num_of_qizilbash = 1
+			num_of_rajput = 1
+			num_of_revolutionary_guard = 1
+			num_of_samurai = 1
+			num_of_streltsy = 1
+			num_of_tercio = 1
+			num_of_hussars = 1
+			}
+			crown_land_share = 15
+		}
+	}
+}
+#Basic Schools
+estate_academy_muskets_school = {
+	icon = privilege_military
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_land_fire = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_pike_square = {
+	icon = privilege_military
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_foraging_basics = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_land_manuever = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_cannoneering_lecture = {
+	icon = privilege_artillery
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_siege = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+#Advanced
+estate_academy_improved_fire_regimen = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		fire_damage = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_muskets_school
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_shock_and_awe = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+				
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		shock_damage = 0.05
+		morale_damage = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_pike_square
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_foraging_ultra = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		global_supply_limit_modifier = 0.5
+		land_attrition = -0.2
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_foraging_basics
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_wallbreaching_skewl = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		siege_ability = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_cannoneering_lecture
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+
+##########################################################################
+
+########################## Naval Branch ##################################
+
+##########################################################################
+estate_academy_navy_fire_pip = {
+	icon = privilege_artillery
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_naval_fire = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+	}
+}
+estate_academy_navy_cannons = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		number_of_cannons_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_navy_fire_pip
+		}
+	}
+}
+estate_academy_navy_shock = {
+	icon = privilege_artillery
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_naval_shock = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+	}
+}
+estate_academy_navy_cap_chance = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		capture_ship_chance = 0.33
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_navy_shock
+		}
+	}
+}
+estate_academy_navy_manuever = {
+	icon = privilege_artillery
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 5
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	is_valid = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_create_academy
+	}
+	benefits = {
+		leader_naval_manuever = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+	}
+}
+estate_academy_navy_movespeed = {
+	icon = privilege_artillery
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 10 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 2}
+	}
+	can_select = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	is_valid = {
+		num_of_ports = 1
+		has_estate_privilege = estate_academy_expand_academy
+	}
+	benefits = {
+		movement_speed_in_fleet_modifier = 1
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				TAG = GBR
+				TAG = NED
+				TAG = ENG
+				TAG = DAN
+				TAG = MLC
+				TAG = JAP
+				TAG = POR
+				TAG = CAS
+				TAG = SPA
+			}
+		}
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_academy_navy_manuever
+		}
+	}
+}
+######################################################################
+#																	 #
+######################## Special Unit Privs ##########################
+#																	 #
+######################################################################
+estate_academy_su_banners = {
+	icon = horse
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			primary_culture = manchu
+			primary_culture = manchu_new
+			primary_culture = altaic_new
+			has_reform = great_mongol_state_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			primary_culture = manchu
+			primary_culture = manchu_new
+			primary_culture = altaic_new
+			has_reform = great_mongol_state_reform
+		}
+	}
+	benefits = {
+		regiment_manpower_usage = 0.25
+		reinforce_speed = -0.25
+		is_banner_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+
+}
+estate_academy_su_caroleans = {
+	icon = privilege_carolean_charge
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fin_baltic_empire
+			has_reform = allotment_system
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fin_baltic_empire
+			has_reform = allotment_system
+		}
+	}
+	benefits = {
+		drill_decay_modifier = -0.5
+		drill_gain_modifier = 1
+		is_carolean_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+				TAG = SWE
+				AND = {
+					TAG = FIN
+					mission_completed = fin_baltic_empire
+				}
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_cawa = {
+	icon = privilege_cawa_offensive_fighters
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = solomonic_empire
+			has_reform = negusa_nagast
+			has_reform = cawa_auxiliary_forces
+			has_reform = the_cawa_regiments_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = solomonic_empire
+			has_reform = negusa_nagast
+			has_reform = cawa_auxiliary_forces
+			has_reform = the_cawa_regiments_reform
+		}
+	}
+	benefits = {
+		discipline = 0.025
+		land_morale = 0.05
+		reinforce_cost_modifier = -0.25
+		is_cawa_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+				TAG = ETH
+				AND = {
+					TAG = MAM
+					has_reform = cawa_auxiliary_forces
+				}
+				has_reform = the_cawa_regiments_reform
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_cossacks = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		has_estate = estate_cossacks
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		has_estate = estate_cossacks
+	}
+	benefits = {
+		fire_damage = 0.1
+		land_maintenance_modifier = 0.20
+		is_cossack_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			estate_territory = {
+				estate = estate_cossacks
+				territory = 20
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+		
+	}
+}
+estate_academy_su_janissaries = {
+	icon = privilege_janissaries
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = ottoman_government
+			has_reform = reformed_ottoman_conscription_reform
+			has_reform = reorganized_ottoman_government
+			has_reform = sultanate_of_rum_reform
+			has_reform = modernized_ottoman_government
+			has_reform = janissary_autocracy_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = ottoman_government
+			has_reform = reformed_ottoman_conscription_reform
+			has_reform = reorganized_ottoman_government
+			has_reform = sultanate_of_rum_reform
+			has_reform = modernized_ottoman_government
+			has_reform = janissary_autocracy_reform
+		}
+	}
+	benefits = {
+		reinforce_cost_modifier = -0.25
+		is_janissary_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_mamluks = {
+	icon = mamluk_priv
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			TAG = MAM
+			has_estate_privilege = estate_nobles_enlist_the_mamluks
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			TAG = MAM
+			has_estate_privilege = estate_nobles_enlist_the_mamluks
+		}
+	}
+	benefits = {
+		drill_decay_modifier = -0.33
+		reinforce_speed = 0.27
+		is_mamluks_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_musketeers = {
+	icon = musketeer_priv
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fra_musketeers
+			has_reform = musketeers_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fra_musketeers
+			has_reform = musketeers_reform
+		}
+	}
+	benefits = {
+		infantry_fire = 0.3
+		is_musketeer_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_qizilbash = {
+	icon = qizlbash_cavalry
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		has_estate_privilege = estate_qizilbash_establish_the_qizilbash_regiments
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		has_estate_privilege = estate_qizilbash_establish_the_qizilbash_regiments
+	}
+	benefits = {
+		infantry_shock = 0.2
+		fire_damage_received = -0.05
+		is_qizilbash_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_rajputs = {
+	icon = privilege_recruit_rajput_general
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_estate_privilege = estate_rajput_rajput_regiments
+			has_reform = rajput_military_leadership_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_estate_privilege = estate_rajput_rajput_regiments
+			has_reform = rajput_military_leadership_reform
+		}
+	}
+	benefits = {
+		land_morale = 0.05
+		reinforce_speed = 0.15
+		is_rajput_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_revguard = {
+	icon = privilege_comission_merchant_ships_for_war
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		is_revolutionary = yes
+	}
+	is_valid = {
+		is_revolutionary = yes
+		has_estate_privilege = estate_academy_establish_specialist_branch
+	}
+	benefits = {
+		artillery_power = 0.15
+		land_maintenance_modifier = -0.25
+		is_revolutionary_guard_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_samurais = {
+	icon = horse
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			JAP_ideas = 1
+			has_reform = shogunate
+			has_country_modifier = jap_grant_samurai_modifier
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			JAP_ideas = 1
+			has_reform = shogunate
+			has_country_modifier = jap_grant_samurai_modifier
+			culture_group = japanese_g
+		}
+	}
+	benefits = {
+		discipline = 0.05
+		is_samurai_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_streltsy = {
+	icon = local_has_streltsy
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = veche_republic
+			has_reform = great_veche_republic
+			has_reform = tsardom
+			has_reform = principality
+			has_reform = ruthenian_tsardom
+			has_reform = streltsy_reform
+			has_reform = russian_mercenary_guard_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = veche_republic
+			has_reform = great_veche_republic
+			has_reform = tsardom
+			has_reform = principality
+			has_reform = ruthenian_tsardom
+			has_reform = streltsy_reform
+			has_reform = russian_mercenary_guard_reform
+		}
+	}
+	benefits = {
+		regiment_manpower_usage = -0.2
+		global_regiment_cost = -0.15
+		is_streltsy_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_tercio = {
+	icon = has_tercio
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = tercio_reform
+			has_reform = tercios_reform
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = tercio_reform
+			has_reform = tercios_reform
+		}
+	}
+	benefits = {
+		shock_damage_received = 0.05
+		fire_damage = 0.05
+		is_tercio_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
+		}
+	}
+}
+estate_academy_su_hussars = {
+	icon = has_hussars
+	max_absolutism = -5
+	influence = 10
+	conditional_modifier = {
+		trigger = {
+				has_absolutism_reduction_for_estate_privileges = yes 
+				has_country_flag = uis_beat_academy_disaster
+		}
+		modifier = { max_absolutism = 5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_absolutism_reduction_for_estate_privileges = yes
+			NOT = {
+				has_country_flag = uis_beat_academy_disaster
+			}
+		}
+		modifier = {max_absolutism = 1}
+	}
+	can_select = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			POL_ideas = 4
+			LIT_ideas = 5
+			PLC_ideas = 4
+			PLC_LIT_ideas = 5
+		}
+	}
+	is_valid = {
+		has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			POL_ideas = 4
+			LIT_ideas = 5
+			PLC_ideas = 4
+			PLC_LIT_ideas = 5
+		}
+	}
+	benefits = {
+		reinforce_speed = 0.25
+		is_hussars_modifier = yes
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = {
+				estate_influence = {
+					estate = estate_academy
+					influence = 85
+				}
+			}
 		}
 	}
 }
@@ -48,82 +1648,6 @@ estate_academy_officer_graduation = {
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
 		modifier = { monthly_russian_modernization = -0.05 }
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-estate_academy_fire_training = {
-	icon = privilege_infantry
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = 0
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	penalties = {
-
-	}
-	benefits = {
-		max_general_fire = 1
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-estate_academy_shock_training = {
-	icon = privilege_spawn_rajput_regiments
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = 0
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	penalties = {
-
-	}
-	benefits = {
-		max_general_shock = 1
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-estate_academy_maneuver_training = {
-	icon = privilege_discipline
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = 0
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	penalties = {
-
-	}
-	benefits = {
-		max_general_maneuver = 1
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-estate_academy_siege_training = {
-	icon = privilege_artillery
-	loyalty = 0.0
-	influence = 0.05
-	max_absolutism = 0
-	is_valid = {
-		has_dlc = "Domination"
-	}
-	penalties = {
-
-	}
-	benefits = {
-		max_general_siege = 1
 	}
 	ai_will_do = {
 		factor = 0
