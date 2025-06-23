@@ -239,22 +239,19 @@ court_military_decree_quartermaster = {
 tactics_cooldown = {
 }
 balanced_tactics = {
-	fire_damage = 0.025
-	shock_damage = 0.025
-	backrow_artillery_damage = 0.10
-	morale_damage = 0.01
+	fire_damage = 0.05
+	shock_damage = 0.05
+	morale_damage = 0.025
 }
 fire_tactics = {
-	fire_damage = 0.05
-	fire_damage_received = -0.05
-	artillery_levels_available_vs_fort = 1
-	backrow_artillery_damage = 0.15
+	fire_damage = 0.075
+	backrow_artillery_damage = 0.1
+	artillery_level_modifier = 0.2
 }
 shock_tactics = {
-	shock_damage = 0.05
-	shock_damage_received = -0.05
-	movement_speed = 0.10
-	morale_damage = 0.025
+	shock_damage = 0.075
+	movement_speed = 0.05
+	morale_damage = 0.05
 }
 
 # Quantity Ideas
@@ -329,4 +326,72 @@ uis_prestige_academy = {
 uis_disloyal_academy_scholars = {
 	yearly_army_professionalism = -0.01
 	general_cost = 0.25
+}
+## Academy Special Unit Modifiers ##
+uis_academy_banners = {
+	regiment_manpower_usage = 0.25
+	reinforce_speed = -0.25
+	is_banner_modifier = yes
+}
+uis_academy_caroleans = {
+	drill_decay_modifier = -0.5
+	drill_gain_modifier = 1
+	is_carolean_modifier = yes
+}
+uis_academy_cawa = {
+	discipline = 0.025
+	land_morale = 0.05
+	reinforce_cost_modifier = -0.25
+	is_cawa_modifier = yes
+}
+uis_academy_cossacks = {
+	fire_damage = 0.1
+	land_maintenance_modifier = 0.1
+	is_cossack_modifier = yes
+}
+uis_academy_jani = {
+	reinforce_cost_modifier = -0.25
+	is_janissary_modifier = yes
+}
+uis_academy_mamluks = {
+	drill_decay_modifier = -0.33
+	reinforce_speed = 0.27
+	is_mamluks_modifier = yes
+}
+uis_academy_musketeers = {
+	infantry_fire = 0.3
+	is_musketeer_modifier = yes
+}
+uis_academy_qizilbash = {
+	infantry_shock = 0.2
+	fire_damage_received = -0.05
+	is_qizilbash_modifier = yes
+}
+uis_academy_rajputs = {
+	land_morale = 0.05
+	reinforce_speed = 0.15
+	is_rajput_modifier = yes
+}
+uis_academy_revguard = {
+	artillery_power = 0.15
+	land_maintenance_modifier = -0.25
+	is_revolutionary_guard_modifier = yes
+}
+uis_academy_samurai = {
+	discipline = 0.05
+	is_samurai_modifier = yes
+}
+uis_academy_streltsy = {
+	regiment_manpower_usage = -0.2
+	global_regiment_cost = -0.15
+	is_streltsy_modifier = yes
+}
+uis_academy_tercio = {
+	shock_damage_received = 0.05
+	fire_damage = 0.05
+	is_tercio_modifier = yes
+}
+uis_academy_hussars = {
+	reinforce_speed = 0.25
+	is_hussars_modifier = yes
 }

@@ -31,7 +31,7 @@ state_house_autonomy_effect = {
 			}
 			area = {
 				limit = {
-					owned_by = ROOT
+					owned_by = FROM
 				}
 				add_permanent_province_modifier = {
 					name = state_house_autonomy_offset
@@ -42,7 +42,7 @@ state_house_autonomy_effect = {
 		else = {
 			area = {
 				limit = {
-					owned_by = ROOT
+					owned_by = FROM
 				}
 				remove_province_modifier = state_house_autonomy_offset
 			}

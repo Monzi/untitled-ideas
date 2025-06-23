@@ -105,6 +105,7 @@ estate_academy_establish_specialist_branch = {
 	}
 	can_select = {
 		OR = {
+			has_estate_privilege = estate_academy_establish_specialist_branch
 			num_of_banners = 1
 			num_of_carolean = 1
 			num_of_cawa = 1
@@ -123,6 +124,7 @@ estate_academy_establish_specialist_branch = {
 	}
 	is_valid = {
 		OR = {
+			has_estate_privilege = estate_academy_establish_specialist_branch
 			num_of_banners = 1
 			num_of_carolean = 1
 			num_of_cawa = 1
@@ -532,6 +534,7 @@ estate_academy_wallbreaching_skewl = {
 	}
 	benefits = {
 		siege_ability = 0.1
+		global_naval_barrage_cost = -0.25
 	}
 	ai_will_do = {
 		factor = 1
@@ -905,10 +908,17 @@ estate_academy_su_banners = {
 	is_valid = {
 		estate_academy_banner = yes
 	}
-	benefits = {
-		regiment_manpower_usage = 0.25
-		reinforce_speed = -0.25
-		is_banner_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_banners
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_banners
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_banners
 	}
 	ai_will_do = {
 		factor = 1
@@ -950,10 +960,17 @@ estate_academy_su_caroleans = {
 	is_valid = {
 		estate_academy_caroleans = yes
 	}
-	benefits = {
-		drill_decay_modifier = -0.5
-		drill_gain_modifier = 1
-		is_carolean_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_caroleans
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_caroleans
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_caroleans
 	}
 	ai_will_do = {
 		factor = 1
@@ -1001,11 +1018,17 @@ estate_academy_su_cawa = {
 	is_valid = {
 		estate_academy_cawa = yes
 	}
-	benefits = {
-		discipline = 0.025
-		land_morale = 0.05
-		reinforce_cost_modifier = -0.25
-		is_cawa_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_cawa
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_cawa
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_cawa
 	}
 	ai_will_do = {
 		factor = 1
@@ -1056,10 +1079,17 @@ estate_academy_su_cossacks = {
 		has_estate_privilege = estate_academy_establish_specialist_branch
 		has_estate = estate_cossacks
 	}
-	benefits = {
-		fire_damage = 0.1
-		land_maintenance_modifier = 0.20
-		is_cossack_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_cossacks
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_cossacks
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_cossacks
 	}
 	ai_will_do = {
 		factor = 1
@@ -1105,9 +1135,17 @@ estate_academy_su_janissaries = {
 	is_valid = {
 		estate_academy_janissaries = yes
 	}
-	benefits = {
-		reinforce_cost_modifier = -0.25
-		is_janissary_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_jani
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_jani
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_jani
 	}
 	ai_will_do = {
 		factor = 1
@@ -1148,10 +1186,17 @@ estate_academy_su_mamluks = {
 	is_valid = {
 		estate_academy_mamluks = yes
 	}
-	benefits = {
-		drill_decay_modifier = -0.33
-		reinforce_speed = 0.27
-		is_mamluks_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_mamluks
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_mamluks
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_mamluks
 	}
 	ai_will_do = {
 		factor = 1
@@ -1192,9 +1237,17 @@ estate_academy_su_musketeers = {
 	is_valid = {
 		estate_academy_musketeers = yes
 	}
-	benefits = {
-		infantry_fire = 0.3
-		is_musketeer_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_musketeers
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_musketeers
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_musketeers
 	}
 	ai_will_do = {
 		factor = 1
@@ -1237,10 +1290,17 @@ estate_academy_su_qizilbash = {
 		has_estate_privilege = estate_academy_establish_specialist_branch
 		has_estate_privilege = estate_qizilbash_establish_the_qizilbash_regiments
 	}
-	benefits = {
-		infantry_shock = 0.2
-		fire_damage_received = -0.05
-		is_qizilbash_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_qizilbash
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_qizilbash
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_qizilbash
 	}
 	ai_will_do = {
 		factor = 1
@@ -1289,10 +1349,17 @@ estate_academy_su_rajputs = {
 			has_reform = rajput_military_leadership_reform
 		}
 	}
-	benefits = {
-		land_morale = 0.05
-		reinforce_speed = 0.15
-		is_rajput_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_rajputs
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_rajputs
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_rajputs
 	}
 	ai_will_do = {
 		factor = 1
@@ -1335,10 +1402,17 @@ estate_academy_su_revguard = {
 		is_revolutionary = yes
 		has_estate_privilege = estate_academy_establish_specialist_branch
 	}
-	benefits = {
-		artillery_power = 0.15
-		land_maintenance_modifier = -0.25
-		is_revolutionary_guard_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_revguard
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_revguard
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_revguard
 	}
 	ai_will_do = {
 		factor = 1
@@ -1379,9 +1453,17 @@ estate_academy_su_samurais = {
 	is_valid = {
 		estate_academy_samurai = yes
 	}
-	benefits = {
-		discipline = 0.05
-		is_samurai_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_samurai
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_samurai
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_samurai
 	}
 	ai_will_do = {
 		factor = 1
@@ -1422,10 +1504,17 @@ estate_academy_su_streltsy = {
 	is_valid = {
 		estate_academy_streltsy = yes
 	}
-	benefits = {
-		regiment_manpower_usage = -0.2
-		global_regiment_cost = -0.15
-		is_streltsy_modifier = yes
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_streltsy
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_streltsy
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_streltsy
 	}
 	ai_will_do = {
 		factor = 1
@@ -1474,6 +1563,18 @@ estate_academy_su_tercio = {
 			has_reform = tercios_reform
 		}
 	}
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_tercio
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_tercio
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_tercio
+	}
 	benefits = {
 		shock_damage_received = 0.05
 		fire_damage = 0.05
@@ -1517,6 +1618,18 @@ estate_academy_su_hussars = {
 	}
 	is_valid = {
 		estate_academy_hussars_test = yes
+	}
+	on_granted = {
+		add_country_modifier = {
+			name = uis_academy_hussars
+			duration = -1
+		}
+	}
+	on_revoked = {
+		remove_country_modifier = uis_academy_hussars
+	}
+	on_invalid = {
+		remove_country_modifier = uis_academy_hussars
 	}
 	benefits = {
 		reinforce_speed = 0.25
