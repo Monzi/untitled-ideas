@@ -739,8 +739,10 @@ estate_academy_navy_cap_chance = {
 	}
 	can_select = {
 		has_estate_privilege = estate_academy_expand_academy
+		num_of_ports = 1
 	}
 	is_valid = {
+		num_of_ports = 1
 		has_estate_privilege = estate_academy_expand_academy
 	}
 	benefits = {
@@ -898,22 +900,10 @@ estate_academy_su_banners = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			primary_culture = manchu
-			primary_culture = manchu_new
-			primary_culture = altaic_new
-			has_reform = great_mongol_state_reform
-		}
+		estate_academy_banner = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			primary_culture = manchu
-			primary_culture = manchu_new
-			primary_culture = altaic_new
-			has_reform = great_mongol_state_reform
-		}
+		estate_academy_banner = yes
 	}
 	benefits = {
 		regiment_manpower_usage = 0.25
@@ -955,18 +945,10 @@ estate_academy_su_caroleans = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			mission_completed = fin_baltic_empire
-			has_reform = allotment_system
-		}
+		estate_academy_caroleans = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			mission_completed = fin_baltic_empire
-			has_reform = allotment_system
-		}
+		estate_academy_caroleans = yes
 	}
 	benefits = {
 		drill_decay_modifier = -0.5
@@ -1014,22 +996,10 @@ estate_academy_su_cawa = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = solomonic_empire
-			has_reform = negusa_nagast
-			has_reform = cawa_auxiliary_forces
-			has_reform = the_cawa_regiments_reform
-		}
+		estate_academy_cawa = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = solomonic_empire
-			has_reform = negusa_nagast
-			has_reform = cawa_auxiliary_forces
-			has_reform = the_cawa_regiments_reform
-		}
+		estate_academy_cawa = yes
 	}
 	benefits = {
 		discipline = 0.025
@@ -1130,26 +1100,10 @@ estate_academy_su_janissaries = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = ottoman_government
-			has_reform = reformed_ottoman_conscription_reform
-			has_reform = reorganized_ottoman_government
-			has_reform = sultanate_of_rum_reform
-			has_reform = modernized_ottoman_government
-			has_reform = janissary_autocracy_reform
-		}
+		estate_academy_janissaries = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = ottoman_government
-			has_reform = reformed_ottoman_conscription_reform
-			has_reform = reorganized_ottoman_government
-			has_reform = sultanate_of_rum_reform
-			has_reform = modernized_ottoman_government
-			has_reform = janissary_autocracy_reform
-		}
+		estate_academy_janissaries = yes
 	}
 	benefits = {
 		reinforce_cost_modifier = -0.25
@@ -1189,18 +1143,10 @@ estate_academy_su_mamluks = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			TAG = MAM
-			has_estate_privilege = estate_nobles_enlist_the_mamluks
-		}
+		estate_academy_mamluks = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			TAG = MAM
-			has_estate_privilege = estate_nobles_enlist_the_mamluks
-		}
+		estate_academy_mamluks = yes
 	}
 	benefits = {
 		drill_decay_modifier = -0.33
@@ -1241,18 +1187,10 @@ estate_academy_su_musketeers = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			mission_completed = fra_musketeers
-			has_reform = musketeers_reform
-		}
+		estate_academy_musketeers = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			mission_completed = fra_musketeers
-			has_reform = musketeers_reform
-		}
+		estate_academy_musketeers = yes
 	}
 	benefits = {
 		infantry_fire = 0.3
@@ -1436,21 +1374,10 @@ estate_academy_su_samurais = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			JAP_ideas = 1
-			has_reform = shogunate
-			has_country_modifier = jap_grant_samurai_modifier
-		}
+		estate_academy_samurai = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			JAP_ideas = 1
-			has_reform = shogunate
-			has_country_modifier = jap_grant_samurai_modifier
-			culture_group = japanese_g
-		}
+		estate_academy_samurai = yes
 	}
 	benefits = {
 		discipline = 0.05
@@ -1490,28 +1417,10 @@ estate_academy_su_streltsy = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = veche_republic
-			has_reform = great_veche_republic
-			has_reform = tsardom
-			has_reform = principality
-			has_reform = ruthenian_tsardom
-			has_reform = streltsy_reform
-			has_reform = russian_mercenary_guard_reform
-		}
+		estate_academy_streltsy = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_reform = veche_republic
-			has_reform = great_veche_republic
-			has_reform = tsardom
-			has_reform = principality
-			has_reform = ruthenian_tsardom
-			has_reform = streltsy_reform
-			has_reform = russian_mercenary_guard_reform
-		}
+		estate_academy_streltsy = yes
 	}
 	benefits = {
 		regiment_manpower_usage = -0.2
@@ -1584,7 +1493,7 @@ estate_academy_su_tercio = {
 	}
 }
 estate_academy_su_hussars = {
-	icon = has_hussars
+	icon = hussar_priv
 	max_absolutism = -5
 	influence = 0.1
 	conditional_modifier = {
@@ -1604,18 +1513,10 @@ estate_academy_su_hussars = {
 		modifier = {max_absolutism = 1}
 	}
 	can_select = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_idea = winged_hussars
-			has_idea = lithuanian_hussars
-		}
+		estate_academy_hussars_test = yes
 	}
 	is_valid = {
-		has_estate_privilege = estate_academy_establish_specialist_branch
-		OR = {
-			has_idea = winged_hussars
-			has_idea = lithuanian_hussars
-		}
+		estate_academy_hussars_test = yes
 	}
 	benefits = {
 		reinforce_speed = 0.25
