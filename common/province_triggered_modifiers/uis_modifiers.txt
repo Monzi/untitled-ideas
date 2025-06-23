@@ -33,6 +33,24 @@ marine_sailor_base = {
 	}
 	global_sailors_modifier = 0.01
 }
+state_house_autonomy_effect_triggered = {
+	potential = {
+		area_for_scope_province = {
+			type = any
+			has_building = state_house
+		}
+	}
+	trigger = {
+		area_for_scope_province = {
+			type = any
+			AND = {
+				has_building = state_house
+				is_core = owner
+			}
+		}
+	}
+	min_local_autonomy = -5
+}
 # V Some things i was experimenting with
 #uis_marine_capital = {
 #	potential = {

@@ -49,6 +49,26 @@ state_house_autonomy_effect = {
 		}
 	}
 }
+##potential Way to Do state house without owner change headache
+state_house_autonomy_effect_new = {
+	custom_tooltip = state_house_autonomy_effect_TT
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = state_house
+			}
+			area = {
+				add_province_triggered_modifier = state_house_autonomy_effect_triggered
+			}
+		}
+		else = {
+			area = {
+				remove_province_triggered_modifier = state_house_autonomy_effect_triggered
+			}
+		}
+	}
+	}
+
 
 # Academy Ideas
 estate_action_GRANT_GENERALSHIP_ACADEMY = {
