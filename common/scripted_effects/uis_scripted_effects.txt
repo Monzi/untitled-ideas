@@ -36,6 +36,7 @@ state_house_autonomy_effect = {
 				add_permanent_province_modifier = {
 					name = state_house_autonomy_offset
 					duration = -1
+					hidden = yes
 				}
 			}
 		}
@@ -54,7 +55,9 @@ on_province_owner_change_state_house = {
 	if = {
 		limit = {
 			area_for_scope_province = {
-				type = any
+				owner = {
+					tag = ROOT
+				}
 				has_building = state_house
 				NOT = {
 					owned_by = FROM
@@ -65,8 +68,12 @@ on_province_owner_change_state_house = {
 			add_permanent_province_modifier = {
 				name = state_house_autonomy_offset
 				duration = -1
+				hidden = yes
 			}
 		}
+	}
+	else = {
+		remove_province_modifier = state_house_autonomy_offset
 	}
 }
 
