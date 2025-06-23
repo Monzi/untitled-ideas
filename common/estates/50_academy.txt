@@ -77,13 +77,46 @@ estate_academy = {
 	color = { 159 119 32 }
 
 	privileges = {
-		estate_academy_right_of_counsel
+		estate_academy_create_academy
+		estate_academy_expand_academy
+		estate_academy_establish_specialist_branch
+		#Army Basic
+		estate_academy_muskets_school
+		estate_academy_pike_square
+		estate_academy_foraging_basics
+		estate_academy_cannoneering_lecture
+		#Army Advanced
+		estate_academy_improved_fire_regimen
+		estate_academy_shock_and_awe
+		estate_academy_foraging_ultra
+		estate_academy_wallbreaching_skewl
+		#Navy Basic
+		estate_academy_navy_fire_pip
+		estate_academy_navy_shock
+		estate_academy_navy_manuever
+		#Navy Advanced
+		estate_academy_navy_cannons
+		estate_academy_navy_cap_chance
+		estate_academy_navy_movespeed
+		#Special Unit Privs
+		estate_academy_su_banners
+		estate_academy_su_caroleans
+		estate_academy_su_cawa
+		estate_academy_su_cossacks
+		estate_academy_su_janissaries
+		estate_academy_su_mamluks
+		estate_academy_su_musketeers
+		estate_academy_su_qizilbash
+		estate_academy_su_rajputs
+		estate_academy_su_revguard
+		estate_academy_su_samurais
+		estate_academy_su_streltsy
+		estate_academy_su_tercio
+		estate_academy_su_hussars
+		#Advisor Privs
 		estate_academy_officer_graduation
-		estate_academy_fire_training
-		estate_academy_shock_training
-		estate_academy_maneuver_training
-		estate_academy_siege_training
 		estate_academy_advisors
+		
 	}
 
 	agendas = {
