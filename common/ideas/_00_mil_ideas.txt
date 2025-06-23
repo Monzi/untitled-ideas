@@ -16,9 +16,10 @@ academy_ideas = {
 
 	academy_ideas_1 = {
 		prestige = 1
+		prestige_decay = -0.01
 	}
 	academy_ideas_2 = {
-		mil_advisor_cost = -0.25
+		mil_advisor_cost = -0.20
 	}
 	academy_ideas_3 = {
 		monthly_reform_progress_modifier = 0.2
@@ -71,7 +72,7 @@ tactic_ideas = {
 	category = MIL
 	
 	bonus = {
-		military_tactics = 0.15
+		military_tactics = 0.1
 	}
 
 	tactic_ideas1 = { # Battlefield Assessments
@@ -170,6 +171,7 @@ offensive_ideas = {
 	}
 	napoleonic_warfare = {
 		discipline = 0.05
+		#unlock offensive tactic in research tab
 	}
 
 	ai_will_do = {
@@ -255,6 +257,7 @@ defensive_ideas = {
 	improved_foraging = {
 		global_garrison_growth = 0.15
 		hostile_attrition = 1
+		#adds defensive tactic to research tab
 		effect = {
 			hidden_effect = {
 				if = {
@@ -510,181 +513,6 @@ quantity_ideas = {
 			OR = {
 				has_idea_group = trade_ideas
 				has_idea_group = economic_ideas
-			}
-		}
-	}
-}
-
-# Infantry ideas
-infantry_ideas = {
-	category = MIL
-	trigger = {
-		NOT = {
-			has_idea_group = cavalry_ideas
-		}
-	}
-
-	bonus = {
-		fire_damage = 0.05
-	}
-
-	inf_ideas_1 = {
-		infantry_cost = -0.15
-	}
-	inf_ideas_2 = {
-		army_tradition_from_battle = 0.5
-	}
-	inf_ideas_3 = {
-		infantry_power = 0.10
-	}
-	inf_ideas_4 = {
-		leader_land_fire = 1
-	}
-	inf_ideas_5 = {
-		reinforce_cost_modifier = -0.10
-	}
-	inf_ideas_6 = {
-		shock_damage = 0.05
-	}
-	inf_ideas_7 = {
-		# Allows Infantry training decision
-		shock_damage_received = -0.05
-		removed_effect = {
-			clear_army_training_modifiers = yes
-			clr_country_flag = finished_army_training
-		}
-	}
-
-	ai_will_do = {
-		factor = 3.5
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
-		modifier = { 
-			factor = 0.75
-			NOT = { monthly_mil = 8 }
-		}
-		modifier = { 
-			factor = 1.05
-			is_great_power = yes 
-		}
-		modifier = { 
-			factor = 1.05
-			national_focus = MIL 
-		}
-		modifier = { 
-			factor = 1.1
-			personality = ai_militarist  
-		}
-		modifier = {
-			factor = 1.05
-			OR = {
-				has_idea_group = innovativeness_ideas
-				has_idea_group = industrial_ideas
-				has_idea_group = economic_ideas
-			}
-		}
-		modifier = { 
-			factor = 1.25
-			OR = { 
-				has_global_modifier_value = { 
-					which = infantry_power 
-					value = 0.2
-				}
-				has_global_modifier_value = { 
-					which = artillery_power 
-					value = 0.1
-				}
-				has_global_modifier_value = { 
-					which = army_tradition
-					value = 0.01
-				}
-			}
-			
-		}
-	}
-}
-
-# Cavalry ideas
-cavalry_ideas = {
-	category = MIL
-	trigger = {
-		NOT = {
-			has_idea_group = infantry_ideas
-		}
-	}
-
-	bonus = {
-		shock_damage = 0.05
-	}
-
-	cav_ideas_1 = {
-		cavalry_cost = -0.10
-	}
-	cav_ideas_2 = {
-		recover_army_morale_speed = 0.05
-	}
-	cav_ideas_3 = {
-		cavalry_power = 0.10
-	}
-	cav_ideas_4 = {
-		leader_land_shock = 1
-	}
-	cav_ideas_5 = {
-		cav_to_inf_ratio = 0.15
-	}
-	cav_ideas_6 = {
-		fire_damage = 0.05
-	}
-	cav_ideas_7 = {
-		# Allows Cavalry training decision
-		fire_damage_received = -0.05
-		removed_effect = {
-			clear_army_training_modifiers = yes
-			clr_country_flag = finished_army_training
-		}
-	}
-
-	ai_will_do = {
-		factor = 3.0
-		
-		modifier = {
-			factor = 1.25
-			has_global_modifier_value = {
-				which = cavalry_power 
-				value = 0.20
-			}
-		}
-		modifier = {
-			factor = 1.25
-			cavalry_fraction = 0.3
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { monthly_mil = 7 }
-		}
-		modifier = {
-			factor = 1.1
-			personality = ai_militarist 
-		}
-		modifier = {
-			factor = 5
-			OR = {
-				tag = POL
-				tag = LIT
-				tag = PLC
-			}
-		}
-		modifier = {
-			factor = 0.5
-			is_subject = yes
-		}
-		modifier = { 
-			factor = 1.25
-			OR = {
-				has_idea_group = spy_ideas
-				has_idea_group = aristocracy_ideas
 			}
 		}
 	}
