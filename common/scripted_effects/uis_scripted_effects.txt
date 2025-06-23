@@ -49,25 +49,26 @@ state_house_autonomy_effect = {
 		}
 	}
 }
-##potential Way to Do state house without owner change headache
-state_house_autonomy_effect_new = {
-	custom_tooltip = state_house_autonomy_effect_TT
-	hidden_effect = {
-		if = {
-			limit = {
+#Cool little onaction
+on_province_owner_change_state_house = {
+	if = {
+		limit = {
+			area_for_scope_province = {
+				type = any
 				has_building = state_house
-			}
-			area = {
-				add_province_triggered_modifier = state_house_autonomy_effect_triggered
+				NOT = {
+					owned_by = FROM
+				}
 			}
 		}
-		else = {
-			area = {
-				remove_province_triggered_modifier = state_house_autonomy_effect_triggered
+		ROOT = {
+			add_permanent_province_modifier = {
+				name = state_house_autonomy_offset
+				duration = -1
 			}
 		}
 	}
-	}
+}
 
 
 # Academy Ideas

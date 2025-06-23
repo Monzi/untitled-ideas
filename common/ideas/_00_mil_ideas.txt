@@ -92,7 +92,7 @@ tactic_ideas = {
 		fire_damage_received = -0.05
 	}
 	tactic_ideas6 = { # Rapid Recovery
-		reserves_organisation = 0.1
+		recover_army_morale_speed = 0.1
 	}
 	tactic_ideas7 = { # Organized Rotations
 		reserves_organisation = 0.10
@@ -233,11 +233,11 @@ defensive_ideas = {
 		shock_damage_received = -0.1
 	}
 	military_drill = {
-		land_morale = 0.10
+		land_morale = 0.075
+		morale_damage_received = -0.075
 	}
 	improved_manuever = {
-		land_morale = 0.075
-		morale_damage_received = 0.075
+		fire_damage_received = -0.1
 	}
 	regimental_system = {
 		land_maintenance_modifier = -0.075
