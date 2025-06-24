@@ -31,24 +31,52 @@ state_house_autonomy_effect = {
 			}
 			area = {
 				limit = {
-					owned_by = ROOT
+					owned_by = FROM
 				}
 				add_permanent_province_modifier = {
 					name = state_house_autonomy_offset
 					duration = -1
+					hidden = yes
 				}
 			}
 		}
 		else = {
 			area = {
 				limit = {
-					owned_by = ROOT
+					owned_by = FROM
 				}
 				remove_province_modifier = state_house_autonomy_offset
 			}
 		}
 	}
 }
+#Cool little onaction
+on_province_owner_change_state_house = {
+	if = {
+		limit = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				has_building = state_house
+				NOT = {
+					owned_by = FROM
+				}
+			}
+		}
+		ROOT = {
+			add_permanent_province_modifier = {
+				name = state_house_autonomy_offset
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	else = {
+		remove_province_modifier = state_house_autonomy_offset
+	}
+}
+
 
 # Academy Ideas
 estate_action_GRANT_GENERALSHIP_ACADEMY = {

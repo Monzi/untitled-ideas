@@ -1,0 +1,37 @@
+uis_edict_institution_growth = {
+	potential = {
+		always = yes
+	}
+	allow = {
+		full_idea_group = innovativeness_ideas
+		capital_scope = {
+			is_capital = yes
+		}
+	}
+	modifier = {
+		institution_growth = 10
+	}
+	notify_trigger = {
+		FROM = {
+			current_institution = 100
+		}
+	}
+
+	color = { 50 173 192 }
+
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 7
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 5
+			all_province_in_state = {
+				NOT = { current_institution_growth = 0.5 }
+			}
+		}
+	}
+}
