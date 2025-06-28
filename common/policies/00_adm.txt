@@ -13,7 +13,7 @@ ari_mil = {
 	}
 
 	state_governing_cost = -0.1
-	drill_gain_modifier = 0.15
+	drill_gain_modifier = 0.20
 
 	effect = {}
 	removed_effect = {}
@@ -128,8 +128,8 @@ quality_mil = {
 		full_idea_group = militarism_ideas
 	}
 
-	drill_gain_modifier = 0.10
-	drill_decay_modifier = -0.10
+	drill_gain_modifier = 0.25
+	drill_decay_modifier = -0.25
 
 	effect = {}
 	removed_effect = {}
@@ -151,7 +151,7 @@ quant_mil = {
 		full_idea_group = militarism_ideas
 	}
 
-	reserves_organisation = 0.15
+	reserves_organisation = 0.10
 	global_unrest = -1
 
 	effect = {}
@@ -220,7 +220,7 @@ hum_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	military_tactics = 0.01
+	military_tactics = 0.02
 	tolerance_of_heretics_capacity = 1
 	tolerance_of_heathens_capacity = 1
 
@@ -267,8 +267,8 @@ infra_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	centralize_state_cost = -0.15
-	military_tactics = 0.01
+	centralize_state_cost = -0.25
+	military_tactics = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -291,7 +291,7 @@ cent_tac = {
 	}
 
 	state_governing_cost = -0.1
-	military_tactics = 0.01
+	military_tactics = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -314,7 +314,7 @@ decent_tac = {
 	}
 
 	territories_governing_cost = -0.20
-	military_tactics = 0.01
+	military_tactics = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -449,7 +449,7 @@ infra_assi = {
 		full_idea_group = assimilation_ideas
 	}
 
-	expand_infrastructure_cost_modifier = -0.20
+	expand_infrastructure_cost_modifier = -0.25
 	overextension_impact_modifier = -0.1
 
 	effect = {}
@@ -495,7 +495,7 @@ cent_assi = {
 		full_idea_group = assimilation_ideas
 	}
 
-	monthly_reform_progress_modifier = 0.30
+	monthly_reform_progress_modifier = 0.20
 
 	effect = {}
 	removed_effect = {}
@@ -688,29 +688,6 @@ cent_ari = {
 	}
 }
 
-decent_ari = {
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = decentralization_ideas
-		has_idea_group = aristocracy_ideas
-	}
-
-	allow = {
-		full_idea_group = decentralization_ideas
-		full_idea_group = aristocracy_ideas
-	}
-
-	land_maintenance_modifier = -0.10
-	development_cost = -0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1			
-	}
-}
-
 cent_pluto = {
 	monarch_power = ADM
 
@@ -839,7 +816,7 @@ cent_indi = {
 		full_idea_group = centralization_ideas
 	}
 
-	monthly_reform_progress_modifier = 0.10
+	monthly_reform_progress_modifier = 0.30
 	development_cost = -0.1
 
 	effect = {}
@@ -1074,7 +1051,6 @@ cent_quality = {
 	devotion = 1
 	horde_unity = 1
 	meritocracy = 1
-	military_tactics = 0.02
 	monthly_militarized_society = 0.05
 	monthly_uis_junta_militarization = 0.05
 
@@ -2303,7 +2279,7 @@ supply_convoys = {
 		full_idea_group = expansion_ideas
 	}	
 	
-	state_maintenance_modifier = -0.5
+	state_maintenance_modifier = -0.33
 	liberty_desire_from_subject_development = -0.25
 	
 	effect = {}

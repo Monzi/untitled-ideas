@@ -126,7 +126,7 @@ trade_mil = {
 		full_idea_group = militarism_ideas
 	}
 
-	embargo_efficiency = 0.20
+	embargo_efficiency = 0.33
 	caravan_power = 0.1
 
 	effect = {}
@@ -698,7 +698,7 @@ cent_exp = {
 		full_idea_group = exploration_ideas
 	}
 
-	native_assimilation = 0.75
+	native_assimilation = 1
 	native_uprising_chance = -0.25
 
 	effect = {}
@@ -1590,7 +1590,7 @@ naval_infrastructure_act = {
 	}
 
 
-	naval_forcelimit_modifier = 0.33
+	naval_forcelimit_modifier = 0.15
 
 
 	effect = {}

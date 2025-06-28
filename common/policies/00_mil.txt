@@ -35,8 +35,7 @@ mari_mil = {
 		full_idea_group = militarism_ideas
 	}
 
-	can_transport_units = yes
-	transport_attrition = -0.2
+	transport_attrition = -0.33
 
 	effect = {}
 	removed_effect = {}
@@ -149,7 +148,7 @@ off_mil = {
 		full_idea_group = militarism_ideas
 	}
 
-	fire_damage = 0.1
+	fire_damage = 0.05
 	unjustified_demands = -0.1
 
 	effect = {}
@@ -1066,6 +1065,29 @@ mari_stand = {
 	}
 }
 
+decent_ari = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = decentralization_ideas
+		has_idea_group = aristocracy_ideas
+	}
+
+	allow = {
+		full_idea_group = decentralization_ideas
+		full_idea_group = aristocracy_ideas
+	}
+
+	land_maintenance_modifier = -0.10
+	development_cost = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1			
+	}
+}
+
 decent_pluto = {
 	monarch_power = MIL
 
@@ -1102,10 +1124,8 @@ inno_aca = {
 		full_idea_group = academy_ideas
 	}
 
-	max_general_siege = 1
-	max_general_maneuver = 1
-	max_admiral_siege = 1
-	max_admiral_maneuver = 1
+	max_general_fire = 1
+	max_general_shock = 1
 
 	effect = {}
 	removed_effect = {}
@@ -1289,7 +1309,7 @@ decent_def = {
 		full_idea_group = defensive_ideas
 	}
 
-	prestige_from_land = 0.10
+	prestige_from_land = 1
 	reinforce_speed = 0.25
 
 	effect = {}
@@ -2486,7 +2506,7 @@ the_best_defense_policy = {
 		full_idea_group = innovativeness_ideas
 	}
 
-	shock_damage_received = -0.05
+	shock_damage = 0.05
 	fire_damage_received = -0.05
 	
 	effect = {}
