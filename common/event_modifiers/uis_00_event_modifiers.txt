@@ -47,6 +47,10 @@ uis_junta_intolerance = {
 uis_recent_junta_uprising = {
 	
 }
+#Innovative Province Modifiers
+uis_inno_growth_capitalState = {
+	institution_growth = 9
+}
 # modifier for rebel occupied province
 uis_local_men_drafted = {
 	local_manpower_modifier = -100
@@ -326,6 +330,13 @@ uis_prestige_academy = {
 uis_disloyal_academy_scholars = {
 	yearly_army_professionalism = -0.01
 	general_cost = 0.25
+}
+#Country Modifiers for Agendas
+uis_academy_drilled_the_armies = {
+	drill_decay_modifier = -0.66
+}
+uis_academy_drill_the_armies = {
+	drill_gain_modifier = 1
 }
 ## Academy Special Unit Modifiers ##
 uis_academy_banners = {

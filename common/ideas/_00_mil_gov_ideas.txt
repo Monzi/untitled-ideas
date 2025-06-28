@@ -112,7 +112,7 @@ plutocracy_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	free_cities = {
-		caravan_power = 0.25
+		caravan_power = 0.33
 		development_cost = -0.05
 	}
 	emancipation = {
@@ -174,7 +174,7 @@ horde_gov_ideas = {
 		horde_unity = 0.5
 	}
 	watchers_of_the_silk_road = {	
-		caravan_power = 0.20
+		caravan_power = 0.25
 	}
 	a_magnanimous_empire = {
 		num_accepted_cultures = 2

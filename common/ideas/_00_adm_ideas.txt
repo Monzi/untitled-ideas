@@ -31,8 +31,10 @@ innovativeness_ideas = {
 	expanded_policies = {
 		possible_adm_policy = 1
 		effect = {
-			#Research mechanic and flat growth edict
-			custom_tooltip = unlock_edict_tooltip
+			custom_tooltip = unlock_innovative_capital
+			hidden_effect = {
+				uis_inno_ideas_capital_effect = yes
+			}
 		}
 	}
 
@@ -348,7 +350,7 @@ infrastructure_ideas = {
 	}
 	fort_logistics = {
 		trade_company_investment_cost = -0.1
-		caravan_power = 0.1
+		caravan_power = 0.25
  	}
 	regulation_bureau = {
 		build_time = -0.25
@@ -767,7 +769,7 @@ decentralization_ideas = {
 	}
 	decent_ideas_5 = {
 		merchants = 1
-		caravan_power = 0.1
+		caravan_power = 0.25
 	}
 	decent_ideas_6 = {
 		monthly_reform_progress_modifier = 0.15

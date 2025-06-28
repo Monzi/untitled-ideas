@@ -135,4 +135,231 @@ estate_academy_fire_advisor = {
 		clr_country_flag = need_to_fire_mil_advisor
     }
 }
+estate_academy_drill_the_armies = {
+	can_select = {
+		num_of_regiments_at_full_drill = 0
+		NOT = {
+			num_of_regiments_at_full_drill = 1
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			army_professionalism = 0.8
+		}
+		modifier = {
+			factor = 1.5
+			army_professionalism = 0.6
+			NOT = {army_professionalism = 0.79}
+		}
+		modifier = {
+			factor = 2
+			army_professionalism = 0.4
+			NOT = {army_professionalism = 0.59}
+		}
+		modifier = {
+			factor = 3
+			army_professionalism = 0.2
+			NOT = {army_professionalism = 0.39}
+		}
+		modifier = {
+			factor = 5
+			army_professionalism = 0
+			NOT = {army_professionalism = 0.19}
+		}
+	}
+	immediate_effect = {
+		set_country_flag = academy_needs_drilled_army
+		add_country_modifier = {
+			name = uis_academy_drill_the_armies
+			duration = -1
+		}
+	}
+	task_requirements = {
+		num_of_regiments_at_full_drill = 10
+	}
+	task_completed_effect = {
+		add_country_modifier = {
+			name = uis_academy_drilled_the_armies
+			duration = 3650
+		}
+		remove_country_modifier = uis_academy_drill_the_armies
+		clr_country_flag = academy_needs_drilled_army
+	}
+	fail_if = {
+		OR = {
+			is_at_war = yes
+			AND = {
+				num_of_infantry = 0
+				num_of_cavalry = 0
+				num_of_artillery = 0
+			}
+		}
+	}
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		add_estate_loyalty_modifier = {
+			estate = estate_academy
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+		clr_country_flag = academy_needs_drilled_army
+		remove_country_modifier = uis_academy_drill_the_armies
+	}
+	on_invalid = {
+		clr_country_flag = academy_needs_drilled_army
+		remove_country_modifier = uis_academy_drill_the_armies
+	}
+}
+estate_academy_build_universities = {
+	can_select = {
+		adm_tech = 17
+		any_owned_province = {
+			is_state_core = ROOT
+			NOT = { has_building = university }
+			num_free_building_slots = 1
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.65
+			NOT = {
+				any_owned_province = {
+					is_state_core = root
+					base_manpower = 4
+					NOT = { has_building = university }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_owned_province = {
+				is_state_core = root
+				base_manpower = 7
+				NOT = { has_building = university }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				crown_land_share = 15
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_academy_university_build_temple_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { has_building = university }
+			}
+			save_event_target_as = agenda_province
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				base_manpower = 7
+				NOT = { has_building = university }
+			}
+			save_event_target_as = agenda_province
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					NOT = { has_building = university }
+				}
+				ROOT = {
+					set_variable = {
+						which = estate_academy_university_build_temple_var
+						value = 1
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						which = estate_academy_university_build_temple_var
+						value = 2
+					}
+				}
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			NOT = { owned_by = ROOT }
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_academy
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_academy
+			}
+		}
+		else = {
+			event_target:agenda_province = {
+				has_building = university
+			}
+		}
+	}
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_academy
+		}
+		add_estate_loyalty = {
+			estate = estate_academy
+			loyalty = 10
+		}
+		if = {
+			limit = {				
+				NOT = { crown_land_share = 15 }
+				estate_territory = {
+					estate = estate_academy
+					territory = 10
+				}
+				estate_not_has_exempt_from_seize_land_privilege = { estate = estate_academy }
+			}
+			take_estate_land_share_small = { estate = estate_academy }
+		}
+		else = {
+			event_target:agenda_province = {
+				add_base_manpower = 1
+			}
+		}
+	}
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		event_target:agenda_province = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_named_unrest = {
+					name = local_academics_displeased
+					value = 5
+				}
+			}
+		}
+		add_estate_loyalty_modifier = {
+			estate = estate_academy
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+		}
+	}
+}
 

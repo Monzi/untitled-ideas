@@ -11,3 +11,11 @@ pulse_infantry_big_good = {
 	infantry_power = 0.1
 	land_forcelimit_modifier = 0.1
 }
+pulse_academy_discounted_mil_adv = {
+	
+}
+pulse_academy_academic_commanders = {
+	land_morale = 0.05
+	discipline = 0.025
+	land_maintenance_modifier = 0.1
+}

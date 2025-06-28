@@ -76,3 +76,44 @@ on_province_owner_change_quality_mechanic = {
 		}
 	}
 }
+#Academy war ended
+on_war_ended_academy_modifier_clear = {
+	if = {
+		limit = {
+			ROOT = {
+				has_country_modifier = pulse_academy_academic_commanders
+			}
+		}
+		remove_country_modifier = pulse_academy_academic_commanders
+	}
+	else_if = {
+		limit = {
+			FROM = {
+				has_country_modifier = pulse_academy_academic_commanders
+			}
+		}
+		remove_country_modifier = pulse_academy_academic_commanders
+	}
+}
+#inno capital moved 
+on_capital_moved_innovative_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				owner = {
+					full_idea_group = innovativeness_ideas
+				}
+			}
+		}
+		ROOT = {
+			add_province_triggered_modifier = inno_capital_growth
+		}
+	}
+	FROM = {
+		every_province_in_state = {
+			remove_province_modifier = uis_inno_growth_capitalState
+			remove_province_triggered_modifier = inno_capital_growth
+		}
+	}
+	
+}

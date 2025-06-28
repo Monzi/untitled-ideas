@@ -3,12 +3,12 @@
 #
 # Effects are fully scriptable here.
 
-trade_abroad_malus = {
-	potential = {
-		always = yes
-	}
-	trigger = {
-		always = yes
-	}
-	global_foreign_trade_power = -1
-}
+#trade_abroad_malus = {
+#	potential = {
+#		always = yes
+#	}
+#	trigger = {
+#		always = yes
+#	}
+#	global_foreign_trade_power = -1
+#}

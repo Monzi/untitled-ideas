@@ -122,6 +122,8 @@ estate_academy = {
 	agendas = {
 		estate_academy_hire_advisor
 		estate_academy_fire_advisor
+		estate_academy_drill_the_armies
+		estate_academy_build_universities
 	}
 	influence_from_dev_modifier = 0.5
 }

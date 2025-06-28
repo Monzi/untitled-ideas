@@ -200,6 +200,7 @@
  UIS_JUNTA_DECISION_TOOLTIP:0 ""
  UIS_JUNTA_DECISION_TOOLTIP_DESC:0 ""
  junta_readiness:0 "Junta Readiness"
+ unlock_innovative_capital:0 "Every New §YInstitution§! will grow passively in the §TCapital State§!"
 #tooltip for marine government tooltip
  uis_enact_marine_government:0 "Enables §YMarine Professionalism§! Mechanic"
 #tooltip for maritime ideagroup bonus

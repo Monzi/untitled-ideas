@@ -69,3 +69,30 @@ marine_sailor_base = {
 #	movement_speed = 0.1
 #	regiment_manpower_usage = -0.3
 #}
+inno_capital_growth = {
+	potential = {
+		is_capital = yes
+		owner = {
+			has_idea_group = innovativeness_ideas
+		}
+	}
+	trigger = {
+		is_capital = yes
+		all_province_in_state = {
+			is_state_core = owner
+		}
+		owner = {
+			full_idea_group = innovativeness_ideas
+		}
+	}
+	on_activation = {
+		every_province_in_state = {
+			add_province_modifier = {
+				name = uis_inno_growth_capitalState
+				duration = -1
+			}
+		}
+	}
+	hidden = yes
+	institution_growth = 0.1
+}

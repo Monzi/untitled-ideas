@@ -196,6 +196,18 @@ maritime_ideas_building_counter = {#checks how many docks/drydocks/impressmentof
 		value = 0
 	}
 }
+
+##Inno ideas prov modifier adder 
+uis_inno_ideas_capital_effect = {
+	if = {
+		limit = {
+			full_idea_group = innovativeness_ideas
+		}
+		capital_scope = {
+			add_province_triggered_modifier = inno_capital_growth
+		}
+	}
+}
 # VVV This may not be needed as we add power from the buildings on_build/on_destroyed itself VVV
 #marine_building_power = {#The effect that fires when building naval buildings for maritime
 #	FROM = {
