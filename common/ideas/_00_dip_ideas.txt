@@ -298,8 +298,8 @@ nationalism_ideas = {
 	}
 
 	bonus = {
-		culture_conversion_cost = -0.25
-		culture_conversion_time = -0.15
+		culture_conversion_cost = -0.33
+		culture_conversion_time = -0.33
 		monthly_cultural_unity = 0.5
 	}
 
@@ -307,7 +307,7 @@ nationalism_ideas = {
 		hostile_attrition = 1
 	}
 	nationalism_ideas_2 = {
-		manpower_in_culture_group_provinces = 0.15
+		manpower_in_own_culture_provinces = 0.2
 		same_culture_advisor_cost = -0.15
 	}
 	nationalism_ideas_3 = {
