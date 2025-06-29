@@ -202,7 +202,7 @@ court_military_decree_1 = {
 court_military_decree_2 = {
 	# Aggressive stance
 	global_attacker_dice_roll_bonus = 1
-	garrison_size = -0.25
+	reinforce_speed = 0.2
 	drill_decay_modifier = -0.5
 }
 court_military_decree_3 = {

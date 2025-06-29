@@ -619,7 +619,7 @@ assi_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	may_return_manpower_on_disband = yes
+	reserves_organisation = 0.05
 	manpower_in_accepted_culture_provinces = 0.15
 
 	effect = {}
@@ -642,7 +642,7 @@ nat_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	yearly_army_professionalism = 0.01
+	yearly_army_professionalism = 0.005
 	manpower_in_own_culture_provinces = 0.15
 
 	effect = {}
@@ -665,7 +665,7 @@ dip_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	rival_change_cost = -0.2
+	rival_change_cost = -1
 	rival_border_fort_maintenance = -0.15
 
 	effect = {}
@@ -710,8 +710,8 @@ influ_stand = {
 		full_idea_group = standingarmy_ideas
 	}
 
-	vassal_forcelimit_bonus = 0.15
-	vassal_naval_forcelimit_bonus = 0.15
+	vassal_forcelimit_bonus = 0.33
+	vassal_naval_forcelimit_bonus = 0.33
 
 	effect = {}
 	removed_effect = {}
@@ -2965,7 +2965,7 @@ sharp_wits_act = {
 		full_idea_group = offensive_ideas 
 	}
 	
-	power_projection_from_insults = 0.25
+	power_projection_from_insults = 1
 	morale_damage = 0.1
 
 	effect = {}

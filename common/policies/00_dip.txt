@@ -172,7 +172,7 @@ court_tac = {
 		full_idea_group = tactic_ideas
 	}
 
-	power_projection_from_insults = 0.1
+	power_projection_from_insults = 1
 	movement_speed = 0.10
 
 	effect = {}
@@ -219,7 +219,7 @@ influ_tac = {
 	}
 
 	morale_damage = 0.025
-	annexation_relations_impact = -0.15 
+	annexation_relations_impact = -0.5 
 
 	effect = {}
 	removed_effect = {}
@@ -2521,7 +2521,7 @@ trained_marines_act = {
 	}
 	
 	naval_morale = 0.1
-	allowed_marine_fraction = 0.1
+	allowed_marine_fraction = 0.2
 
 	effect = {}
 	removed_effect = {}
