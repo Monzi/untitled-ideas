@@ -19,8 +19,1355 @@ custom_window = {
 	potential = { has_country_flag = unit_tree_window_shown }
 }
 
-custom_icon = {
-	name = unit_tree_experience_progressbar
+custom_window = { # Infantry
+	name = infantry_tree_window
+	potential = { }
+}
+
+custom_window = { # Cavalry
+	name = cavalry_tree_window
+	potential = { }
+}
+
+custom_window = { # Artillery
+	name = artillery_tree_window
+	potential = { }
+}
+
+# Infantry
+# Tier 1 ########################################
+custom_button = {
+	name = inf_tech1_tier1_btn
+	tooltip = inf_tech1_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier1_btn
+	tooltip = inf_tech2_tier1_btn_TT
 	potential = { always = yes }
-	frame_variable = "trainingExperience"
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech3_tier1_btn
+	tooltip = inf_tech3_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech3_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech3_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech3_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech4_tier1_btn
+	tooltip = inf_tech4_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech4_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech4_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech4_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech5_tier1_btn
+	tooltip = inf_tech5_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech5_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech5_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech5_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech6_tier1_btn
+	tooltip = inf_tech6_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech6_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech6_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech6_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech7_tier1_btn
+	tooltip = inf_tech7_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech7_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech7_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech7_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech8_tier1_btn
+	tooltip = inf_tech8_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech8_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech8_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech8_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech9_tier1_btn
+	tooltip = inf_tech9_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech9_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech9_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech9_tier1 }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = inf_tech1_tier2_btn
+	tooltip = inf_tech1_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier2_btn
+	tooltip = inf_tech2_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech3_tier2_btn
+	tooltip = inf_tech3_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech3_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech3_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech3_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech4_tier2_btn
+	tooltip = inf_tech4_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech4_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech4_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech4_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech5_tier2_btn
+	tooltip = inf_tech5_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech5_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech5_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech5_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech6_tier2_btn
+	tooltip = inf_tech6_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech6_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech6_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech6_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech7_tier2_btn
+	tooltip = inf_tech7_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech7_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech7_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech7_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech8_tier2_btn
+	tooltip = inf_tech8_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech8_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech8_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech8_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech9_tier2_btn
+	tooltip = inf_tech9_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech9_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech9_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech9_tier2 }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = inf_tech1_tier3_btn
+	tooltip = inf_tech1_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier3_btn
+	tooltip = inf_tech2_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech3_tier3_btn
+	tooltip = inf_tech3_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech3_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech3_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech3_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech4_tier3_btn
+	tooltip = inf_tech4_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech4_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech4_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech4_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech5_tier3_btn
+	tooltip = inf_tech5_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech5_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech5_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech5_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech6_tier3_btn
+	tooltip = inf_tech6_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech6_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech6_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech6_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech7_tier3_btn
+	tooltip = inf_tech7_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech7_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech7_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech7_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech8_tier3_btn
+	tooltip = inf_tech8_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech8_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech8_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech8_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech9_tier3_btn
+	tooltip = inf_tech9_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech9_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech9_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech9_tier3 }
+		number = 2
+	}
+}
+
+# Cavalry
+# Tier 1 ########################################
+custom_button = {
+	name = cav_tech1_tier1_btn
+	tooltip = cav_tech1_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier1_btn
+	tooltip = cav_tech2_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier1_btn
+	tooltip = cav_tech3_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech4_tier1_btn
+	tooltip = cav_tech4_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech4_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech4_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech4_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech5_tier1_btn
+	tooltip = cav_tech5_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech5_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech5_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech5_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech6_tier1_btn
+	tooltip = cav_tech6_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech6_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech6_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech6_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech7_tier1_btn
+	tooltip = cav_tech7_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech7_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech7_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech7_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech8_tier1_btn
+	tooltip = cav_tech8_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech8_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech8_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech8_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech9_tier1_btn
+	tooltip = cav_tech9_tier1_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech9_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech9_tier1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech9_tier1 }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = cav_tech1_tier2_btn
+	tooltip = cav_tech1_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier2_btn
+	tooltip = cav_tech2_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier2_btn
+	tooltip = cav_tech3_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech4_tier2_btn
+	tooltip = cav_tech4_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech4_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech4_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech4_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech5_tier2_btn
+	tooltip = cav_tech5_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech5_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech5_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech5_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech6_tier2_btn
+	tooltip = cav_tech6_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech6_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech6_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech6_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech7_tier2_btn
+	tooltip = cav_tech7_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech7_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech7_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech7_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech8_tier2_btn
+	tooltip = cav_tech8_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech8_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech8_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech8_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech9_tier2_btn
+	tooltip = cav_tech9_tier2_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech9_tier2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech9_tier2
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech9_tier2 }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = cav_tech1_tier3_btn
+	tooltip = cav_tech1_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier3_btn
+	tooltip = cav_tech2_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier3_btn
+	tooltip = cav_tech3_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech4_tier3_btn
+	tooltip = cav_tech4_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech4_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech4_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech4_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech5_tier3_btn
+	tooltip = cav_tech5_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech5_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech5_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech5_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech6_tier3_btn
+	tooltip = cav_tech6_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech6_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech6_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech6_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech7_tier3_btn
+	tooltip = cav_tech7_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech7_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech7_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech7_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech8_tier3_btn
+	tooltip = cav_tech8_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech8_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech8_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech8_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech9_tier3_btn
+	tooltip = cav_tech9_tier3_btn_TT
+	potential = { always = no }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech9_tier3 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech9_tier3
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech9_tier3 }
+		number = 2
+	}
+}
+
+# Artillery
+# Tier 1 ########################################
+custom_button = {
+	name = art_tech1_tier1_btn
+	tooltip = art_tech1_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier1_btn
+	tooltip = art_tech2_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech3_tier1_btn
+	tooltip = art_tech3_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech4_tier1_btn
+	tooltip = art_tech4_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech5_tier1_btn
+	tooltip = art_tech5_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech6_tier1_btn
+	tooltip = art_tech6_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech7_tier1_btn
+	tooltip = art_tech7_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech8_tier1_btn
+	tooltip = art_tech8_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech9_tier1_btn
+	tooltip = art_tech9_tier1_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = art_tech1_tier2_btn
+	tooltip = art_tech1_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier2_btn
+	tooltip = art_tech2_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech3_tier2_btn
+	tooltip = art_tech3_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech4_tier2_btn
+	tooltip = art_tech4_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech5_tier2_btn
+	tooltip = art_tech5_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech6_tier2_btn
+	tooltip = art_tech6_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech7_tier2_btn
+	tooltip = art_tech7_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech8_tier2_btn
+	tooltip = art_tech8_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech9_tier2_btn
+	tooltip = art_tech9_tier2_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = art_tech1_tier3_btn
+	tooltip = art_tech1_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier3_btn
+	tooltip = art_tech2_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech3_tier3_btn
+	tooltip = art_tech3_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech4_tier3_btn
+	tooltip = art_tech4_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech5_tier3_btn
+	tooltip = art_tech5_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech6_tier3_btn
+	tooltip = art_tech6_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech7_tier3_btn
+	tooltip = art_tech7_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech8_tier3_btn
+	tooltip = art_tech8_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech9_tier3_btn
+	tooltip = art_tech9_tier3_btn_TT
+	potential = { always = no }
+	trigger = { }
+	effect = { }
+	frame = {
+		trigger = { }
+		number = 2
+	}
 }

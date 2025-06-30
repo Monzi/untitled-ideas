@@ -1908,19 +1908,6 @@ guiTypes = {
 				font = "vic_18"
 				format = centre
 			}
-			iconType = { # Experience Progressbar
-				name = "unit_tree_experience_progressbar"
-				spriteType = "GFX_unit_tree_experience_progressbar"
-				position = { x=300 y=263 }
-				Orientation = "UPPER_LEFT"
-				scripted = yes
-			}
-			iconType = { # Experience Progressbar frame
-				name = "unit_tree_experience_progressbar_frame"
-				spriteType = "GFX_unit_tree_experience_progressbar_frame"
-				position = { x=289 y=260 }
-				Orientation = "UPPER_LEFT"
-			}
 
 			# Banner titles
 			instantTextBoxType = {
@@ -1943,6 +1930,690 @@ guiTypes = {
 				text = "Artillery"
 				font = "vic_22"
 				format = centre
+			}
+
+			windowType = { # Infantry
+				name = "infantry_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech4_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech5_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech6_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech7_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech8_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech9_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech3_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech4_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech5_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech6_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech7_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech8_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech9_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech3_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech4_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech5_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech6_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech7_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech8_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech9_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+			}
+
+			windowType = { # Cavalry
+				name = "cavalry_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech4_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech5_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech6_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech7_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech8_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech9_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech4_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech5_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech6_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech7_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech8_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech9_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech4_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech5_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech6_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech7_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=200 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech8_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=255 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech9_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+			}
+
+			windowType = { # Artillery
+				name = "artillery_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech4_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech5_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech6_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech7_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech8_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech9_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=475 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech3_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech4_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech5_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech6_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech7_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech8_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech9_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=660 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech3_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech4_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech5_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech6_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=790 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech7_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech8_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=435 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech9_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=845 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
 			}
 		}
 	}
