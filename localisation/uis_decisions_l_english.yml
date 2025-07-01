@@ -8,19 +8,10 @@
  UIS_JUNTA_DECISION_TOOLTIP:0 "End the Military Takeover disaster by lowering [Root.junta_readiness.GetName] below 10\nCurrent [Root.junta_readiness.GetName]: [Root.junta_readiness.GetValue]"
 
 # DIP
- marine_upgrade_title:0 "Landing War Games"
- marine_upgrade_desc:0 "We should prepare our marines for naval landings in the future."
  enact_marine_government_title:0 "Enable §YMariner Professionalism§! mechanic"
  enact_marine_government_desc:0 "This can only be done ONCE this way."
 
-
 # MIL
- army_training_title:0 "[Root.title_army_training]"
- army_training_desc:0 "[Root.desc_army_training]"
- string_infantry_training_title:0 "Infantry Training"
- string_infantry_training_desc:0 "Rigorously trained troops make for a proper fighting force."
- string_cavalry_training_title:0 "Cavalry Training"
- string_cavalry_training_desc:0 "Cohesion training for our cavalry to eleminate the need for infantry in our armies."
 
 # Notifications
 # Court Mechanic

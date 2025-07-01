@@ -1,15 +1,19 @@
 custom_button = { # Button that shows the unit_tree_window
-	name = unit_tree_window_button
-	tooltip = unit_tree_window_button_TT
+	name = unit_tree_window_btn
+	tooltip = unit_tree_window_btn_TT
 	potential = { always = yes }
-	trigger = { always = yes } # Always while debugging
+	trigger = { hidden_trigger = { always = yes } }
 	effect = {
-		if = {
-			limit = { has_country_flag = unit_tree_window_shown }
-			clr_country_flag = unit_tree_window_shown
-		}
-		else = {
-			set_country_flag = unit_tree_window_shown
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = unit_tree_window_shown }
+				clr_country_flag = unit_tree_window_shown
+				tech_tree_window_reset = yes
+			}
+			else = {
+				set_country_flag = unit_tree_window_shown
+				set_country_flag = infantry_tree_window_shown # Tree shown by default when unit_tree_window opens
+			}
 		}
 	}
 }
@@ -19,19 +23,58 @@ custom_window = {
 	potential = { has_country_flag = unit_tree_window_shown }
 }
 
-custom_window = { # Infantry
+custom_button = { # Infantry
+	name = infantry_tree_window_btn
+	tooltip = infantry_tree_window_btn_TT
+	potential = { always = yes }
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = infantry_tree_window_shown
+		}
+	}
+}
+
+custom_button = { # Cavalry
+	name = cavalry_tree_window_btn
+	tooltip = cavalry_tree_window_btn_TT
+	potential = { always = yes }
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = cavalry_tree_window_shown
+		}
+	}
+}
+
+custom_button = { # Artillery
+	name = artillery_tree_window_btn
+	tooltip = artillery_tree_window_btn_TT
+	potential = { always = yes }
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = artillery_tree_window_shown
+		}
+	}
+}
+
+custom_window = { # Infantry, Default
 	name = infantry_tree_window
-	potential = { }
+	potential = { has_country_flag = infantry_tree_window_shown }
 }
 
 custom_window = { # Cavalry
 	name = cavalry_tree_window
-	potential = { }
+	potential = { has_country_flag = cavalry_tree_window_shown }
 }
 
 custom_window = { # Artillery
 	name = artillery_tree_window
-	potential = { }
+	potential = { has_country_flag = artillery_tree_window_shown }
 }
 
 # Infantry
@@ -63,6 +106,14 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier1 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = inf_tech4_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -81,6 +132,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech3_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
 		}
 	}
 	effect = {
@@ -101,6 +156,14 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech4_tier1 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = inf_tech2_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -112,101 +175,6 @@ custom_button = {
 		number = 2
 	}
 }
-custom_button = {
-	name = inf_tech5_tier1_btn
-	tooltip = inf_tech5_tier1_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech5_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech5_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech5_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech6_tier1_btn
-	tooltip = inf_tech6_tier1_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech6_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech6_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech6_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech7_tier1_btn
-	tooltip = inf_tech7_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech7_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech7_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech7_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech8_tier1_btn
-	tooltip = inf_tech8_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech8_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech8_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech8_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech9_tier1_btn
-	tooltip = inf_tech9_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech9_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech9_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech9_tier1 }
-		number = 2
-	}
-}
 # Tier 2 ########################################
 custom_button = {
 	name = inf_tech1_tier2_btn
@@ -215,6 +183,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech1_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech2_tier1
 		}
 	}
 	effect = {
@@ -235,6 +207,10 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier2 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech3_tier1
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -253,6 +229,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech3_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech4_tier1
 		}
 	}
 	effect = {
@@ -273,6 +253,10 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech4_tier2 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier2
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -291,6 +275,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech5_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech2_tier2
 		}
 	}
 	effect = {
@@ -311,6 +299,10 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech6_tier2 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech3_tier2
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -322,63 +314,6 @@ custom_button = {
 		number = 2
 	}
 }
-custom_button = {
-	name = inf_tech7_tier2_btn
-	tooltip = inf_tech7_tier2_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech7_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech7_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech7_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech8_tier2_btn
-	tooltip = inf_tech8_tier2_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech8_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech8_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech8_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech9_tier2_btn
-	tooltip = inf_tech9_tier2_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech9_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech9_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech9_tier2 }
-		number = 2
-	}
-}
 # Tier 3 ########################################
 custom_button = {
 	name = inf_tech1_tier3_btn
@@ -387,6 +322,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech1_tier3 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech4_tier2
 		}
 	}
 	effect = {
@@ -407,6 +346,10 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier3 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech6_tier2
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -415,139 +358,6 @@ custom_button = {
 	}
 	frame = {
 		trigger = { has_country_flag = inf_tech2_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech3_tier3_btn
-	tooltip = inf_tech3_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech3_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech3_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech3_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech4_tier3_btn
-	tooltip = inf_tech4_tier3_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech4_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech4_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech4_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech5_tier3_btn
-	tooltip = inf_tech5_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech5_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech5_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech5_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech6_tier3_btn
-	tooltip = inf_tech6_tier3_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech6_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech6_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech6_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech7_tier3_btn
-	tooltip = inf_tech7_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech7_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech7_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech7_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech8_tier3_btn
-	tooltip = inf_tech8_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech8_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech8_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech8_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = inf_tech9_tier3_btn
-	tooltip = inf_tech9_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = inf_tech9_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = inf_tech9_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = inf_tech9_tier3 }
 		number = 2
 	}
 }
@@ -561,6 +371,10 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = cav_tech2_tier1 }
 		}
 	}
 	effect = {
@@ -581,6 +395,10 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier1 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -600,6 +418,13 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier1 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier1
+				has_country_flag = cav_tech2_tier1
+			}
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -611,120 +436,6 @@ custom_button = {
 		number = 2
 	}
 }
-custom_button = {
-	name = cav_tech4_tier1_btn
-	tooltip = cav_tech4_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech4_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech4_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech4_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech5_tier1_btn
-	tooltip = cav_tech5_tier1_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech5_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech5_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech5_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech6_tier1_btn
-	tooltip = cav_tech6_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech6_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech6_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech6_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech7_tier1_btn
-	tooltip = cav_tech7_tier1_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech7_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech7_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech7_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech8_tier1_btn
-	tooltip = cav_tech8_tier1_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech8_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech8_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech8_tier1 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech9_tier1_btn
-	tooltip = cav_tech9_tier1_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech9_tier1 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech9_tier1
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech9_tier1 }
-		number = 2
-	}
-}
 # Tier 2 ########################################
 custom_button = {
 	name = cav_tech1_tier2_btn
@@ -733,6 +444,11 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech1_tier1
+			has_country_flag = cav_tech3_tier1
 		}
 	}
 	effect = {
@@ -753,6 +469,11 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier2 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech2_tier1
+			has_country_flag = cav_tech3_tier1
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -772,6 +493,13 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier2 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier2
+				has_country_flag = cav_tech2_tier2
+			}
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -783,120 +511,6 @@ custom_button = {
 		number = 2
 	}
 }
-custom_button = {
-	name = cav_tech4_tier2_btn
-	tooltip = cav_tech4_tier2_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech4_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech4_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech4_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech5_tier2_btn
-	tooltip = cav_tech5_tier2_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech5_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech5_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech5_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech6_tier2_btn
-	tooltip = cav_tech6_tier2_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech6_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech6_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech6_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech7_tier2_btn
-	tooltip = cav_tech7_tier2_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech7_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech7_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech7_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech8_tier2_btn
-	tooltip = cav_tech8_tier2_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech8_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech8_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech8_tier2 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech9_tier2_btn
-	tooltip = cav_tech9_tier2_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech9_tier2 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech9_tier2
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech9_tier2 }
-		number = 2
-	}
-}
 # Tier 3 ########################################
 custom_button = {
 	name = cav_tech1_tier3_btn
@@ -905,6 +519,11 @@ custom_button = {
 	trigger = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier3 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech1_tier2
+			has_country_flag = cav_tech3_tier2
 		}
 	}
 	effect = {
@@ -925,6 +544,11 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier3 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech2_tier2
+			has_country_flag = cav_tech3_tier2
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -944,6 +568,13 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier3 }
 		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier3
+				has_country_flag = cav_tech2_tier3
+			}
+		}
 	}
 	effect = {
 		hidden_effect = {
@@ -955,131 +586,25 @@ custom_button = {
 		number = 2
 	}
 }
-custom_button = {
-	name = cav_tech4_tier3_btn
-	tooltip = cav_tech4_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech4_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech4_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech4_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech5_tier3_btn
-	tooltip = cav_tech5_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech5_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech5_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech5_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech6_tier3_btn
-	tooltip = cav_tech6_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech6_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech6_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech6_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech7_tier3_btn
-	tooltip = cav_tech7_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech7_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech7_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech7_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech8_tier3_btn
-	tooltip = cav_tech8_tier3_btn_TT
-	potential = { always = yes }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech8_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech8_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech8_tier3 }
-		number = 2
-	}
-}
-custom_button = {
-	name = cav_tech9_tier3_btn
-	tooltip = cav_tech9_tier3_btn_TT
-	potential = { always = no }
-	trigger = {
-		hidden_trigger = {
-			NOT = { has_country_flag = cav_tech9_tier3 }
-		}
-	}
-	effect = {
-		hidden_effect = {
-			set_country_flag = cav_tech9_tier3
-		}
-	}
-	frame = {
-		trigger = { has_country_flag = cav_tech9_tier3 }
-		number = 2
-	}
-}
 
 # Artillery
 # Tier 1 ########################################
 custom_button = {
 	name = art_tech1_tier1_btn
 	tooltip = art_tech1_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier1
+		}
+	}
 	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech1_tier1 }
 		number = 2
 	}
 }
@@ -1087,10 +612,26 @@ custom_button = {
 	name = art_tech2_tier1_btn
 	tooltip = art_tech2_tier1_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = art_tech3_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier1
+		}
+	}
 	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech2_tier1 }
 		number = 2
 	}
 }
@@ -1098,76 +639,26 @@ custom_button = {
 	name = art_tech3_tier1_btn
 	tooltip = art_tech3_tier1_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech3_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = art_tech2_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier1
+		}
 	}
-}
-custom_button = {
-	name = art_tech4_tier1_btn
-	tooltip = art_tech4_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech3_tier1
+		}
 	}
-}
-custom_button = {
-	name = art_tech5_tier1_btn
-	tooltip = art_tech5_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
 	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech6_tier1_btn
-	tooltip = art_tech6_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech7_tier1_btn
-	tooltip = art_tech7_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech8_tier1_btn
-	tooltip = art_tech8_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech9_tier1_btn
-	tooltip = art_tech9_tier1_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech3_tier1 }
 		number = 2
 	}
 }
@@ -1176,10 +667,22 @@ custom_button = {
 	name = art_tech1_tier2_btn
 	tooltip = art_tech1_tier2_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech2_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier2
+		}
+	}
 	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech1_tier2 }
 		number = 2
 	}
 }
@@ -1187,87 +690,22 @@ custom_button = {
 	name = art_tech2_tier2_btn
 	tooltip = art_tech2_tier2_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier2 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech3_tier1
+		}
 	}
-}
-custom_button = {
-	name = art_tech3_tier2_btn
-	tooltip = art_tech3_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier2
+		}
 	}
-}
-custom_button = {
-	name = art_tech4_tier2_btn
-	tooltip = art_tech4_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
 	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech5_tier2_btn
-	tooltip = art_tech5_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech6_tier2_btn
-	tooltip = art_tech6_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech7_tier2_btn
-	tooltip = art_tech7_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech8_tier2_btn
-	tooltip = art_tech8_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech9_tier2_btn
-	tooltip = art_tech9_tier2_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech2_tier2 }
 		number = 2
 	}
 }
@@ -1276,10 +714,22 @@ custom_button = {
 	name = art_tech1_tier3_btn
 	tooltip = art_tech1_tier3_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier3 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier3
+		}
+	}
 	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech1_tier3 }
 		number = 2
 	}
 }
@@ -1287,10 +737,22 @@ custom_button = {
 	name = art_tech2_tier3_btn
 	tooltip = art_tech2_tier3_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier3 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech2_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier3
+		}
+	}
 	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech2_tier3 }
 		number = 2
 	}
 }
@@ -1298,76 +760,25 @@ custom_button = {
 	name = art_tech3_tier3_btn
 	tooltip = art_tech3_tier3_btn_TT
 	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech3_tier3 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = art_tech1_tier3
+				has_country_flag = art_tech2_tier3
+			}
+		}
 	}
-}
-custom_button = {
-	name = art_tech4_tier3_btn
-	tooltip = art_tech4_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech3_tier3
+		}
 	}
-}
-custom_button = {
-	name = art_tech5_tier3_btn
-	tooltip = art_tech5_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
 	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech6_tier3_btn
-	tooltip = art_tech6_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech7_tier3_btn
-	tooltip = art_tech7_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech8_tier3_btn
-	tooltip = art_tech8_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
-		number = 2
-	}
-}
-custom_button = {
-	name = art_tech9_tier3_btn
-	tooltip = art_tech9_tier3_btn_TT
-	potential = { always = no }
-	trigger = { }
-	effect = { }
-	frame = {
-		trigger = { }
+		trigger = { has_country_flag = art_tech3_tier3 }
 		number = 2
 	}
 }

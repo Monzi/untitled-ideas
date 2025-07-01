@@ -1,3 +1,10 @@
+# Helper effects
+tech_tree_window_reset = {
+	clr_country_flag = infantry_tree_window_shown
+	clr_country_flag = cavalry_tree_window_shown
+	clr_country_flag = artillery_tree_window_shown
+}
+
 # Initialize trainingExperience variable
 initialize_training_variable = {
 	set_variable = {
@@ -7,7 +14,7 @@ initialize_training_variable = {
 }
 
 # Add Experience
-add_exp_progress = {
+add_exp = {
 	custom_tooltip = EXP_GAIN
 	hidden_effect = {
 		change_variable = {
@@ -15,22 +22,10 @@ add_exp_progress = {
 			value = 1
 		}
 	}
-	if = {
-		limit = {
-			check_variable = {
-				which = trainingExperience
-				value = 100
-			}
-		}
-		set_variable = {
-			which = trainingExperience
-			value = 100
-		}
-	}
 }
 
 # Subtract Experience
-subtract_exp_progress = {
+subtract_exp = {
 	custom_tooltip = EXP_LOSS
 	hidden_effect = {
 		subtract_variable = {

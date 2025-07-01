@@ -2,12 +2,14 @@
 # Modifiers for idea groups.
 # ------------------------------------------------------------------------------------------------
 # ADM
-#Centralization
+# Innovative
+ uis_inno_growth_capitalState:0 "Center of Innovation"
+# Centralization
  centralized_region:0 "Centralized Region"
  desc_centralized_region:0 ""
  outside_centralized_region:0 "Outside Centralized Region"
  desc_outside_centralized_region:0 ""
-#Militarism / Junta Rebels and Disaster
+# Militarism / Junta Rebels and Disaster
  uis_lost_to_junta_rebels:0 "Junta Rebels enforced demands"
  uis_junta_forts_paid:0 "Castle Holders Paid Off"
  uis_local_men_drafted:0 "Local Soldiers Drafted"
@@ -54,15 +56,6 @@
  court_military_decree_fortification_expert:0 "Engineering Advancements"
  court_military_decree_quartermaster:0 "Supply Wagons"
 
-# Maritime Ideas
- upgraded_marines_cooldown:0 "Naval War Games"
- upgraded_marines:0 "Surprise Landings"
-# Province modifier from buildings
- marine_fraction_build:0 "Marine Base"
-# For sailor increase after DLC Check
- marine_sailor_base:0 "Marine Base"
- uis_marine_capital:0 "Marine Capital"
-
 # MIL
 # Tactic Ideas
  tactics_cooldown:0 "Recently Changed Tactics"
@@ -76,17 +69,6 @@
  quality_copper:0 "High Quality Copper"
 # Quantity Ideas
  pops_drafted:0 "Population Drafted"
-
-# Infantry / Cavalry Ideas
- army_restructuring:0 "Army Restructuring"
-# Infantry
- tier1_infantry:0 "Levy Infantry"
- tier2_infantry:0 "Conscription Infantry"
- tier3_infantry:0 "Professional Infantry"
-# Cavalry
- tier1_cavalry:0 "Noble Cavalry"
- tier2_cavalry:0 "Conscription Cavalry"
- tier3_cavalry:0 "Professional Cavalry"
 
 # Standing Army Ideas
  upgraded_stand_5:0 "Regular Forced Marches"

@@ -1,0 +1,15 @@
+﻿l_english:
+ unit_tree_window_btn_TT:0 "Open Training Interface"
+ infantry_tree_window_btn_TT:0 "Show Infantry Tree"
+ cavalry_tree_window_btn_TT:0 "Show Cavalry Tree"
+ artillery_tree_window_btn_TT:0 "Show Artillery Tree"
+
+# Custom toolips
+# Experience LOC
+ trainingExperience:0 "Unit Experience"
+ EXP_GAIN:0 "Gain §Gx§! [This.trainingExperience.GetName]"
+ EXP_LOSS:0 "Lose §Rx§! [This.trainingExperience.GetName]"
+ ut_available_exp:0 "Available [This.trainingExperience.GetName]: [This.trainingExperience.GetValue]"
+# Requirements
+ required_tech_TT:0 "Has unlocked prior tech"
+ mutually_exclusive_techpath:0 "§RMutually exclusive path§!"

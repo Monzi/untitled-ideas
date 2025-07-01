@@ -275,41 +275,6 @@ quality_copper = {
 	artillery_power = 0.002
 }
 
-# Infantry / Cavalry Ideas
-army_restructuring = {
-	infantry_power = -0.15
-	cavalry_power = -0.15
-}
-# Infantry
-tier1_infantry = {
-	infantry_fire = 0.05
-	infantry_shock = 0.05
-}
-tier2_infantry = {
-	infantry_fire = 0.1
-	infantry_shock = 0.1
-}
-tier3_infantry = {
-	infantry_fire = 0.15
-	infantry_shock = 0.15
-}
-# Cavalry
-tier1_cavalry = {
-	cavalry_fire = 0.05
-	cavalry_shock = 0.05
-	cav_to_inf_ratio = 0.05
-}
-tier2_cavalry = {
-	cavalry_fire = 0.1
-	cavalry_shock = 0.1
-	cav_to_inf_ratio = 0.10
-}
-tier3_cavalry = {
-	cavalry_fire = 0.15
-	cavalry_shock = 0.15
-	cav_to_inf_ratio = 0.15
-}
-
 # Standing Army Ideas
 upgraded_stand_5 = {
 	force_march_free = yes

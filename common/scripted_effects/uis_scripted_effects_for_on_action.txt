@@ -76,7 +76,8 @@ on_province_owner_change_quality_mechanic = {
 		}
 	}
 }
-#Academy war ended
+
+# Academy war ended
 on_war_ended_academy_modifier_clear = {
 	if = {
 		limit = {
@@ -95,7 +96,8 @@ on_war_ended_academy_modifier_clear = {
 		remove_country_modifier = pulse_academy_academic_commanders
 	}
 }
-#inno capital moved 
+
+# inno capital moved 
 on_capital_moved_innovative_effect = {
 	if = {
 		limit = {
@@ -116,4 +118,30 @@ on_capital_moved_innovative_effect = {
 		}
 	}
 	
+}
+# Building - State House - On Province Owner Change
+on_province_owner_change_state_house = {
+	if = {
+		limit = {
+			area_for_scope_province = {
+				owner = {
+					tag = ROOT
+				}
+				has_building = state_house
+				NOT = {
+					owned_by = FROM
+				}
+			}
+		}
+		ROOT = {
+			add_permanent_province_modifier = {
+				name = state_house_autonomy_offset
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	else = {
+		remove_province_modifier = state_house_autonomy_offset
+	}
 }

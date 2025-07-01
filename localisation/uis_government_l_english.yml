@@ -158,6 +158,7 @@
  uis_junta_boost_militarization_desc:0 ""
  uis_junta_militarization_gain_modifier:0 "Junta Militarization Gain Modifier"
  monthly_uis_junta_militarization:0 "Monthly Junta Militarized Society"
+
  ability_uis_maritime_mechanic:0 "Marine Professionalism"
  monthly_uis_maritime_power:0 "Monthly Marine Professionalism Gain"
  uis_maritime_power:0 "Marine Professionalism"
