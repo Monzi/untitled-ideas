@@ -5,15 +5,234 @@ tech_tree_window_reset = {
 	clr_country_flag = artillery_tree_window_shown
 }
 
-# Initialize trainingExperience variable
-initialize_training_variable = {
+reset_inf_tree = {
+	custom_tooltip = RESET_INF_TREE_TT
+	hidden_effect = {
+		# Flags
+		# Tier 1
+		clr_country_flag = inf_tech1_tier1
+		clr_country_flag = inf_tech2_tier1
+		clr_country_flag = inf_tech3_tier1
+		clr_country_flag = inf_tech4_tier1
+		# Tier 2
+		clr_country_flag = inf_tech1_tier2
+		clr_country_flag = inf_tech2_tier2
+		clr_country_flag = inf_tech3_tier2
+		clr_country_flag = inf_tech4_tier2
+		clr_country_flag = inf_tech5_tier2
+		clr_country_flag = inf_tech6_tier2
+		# Tier 3
+		clr_country_flag = inf_tech1_tier3
+		clr_country_flag = inf_tech2_tier3
+		# Modifiers
+		# Base
+		remove_country_modifier = inf_base_tech1
+		remove_country_modifier = inf_base_tech2
+		remove_country_modifier = inf_base_tech3
+		remove_country_modifier = inf_base_tech4
+		# Fire
+		remove_country_modifier = inf_fire_tech1
+		remove_country_modifier = inf_fire_tech2
+		remove_country_modifier = inf_fire_tech3
+		remove_country_modifier = inf_fire_tech4
+		# Shock
+		remove_country_modifier = inf_shock_tech1
+		remove_country_modifier = inf_shock_tech2
+		remove_country_modifier = inf_shock_tech3
+		remove_country_modifier = inf_shock_tech4
+
+		# Amount to Refund
+		#if = {
+		#	limit = {
+		#		check_inf_var = { amount = 8 }
+		#	}
+		#	change_variable = {
+		#		which = trainingExperience
+		#		value = 1
+		#	}
+		#}
+	}
+}
+
+reset_cav_tree = {
+	custom_tooltip = RESET_CAV_TREE_TT
+	hidden_effect = {
+		# Flags
+		# Tier 1
+		clr_country_flag = cav_tech1_tier1
+		clr_country_flag = cav_tech2_tier1
+		clr_country_flag = cav_tech3_tier1
+		# Tier 2
+		clr_country_flag = cav_tech1_tier2
+		clr_country_flag = cav_tech2_tier2
+		clr_country_flag = cav_tech3_tier2
+		# Tier 3
+		clr_country_flag = cav_tech1_tier3
+		clr_country_flag = cav_tech2_tier3
+		clr_country_flag = cav_tech3_tier3
+		# Modifiers
+		# Tier 1
+		remove_country_modifier = cav_base_tech1
+		remove_country_modifier = cav_base_tech2
+		remove_country_modifier = cav_base_tech3
+		# Tier 2
+		remove_country_modifier = cav_fire_tech1
+		remove_country_modifier = cav_fire_tech2
+		remove_country_modifier = cav_fire_tech3
+		# Tier 3
+		remove_country_modifier = cav_shock_tech1
+		remove_country_modifier = cav_shock_tech2
+		remove_country_modifier = cav_shock_tech3
+	}
+}
+
+reset_art_tree = {
+	custom_tooltip = RESET_ART_TREE_TT
+	hidden_effect = {
+		# Flags
+		# Tier 1
+		clr_country_flag = art_tech1_tier1
+		clr_country_flag = art_tech2_tier1
+		clr_country_flag = art_tech3_tier1
+		# Tier 2
+		clr_country_flag = art_tech1_tier2
+		clr_country_flag = art_tech2_tier2
+		# Tier 3
+		clr_country_flag = art_tech1_tier3
+		clr_country_flag = art_tech2_tier3
+		clr_country_flag = art_tech3_tier3
+		# Modifiers
+		# Tier 1
+		remove_country_modifier = art_base_tech1
+		remove_country_modifier = art_base_tech2
+		# Tier 2
+		remove_country_modifier = art_fire_tech1
+		remove_country_modifier = art_fire_tech2
+		remove_country_modifier = art_fire_tech3
+		# Tier 3
+		remove_country_modifier = art_shock_tech1
+		remove_country_modifier = art_shock_tech2
+		remove_country_modifier = art_shock_tech3
+	}
+}
+
+# Initialize Mechanic
+initialize_training_mechanic = {
+	# Experience 
 	set_variable = {
 		which = trainingExperience
 		value = 0
 	}
+	# Counters for taken tech in each tier of infantry
+	set_variable = {
+		which = infTier1TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = infTier2TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = infTier3TakenCount
+		value = 0
+	}
+	# Counters for taken tech in each tier of cavalry
+	set_variable = {
+		which = cavTier1TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = cavTier2TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = cavTier3TakenCount
+		value = 0
+	}
+	# Counters for taken tech in each tier of artillery
+	set_variable = {
+		which = artTier1TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = artTier2TakenCount
+		value = 0
+	}
+	set_variable = {
+		which = artTier3TakenCount
+		value = 0
+	}
 }
 
-# Add Experience
+# Add
+add_tier1_inf_count = {
+	hidden_effect = {
+		change_variable = {
+			which = infTier1TakenCount
+			value = 1
+		}
+	}
+}
+add_tier2_inf_count = {
+	hidden_effect = {
+		change_variable = {
+			which = infTier2TakenCount
+			value = 1
+		}
+	}
+}
+add_tier3_inf_count = {
+	hidden_effect = {
+		change_variable = {
+			which = infTier3TakenCount
+			value = 1
+		}
+	}
+}
+
+add_cav_count = {
+	hidden_effect = {
+		change_variable = {
+			which = cavTakenCount
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = cavTakenCount
+					value = 9 # Set this to max amount of cavalry techs
+				}
+			}
+			set_variable = {
+				which = cavTakenCount
+				value = 9 # Set this to max amount of cavalry techs
+			}
+		}
+	}
+}
+
+add_art_count = {
+	hidden_effect = {
+		change_variable = {
+			which = artTakenCount
+			value = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = artTakenCount
+					value = 8 # Set this to max amount of artillery techs
+				}
+			}
+			set_variable = {
+				which = artTakenCount
+				value = 8 # Set this to max amount of artillery techs
+			}
+		}
+	}
+}
+
+# Experience
 add_exp = {
 	custom_tooltip = EXP_GAIN
 	hidden_effect = {
@@ -24,7 +243,8 @@ add_exp = {
 	}
 }
 
-# Subtract Experience
+# Subtract
+# Experience
 subtract_exp = {
 	custom_tooltip = EXP_LOSS
 	hidden_effect = {
@@ -34,6 +254,72 @@ subtract_exp = {
 		}
 	}
 	if = {
+		limit = {
+			check_variable = {
+				which = trainingExperience
+				value = 0
+			}
+		}
+		set_variable = {
+			which = trainingExperience
+			value = 0
+		}
+	}
+}
+
+subtract_exp_tier1 = {
+	custom_tooltip = EXP_LOSS_TIER1
+	hidden_effect = {
+		subtract_variable = {
+			which = trainingExperience
+			value = 25
+		}
+	}
+	if = { # Fallback in case there somehow isn't enough EXP
+		limit = {
+			check_variable = {
+				which = trainingExperience
+				value = 0
+			}
+		}
+		set_variable = {
+			which = trainingExperience
+			value = 0
+		}
+	}
+}
+
+subtract_exp_tier2 = {
+	custom_tooltip = EXP_LOSS_TIER2
+	hidden_effect = {
+		subtract_variable = {
+			which = trainingExperience
+			value = 25
+		}
+	}
+	if = { # Fallback in case there somehow isn't enough EXP
+		limit = {
+			check_variable = {
+				which = trainingExperience
+				value = 0
+			}
+		}
+		set_variable = {
+			which = trainingExperience
+			value = 0
+		}
+	}
+}
+
+subtract_exp_tier3 = {
+	custom_tooltip = EXP_LOSS_TIER3
+	hidden_effect = {
+		subtract_variable = {
+			which = trainingExperience
+			value = 25
+		}
+	}
+	if = { # Fallback in case there somehow isn't enough EXP
 		limit = {
 			check_variable = {
 				which = trainingExperience

@@ -77,6 +77,52 @@ custom_window = { # Artillery
 	potential = { has_country_flag = artillery_tree_window_shown }
 }
 
+# Reset buttons
+custom_button = { # Infantry
+	name = reset_inf_tree_btn
+	tooltip = reset_inf_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = infTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_inf_tree = yes }
+}
+
+custom_button = { # Cavalry
+	name = reset_cav_tree_btn
+	tooltip = reset_cav_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = cavTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_cav_tree = yes }
+}
+
+custom_button = { # Artillery
+	name = reset_art_tree_btn
+	tooltip = reset_art_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = artTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_art_tree = yes }
+}
+
 # Infantry
 # Tier 1 ########################################
 custom_button = {
@@ -87,10 +133,17 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech1_tier1 }
 		}
+		tier1_exp_cost = yes
 	}
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -106,6 +159,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = inf_tech4_tier1 }
@@ -118,6 +172,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_fire_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -133,6 +193,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech3_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech1_tier1
@@ -141,6 +202,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech3_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -156,6 +223,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech4_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = inf_tech2_tier1 }
@@ -168,6 +236,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech4_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_shock_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -184,6 +258,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech1_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech2_tier1
@@ -192,6 +267,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -207,6 +288,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech3_tier1
@@ -215,6 +297,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -230,6 +318,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech3_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech4_tier1
@@ -238,6 +327,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech3_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -253,6 +348,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech4_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech1_tier2
@@ -261,6 +357,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech4_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -276,6 +378,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech5_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech2_tier2
@@ -284,6 +387,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech5_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech4
+			duration = -1
 		}
 	}
 	frame = {
@@ -299,6 +408,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech6_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech3_tier2
@@ -307,6 +417,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech6_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -323,6 +439,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech1_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech4_tier2
@@ -331,6 +448,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier3
+			add_inf_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_fire_tech4
+			duration = -1
 		}
 	}
 	frame = {
@@ -346,6 +469,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = inf_tech2_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = inf_tech6_tier2
@@ -354,6 +478,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier3
+			add_inf_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_shock_tech4
+			duration = -1
 		}
 	}
 	frame = {
@@ -372,6 +502,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = cav_tech2_tier1 }
@@ -380,6 +511,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_fire_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -395,6 +532,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = cav_tech1_tier1 }
@@ -403,6 +541,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_shock_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -418,6 +562,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			OR = {
@@ -429,6 +574,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_base_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -445,6 +596,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = cav_tech1_tier1
@@ -454,6 +606,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_fire_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -469,6 +627,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = cav_tech2_tier1
@@ -478,6 +637,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_shock_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -493,6 +658,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			OR = {
@@ -504,6 +670,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_base_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -520,6 +692,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech1_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = cav_tech1_tier2
@@ -529,6 +702,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_fire_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -544,6 +723,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = cav_tech2_tier2
@@ -553,6 +733,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_shock_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -568,6 +754,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech3_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			OR = {
@@ -579,6 +766,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_base_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -597,10 +790,17 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech1_tier1 }
 		}
+		tier1_exp_cost = yes
 	}
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_base_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -616,6 +816,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech2_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = art_tech3_tier1 }
@@ -628,6 +829,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_fire_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -643,6 +850,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech3_tier1 }
 		}
+		tier1_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = art_tech2_tier1 }
@@ -655,6 +863,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech3_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_shock_tech1
+			duration = -1
 		}
 	}
 	frame = {
@@ -671,6 +885,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech1_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = art_tech2_tier1
@@ -679,6 +894,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier2
+			add_art_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_fire_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -694,6 +915,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech2_tier2 }
 		}
+		tier2_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = art_tech3_tier1
@@ -702,6 +924,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier2
+			add_art_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_shock_tech2
+			duration = -1
 		}
 	}
 	frame = {
@@ -718,6 +946,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech1_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = art_tech1_tier2
@@ -726,6 +955,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_fire_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -741,6 +976,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech2_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			has_country_flag = art_tech2_tier2
@@ -749,6 +985,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_shock_tech3
+			duration = -1
 		}
 	}
 	frame = {
@@ -764,6 +1006,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = art_tech3_tier3 }
 		}
+		tier3_exp_cost = yes
 		custom_trigger_tooltip = {
 			tooltip = required_tech_TT
 			OR = {
@@ -775,6 +1018,12 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech3_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_base_tech2
+			duration = -1
 		}
 	}
 	frame = {

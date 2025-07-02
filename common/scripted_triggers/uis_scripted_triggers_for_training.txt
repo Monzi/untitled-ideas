@@ -1,0 +1,52 @@
+# Reset scripted trigger
+check_inf_var = {
+	check_variable = {
+		which = infTakenCount
+		value = $amount$
+	}
+}
+
+check_cav_var = {
+	check_variable = {
+		which = cavTakenCount
+		value = $amount$
+	}
+}
+
+check_art_var = {
+	check_variable = {
+		which = artTakenCount
+		value = $amount$
+	}
+}
+
+# Requirement Cost Check
+tier1_exp_cost = {
+    custom_trigger_tooltip = {
+		tooltip = TIER1_COST
+		check_variable = {
+			which = trainingExperience
+			value = 25
+		}
+	}
+}
+
+tier2_exp_cost = {
+    custom_trigger_tooltip = {
+		tooltip = TIER2_COST
+		check_variable = {
+			which = trainingExperience
+			value = 50
+		}
+	}
+}
+
+tier3_exp_cost = {
+    custom_trigger_tooltip = {
+		tooltip = TIER3_COST
+		check_variable = {
+			which = trainingExperience
+			value = 75
+		}
+	}
+}

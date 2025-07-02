@@ -1,0 +1,101 @@
+# Infantry
+# This file contains event modifiers for the unit tree in the infantry section.
+inf_base_tech1 = {
+
+}
+inf_base_tech2 = {
+	
+}
+inf_base_tech3 = {
+	
+}
+inf_base_tech4 = {
+	
+}
+# Fire Path
+inf_fire_tech1 = {
+
+}
+inf_fire_tech2 = {
+
+}
+inf_fire_tech3 = {
+
+}
+inf_fire_tech4 = {
+
+}
+# Shock Path
+inf_shock_tech1 = {
+
+}
+inf_shock_tech2 = {
+
+}
+inf_shock_tech3 = {
+
+}
+inf_shock_tech4 = {
+
+}
+
+# Cavalry
+# This file contains event modifiers for the unit tree in the cavalry section.
+cav_base_tech1 = {
+
+}
+cav_base_tech2 = {
+	
+}
+cav_base_tech3 = {
+	
+}
+# Fire Path
+cav_fire_tech1 = {
+
+}
+cav_fire_tech2 = {
+
+}
+cav_fire_tech3 = {
+
+}
+# Shock Path
+cav_shock_tech1 = {
+
+}
+cav_shock_tech2 = {
+
+}
+cav_shock_tech3 = {
+
+}
+
+# Artillery
+# This file contains event modifiers for the unit tree in the artillery section.
+art_base_tech1 = {
+
+}
+art_base_tech2 = {
+	
+}
+# Fire Path
+art_fire_tech1 = {
+
+}
+art_fire_tech2 = {
+
+}
+art_fire_tech3 = {
+
+}
+# Shock Path
+art_shock_tech1 = {
+
+}
+art_shock_tech2 = {
+
+}
+art_shock_tech3 = {
+
+}

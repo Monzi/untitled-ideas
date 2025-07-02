@@ -1876,13 +1876,21 @@ guiTypes = {
 		}
 
 		# Untitled Ideas, Training - Unit tree
+		# Change sprites for:
+		# unit_tree_window_btn
+		# reset_inf_tree_btn
+		# reset_cav_tree_btn
+		# reset_art_tree_btn
+		# infantry_tree_window_btn
+		# cavalry_tree_window_btn
+		# artillery_tree_window_btn
 		guiButtonType = {
 			name = "unit_tree_window_btn"
 			quadTextureSprite= "GFX_naval_doctrine_icons_small"
 			frame = 1
 			scale = 0.90
 			#spriteType = ""
-			position = { x=27 y =113 }
+			position = { x=27 y=113 }
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}
@@ -1954,6 +1962,16 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				scripted = yes
+
+				guiButtonType = { # Reset button
+					name = "reset_inf_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
 
 				# Tier 1 ########################################
 				guiButtonType = {
@@ -2063,6 +2081,16 @@ guiTypes = {
 				moveable = 0
 				scripted = yes
 
+				guiButtonType = { # Reset button
+					name = "reset_cav_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+
 				# Tier 1 ########################################
 				guiButtonType = {
 					name = "cav_tech1_tier1_btn"
@@ -2146,6 +2174,16 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				moveable = 0
 				scripted = yes
+
+				guiButtonType = { # Reset button
+					name = "reset_art_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
 
 				# Tier 1 ########################################
 				guiButtonType = {

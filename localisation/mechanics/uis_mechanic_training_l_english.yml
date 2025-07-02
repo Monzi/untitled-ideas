@@ -3,13 +3,120 @@
  infantry_tree_window_btn_TT:0 "Show Infantry Tree"
  cavalry_tree_window_btn_TT:0 "Show Cavalry Tree"
  artillery_tree_window_btn_TT:0 "Show Artillery Tree"
+ reset_inf_tree_btn_TT:0 "Reset Infantry Tree"
+ reset_cav_tree_btn_TT:0 "Reset Cavalry Tree"
+ reset_art_tree_btn_TT:0 "Reset Artillery Tree"
 
 # Custom toolips
+# Helpers
+ RESET_INF_TREE_TT:0 "Refunds all spent [Root.trainingExperience.GetName]"
+ RESET_CAV_TREE_TT:0 "Refunds all spent [Root.trainingExperience.GetName]"
+ RESET_ART_TREE_TT:0 "Refunds all spent [Root.trainingExperience.GetName]"
 # Experience LOC
  trainingExperience:0 "Unit Experience"
- EXP_GAIN:0 "Gain §Gx§! [This.trainingExperience.GetName]"
- EXP_LOSS:0 "Lose §Rx§! [This.trainingExperience.GetName]"
- ut_available_exp:0 "Available [This.trainingExperience.GetName]: [This.trainingExperience.GetValue]"
+ EXP_GAIN:0 "Gain §Gx§! [Root.trainingExperience.GetName]"
+ EXP_LOSS:0 "Lose §Rx§! [Root.trainingExperience.GetName]"
+ ut_available_exp:0 "Available [Root.trainingExperience.GetName]: [Root.trainingExperience.GetValue]"
+ TIER1_COST:0 "Has at least 25 [Root.trainingExperience.GetName]"
+ TIER2_COST:0 "Has at least 50 [Root.trainingExperience.GetName]"
+ TIER3_COST:0 "Has at least 75 [Root.trainingExperience.GetName]"
+ EXP_LOSS_TIER1:0 "Lose §R25§! [Root.trainingExperience.GetName]"
+ EXP_LOSS_TIER2:0 "Lose §R50§! [Root.trainingExperience.GetName]"
+ EXP_LOSS_TIER3:0 "Lose §R75§! [Root.trainingExperience.GetName]"
 # Requirements
  required_tech_TT:0 "Has unlocked prior tech"
  mutually_exclusive_techpath:0 "§RMutually exclusive path§!"
+
+# Tech & Modifiers
+# Infantry
+# Tier 1
+ inf_tech1_tier1_btn_TT:0 ""
+ inf_base_tech1:0 "Base"
+
+ inf_tech2_tier1_btn_TT:0 ""
+ inf_fire_tech1:0 "Fire"
+
+ inf_tech3_tier1_btn_TT:0 ""
+ inf_base_tech2:0 "Base"
+
+ inf_tech4_tier1_btn_TT:0 ""
+ inf_shock_tech1:0 "Shock"
+# Tier 2
+ inf_tech1_tier2_btn_TT:0 ""
+ inf_fire_tech2:0 "Fire"
+
+ inf_tech2_tier2_btn_TT:0 ""
+ inf_base_tech3:0 "Base"
+
+ inf_tech3_tier2_btn_TT:0 ""
+ inf_shock_tech2:0 "Shock"
+
+ inf_tech4_tier2_btn_TT:0 ""
+ inf_fire_tech3:0 "Fire"
+
+ inf_tech5_tier2_btn_TT:0 ""
+ inf_base_tech4:0 "Base"
+
+ inf_tech6_tier2_btn_TT:0 ""
+ inf_shock_tech3:0 "Shock"
+# Tier 3
+ inf_tech1_tier3_btn_TT:0 ""
+ inf_fire_tech4:0 "Fire"
+
+ inf_tech2_tier3_btn_TT:0 ""
+ inf_shock_tech4:0 "Shock"
+
+# Cavalry
+# Tier 1
+ cav_tech1_tier1_btn_TT:0 ""
+ cav_fire_tech1:0 "Fire"
+
+ cav_tech2_tier1_btn_TT:0 ""
+ cav_shock_tech1:0 "Shock"
+
+ cav_tech3_tier1_btn_TT:0 ""
+ cav_base_tech1:0 "Base"
+# Tier 2
+ cav_tech1_tier2_btn_TT:0 ""
+ cav_fire_tech2:0 "Fire"
+
+ cav_tech2_tier2_btn_TT:0 ""
+ cav_shock_tech2:0 "Shock"
+
+ cav_tech3_tier2_btn_TT:0 ""
+ cav_base_tech2:0 "Base"
+# Tier 3
+ cav_tech1_tier3_btn_TT:0 ""
+ cav_fire_tech3:0 "Fire"
+
+ cav_tech2_tier3_btn_TT:0 ""
+ cav_shock_tech3:0 "Shock"
+
+ cav_tech3_tier3_btn_TT:0 ""
+ cav_base_tech3:0 "Base"
+
+# Artillery
+# Tier 1
+ art_tech1_tier1_btn_TT:0 ""
+ art_base_tech1:0 "Base"
+
+ art_tech2_tier1_btn_TT:0 ""
+ art_fire_tech1:0 "Fire"
+
+ art_tech3_tier1_btn_TT:0 ""
+ art_shock_tech1:0 "Shock"
+# Tier 2
+ art_tech1_tier2_btn_TT:0 ""
+ art_fire_tech2:0 "Fire"
+
+ art_tech2_tier2_btn_TT:0 ""
+ art_shock_tech2:0 "Shock"
+# Tier 3
+ art_tech1_tier3_btn_TT:0 ""
+ art_fire_tech3:0 "Fire"
+
+ art_tech2_tier3_btn_TT:0 ""
+ art_shock_tech3:0 "Shock"
+
+ art_tech3_tier3_btn_TT:0 ""
+ art_base_tech2:0 "Base"
