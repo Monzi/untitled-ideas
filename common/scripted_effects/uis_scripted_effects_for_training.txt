@@ -42,15 +42,98 @@ reset_inf_tree = {
 		remove_country_modifier = inf_shock_tech4
 
 		# Amount to Refund
-		#if = {
-		#	limit = {
-		#		check_inf_var = { amount = 8 }
-		#	}
-		#	change_variable = {
-		#		which = trainingExperience
-		#		value = 1
-		#	}
-		#}
+		# Tier 1
+		if = {
+			limit = {
+				check_t1_inf_var = { amount = 3 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 37.5
+			}
+		}
+		else_if = {
+			limit = {
+				check_t1_inf_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		else_if = {
+			limit = {
+				check_t1_inf_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 12.5
+			}
+		}
+		# Tier 2
+		if = {
+			limit = {
+				check_t2_inf_var = { amount = 4 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 100
+			}
+		}
+		else_if = {
+			limit = {
+				check_t2_inf_var = { amount = 3 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 75
+			}
+		}
+		else_if = {
+			limit = {
+				check_t2_inf_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				check_t2_inf_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		else = {
+			# Had no tier 2 tech
+		}
+		# Tier 3
+		if = {
+			limit = {
+				check_t3_inf_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 37.5
+			}
+		}
+
+		# Reset Tech Counters
+		set_variable = {
+			which = infTier1TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = infTier2TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = infTier3TakenCount
+			value = 0
+		}
 	}
 }
 
@@ -83,6 +166,85 @@ reset_cav_tree = {
 		remove_country_modifier = cav_shock_tech1
 		remove_country_modifier = cav_shock_tech2
 		remove_country_modifier = cav_shock_tech3
+
+		# Amount to Refund
+		# Tier 1
+		if = {
+			limit = {
+				check_t1_cav_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		else_if = {
+			limit = {
+				check_t1_cav_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 12.5
+			}
+		}
+		# Tier 2
+		if = {
+			limit = {
+				check_t2_cav_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				check_t2_cav_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		else = {
+			# Had no tier 2 tech
+		}
+		# Tier 3
+		if = {
+			limit = {
+				check_t3_cav_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 75
+			}
+		}
+		else_if = {
+			limit = {
+				check_t3_cav_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 37.5
+			}
+		}
+		else = {
+			# Had no tier 3 tech
+		}
+
+		# Reset Tech Counters
+		set_variable = {
+			which = cavTier1TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = cavTier2TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = cavTier3TakenCount
+			value = 0
+		}
 	}
 }
 
@@ -113,6 +275,73 @@ reset_art_tree = {
 		remove_country_modifier = art_shock_tech1
 		remove_country_modifier = art_shock_tech2
 		remove_country_modifier = art_shock_tech3
+
+		# Amount to Refund
+		# Tier 1
+		if = {
+			limit = {
+				check_t1_art_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		else_if = {
+			limit = {
+				check_t1_art_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 12.5
+			}
+		}
+		# Tier 2
+		if = {
+			limit = {
+				check_t2_art_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		# Tier 3
+		if = {
+			limit = {
+				check_t3_art_var = { amount = 2 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 75
+			}
+		}
+		else_if = {
+			limit = {
+				check_t3_art_var = { amount = 1 }
+			}
+			change_variable = {
+				which = trainingExperience
+				value = 37.5
+			}
+		}
+		else = {
+			# Had no tier 3 tech
+		}
+
+		# Reset Tech Counters
+		set_variable = {
+			which = artTier1TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = artTier2TakenCount
+			value = 0
+		}
+		set_variable = {
+			which = artTier3TakenCount
+			value = 0
+		}
 	}
 }
 
@@ -190,44 +419,52 @@ add_tier3_inf_count = {
 	}
 }
 
-add_cav_count = {
+add_tier1_cav_count = {
 	hidden_effect = {
 		change_variable = {
-			which = cavTakenCount
+			which = cavTier1TakenCount
 			value = 1
 		}
-		if = {
-			limit = {
-				check_variable = {
-					which = cavTakenCount
-					value = 9 # Set this to max amount of cavalry techs
-				}
-			}
-			set_variable = {
-				which = cavTakenCount
-				value = 9 # Set this to max amount of cavalry techs
-			}
+	}
+}
+add_tier2_cav_count = {
+	hidden_effect = {
+		change_variable = {
+			which = cavTier2TakenCount
+			value = 1
+		}
+	}
+}
+add_tier3_cav_count = {
+	hidden_effect = {
+		change_variable = {
+			which = cavTier3TakenCount
+			value = 1
 		}
 	}
 }
 
-add_art_count = {
+add_tier1_art_count = {
 	hidden_effect = {
 		change_variable = {
-			which = artTakenCount
+			which = artTier1TakenCount
 			value = 1
 		}
-		if = {
-			limit = {
-				check_variable = {
-					which = artTakenCount
-					value = 8 # Set this to max amount of artillery techs
-				}
-			}
-			set_variable = {
-				which = artTakenCount
-				value = 8 # Set this to max amount of artillery techs
-			}
+	}
+}
+add_tier2_art_count = {
+	hidden_effect = {
+		change_variable = {
+			which = artTier2TakenCount
+			value = 1
+		}
+	}
+}
+add_tier3_art_count = {
+	hidden_effect = {
+		change_variable = {
+			which = artTier3TakenCount
+			value = 1
 		}
 	}
 }
@@ -252,17 +489,19 @@ subtract_exp = {
 			which = trainingExperience
 			value = 1
 		}
-	}
-	if = {
-		limit = {
-			check_variable = {
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = trainingExperience
+						value = 0
+					}
+				}
+			}
+			set_variable = {
 				which = trainingExperience
 				value = 0
 			}
-		}
-		set_variable = {
-			which = trainingExperience
-			value = 0
 		}
 	}
 }
@@ -274,17 +513,19 @@ subtract_exp_tier1 = {
 			which = trainingExperience
 			value = 25
 		}
-	}
-	if = { # Fallback in case there somehow isn't enough EXP
-		limit = {
-			check_variable = {
+		if = { # Fallback in case there somehow isn't enough EXP
+			limit = {
+				NOT = {
+					check_variable = {
+						which = trainingExperience
+						value = 0
+					}
+				}
+			}
+			set_variable = {
 				which = trainingExperience
 				value = 0
 			}
-		}
-		set_variable = {
-			which = trainingExperience
-			value = 0
 		}
 	}
 }
@@ -296,17 +537,19 @@ subtract_exp_tier2 = {
 			which = trainingExperience
 			value = 25
 		}
-	}
-	if = { # Fallback in case there somehow isn't enough EXP
-		limit = {
-			check_variable = {
+		if = { # Fallback in case there somehow isn't enough EXP
+			limit = {
+				NOT = {
+					check_variable = {
+						which = trainingExperience
+						value = 0
+					}
+				}
+			}
+			set_variable = {
 				which = trainingExperience
 				value = 0
 			}
-		}
-		set_variable = {
-			which = trainingExperience
-			value = 0
 		}
 	}
 }
@@ -318,17 +561,19 @@ subtract_exp_tier3 = {
 			which = trainingExperience
 			value = 25
 		}
-	}
-	if = { # Fallback in case there somehow isn't enough EXP
-		limit = {
-			check_variable = {
+		if = { # Fallback in case there somehow isn't enough EXP
+			limit = {
+				NOT = {
+					check_variable = {
+						which = trainingExperience
+						value = 0
+					}
+				}
+			}
+			set_variable = {
 				which = trainingExperience
 				value = 0
 			}
-		}
-		set_variable = {
-			which = trainingExperience
-			value = 0
 		}
 	}
 }

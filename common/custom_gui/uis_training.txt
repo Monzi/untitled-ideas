@@ -16,7 +16,11 @@ custom_button = { # Button that shows the unit_tree_window
 			}
 			if = { # DEBUG!
 				limit = { NOT = { has_country_flag = exp_started } }
-				initialize_training_variable = yes
+				initialize_training_mechanic = yes
+				change_variable = {
+					which = trainingExperience
+					value = 99999
+				}
 			}
 		}
 	}
@@ -25,6 +29,11 @@ custom_button = { # Button that shows the unit_tree_window
 custom_window = {
 	name = unit_tree_window
 	potential = { has_country_flag = unit_tree_window_shown }
+}
+
+custom_text_box = {
+	name = unit_tree_available_exp
+	potential = { always = yes }
 }
 
 custom_button = { # Infantry
@@ -37,6 +46,10 @@ custom_button = { # Infantry
 			tech_tree_window_reset = yes
 			set_country_flag = infantry_tree_window_shown
 		}
+	}
+	frame = {
+		trigger = { has_country_flag = infantry_tree_window_shown }
+		number = 2
 	}
 }
 
@@ -51,6 +64,10 @@ custom_button = { # Cavalry
 			set_country_flag = cavalry_tree_window_shown
 		}
 	}
+	frame = {
+		trigger = { has_country_flag = cavalry_tree_window_shown }
+		number = 2
+	}
 }
 
 custom_button = { # Artillery
@@ -63,6 +80,10 @@ custom_button = { # Artillery
 			tech_tree_window_reset = yes
 			set_country_flag = artillery_tree_window_shown
 		}
+	}
+	frame = {
+		trigger = { has_country_flag = artillery_tree_window_shown }
+		number = 2
 	}
 }
 
@@ -89,7 +110,7 @@ custom_button = { # Infantry
 	trigger = {
 		hidden_trigger = {
 			check_variable = {
-				which = infTakenCount
+				which = infTier1TakenCount
 				value = 1
 			}
 		}
@@ -104,7 +125,7 @@ custom_button = { # Cavalry
 	trigger = {
 		hidden_trigger = {
 			check_variable = {
-				which = cavTakenCount
+				which = cavTier1TakenCount
 				value = 1
 			}
 		}
@@ -119,7 +140,7 @@ custom_button = { # Artillery
 	trigger = {
 		hidden_trigger = {
 			check_variable = {
-				which = artTakenCount
+				which = artTier1TakenCount
 				value = 1
 			}
 		}
@@ -142,7 +163,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier1
-			add_inf_count = yes
+			add_tier1_inf_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -176,7 +197,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier1
-			add_inf_count = yes
+			add_tier1_inf_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -206,7 +227,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech3_tier1
-			add_inf_count = yes
+			add_tier1_inf_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -240,7 +261,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech4_tier1
-			add_inf_count = yes
+			add_tier1_inf_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -271,7 +292,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -301,7 +322,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -331,7 +352,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech3_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -361,7 +382,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech4_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -391,7 +412,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech5_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -421,7 +442,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech6_tier2
-			add_inf_count = yes
+			add_tier2_inf_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -452,7 +473,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech1_tier3
-			add_inf_count = yes
+			add_tier3_inf_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -482,7 +503,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = inf_tech2_tier3
-			add_inf_count = yes
+			add_tier3_inf_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -515,7 +536,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier1
-			add_cav_count = yes
+			add_tier1_cav_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -545,7 +566,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier1
-			add_cav_count = yes
+			add_tier1_cav_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -578,7 +599,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier1
-			add_cav_count = yes
+			add_tier1_cav_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -610,7 +631,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier2
-			add_cav_count = yes
+			add_tier2_cav_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -641,7 +662,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier2
-			add_cav_count = yes
+			add_tier2_cav_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -674,7 +695,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier2
-			add_cav_count = yes
+			add_tier2_cav_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -706,7 +727,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech1_tier3
-			add_cav_count = yes
+			add_tier3_cav_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -737,7 +758,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech2_tier3
-			add_cav_count = yes
+			add_tier3_cav_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -770,7 +791,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = cav_tech3_tier3
-			add_cav_count = yes
+			add_tier3_cav_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -799,7 +820,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier1
-			add_art_count = yes
+			add_tier1_art_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -833,7 +854,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier1
-			add_art_count = yes
+			add_tier1_art_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -867,7 +888,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech3_tier1
-			add_art_count = yes
+			add_tier1_art_count = yes
 		}
 		subtract_exp_tier1 = yes
 		add_country_modifier = {
@@ -898,7 +919,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier2
-			add_art_count = yes
+			add_tier2_art_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -928,7 +949,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier2
-			add_art_count = yes
+			add_tier2_art_count = yes
 		}
 		subtract_exp_tier2 = yes
 		add_country_modifier = {
@@ -959,7 +980,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech1_tier3
-			add_art_count = yes
+			add_tier3_art_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -989,7 +1010,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech2_tier3
-			add_art_count = yes
+			add_tier3_art_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {
@@ -1022,7 +1043,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			set_country_flag = art_tech3_tier3
-			add_art_count = yes
+			add_tier3_art_count = yes
 		}
 		subtract_exp_tier3 = yes
 		add_country_modifier = {

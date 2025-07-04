@@ -44,6 +44,11 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_tech_tab_button"
+		texturefile = "gfx//interface//training_tech_tree//tech_tab_button.dds"
+		noOfFrames = 2
+	}
 
 	# Techs
 	spriteType = {

@@ -1,21 +1,57 @@
 # Reset scripted trigger
-check_inf_var = {
+check_t1_inf_var = {
 	check_variable = {
-		which = infTakenCount
+		which = infTier1TakenCount
+		value = $amount$
+	}
+}
+check_t2_inf_var = {
+	check_variable = {
+		which = infTier2TakenCount
+		value = $amount$
+	}
+}
+check_t3_inf_var = {
+	check_variable = {
+		which = infTier3TakenCount
 		value = $amount$
 	}
 }
 
-check_cav_var = {
+check_t1_cav_var = {
 	check_variable = {
-		which = cavTakenCount
+		which = cavTier1TakenCount
+		value = $amount$
+	}
+}
+check_t2_cav_var = {
+	check_variable = {
+		which = cavTier2TakenCount
+		value = $amount$
+	}
+}
+check_t3_cav_var = {
+	check_variable = {
+		which = cavTier3TakenCount
 		value = $amount$
 	}
 }
 
-check_art_var = {
+check_t1_art_var = {
 	check_variable = {
-		which = artTakenCount
+		which = artTier1TakenCount
+		value = $amount$
+	}
+}
+check_t2_art_var = {
+	check_variable = {
+		which = artTier2TakenCount
+		value = $amount$
+	}
+}
+check_t3_art_var = {
+	check_variable = {
+		which = artTier3TakenCount
 		value = $amount$
 	}
 }
