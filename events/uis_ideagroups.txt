@@ -1144,7 +1144,23 @@ country_event = {#on end Cleanup
 #######################################
 # Diplo Ideas						  #
 #######################################
-
+country_event = {
+	id = uis_ideagroups_maritime.0001
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = uis_ideagroups_maritime.a
+		maritime_ideas_building_counter = yes
+#		VVV testing of some things VVV
+#		capital_scope = {
+#			add_province_triggered_modifier = uis_marine_capital
+#		}
+		#set_country_flag = clicked_maritime_flag
+	}
+}
 
 
 #######################################
@@ -1169,105 +1185,5 @@ country_event = {
 
 	option = {
 		name = uis_ideagroups.2002.a
-	}
-}
-
-# Infantry / Cavalry Ideas
-country_event = {
-	id = uis_ideagroups.0001
-	title = "Restructuring The Army"
-	hidden = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = { full_idea_group = infantry_ideas }
-			if = {
-				limit = { has_country_modifier = tier2_infantry }
-				remove_country_modifier = tier2_infantry
-				add_country_modifier = {
-					name = tier3_infantry
-					duration = -1
-				}
-				set_country_flag = finished_army_training
-			}
-			else_if = {
-				limit = { has_country_modifier = tier1_infantry }
-				remove_country_modifier = tier1_infantry
-				add_country_modifier = {
-					name = tier2_infantry
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = tier1_infantry
-					duration = -1
-				}
-			}
-		}
-		if = {
-			limit = { full_idea_group = cavalry_ideas }
-			if = {
-				limit = { has_country_modifier = tier2_cavalry }
-				remove_country_modifier = tier2_cavalry
-				add_country_modifier = {
-					name = tier3_cavalry
-					duration = -1
-				}
-				set_country_flag = finished_army_training
-			}
-			else_if = {
-				limit = { has_country_modifier = tier1_cavalry }
-				remove_country_modifier = tier1_cavalry
-				add_country_modifier = {
-					name = tier2_cavalry
-					duration = -1
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = tier1_cavalry
-					duration = -1
-				}
-			}
-		}
-		country_event = {
-			id = uis_ideagroups.0002
-		}
-	}
-
-	option = {
-		name = uis_ideagroups.0001.a
-	}
-}
-
-country_event = {
-	id = uis_ideagroups.0002
-	title = uis_ideagroups.0002.t
-	desc = uis_ideagroups.0002.d
-	picture = GENERALS_DISCUSSING_eventPicture
-	is_triggered_only = yes
-
-	option = {
-		name = uis_ideagroups.0002.a
-	}
-}
-#
-country_event = {
-	id = uis_ideagroups_maritime.0001
-	hidden = yes
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = uis_ideagroups_maritime.a
-		maritime_ideas_building_counter = yes
-#		VVV testing of some things VVV
-#		capital_scope = {
-#			add_province_triggered_modifier = uis_marine_capital
-#		}
-		#set_country_flag = clicked_maritime_flag
 	}
 }

@@ -1,15 +1,23 @@
 custom_button = { # Button that shows the unit_tree_window
-	name = unit_tree_window_button
-	tooltip = unit_tree_window_button_TT
+	name = unit_tree_window_btn
+	tooltip = unit_tree_window_btn_TT
 	potential = { always = yes }
-	trigger = { always = yes } # Always while debugging
+	trigger = { hidden_trigger = { always = yes } }
 	effect = {
-		if = {
-			limit = { has_country_flag = unit_tree_window_shown }
-			clr_country_flag = unit_tree_window_shown
-		}
-		else = {
-			set_country_flag = unit_tree_window_shown
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = unit_tree_window_shown }
+				clr_country_flag = unit_tree_window_shown
+				tech_tree_window_reset = yes
+			}
+			else = {
+				set_country_flag = unit_tree_window_shown
+				set_country_flag = infantry_tree_window_shown # Tree shown by default when unit_tree_window opens
+			}
+			if = { # DEBUG!
+				limit = { NOT = { has_country_flag = exp_started } }
+				initialize_training_variable = yes
+			}
 		}
 	}
 }
@@ -19,8 +27,1011 @@ custom_window = {
 	potential = { has_country_flag = unit_tree_window_shown }
 }
 
-custom_icon = {
-	name = unit_tree_experience_progressbar
+custom_button = { # Infantry
+	name = infantry_tree_window_btn
+	tooltip = infantry_tree_window_btn_TT
 	potential = { always = yes }
-	frame_variable = "trainingExperience"
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = infantry_tree_window_shown
+		}
+	}
+}
+
+custom_button = { # Cavalry
+	name = cavalry_tree_window_btn
+	tooltip = cavalry_tree_window_btn_TT
+	potential = { always = yes }
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = cavalry_tree_window_shown
+		}
+	}
+}
+
+custom_button = { # Artillery
+	name = artillery_tree_window_btn
+	tooltip = artillery_tree_window_btn_TT
+	potential = { always = yes }
+	trigger = { hidden_trigger = { always = yes } }
+	effect = {
+		hidden_effect = {
+			tech_tree_window_reset = yes
+			set_country_flag = artillery_tree_window_shown
+		}
+	}
+}
+
+custom_window = { # Infantry, Default
+	name = infantry_tree_window
+	potential = { has_country_flag = infantry_tree_window_shown }
+}
+
+custom_window = { # Cavalry
+	name = cavalry_tree_window
+	potential = { has_country_flag = cavalry_tree_window_shown }
+}
+
+custom_window = { # Artillery
+	name = artillery_tree_window
+	potential = { has_country_flag = artillery_tree_window_shown }
+}
+
+# Reset buttons
+custom_button = { # Infantry
+	name = reset_inf_tree_btn
+	tooltip = reset_inf_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = infTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_inf_tree = yes }
+}
+
+custom_button = { # Cavalry
+	name = reset_cav_tree_btn
+	tooltip = reset_cav_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = cavTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_cav_tree = yes }
+}
+
+custom_button = { # Artillery
+	name = reset_art_tree_btn
+	tooltip = reset_art_tree_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			check_variable = {
+				which = artTakenCount
+				value = 1
+			}
+		}
+	}
+	effect = { reset_art_tree = yes }
+}
+
+# Infantry
+# Tier 1 ########################################
+custom_button = {
+	name = inf_tech1_tier1_btn
+	tooltip = inf_tech1_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier1 }
+		}
+		tier1_exp_cost = yes
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier1_btn
+	tooltip = inf_tech2_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = inf_tech4_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_fire_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech3_tier1_btn
+	tooltip = inf_tech3_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech3_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech3_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech3_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech4_tier1_btn
+	tooltip = inf_tech4_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech4_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = inf_tech2_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech4_tier1
+			add_inf_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_shock_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech4_tier1 }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = inf_tech1_tier2_btn
+	tooltip = inf_tech1_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech2_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier2_btn
+	tooltip = inf_tech2_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech3_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech3_tier2_btn
+	tooltip = inf_tech3_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech3_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech4_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech3_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech3_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech4_tier2_btn
+	tooltip = inf_tech4_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech4_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech1_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech4_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech4_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech5_tier2_btn
+	tooltip = inf_tech5_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech5_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech2_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech5_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech4
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech5_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech6_tier2_btn
+	tooltip = inf_tech6_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech6_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech3_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech6_tier2
+			add_inf_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech6_tier2 }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = inf_tech1_tier3_btn
+	tooltip = inf_tech1_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech1_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech4_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech1_tier3
+			add_inf_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_fire_tech4
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech1_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = inf_tech2_tier3_btn
+	tooltip = inf_tech2_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = inf_tech2_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = inf_tech6_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = inf_tech2_tier3
+			add_inf_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_shock_tech4
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = inf_tech2_tier3 }
+		number = 2
+	}
+}
+
+# Cavalry
+# Tier 1 ########################################
+custom_button = {
+	name = cav_tech1_tier1_btn
+	tooltip = cav_tech1_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = cav_tech2_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_fire_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier1_btn
+	tooltip = cav_tech2_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_shock_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier1_btn
+	tooltip = cav_tech3_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier1
+				has_country_flag = cav_tech2_tier1
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier1
+			add_cav_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_base_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier1 }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = cav_tech1_tier2_btn
+	tooltip = cav_tech1_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech1_tier1
+			has_country_flag = cav_tech3_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_fire_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier2_btn
+	tooltip = cav_tech2_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech2_tier1
+			has_country_flag = cav_tech3_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_shock_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier2_btn
+	tooltip = cav_tech3_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier2
+				has_country_flag = cav_tech2_tier2
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier2
+			add_cav_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_base_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier2 }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = cav_tech1_tier3_btn
+	tooltip = cav_tech1_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech1_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech1_tier2
+			has_country_flag = cav_tech3_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech1_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_fire_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech1_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech2_tier3_btn
+	tooltip = cav_tech2_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech2_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = cav_tech2_tier2
+			has_country_flag = cav_tech3_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech2_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_shock_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech2_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = cav_tech3_tier3_btn
+	tooltip = cav_tech3_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = cav_tech3_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = cav_tech1_tier3
+				has_country_flag = cav_tech2_tier3
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = cav_tech3_tier3
+			add_cav_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_base_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = cav_tech3_tier3 }
+		number = 2
+	}
+}
+
+# Artillery
+# Tier 1 ########################################
+custom_button = {
+	name = art_tech1_tier1_btn
+	tooltip = art_tech1_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier1 }
+		}
+		tier1_exp_cost = yes
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_base_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech1_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier1_btn
+	tooltip = art_tech2_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = art_tech3_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_fire_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech2_tier1 }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech3_tier1_btn
+	tooltip = art_tech3_tier1_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech3_tier1 }
+		}
+		tier1_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = mutually_exclusive_techpath
+			NOT = { has_country_flag = art_tech2_tier1 }
+		}
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech3_tier1
+			add_art_count = yes
+		}
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_shock_tech1
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech3_tier1 }
+		number = 2
+	}
+}
+# Tier 2 ########################################
+custom_button = {
+	name = art_tech1_tier2_btn
+	tooltip = art_tech1_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech2_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier2
+			add_art_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_fire_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech1_tier2 }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier2_btn
+	tooltip = art_tech2_tier2_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier2 }
+		}
+		tier2_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech3_tier1
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier2
+			add_art_count = yes
+		}
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_shock_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech2_tier2 }
+		number = 2
+	}
+}
+# Tier 3 ########################################
+custom_button = {
+	name = art_tech1_tier3_btn
+	tooltip = art_tech1_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech1_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech1_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech1_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_fire_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech1_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech2_tier3_btn
+	tooltip = art_tech2_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech2_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			has_country_flag = art_tech2_tier2
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech2_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_shock_tech3
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech2_tier3 }
+		number = 2
+	}
+}
+custom_button = {
+	name = art_tech3_tier3_btn
+	tooltip = art_tech3_tier3_btn_TT
+	potential = { always = yes }
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = art_tech3_tier3 }
+		}
+		tier3_exp_cost = yes
+		custom_trigger_tooltip = {
+			tooltip = required_tech_TT
+			OR = {
+				has_country_flag = art_tech1_tier3
+				has_country_flag = art_tech2_tier3
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_country_flag = art_tech3_tier3
+			add_art_count = yes
+		}
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_base_tech2
+			duration = -1
+		}
+	}
+	frame = {
+		trigger = { has_country_flag = art_tech3_tier3 }
+		number = 2
+	}
 }

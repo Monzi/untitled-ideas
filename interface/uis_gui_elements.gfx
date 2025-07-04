@@ -45,19 +45,21 @@ spriteTypes = {
 		transparencecheck = yes
 	}
 
-	progressbartype = {
-		name = "GFX_unit_tree_experience_progressbar"
-		color = { 1.0 0.0 0.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx//interface//unit_tree_exp_progress.dds"
-		textureFile2 = "gfx\\interface\\institutions\\institution_progress_transparent.dds"
-		size = { x = 238 y = 12 }
-		effectFile = "gfx/FX/progress.lua"
+	# Techs
+	spriteType = {
+		name = "GFX_tech_blank"
+		texturefile = "gfx//interface//training_tech_tree//tech_blank.dds"
+		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_unit_tree_experience_progressbar_frame"
-		texturefile = "gfx//interface//unit_tree_exp_frame.dds"
-		alwaystransparent = yes
+		name = "GFX_tech_blank_fire"
+		texturefile = "gfx//interface//training_tech_tree//tech_blank_fire.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_tech_blank_shock"
+		texturefile = "gfx//interface//training_tech_tree//tech_blank_shock.dds"
+		noOfFrames = 2
 	}
 
 	# Tactics Mechanic

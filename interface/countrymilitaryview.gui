@@ -1876,13 +1876,21 @@ guiTypes = {
 		}
 
 		# Untitled Ideas, Training - Unit tree
+		# Change sprites for:
+		# unit_tree_window_btn
+		# reset_inf_tree_btn
+		# reset_cav_tree_btn
+		# reset_art_tree_btn
+		# infantry_tree_window_btn
+		# cavalry_tree_window_btn
+		# artillery_tree_window_btn
 		guiButtonType = {
-			name = "unit_tree_window_button"
+			name = "unit_tree_window_btn"
 			quadTextureSprite= "GFX_naval_doctrine_icons_small"
 			frame = 1
 			scale = 0.90
 			#spriteType = ""
-			position = { x=27 y =113 }
+			position = { x=27 y=113 }
 			Orientation = "UPPER_LEFT"
 			scripted = yes
 		}
@@ -1908,41 +1916,342 @@ guiTypes = {
 				font = "vic_18"
 				format = centre
 			}
-			iconType = { # Experience Progressbar
-				name = "unit_tree_experience_progressbar"
-				spriteType = "GFX_unit_tree_experience_progressbar"
-				position = { x=300 y=263 }
-				Orientation = "UPPER_LEFT"
-				scripted = yes
-			}
-			iconType = { # Experience Progressbar frame
-				name = "unit_tree_experience_progressbar_frame"
-				spriteType = "GFX_unit_tree_experience_progressbar_frame"
-				position = { x=289 y=260 }
-				Orientation = "UPPER_LEFT"
+			instantTextBoxType = { # Avialable experience
+				name = "unit_tree_available_exp"
+				position = { x=260 y=250 }
+				text = "ut_available_exp"
+				font = "vic_22"
+				format = left
 			}
 
 			# Banner titles
-			instantTextBoxType = {
-				name = "unit_tree_infantry_title"
+			guiButtonType = {
+				name = "infantry_tree_window_btn"
+				spriteType = "" # ADD TEXTURE
 				position = { x=0 y=340 }
-				text = "Infantry"
-				font = "vic_22"
-				format = centre
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				buttonText = "Infantry"
+				buttonFont = "vic_22"
+				scripted = yes
 			}
-			instantTextBoxType = {
-				name = "unit_tree_cavalry_title"
+			guiButtonType = {
+				name = "cavalry_tree_window_btn"
+				spriteType = "" # ADD TEXTURE
 				position = { x=185 y=340 }
-				text = "Cavalry"
-				font = "vic_22"
-				format = centre
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				buttonText = "Cavalry"
+				buttonFont = "vic_22"
+				scripted = yes
 			}
-			instantTextBoxType = {
-				name = "unit_tree_artillery_title"
+			guiButtonType = {
+				name = "artillery_tree_window_btn"
+				spriteType = "" # ADD TEXTURE
 				position = { x=370 y=340 }
-				text = "Artillery"
-				font = "vic_22"
-				format = centre
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				buttonText = "Artillery"
+				buttonFont = "vic_22"
+				scripted = yes
+			}
+
+			windowType = { # Infantry
+				name = "infantry_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				guiButtonType = { # Reset button
+					name = "reset_inf_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=20 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=75 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=130 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech4_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=20 y=420 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech3_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech4_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech5_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=75 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech6_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=130 y=605 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "inf_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=20 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "inf_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=75 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+			}
+
+			windowType = { # Cavalry
+				name = "cavalry_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				guiButtonType = { # Reset button
+					name = "reset_cav_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=200 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=255 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=200 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=255 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "cav_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=200 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=255 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "cav_tech3_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=310 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+			}
+
+			windowType = { # Artillery
+				name = "artillery_tree_window"
+				position = { x=0 y=0 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				guiButtonType = { # Reset button
+					name = "reset_art_tree_btn"
+					quadTextureSprite= "GFX_naval_doctrine_icons_small"
+					frame = 1
+					#spriteType = ""
+					position = { x=20 y=20 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+
+				# Tier 1 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=380 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=435 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech3_tier1_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=490 y=365 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 2 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=380 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier2_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=435 y=550 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				# Tier 3 ########################################
+				guiButtonType = {
+					name = "art_tech1_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_fire"
+					frame = 1
+					position = { x=380 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech2_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank_shock"
+					frame = 1
+					position = { x=435 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "art_tech3_tier3_btn"
+					quadTextureSprite= "GFX_tech_blank"
+					frame = 1
+					position = { x=490 y=735 }
+					Orientation = "UPPER_LEFT"
+					scripted = yes
+				}
 			}
 		}
 	}

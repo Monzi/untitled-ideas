@@ -27,7 +27,6 @@ on_removed_from_company = {
 on_province_owner_change = {
 	centralization_mechanic_on_province_owner_change = yes # centralization Mechanic
 	on_province_owner_change_quality_mechanic = yes # Quality Mechanic
-	#state_house_autonomy_effect = yes # Building - State House
 	on_province_owner_change_state_house = yes
 }
 

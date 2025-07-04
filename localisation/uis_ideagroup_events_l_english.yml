@@ -68,10 +68,6 @@
  uis_ideagroups.40022.2:0 "REPLACE_ME"
  uis_ideagroups.40022.3:0 "REPALCEMAE"
 
-# Training inf/cav
- uis_ideagroups.0002.t:0 "The army has been restructured"
- uis_ideagroups.0002.d:0 "Now that the army has been restructured, our power has grown and our enemies will fear us!"
- uis_ideagroups.0002.a:0 "This is good!"
  uis_church_handle_junta:0 "Handled Religious Rebels"
 
 # Pulse Events for Academy Estate
@@ -98,9 +94,6 @@
  uis_academy_events.6.b:0 "REPLACE_ME"
 
 # Pulse Ideagroup Events
-# Industrial
-
-
 # Militarism
 
 
@@ -120,12 +113,6 @@
 
 
 # Tactic
-
-
-# Infantry
-
-
-# Cavalry
 
 
 # Standing Army
