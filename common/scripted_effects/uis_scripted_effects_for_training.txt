@@ -391,6 +391,7 @@ initialize_training_mechanic = {
 		which = artTier3TakenCount
 		value = 0
 	}
+	set_country_flag = training_initialized
 }
 
 # Add
@@ -470,6 +471,20 @@ add_tier3_art_count = {
 }
 
 # Experience
+battle_won_add_exp = {
+	change_variable = {
+		which = trainingExperience
+		value = 1.5
+	}
+}
+
+battle_lost_add_exp = {
+	change_variable = {
+		which = trainingExperience
+		value = 0.5
+	}
+}
+
 add_exp = {
 	custom_tooltip = EXP_GAIN
 	hidden_effect = {

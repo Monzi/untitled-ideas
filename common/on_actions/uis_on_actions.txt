@@ -1,13 +1,23 @@
+on_startup = {
+	country_event = {
+		id = uis_training_system.0001 # Initialize Training System at game start
+	}
+}
+
+# country
+# root = winning country, from = loser country
+on_battle_won_country = {
+	battle_won_add_exp = yes
+}
+
+# country
+# root = loser country, from = winner country
+on_battle_lost_country = {
+	battle_lost_add_exp = yes
+}
+
 #Unit Scope OnAction for Battle Won
 on_battle_won_unit = {
-#	if = {
-#		limit = {
-#			unit_owner = {
-#				has_country_flag = uis_junta_disaster_started
-#			}
-#		}
-#		
-#	}
 	junta_event_battle_won_unit_effect = yes
 	
 }

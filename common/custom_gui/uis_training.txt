@@ -2,7 +2,10 @@ custom_button = { # Button that shows the unit_tree_window
 	name = unit_tree_window_btn
 	tooltip = unit_tree_window_btn_TT
 	potential = { always = yes }
-	trigger = { hidden_trigger = { always = yes } }
+	trigger = {
+		always = no
+		hidden_trigger = { has_country_flag = training_initialized }
+	}
 	effect = {
 		hidden_effect = {
 			if = {
@@ -13,14 +16,6 @@ custom_button = { # Button that shows the unit_tree_window
 			else = {
 				set_country_flag = unit_tree_window_shown
 				set_country_flag = infantry_tree_window_shown # Tree shown by default when unit_tree_window opens
-			}
-			if = { # DEBUG!
-				limit = { NOT = { has_country_flag = exp_started } }
-				initialize_training_mechanic = yes
-				change_variable = {
-					which = trainingExperience
-					value = 99999
-				}
 			}
 		}
 	}

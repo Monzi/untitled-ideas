@@ -14,29 +14,29 @@ inf_base_tech4 = {
 }
 # Fire Path
 inf_fire_tech1 = {
-
+	infantry_fire = 0.10
 }
 inf_fire_tech2 = {
-
+	infantry_fire = 0.05
 }
 inf_fire_tech3 = {
-
+	infantry_fire = 0.10
 }
 inf_fire_tech4 = {
-
+	infantry_fire = 0.15
 }
 # Shock Path
 inf_shock_tech1 = {
-
+	infantry_shock = 0.10
 }
 inf_shock_tech2 = {
-
+	infantry_shock = 0.10
 }
 inf_shock_tech3 = {
-
+	infantry_shock = 0.15
 }
 inf_shock_tech4 = {
-
+	infantry_shock = 0.25
 }
 
 # Cavalry

@@ -1,0 +1,18 @@
+namespace = uis_training_system
+
+country_event = { # Initializes training system
+	id = uis_training_system.0001
+	hidden = yes
+
+	trigger = {
+		NOT = { has_country_flag = training_initialized }
+	}
+
+	immediate = {
+		initialize_training_mechanic = yes
+	}
+
+	option = {
+		name = uis_training_system.0001.1
+	}
+}
