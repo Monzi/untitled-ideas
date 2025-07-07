@@ -15,6 +15,7 @@ on_battle_won_country = {
 # root = loser country, from = winner country
 on_battle_lost_country = {
 	#battle_lost_add_exp = yes
+	on_battle_lost_experience = yes
 }
 
 #Unit Scope OnAction for Battle Won
