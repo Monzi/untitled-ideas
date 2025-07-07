@@ -89,20 +89,19 @@ cav_fire_tech3 = {
 }
 # Light Cav Path
 cav_shock_tech1 = {
-	cavalry_cost = -0.10
-	movement_speed = 0.05
-	cavalry_flanking = 0.25
+	cavalry_cost = -0.15
 	cav_to_inf_ratio = 0.20
 }
 cav_shock_tech2 = {
 	cavalry_cost = -0.10
-	cavalry_flanking = 0.25
+	cavalry_flanking = 0.50
 	movement_speed = 0.05
 	shock_damage_received = -0.05
 }
 cav_shock_tech3 = {
-	cavalry_cost = -0.15
+	cavalry_cost = -0.10
 	leader_land_manuever = 2
+	movement_speed = 0.05
 	fire_damage_received = -0.05
 }
 
