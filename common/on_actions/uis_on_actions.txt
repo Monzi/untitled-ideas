@@ -7,19 +7,19 @@ on_startup = {
 # country
 # root = winning country, from = loser country
 on_battle_won_country = {
-	battle_won_add_exp = yes
+	#battle_won_add_exp = yes
+	on_battle_won_experience = yes
 }
 
 # country
 # root = loser country, from = winner country
 on_battle_lost_country = {
-	battle_lost_add_exp = yes
+	#battle_lost_add_exp = yes
 }
 
 #Unit Scope OnAction for Battle Won
 on_battle_won_unit = {
 	junta_event_battle_won_unit_effect = yes
-	
 }
 
 # province

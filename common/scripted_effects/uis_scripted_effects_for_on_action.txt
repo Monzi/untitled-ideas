@@ -145,3 +145,51 @@ on_province_owner_change_state_house = {
 		remove_province_modifier = state_house_autonomy_offset
 	}
 }
+on_battle_won_experience = {
+	#Winner Country
+	ROOT = {
+		set_variable = {
+			which = trainingLost
+			which = land_units_lost
+		}
+		export_to_variable = {
+			which = trainingForceLimit
+			value = land_forcelimit
+		}
+		divide_variable = {
+			which = trainingLost
+			which = trainingForceLimit
+		}
+		multiply_variable = {
+			which = trainingLost
+			value = 1.5
+		}
+		change_variable = {
+			which = trainingExperience
+			which = trainingLost
+		}	
+	}
+	#Loser Country
+	FROM = {
+		set_variable = {
+			which = trainingLost
+			which = land_units_lost
+		}
+		export_to_variable = {
+			which = trainingForceLimit
+			value = land_forcelimit
+		}
+		divide_variable = {
+			which = trainingLost
+			which = trainingForceLimit
+		}
+		multiply_variable = {
+			which = trainingLost
+			value = 1.5
+		}
+		change_variable = {
+			which = trainingExperience
+			which = trainingLost
+		}
+	}
+}
