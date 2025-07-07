@@ -23,7 +23,7 @@ custom_window = {
 	potential = { has_country_flag = unit_tree_window_shown }
 }
 
-custom_text_box = {
+custom_text_box = { # For Debugging experience
 	name = debug_land_units_killed_lost
 	potential = { always = yes }
 }
@@ -71,7 +71,12 @@ custom_button = { # Artillery
 	name = artillery_tree_window_btn
 	tooltip = artillery_tree_window_btn_TT
 	potential = { always = yes }
-	trigger = { hidden_trigger = { always = yes } }
+	trigger = {
+		hidden_trigger = {
+			mil_tech = 7
+			always = yes
+		}
+	}
 	effect = {
 		hidden_effect = {
 			tech_tree_window_reset = yes
