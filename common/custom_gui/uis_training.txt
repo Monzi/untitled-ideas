@@ -69,7 +69,6 @@ custom_button = { # Artillery
 	trigger = {
 		hidden_trigger = {
 			mil_tech = 7
-			always = yes
 		}
 	}
 	effect = {
@@ -554,7 +553,7 @@ custom_button = {
 		hidden_trigger = {
 			NOT = { has_country_flag = cav_tech2_tier1 }
 		}
-		tier1_exp_cost = yes
+		
 		custom_trigger_tooltip = {
 			tooltip = mutually_exclusive_techpath
 			NOT = { has_country_flag = cav_tech1_tier1 }

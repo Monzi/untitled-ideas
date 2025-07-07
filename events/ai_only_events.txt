@@ -695,3 +695,503 @@ country_event = { # Tactics Ideas
 		
 	}
 }
+
+country_event = { # Training Mechanic
+	id = ai_only_events.0003
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = ai_training_interface_open
+	}
+
+	option = { # Opens Infantry tech tree
+		name = ai_only_events.0003.1
+		ai_chance = {
+			factor = 33
+		}
+		country_event = {
+			id = ai_only_events.0004
+		}
+	}
+	option = { # Opens Cavalry tech tree
+		name = ai_only_events.0003.1
+		ai_chance = {
+			factor = 33
+		}
+		country_event = {
+			id = ai_only_events.0005
+		}
+	}
+	option = { # Opens Artillery tech tree
+		name = ai_only_events.0003.1
+		trigger = {
+			mil_tech = 7
+		}
+		ai_chance = {
+			factor = 33
+		}
+		country_event = {
+			id = ai_only_events.0006
+		}
+	}
+}
+
+country_event = { # Infantry tech tree
+	id = ai_only_events.0004
+	is_triggered_only = yes
+
+	# Tier 1
+	option = {
+		name = ai_only_events.0004.1
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = inf_tech1_tier1 }
+		}
+		set_country_flag = inf_tech1_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.2
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = inf_tech2_tier1 }
+			has_country_flag = inf_tech1_tier1
+			NOT = { has_country_flag = inf_tech4_tier1 }
+		}
+		set_country_flag = inf_tech2_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_fire_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.3
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = inf_tech3_tier1 }
+			has_country_flag = inf_tech1_tier1
+		}
+		set_country_flag = inf_tech3_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_base_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.4
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = inf_tech4_tier1 }
+			has_country_flag = inf_tech1_tier1
+			NOT = { has_country_flag = inf_tech2_tier1 }
+		}
+		set_country_flag = inf_tech4_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = inf_shock_tech1
+			duration = -1
+		}
+	}
+	# Tier 2
+	option = {
+		name = ai_only_events.0004.5
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech1_tier2 }
+			has_country_flag = inf_tech2_tier1
+		}
+		set_country_flag = inf_tech1_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.6
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech2_tier2 }
+			has_country_flag = inf_tech3_tier1
+		}
+		set_country_flag = inf_tech2_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.7
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech3_tier2 }
+			has_country_flag = inf_tech4_tier1
+		}
+		set_country_flag = inf_tech3_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.8
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech4_tier2 }
+			has_country_flag = inf_tech1_tier2
+		}
+		set_country_flag = inf_tech4_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_fire_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.9
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech5_tier2 }
+			has_country_flag = inf_tech2_tier2
+		}
+		set_country_flag = inf_tech5_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_base_tech4
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.10
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = inf_tech6_tier2 }
+			has_country_flag = inf_tech3_tier2
+		}
+		set_country_flag = inf_tech6_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = inf_shock_tech3
+			duration = -1
+		}
+	}
+	# Tier 3
+	option = {
+		name = ai_only_events.0004.11
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = inf_tech1_tier3 }
+			has_country_flag = inf_tech4_tier2
+		}
+		set_country_flag = inf_tech1_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_fire_tech4
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0004.12
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = inf_tech2_tier3 }
+			has_country_flag = inf_tech6_tier2
+		}
+		set_country_flag = inf_tech2_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = inf_shock_tech4
+			duration = -1
+		}
+	}
+	after = {
+		clr_country_flag = ai_training_interface_open
+	}
+}
+
+country_event = { # Cavalry tech tree
+	id = ai_only_events.0005
+	is_triggered_only = yes
+
+	# Tier 1
+	option = {
+		name = ai_only_events.0005.1
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = cav_tech1_tier1 }
+			NOT = { has_country_flag = cav_tech2_tier1 }
+		}
+		set_country_flag = cav_tech1_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_fire_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.2
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = cav_tech2_tier1 }
+			NOT = { has_country_flag = cav_tech1_tier1 }
+		}
+		set_country_flag = cav_tech2_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_shock_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.3
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = cav_tech3_tier1 }
+			OR = {
+				has_country_flag = cav_tech1_tier1
+				has_country_flag = cav_tech2_tier1
+			}
+		}
+		set_country_flag = cav_tech3_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = cav_base_tech1
+			duration = -1
+		}
+	}
+	# Tier 2
+	option = {
+		name = ai_only_events.0005.4
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = cav_tech1_tier2 }
+			has_country_flag = cav_tech1_tier1
+			has_country_flag = cav_tech3_tier1
+		}
+		set_country_flag = cav_tech1_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_fire_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.5
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = cav_tech2_tier2 }
+			has_country_flag = cav_tech2_tier1
+			has_country_flag = cav_tech3_tier1
+		}
+		set_country_flag = cav_tech2_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_shock_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.6
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = cav_tech3_tier2 }
+			OR = {
+				has_country_flag = cav_tech1_tier2
+				has_country_flag = cav_tech2_tier2
+			}
+		}
+		set_country_flag = cav_tech3_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = cav_base_tech2
+			duration = -1
+		}
+	}
+	# Tier 3
+	option = {
+		name = ai_only_events.0005.7
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = cav_tech1_tier3 }
+			has_country_flag = cav_tech1_tier2
+			has_country_flag = cav_tech3_tier2
+		}
+		set_country_flag = cav_tech1_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_fire_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.8
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = cav_tech2_tier3 }
+			has_country_flag = cav_tech2_tier2
+			has_country_flag = cav_tech3_tier2
+		}
+		set_country_flag = cav_tech2_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_shock_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0005.9
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = cav_tech3_tier3 }
+			OR = {
+				has_country_flag = cav_tech1_tier3
+				has_country_flag = cav_tech2_tier3
+			}
+		}
+		set_country_flag = cav_tech3_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = cav_base_tech3
+			duration = -1
+		}
+	}
+	after = {
+		clr_country_flag = ai_training_interface_open
+	}
+}
+
+country_event = { # Artillery tech tree
+	id = ai_only_events.0006
+	is_triggered_only = yes
+
+	# Tier 1
+	option = {
+		name = ai_only_events.0006.1
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = art_tech1_tier1 }
+		}
+		set_country_flag = art_tech1_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_base_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0006.2
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = art_tech2_tier1 }
+			NOT = { has_country_flag = art_tech3_tier1 }
+			has_country_flag = art_tech1_tier1
+		}
+		set_country_flag = art_tech2_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_fire_tech1
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0006.3
+		trigger = {
+			tier1_exp_cost = yes
+			NOT = { has_country_flag = art_tech3_tier1 }
+			NOT = { has_country_flag = art_tech2_tier1 }
+			has_country_flag = art_tech1_tier1
+		}
+		set_country_flag = art_tech3_tier1
+		subtract_exp_tier1 = yes
+		add_country_modifier = {
+			name = art_shock_tech1
+			duration = -1
+		}
+	}
+	# Tier 2
+	option = {
+		name = ai_only_events.0006.4
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = art_tech1_tier2 }
+			has_country_flag = art_tech2_tier1
+		}
+		set_country_flag = art_tech1_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_fire_tech2
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0006.5
+		trigger = {
+			tier2_exp_cost = yes
+			NOT = { has_country_flag = art_tech2_tier2 }
+			has_country_flag = art_tech3_tier1
+		}
+		set_country_flag = art_tech2_tier2
+		subtract_exp_tier2 = yes
+		add_country_modifier = {
+			name = art_shock_tech2
+			duration = -1
+		}
+	}
+	# Tier 3
+	option = {
+		name = ai_only_events.0006.6
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = art_tech1_tier3 }
+			has_country_flag = art_tech1_tier2
+		}
+		set_country_flag = art_tech1_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_fire_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0006.7
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = art_tech2_tier3 }
+			has_country_flag = art_tech2_tier2
+		}
+		set_country_flag = art_tech2_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_shock_tech3
+			duration = -1
+		}
+	}
+	option = {
+		name = ai_only_events.0006.8
+		trigger = {
+			tier3_exp_cost = yes
+			NOT = { has_country_flag = art_tech3_tier3 }
+			OR = {
+				has_country_flag = art_tech1_tier3
+				has_country_flag = art_tech2_tier3
+			}
+		}
+		set_country_flag = art_tech3_tier3
+		subtract_exp_tier3 = yes
+		add_country_modifier = {
+			name = art_base_tech2
+			duration = -1
+		}
+	}
+	after = {
+		clr_country_flag = ai_training_interface_open
+	}
+}
