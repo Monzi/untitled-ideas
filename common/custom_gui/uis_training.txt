@@ -23,11 +23,6 @@ custom_window = {
 	potential = { has_country_flag = unit_tree_window_shown }
 }
 
-custom_text_box = { # For Debugging experience
-	name = debug_land_units_killed_lost
-	potential = { always = yes }
-}
-
 custom_text_box = {
 	name = unit_tree_available_exp
 	potential = { always = yes }

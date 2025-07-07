@@ -7,16 +7,13 @@
  reset_cav_tree_btn_TT:0 "Reset Cavalry Tree"
  reset_art_tree_btn_TT:0 "Reset Artillery Tree"
 
-# Debug
- debug_land_units_killed_lost:0 "Killed: [Root.land_units_killed.GetValue]\nLost: [Root.land_units_lost.GetValue]"
-
 # Custom toolips
 # Helpers
  RESET_INF_TREE_TT:0 "Refunds §Y50%§! of spent [Root.trainingExperience.GetName]"
  RESET_CAV_TREE_TT:0 "Refunds §Y50%§! of  spent [Root.trainingExperience.GetName]"
  RESET_ART_TREE_TT:0 "Refunds §Y50%§! of  spent [Root.trainingExperience.GetName]"
 # Experience LOC
- trainingExperience:0 "Unit Experience"
+ trainingExperience:0 "Army Experience"
  EXP_GAIN:0 "Gain §Gx§! [Root.trainingExperience.GetName]"
  EXP_LOSS:0 "Lose §Rx§! [Root.trainingExperience.GetName]"
  unit_tree_available_exp:0 "Available [Root.trainingExperience.GetName]: [Root.trainingExperience.GetValue]"

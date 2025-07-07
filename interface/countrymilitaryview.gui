@@ -1878,9 +1878,6 @@ guiTypes = {
 		# Untitled Ideas, Training - Unit tree
 		# Change sprites for:
 		# unit_tree_window_btn
-		# reset_inf_tree_btn
-		# reset_cav_tree_btn
-		# reset_art_tree_btn
 		guiButtonType = {
 			name = "unit_tree_window_btn"
 			quadTextureSprite= "GFX_naval_doctrine_icons_small"
@@ -1904,16 +1901,6 @@ guiTypes = {
 				spriteType = "GFX_country_unit_tree_bg"
 				position = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
-			}
-
-			# Debug
-			instantTextBoxType = {
-				name = "debug_land_units_killed_lost"
-				position = { x=30 y=260 }
-				maxWidth = 250
-				font = "vic_22"
-				format = left
-				scripted = yes
 			}
 
 			# Experience
