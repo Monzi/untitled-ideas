@@ -44,7 +44,7 @@ country_event = { # Court Ideas
 				has_ruler_flag = court_realm_decree_taken
 			}
 		}
-		add_ruler_modifier = { # Mlitary Focus
+		add_ruler_modifier = { # Military Focus
 			name = court_realm_decree_3
 			duration = -1
 		}
@@ -700,10 +700,6 @@ country_event = { # Training Mechanic
 	id = ai_only_events.0003
 	is_triggered_only = yes
 
-	immediate = {
-		set_country_flag = ai_training_interface_open
-	}
-
 	option = { # Opens Infantry tech tree
 		name = ai_only_events.0003.1
 		ai_chance = {
@@ -746,6 +742,12 @@ country_event = { # Infantry tech tree
 	id = ai_only_events.0004
 	is_triggered_only = yes
 
+	option = { # Fallback Exit
+		name = ai_only_events.0004.0
+		ai_chance = {
+			factor = 0
+		}
+	}
 	# Tier 1
 	option = {
 		name = ai_only_events.0004.1
@@ -927,6 +929,12 @@ country_event = { # Cavalry tech tree
 	id = ai_only_events.0005
 	is_triggered_only = yes
 
+	option = { # Fallback Exit
+		name = ai_only_events.0005.0
+		ai_chance = {
+			factor = 0
+		}
+	}
 	# Tier 1
 	option = {
 		name = ai_only_events.0005.1
@@ -1078,6 +1086,12 @@ country_event = { # Artillery tech tree
 	id = ai_only_events.0006
 	is_triggered_only = yes
 
+	option = { # Fallback Exit
+		name = ai_only_events.0006.0
+		ai_chance = {
+			factor = 0
+		}
+	}
 	# Tier 1
 	option = {
 		name = ai_only_events.0006.1
