@@ -7,6 +7,9 @@
  reset_cav_tree_btn_TT:0 "Reset Cavalry Tree"
  reset_art_tree_btn_TT:0 "Reset Artillery Tree"
 
+# Debug
+ debug_land_units_killed_lost:0 "Killed: [Root.land_units_killed.GetValue]\nLost: [Root.land_units_lost.GetValue]"
+
 # Custom toolips
 # Helpers
  RESET_INF_TREE_TT:0 "Refunds §Y50%§! of spent [Root.trainingExperience.GetName]"

@@ -1905,6 +1905,17 @@ guiTypes = {
 				position = { x=0 y=0 }
 				Orientation = "UPPER_LEFT"
 			}
+
+			# Debug
+			instantTextBoxType = {
+				name = "debug_land_units_killed_lost"
+				position = { x=30 y=260 }
+				maxWidth = 250
+				font = "vic_22"
+				format = left
+				scripted = yes
+			}
+
 			# Experience
 			instantTextBoxType = { # Experience title
 				name = "unit_tree_experience_title"

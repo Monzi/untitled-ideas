@@ -2,10 +2,7 @@ custom_button = { # Button that shows the unit_tree_window
 	name = unit_tree_window_btn
 	tooltip = unit_tree_window_btn_TT
 	potential = { always = yes }
-	trigger = {
-		always = no
-		hidden_trigger = { has_country_flag = training_initialized }
-	}
+	trigger = {	hidden_trigger = { has_country_flag = training_initialized } }
 	effect = {
 		hidden_effect = {
 			if = {
@@ -24,6 +21,11 @@ custom_button = { # Button that shows the unit_tree_window
 custom_window = {
 	name = unit_tree_window
 	potential = { has_country_flag = unit_tree_window_shown }
+}
+
+custom_text_box = {
+	name = debug_land_units_killed_lost
+	potential = { always = yes }
 }
 
 custom_text_box = {
