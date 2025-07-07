@@ -23,5 +23,4 @@ inno_capital_growth = {
 		}
 	}
 	hidden = yes
-	institution_growth = 0.1
 }

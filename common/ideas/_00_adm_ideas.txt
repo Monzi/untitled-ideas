@@ -36,6 +36,14 @@ innovativeness_ideas = {
 				uis_inno_ideas_capital_effect = yes
 			}
 		}
+		removed_effect = {
+			hidden_effect = {
+				every_owned_province = {
+					remove_province_modifier = uis_inno_growth_capitalState
+					remove_province_modifier = inno_capital_growth
+				}
+			}
+		}
 	}
 
 	ai_will_do = {

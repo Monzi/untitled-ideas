@@ -49,7 +49,7 @@ uis_recent_junta_uprising = {
 }
 #Innovative Province Modifiers
 uis_inno_growth_capitalState = {
-	institution_growth = 9
+	institution_growth = 6
 }
 # modifier for rebel occupied province
 uis_local_men_drafted = {
