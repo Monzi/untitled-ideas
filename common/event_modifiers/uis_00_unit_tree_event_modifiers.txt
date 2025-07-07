@@ -1,16 +1,18 @@
 # Infantry
 # This file contains event modifiers for the unit tree in the infantry section.
 inf_base_tech1 = {
-
+	infantry_power = 0.025
+	infantry_cost = 0.05
 }
 inf_base_tech2 = {
-	
+	infantry_power = 0.025
 }
 inf_base_tech3 = {
-	
+	infantry_power = 0.025
+	infantry_cost = 0.10
 }
 inf_base_tech4 = {
-	
+	infantry_power = 0.025
 }
 # Fire Path
 inf_fire_tech1 = {
@@ -18,12 +20,14 @@ inf_fire_tech1 = {
 }
 inf_fire_tech2 = {
 	infantry_fire = 0.05
+	leader_land_fire = 1
 }
 inf_fire_tech3 = {
 	infantry_fire = 0.10
 }
 inf_fire_tech4 = {
 	infantry_fire = 0.15
+	fire_damage = 0.05
 }
 # Shock Path
 inf_shock_tech1 = {
@@ -31,71 +35,87 @@ inf_shock_tech1 = {
 }
 inf_shock_tech2 = {
 	infantry_shock = 0.10
+	leader_land_shock = 1
 }
 inf_shock_tech3 = {
 	infantry_shock = 0.15
 }
 inf_shock_tech4 = {
 	infantry_shock = 0.25
+	shock_damage = 0.05
 }
 
 # Cavalry
 # This file contains event modifiers for the unit tree in the cavalry section.
 cav_base_tech1 = {
-
+	cavalry_cost = 0.05
+	cav_to_inf_ratio = 0.2
 }
 cav_base_tech2 = {
-	
+	cavalry_cost = 0.05
+	cav_to_inf_ratio = 0.2
 }
 cav_base_tech3 = {
-	
+	cavalry_power = 0.05
+	cavalry_flanking = 0.25
+	cav_to_inf_ratio = 0.1
 }
 # Fire Path
 cav_fire_tech1 = {
-
+	cavalry_fire = 0.2
+	cavalry_power = 0.05
 }
 cav_fire_tech2 = {
-
+	cavalry_fire = 0.2
+	leader_land_fire = 1
 }
 cav_fire_tech3 = {
-
+	cavalry_fire = 0.2
+	fire_damage = 0.05
 }
 # Shock Path
 cav_shock_tech1 = {
-
+	cavalry_shock = 0.1
+	cavalry_power = 0.05
 }
 cav_shock_tech2 = {
-
+	cavalry_shock = 0.1
+	leader_land_shock = 1
 }
 cav_shock_tech3 = {
-
+	cavalry_shock = 0.2
+	shock_damage = 0.05
 }
 
 # Artillery
 # This file contains event modifiers for the unit tree in the artillery section.
 art_base_tech1 = {
-
+	artillery_cost = 0.15
 }
 art_base_tech2 = {
-	
+	artillery_levels_available_vs_fort = 1
 }
-# Fire Path
+# Combat Path
 art_fire_tech1 = {
-
+	artillery_fire = 0.1
+	artillery_shock = 0.1
 }
 art_fire_tech2 = {
-
+	artillery_fire = 0.1
+	artillery_shock = 0.1
 }
 art_fire_tech3 = {
-
+	artillery_fire = 0.1
+	artillery_shock = 0.1
 }
-# Shock Path
+# Siege Path
 art_shock_tech1 = {
-
+	siege_ability = 0.10
 }
 art_shock_tech2 = {
-
+	artillery_level_modifier = 0.2
 }
 art_shock_tech3 = {
-
+	artillery_barrage_cost = 0.25
+	backrow_artillery_damage = 0.25
 }
