@@ -472,16 +472,43 @@ add_tier3_art_count = {
 
 # Experience
 battle_won_add_exp = {
-	change_variable = {
-		which = trainingExperience
-		value = 1.5
+	if = {
+		limit = {
+			FROM = {
+				tag = REB
+			}
+		}
+		change_variable = {
+			which = trainingExperience
+			value = 0.25
+		}
+	}
+	else = {
+		change_variable = {
+			which = trainingExperience
+			value = 1.5
+		}
 	}
 }
 
 battle_lost_add_exp = {
-	change_variable = {
-		which = trainingExperience
-		value = 0.5
+	
+	if = {
+		limit = {
+			FROM = {
+				tag = REB
+			}
+		}
+		change_variable = {
+			which = trainingExperience
+			value = 0.1
+		}
+	}
+	else = {
+		change_variable = {
+			which = trainingExperience
+			value = 0.5
+		}
 	}
 }
 

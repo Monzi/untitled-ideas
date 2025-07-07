@@ -81,7 +81,7 @@ horde_mil = {
 	}
 
 	movement_speed = 0.10
-	cavalry_fire = 1
+	cavalry_fire = 0.2
 
 	effect = {}
 	removed_effect = {}
