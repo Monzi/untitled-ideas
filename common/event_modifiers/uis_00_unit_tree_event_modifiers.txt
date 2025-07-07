@@ -141,3 +141,6 @@ art_shock_tech3 = {
 	leader_siege = 1
 	artillery_barrage_cost = -0.50
 }
+#AI ONLY
+ai_training_decision_cooldown = {
+}

@@ -128,70 +128,9 @@ country_decisions = {
 		}
 		allow = {
 			ai = yes
-			if = {
-				limit = {
-					check_variable = {
-						which = trainingExperience
-						value = 75
-					}
-					NOT = {
-						OR = {
-							# Inf
-
-							# Cav
-
-							# Art
-						}
-					}
-				}
+			NOT = {
+				has_country_modifier = ai_training_decision_cooldown
 			}
-			else_if = {
-				limit = {
-					check_variable = {
-						which = trainingExperience
-						value = 50
-					}
-					NOT = {
-						OR = {
-							# Inf
-
-							# Cav
-
-							# Art
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					check_variable = {
-						which = trainingExperience
-						value = 25
-					}
-					NOT = {
-						OR = {
-							# Inf
-							has_country_flag = inf_tech1_tier1
-							has_country_flag = inf_tech2_tier1
-							has_country_flag = inf_tech3_tier1
-							has_country_flag = inf_tech4_tier1
-							# Cav
-							has_country_flag = cav_tech1_tier1
-							has_country_flag = cav_tech2_tier1
-							has_country_flag = cav_tech3_tier1
-							# Art
-							has_country_flag = art_tech1_tier1
-							has_country_flag = art_tech2_tier1
-							has_country_flag = art_tech3_tier1
-						}
-					}
-				}
-			}
-			check_variable = {
-				which = trainingExperience
-				value = 25
-			}
-			NOT = { has_country_flag = ai_training_interface_open }
 		}
 		effect = {
 			country_event = {

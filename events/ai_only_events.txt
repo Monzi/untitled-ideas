@@ -734,6 +734,12 @@ country_event = { # Training Mechanic
 			id = ai_only_events.0006
 		}
 	}
+	after = {
+		add_country_modifier = {
+			name = ai_training_decision_cooldown
+			duration = 1825
+		}
+	}
 }
 
 country_event = { # Infantry tech tree
