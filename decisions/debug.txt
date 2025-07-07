@@ -1,0 +1,36 @@
+country_decisions = {
+	debug_add_exp = {
+		potential = {
+			always = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			change_variable = {
+				which = trainingExperience
+				value = 25
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_set_exp = {
+		potential = {
+			always = yes
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_variable = {
+				which = trainingExperience
+				value = 0
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
