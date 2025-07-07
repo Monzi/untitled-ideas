@@ -152,6 +152,10 @@ on_battle_won_experience = {
 			which = trainingLost
 			which = land_units_lost
 		}
+		divide_variable = {
+			which = trainingLost
+			value = 1000
+		}
 		export_to_variable = {
 			which = trainingForceLimit
 			value = land_forcelimit
@@ -169,11 +173,16 @@ on_battle_won_experience = {
 			which = trainingLost
 		}	
 	}
-	#Loser Country
-	FROM = {
+}
+on_battle_lost_experience = {
+	ROOT = {
 		set_variable = {
 			which = trainingLost
 			which = land_units_lost
+		}
+		divide_variable = {
+			which = trainingLost
+			value = 1000
 		}
 		export_to_variable = {
 			which = trainingForceLimit
@@ -190,6 +199,6 @@ on_battle_won_experience = {
 		change_variable = {
 			which = trainingExperience
 			which = trainingLost
-		}
+		}	
 	}
 }
