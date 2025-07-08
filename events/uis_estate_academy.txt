@@ -258,7 +258,6 @@ country_event = {
 		}
 	}
 }
-#seize land rebellion #maybe unnecessary
 
 #gain general, admiral or advisor
 country_event = {
@@ -483,7 +482,7 @@ country_event = {
 				NOT = { ruler_has_personality = architectural_visionary_personality }
 			}
 		}
-		add_years_of_income = -2
+		add_years_of_income = -0.5
 		add_prestige = 10
 		add_estate_influence_modifier = {
 			estate = estate_academy

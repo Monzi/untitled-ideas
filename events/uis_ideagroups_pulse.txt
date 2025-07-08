@@ -70,7 +70,7 @@ country_event = {#get bufs while at war
 		custom_tooltip = pulse_academy_academic_commanders_TT
 		add_country_modifier = {
 			name = pulse_academy_academic_commanders
-			duration = -1
+			duration = 1825
 		}
 		add_years_of_income = -0.2
 	}
