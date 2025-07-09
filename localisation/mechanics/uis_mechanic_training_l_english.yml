@@ -30,93 +30,93 @@
 # Tech & Modifiers
 # Infantry
 # Tier 1
- inf_tech1_tier1_btn_TT:0 ""
+ inf_tech1_tier1_btn_TT:0 "§YInfantry Technology Tier 1§!"
  inf_base_tech1:0 "Infantry Technology Tier 1"
 
- inf_tech2_tier1_btn_TT:0 ""
+ inf_tech2_tier1_btn_TT:0 "§YMusket Infantry Tier 1§!"
  inf_fire_tech1:0 "Musket Infantry Tier 1"
 
- inf_tech3_tier1_btn_TT:0 ""
+ inf_tech3_tier1_btn_TT:0 "§YInfantry Technology Tier 2§!"
  inf_base_tech2:0 "Infantry Technology Tier 2"
 
- inf_tech4_tier1_btn_TT:0 ""
+ inf_tech4_tier1_btn_TT:0 "§YShock Infantry Tier 1§!"
  inf_shock_tech1:0 "Shock Infantry Tier 1"
 # Tier 2
- inf_tech1_tier2_btn_TT:0 ""
+ inf_tech1_tier2_btn_TT:0 "§YMusket Infantry Tier 2§!"
  inf_fire_tech2:0 "Musket Infantry Tier 2"
 
- inf_tech2_tier2_btn_TT:0 ""
+ inf_tech2_tier2_btn_TT:0 "§YInfantry Technology Tier 3§!"
  inf_base_tech3:0 "Infantry Technology Tier 3"
 
- inf_tech3_tier2_btn_TT:0 ""
+ inf_tech3_tier2_btn_TT:0 "§YShock Infantry Tier 2§!"
  inf_shock_tech2:0 "Shock Infantry Tier 2"
 
- inf_tech4_tier2_btn_TT:0 ""
+ inf_tech4_tier2_btn_TT:0 "§YMusket Infantry Tier 3§!"
  inf_fire_tech3:0 "Musket Infantry Tier 3"
 
- inf_tech5_tier2_btn_TT:0 ""
+ inf_tech5_tier2_btn_TT:0 "§YInfantry Technology Tier 4§!"
  inf_base_tech4:0 "Infantry Technology Tier 4"
 
- inf_tech6_tier2_btn_TT:0 ""
+ inf_tech6_tier2_btn_TT:0 "§YShock Infantry Tier 3§!"
  inf_shock_tech3:0 "Shock Infantry Tier 3"
 # Tier 3
- inf_tech1_tier3_btn_TT:0 ""
+ inf_tech1_tier3_btn_TT:0 "§YMusket Infantry Tier 4§!"
  inf_fire_tech4:0 "Musket Infantry Tier 4"
 
- inf_tech2_tier3_btn_TT:0 ""
+ inf_tech2_tier3_btn_TT:0 "§YShock Infantry Tier 4§!"
  inf_shock_tech4:0 "Shock Infantry Tier 4"
 
 # Cavalry
 # Tier 1
- cav_tech1_tier1_btn_TT:0 ""
+ cav_tech1_tier1_btn_TT:0 "§YHeavy Cavalry Tier 1§!"
  cav_fire_tech1:0 "Heavy Cavalry Tier 1"
 
- cav_tech2_tier1_btn_TT:0 ""
+ cav_tech2_tier1_btn_TT:0 "§YLight Cavalry Tier 1§!"
  cav_shock_tech1:0 "Light Cavalry Tier 1"
 
- cav_tech3_tier1_btn_TT:0 ""
+ cav_tech3_tier1_btn_TT:0 "§YCavalry Technology Tier 1§!"
  cav_base_tech1:0 "Cavalry Technology Tier 1"
 # Tier 2
- cav_tech1_tier2_btn_TT:0 ""
- cav_fire_tech2:0 "Heavy Cavalry Tier 1"
+ cav_tech1_tier2_btn_TT:0 "§YHeavy Cavalry Tier 2§!"
+ cav_fire_tech2:0 "Heavy Cavalry Tier 2"
 
- cav_tech2_tier2_btn_TT:0 ""
+ cav_tech2_tier2_btn_TT:0 "§YLight Cavalry Tier 2§!"
  cav_shock_tech2:0 "Light Cavalry Tier 2"
 
- cav_tech3_tier2_btn_TT:0 ""
+ cav_tech3_tier2_btn_TT:0 "§YCavalry Technology Tier 2§!"
  cav_base_tech2:0 "Cavalry Technology Tier 2"
 # Tier 3
- cav_tech1_tier3_btn_TT:0 ""
- cav_fire_tech3:0 "Heavy Cavalry Tier 1"
+ cav_tech1_tier3_btn_TT:0 "§YHeavy Cavalry Tier 3§!"
+ cav_fire_tech3:0 "Heavy Cavalry Tier 3"
 
- cav_tech2_tier3_btn_TT:0 ""
+ cav_tech2_tier3_btn_TT:0 "§YLight Cavalry Tier 3§!"
  cav_shock_tech3:0 "Light Cavalry Tier 3"
 
- cav_tech3_tier3_btn_TT:0 ""
+ cav_tech3_tier3_btn_TT:0 "§YCavalry Technology Tier 3§!"
  cav_base_tech3:0 "Cavalry Technology Tier 3"
 
 # Artillery
 # Tier 1
- art_tech1_tier1_btn_TT:0 ""
+ art_tech1_tier1_btn_TT:0 "§YArtillery Technology Tier 1§!"
  art_base_tech1:0 "Artillery Technology Tier 1"
 
- art_tech2_tier1_btn_TT:0 ""
+ art_tech2_tier1_btn_TT:0 "§YBattle Artillery Tier 1§!"
  art_fire_tech1:0 "Battle Artillery Tier 1"
 
- art_tech3_tier1_btn_TT:0 ""
+ art_tech3_tier1_btn_TT:0 "§YSiege Artillery Tier 1§!"
  art_shock_tech1:0 "Siege Artillery Tier 1"
 # Tier 2
- art_tech1_tier2_btn_TT:0 ""
+ art_tech1_tier2_btn_TT:0 "§YBattle Artillery Tier 2§!"
  art_fire_tech2:0 "Battle Artillery Tier 2"
 
- art_tech2_tier2_btn_TT:0 ""
+ art_tech2_tier2_btn_TT:0 "§YSiege Artillery Tier 2§!"
  art_shock_tech2:0 "Siege Artillery Tier 2"
 # Tier 3
- art_tech1_tier3_btn_TT:0 ""
+ art_tech1_tier3_btn_TT:0 "§YBattle Artillery Tier 3§!"
  art_fire_tech3:0 "Battle Artillery Tier 3"
 
- art_tech2_tier3_btn_TT:0 ""
+ art_tech2_tier3_btn_TT:0 "§YSiege Artillery Tier 3§!"
  art_shock_tech3:0 "Siege Artillery Tier 3"
 
- art_tech3_tier3_btn_TT:0 ""
- art_base_tech2:0 "Artillery Technology Tier 2"
+ art_tech3_tier3_btn_TT:0 "§YArtillery Technology Tier 3§!"
+ art_base_tech2:0 "Artillery Technology Tier 3"
