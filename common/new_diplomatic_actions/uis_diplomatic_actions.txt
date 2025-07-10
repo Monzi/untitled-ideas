@@ -1,3 +1,5 @@
+# Influence
+# ROOT = Sender, FROM = Target
 make_decentralized_client_vassal = {
 	category = influence
 
@@ -36,6 +38,124 @@ make_decentralized_client_vassal = {
 	}
 }
 
+# Covert
+# ROOT = Sender, FROM = Target
+raid_estate = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		has_idea_group = spy_ideas
+	}
+
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 40
+		}
+		full_idea_group = spy_ideas
+	}
+
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -40
+		}
+		# Do Raid on Estate here
+	}
+
+	on_decline = { # Target cannot decline
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+# ROOT = Sender, FROM = Target
+weaken_imperial_authority = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		is_emperor = yes
+		has_idea_group = spy_ideas
+	}
+
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 60
+		}
+		full_idea_group = spy_ideas
+	}
+
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -60
+		}
+		random_list = {
+			20 = { # Success
+				add_imperial_influence = -10
+			}
+			40 = { # Success but gets discovered
+				add_imperial_influence = -10
+				# Add discovered effect
+			}
+			60 = { # Fails but doesn't get discovered
+				 
+			}
+			80 = { # Fails
+				# Add discovered effect
+			}
+		}
+	}
+
+	on_decline = { # Target cannot decline
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+# ROOT = Sender, FROM = Target
+plot_assassination = {
+	category = covert
+
+	require_acceptance = no
+
+	is_visible = {
+		has_idea_group = spy_ideas
+	}
+
+	is_allowed = {
+		has_spy_network_in = {
+			who = FROM
+			value = 90
+		}
+		full_idea_group = spy_ideas
+	}
+
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -90
+		}
+	}
+
+	on_decline = { # Target cannot decline
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+# New categories
+# Colonial
+# ROOT = Sender, FROM = Target
 su_manage_colony_borders = {
 	category = colonial
 
@@ -74,7 +194,6 @@ su_manage_colony_borders = {
 					}
 				}
 				cede_province = ROOT
-				add_core = ROOT
 				remove_core = FROM
 			}
 		}
@@ -89,7 +208,7 @@ su_manage_colony_borders = {
 		}
 	}
 }
-
+# ROOT = Sender, FROM = Target
 su_manage_colonies = {
 	category = colonial
 
@@ -97,7 +216,7 @@ su_manage_colonies = {
 
 	is_visible = {
 		FROM = {
-			is_subject_of = ROOT
+			is_subject_of = ROOT 
 			OR = {
 				is_subject_of_type = colony
 				is_subject_of_type = crown_colony
@@ -122,12 +241,28 @@ su_manage_colonies = {
 				is_subject_of_type = private_enterprise
 				is_subject_of_type = self_governing_colony 
 			}
+			# Potential fix even though it shows error in editor
+			capital_scope = {
+				colonial_region = FROM
+			}
+			# Potential fix
+			capital_scope = {
+				FROM = {
+						capital_scope = {
+							colonial_region = capital
+						}
+					}
+			}
+			# Potential fix, may not work since target is noget set
+			capital_scope = {
+				colonial_region = event_target:capital_region
+			}
 		}
 	}
 
 	on_accept = {
 		FROM = {
-			capital_scope ={
+			capital_scope = {
 				save_event_target_as = capital_region
 			}
 		}

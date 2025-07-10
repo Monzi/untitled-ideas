@@ -1,8 +1,21 @@
 ﻿l_english:
+# Influence
  make_decentralized_client_vassal_title:0 "Make Decentralized Client State"
  make_decentralized_client_vassal_desc:0 "We make our Client State into a decentralized part of our country."
  make_decentralized_client_vassal_tooltip:0 "We make our Client State into a decentralized part of our country."
+# Covert
+ raid_estate_title:0 "Raid Estate"
+ raid_estate_desc:0 ""
+ raid_estate_tooltip:0 ""
 
+ weaken_imperial_authority_title:0 "Weaken Imperial Authority"
+ weaken_imperial_authority_desc:0 ""
+ weaken_imperial_authority_tooltip:0 ""
+
+ plot_assassination_title:0 "Plot Assassination"
+ plot_assassination_desc:0 ""
+ plot_assassination_tooltip:0 ""
+# Colonial
  DIPLOMACYACTION_CATEGORY_colonial:0 "Colonial actions"
  su_manage_colony_borders_title:0 "Redraw Colonial Borders"
  su_manage_colony_borders_desc:0 "Our §Ycolony§! will hand over any province that it controls outside of it's colonial region."
