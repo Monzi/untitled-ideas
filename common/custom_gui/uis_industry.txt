@@ -1,17 +1,79 @@
+
+
+# Hills, Highlands, Mountain
+# Prospecting button
+custom_button = {
+	name = prospect_for_resources
+	tooltip = prospect_for_resources_TT
+	potential = {
+		owned_by = FROM
+		controlled_by = FROM
+	}
+	trigger = {
+		hidden_trigger = {
+			owner = {
+				full_idea_group = infrastructure_ideas
+			}
+		}
+		OR = {
+			has_terrain = hills
+			has_terrain = highlands
+			has_terrain = mountain
+		}
+	}
+	effect = {
+		industry_cost = yes
+		add_province_modifier = {
+			name = prospecting_for_resources
+			duration = -1
+		}
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.3000
+				days = 1825
+				random = 182
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Focus on good made from artisans
 
 # Change Trade good
 custom_button = { # Change Province Trade Good
 	name = industry_change_trade_good_button
-	tooltip = x
+	tooltip = industry_change_trade_good_button_TT
 	potential = { always = yes }
 	trigger = {
 		always = yes
-		#full_idea_group = industrial_ideas
+		# Disabled during development, enable before deploy
+		#full_idea_group = infrastructure_ideas
 	}
 	effect = {
-		country_event = {
-			id = uis_ideagroups.1050
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = industry_change_trade_good_window_open }
+				clr_country_flag = industry_change_trade_good_window_open
+			}
+			else = {
+				set_country_flag = industry_change_trade_good_window_open
+			}
 		}
 	}
 }

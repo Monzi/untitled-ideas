@@ -1,0 +1,15 @@
+﻿l_english:
+# Events
+ uis_ideagroups.3000.t:0 "Title"
+ uis_ideagroups.3000.d:0 "Desc"
+ uis_ideagroups.3000.1:0 ""
+ uis_ideagroups.3000.0:0 "We'll keep our current good"
+ uis_ideagroups.3000.fallback:0 "We didn't find what we we're looking for, maybe if we dig deeper."
+
+# Custom toolips
+# Helpers
+
+
+# Modifiers
+ prospecting_for_resources:0 "Prospecting for resources"
+ desc_prospecting_for_resources:0 "Our workers are busy so while we're prospecting our infrastructure will have to suffer."

@@ -1,0 +1,51 @@
+Grasslands
+    Livestock
+Farmlands
+    Grain
+    Wine
+    Livestock
+Drylands
+    Livestock
+Savannah
+    Livestock
+    Ivory
+Steppes
+    Livestock
+
+Desert
+Glacial
+    Fur
+Marsh
+
+Coastal Desert
+    Fish
+    Salt
+Coastline
+    Fish
+    Salt
+
+Woods
+    Fur
+Forest
+    Fur
+Jungle
+    Tropical wood
+
+Hills
+    Copper
+    Iron
+    Coal
+    Gems
+    Gold
+Highlands
+    Copper
+    Iron
+    Coal
+    Gems
+    Gold
+Mountain
+    Copper
+    Iron
+    Coal
+    Gems
+    Gold

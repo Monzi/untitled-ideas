@@ -2,6 +2,58 @@ namespace = uis_ideagroups
 #######################################
 # Admin Ideas						  #
 #######################################
+province_event = {
+	id = uis_ideagroups.3000
+	title = uis_ideagroups.3000.t
+	desc = uis_ideagroups.3000.d
+	picture = FARMING_WIFE_eventPicture
+	is_triggered_only = yes
+
+	option = { # Accept rolled good
+		name = uis_ideagroups.3000.1
+		trigger = {
+			OR = {
+				has_terrain = hills
+				has_terrain = highlands
+				has_terrain = mountain
+			}
+		}
+		random_list = {
+			10 = { # Copper
+
+			}
+			10 = { # Iron
+				
+			}
+			10 = { # Coal
+				
+			}
+			10 = { # Gems
+				
+			}
+			10 = { # Gold
+				
+			}
+		}
+		remove_province_modifier = prospecting_for_resources
+	}
+	option = { # Keep old good
+		name = uis_ideagroups.3000.0
+		remove_province_modifier = prospecting_for_resources
+	}
+	option = { # Try again
+		name = uis_ideagroups.3000.fallback
+		industry_cost = yes
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.3000
+				days = 1825
+				random = 182
+			}
+		}
+	}
+}
+
 country_event = {
 	id = uis_ideagroups.4000
 	title = uis_ideagroups.4000.t

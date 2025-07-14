@@ -11,14 +11,12 @@ clear_tactic_bonus_modifiers = { # Clears all tactics modifiers
 	remove_country_modifier = shock_tactics
 }
 
-# Infantry / Cavalry Ideas
-clear_army_training_modifiers = { # Clears all training modifiers
-	remove_country_modifier = tier1_infantry
-	remove_country_modifier = tier2_infantry
-	remove_country_modifier = tier3_infantry
-	remove_country_modifier = tier1_cavalry
-	remove_country_modifier = tier2_cavalry
-	remove_country_modifier = tier3_cavalry
+# Infrastructure Change Tradegood
+industry_cost = {
+	add_years_of_income = -0.5
+	adm_power_cost = 50
+	dip_power_cost = 50
+	mil_power_cost = 50
 }
 
 # Building - State House
