@@ -3,54 +3,67 @@ namespace = uis_ideagroups
 # Admin Ideas						  #
 #######################################
 province_event = {
-	id = uis_ideagroups.3000
-	title = uis_ideagroups.3000.t
-	desc = uis_ideagroups.3000.d
-	picture = FARMING_WIFE_eventPicture
+	id = uis_ideagroups.5000
+	title = uis_ideagroups.5000.t
+	desc = uis_ideagroups.5000.d
+	picture = COLONIZATION_eventPicture
 	is_triggered_only = yes
 
-	option = { # Accept rolled good
-		name = uis_ideagroups.3000.1
+	option = { # Cultivate the land
+		name = uis_ideagroups.5000.cultivate
 		trigger = {
 			OR = {
-				has_terrain = hills
-				has_terrain = highlands
-				has_terrain = mountain
+				has_terrain = farmlands
+				has_terrain = grasslands
+				has_terrain = drylands
 			}
 		}
-		random_list = {
-			10 = { # Copper
+		# Effect here...
+	}
+	option = { # Gather herds
+		name = uis_ideagroups.5000.gatherherd
+		trigger = {
+			OR = {
+				has_terrain = farmlands
+				has_terrain = drylands
+				has_terrain = grasslands
+				has_terrain = steppe
+				has_terrain = savannah
+			}
+		}
+		# Effect here...
+	}
+	option = { # Survey for hunting grounds
+		name = uis_ideagroups.5000.hunting
+		trigger = {
+			OR = {
+				has_terrain = glacial
+				has_terrain = woods
+				has_terrain = forest
+				has_terrain = jungle
+				has_terrain = hills
 
 			}
-			10 = { # Iron
-				
-			}
-			10 = { # Coal
-				
-			}
-			10 = { # Gems
-				
-			}
-			10 = { # Gold
-				
-			}
 		}
-		remove_province_modifier = prospecting_for_resources
+		# Effect here...
 	}
-	option = { # Keep old good
-		name = uis_ideagroups.3000.0
-		remove_province_modifier = prospecting_for_resources
-	}
-	option = { # Try again
-		name = uis_ideagroups.3000.fallback
-		industry_cost = yes
-		hidden_effect = {
-			province_event = {
-				id = uis_ideagroups.3000
-				days = 1825
-				random = 182
-			}
+	option = { # Survey for fishing spots
+		name = uis_ideagroups.5000.fishing
+		trigger = {
+			has_port = yes
 		}
+		# Effect here...
+	}
+	option = { # Survey for exotic lumber
+		name = uis_ideagroups.5000.lumber
+		trigger = {
+			has_terrain = jungle
+		}
+		# Effect here...
+	}
+	option = { # Prospect for resources
+		name = uis_ideagroups.5000.prospect
+		# Effect here...
 	}
 }
 

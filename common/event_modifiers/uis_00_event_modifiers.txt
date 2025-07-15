@@ -62,13 +62,7 @@ uis_lost_to_junta_rebels = {
 }
 
 # Infrastructure
-prospecting_for_resources = {
-	local_state_maintenance_modifier = 2
-	local_build_cost = 0.30
-	local_build_time = 0.30
-	local_great_project_upgrade_cost = 0.30
-	local_great_project_upgrade_time = 0.30
-}
+
 
 # DIP
 #Maritime Ideas

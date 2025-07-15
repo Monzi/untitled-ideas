@@ -1,51 +1,58 @@
-Grasslands
-    Livestock
+# Cultivating land
 Farmlands
-    Grain
-    Wine
-    Livestock
+	Grain
+	Wine
 Drylands
-    Livestock
+	Grain
+	Wine
+
+# Gathering herd
+Grasslands
+	Livestock
 Savannah
-    Livestock
-    Ivory
+	Livestock
 Steppes
-    Livestock
+	Livestock
 
 Desert
-Glacial
-    Fur
 Marsh
 
+
 Coastal Desert
-    Fish
-    Salt
+	Fish
+	Salt
 Coastline
-    Fish
-    Salt
+	Fish
+	Salt
 
+# Hunting
 Woods
-    Fur
+	Fur
 Forest
-    Fur
-Jungle
-    Tropical wood
+	Fur
+Glacial
+	Fur
 
+# Cutting down the woods
+Jungle
+	Tropical wood
+
+# Prospecting
 Hills
-    Copper
-    Iron
-    Coal
-    Gems
-    Gold
+	Copper
+	Iron
+	Coal
+	Gems
+	Gold
 Highlands
-    Copper
-    Iron
-    Coal
-    Gems
-    Gold
+	Copper
+	Iron
+	Coal
+	Gems
+	Gold
 Mountain
-    Copper
-    Iron
-    Coal
-    Gems
-    Gold
+	Copper
+	Iron
+	Coal
+	Gems
+	Gold
