@@ -9,7 +9,11 @@ province_event = {
 	picture = COLONIZATION_eventPicture
 	is_triggered_only = yes
 
-	option = { # Cultivate the land
+	option = {
+		name = uis_ideagroups.5000.cancel
+
+	}
+	option = { # Cultivate the land | 5001
 		name = uis_ideagroups.5000.cultivate
 		trigger = {
 			OR = {
@@ -18,9 +22,20 @@ province_event = {
 				has_terrain = drylands
 			}
 		}
-		# Effect here...
+		industry_cost = yes
+		add_province_modifier = {
+			name = cultivating_land
+			duration = -1
+		}
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.5001
+				days = 1830
+				random = 128
+			}
+		}
 	}
-	option = { # Gather herds
+	option = { # Gather herds | 5002 - 5003
 		name = uis_ideagroups.5000.gatherherd
 		trigger = {
 			OR = {
@@ -31,9 +46,14 @@ province_event = {
 				has_terrain = savannah
 			}
 		}
-		# Effect here...
+		industry_cost = yes
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.5002
+			}
+		}
 	}
-	option = { # Survey for hunting grounds
+	option = { # Survey for hunting grounds | 5004
 		name = uis_ideagroups.5000.hunting
 		trigger = {
 			OR = {
@@ -45,27 +65,402 @@ province_event = {
 
 			}
 		}
-		# Effect here...
+		industry_cost = yes
+		add_province_modifier = {
+			name = surveying_huntinggrounds
+			duration = -1
+		}
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.5004
+				days = 1830
+				random = 128
+			}
+		}
 	}
-	option = { # Survey for fishing spots
+	option = { # Survey for fishing spots | 5005
 		name = uis_ideagroups.5000.fishing
 		trigger = {
 			has_port = yes
 		}
-		# Effect here...
+		industry_cost = yes
+		add_province_modifier = {
+			name = surveying_fishingspots
+			duration = -1
+		}
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.5005
+				days = 1830
+				random = 128
+			}
+		}
 	}
 	option = { # Survey for exotic lumber
 		name = uis_ideagroups.5000.lumber
 		trigger = {
 			has_terrain = jungle
 		}
+		industry_cost = yes
 		# Effect here...
 	}
 	option = { # Prospect for resources
 		name = uis_ideagroups.5000.prospect
+		industry_cost = yes
 		# Effect here...
 	}
 }
+# Cultivate the land
+province_event = {
+	id = uis_ideagroups.5001
+	title = uis_ideagroups.5001.t
+	desc = uis_ideagroups.5001.d
+	is_triggered_only = yes
+
+	option = {
+		name = uis_ideagroups.5001.grain
+		change_trade_goods = grain
+	}
+	option = {
+		name = uis_ideagroups.5001.wine
+		change_trade_goods = wine
+	}
+	option = {
+		name = uis_ideagroups.5001.spice
+		change_trade_goods = spice
+	}
+	option = {
+		name = uis_ideagroups.5001.tea
+		change_trade_goods = tea
+	}
+	option = {
+		name = uis_ideagroups.5001.cocoa
+		change_trade_goods = cocoa
+	}
+	option = {
+		name = uis_ideagroups.5001.coffee
+		change_trade_goods = coffee
+	}
+	option = {
+		name = uis_ideagroups.5001.cotton
+		change_trade_goods = cotton
+	}
+	option = {
+		name = uis_ideagroups.5001.sugar
+		change_trade_goods = sugar
+	}
+	option = {
+		name = uis_ideagroups.5001.tobacco
+		change_trade_goods = tobacco
+	}
+	option = {
+		name = uis_ideagroups.5001.cloves
+		trigger = {
+			# Heavily restrict this
+		}
+		change_trade_goods = cloves
+	}
+
+	after = {
+		remove_province_modifier = cultivating_land
+	}
+}
+# Gather herds
+province_event = {
+	id = uis_ideagroups.5002
+	title = uis_ideagroups.5002.t
+	desc = uis_ideagroups.5002.d
+	is_triggered_only = yes
+
+	option = {
+		name = uis_ideagroups.5002.wool
+		set_province_flag = desired_good_wool
+	}
+	option = {
+		name = uis_ideagroups.5002.livestock
+		set_province_flag = desired_good_livestock
+	}
+
+	after = {
+		add_province_modifier = {
+			name = gathering_herd
+			duration = -1
+		}
+		hidden_effect = {
+			province_event = {
+				id = uis_ideagroups.5003
+				days = 1830
+				random = 128
+			}
+		}
+	}
+}
+province_event = {
+	id = uis_ideagroups.5003
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { has_province_flag = desired_good_wool }
+			change_trade_goods = wool
+		}
+		else_if = {
+			limit = { has_province_flag = desired_good_livestock }
+			change_trade_goods = livestock
+		}
+	}
+
+	option = {
+		name = uis_ideagroups.5003
+	}
+
+	after = {
+		remove_province_modifier = gathering_herd
+		clr_province_flag = desired_good_wool
+		clr_province_flag = desired_good_livestock
+	}
+}
+# Survey for hunting grounds
+province_event = {
+	id = uis_ideagroups.5004
+	title = uis_ideagroups.5004.t
+	desc = uis_ideagroups.5004.d
+	is_triggered_only = yes
+
+	option = {
+		name = uis_ideagroups.5004.fur
+		change_trade_goods = fur
+	}
+	option = {
+		name = uis_ideagroups.5004.ivory
+		change_trade_goods = ivory
+	}
+	option = {
+		name = uis_ideagroups.5004.slaves
+		trigger = {
+			# Heavily restrict this
+			# Mostly a meme
+		}
+		change_trade_goods = slaves
+	}
+
+	after = {
+		remove_province_modifier = surveying_huntinggrounds
+	}
+}
+# Survey for fishing spots
+province_event = {
+	id = uis_ideagroups.5005
+	title = uis_ideagroups.5005.t
+	desc = uis_ideagroups.5005.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = chanceOfFindingFish
+				value = 0
+			}
+			random_list = {
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 1
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 2
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 3
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 4
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 5
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 6
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 7
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 8
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 9
+					}
+				}
+				10 = {
+					change_variable = {
+						which = chanceOfFindingFish
+						value = 10
+					}
+				}
+			}
+			if = {
+				limit = { has_terrain = coastline }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 3
+				}
+			}
+			if = {
+				limit = { has_terrain = coastal_desert }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 2
+				}
+			}
+			if = {
+				limit = { has_terrain = glacier }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 4
+				}
+			}
+			if = {
+				limit = { province_has_center_of_trade_of_level = 1 }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 2
+				}
+			}
+			else_if = {
+				limit = { province_has_center_of_trade_of_level = 2 }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 3
+				}
+			}
+			else_if = {
+				limit = { province_has_center_of_trade_of_level = 3 }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 4
+				}
+			}
+			else = {
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 1
+				}
+			}
+			if = {
+				limit = { has_building = dock }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 1
+				}
+			}
+			else_if = {
+				limit = { has_building = drydock }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 2
+				}
+			}
+			else = {
+				# Province doesn't have required building
+			}
+			if = {
+				limit = { has_building = shipyard }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 1
+				}
+			}
+			else_if = {
+				limit = { has_building = grand_shipyard }
+				change_variable = {
+					which = chanceOfFindingFish
+					value = 2
+				}
+			}
+			else = {
+				# Province doesn't have required building
+			}
+		}
+	}
+
+	option = {
+		name = uis_ideagroups.5005.cancel
+	}
+	option = {
+		name = uis_ideagroups.5005.tryagain
+		trigger = {
+			check_variable = {
+				which = chanceOfFindingFish
+				value = 9
+			}
+			NOT = {
+				check_variable = {
+					which = chanceOfFindingFish
+					value = 10
+				}
+			}
+		}
+		industry_cost = yes
+	}
+	option = {
+		name = uis_ideagroups.5005.fish
+		trigger = {
+			check_variable = {
+				which = chanceOfFindingFish
+				value = 10
+			}
+		}
+		change_trade_goods = fish
+	}
+	option = {
+		name = uis_ideagroups.5005.gems
+		trigger = {
+			check_variable = {
+				which = chanceOfFindingFish
+				value = 18
+			}
+		}
+		change_trade_goods = gems
+	}
+
+	after = {
+		remove_province_modifier = surveying_fishingspots
+		hidden_effect = {
+			set_variable = {
+				which = chanceOfFindingFish
+				value = 0
+			}
+		}
+	}
+}
+# Survey for exotic lumber
+# Prospect for resources
 
 country_event = {
 	id = uis_ideagroups.4000

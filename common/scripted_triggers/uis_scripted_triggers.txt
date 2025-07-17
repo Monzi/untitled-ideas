@@ -1,0 +1,87 @@
+# Infrastructure Change Tradegood
+# Provinces that you are not allowed to change the trade good in for one reason or another
+blacklisted_province = {
+	OR = {
+		#province_id = xxxx
+	}
+}
+
+#Academy Priv Triggers
+estate_academy_banner = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			primary_culture = manchu
+			primary_culture = manchu_new
+			primary_culture = altaic_new
+			has_reform = great_mongol_state_reform
+		}
+}
+estate_academy_caroleans = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fin_baltic_empire
+			has_reform = allotment_system
+		}
+}
+estate_academy_cawa = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = solomonic_empire
+			has_reform = negusa_nagast
+			has_reform = cawa_auxiliary_forces
+			has_reform = the_cawa_regiments_reform
+		}
+}
+estate_academy_janissaries = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = ottoman_government
+			has_reform = reformed_ottoman_conscription_reform
+			has_reform = reorganized_ottoman_government
+			has_reform = sultanate_of_rum_reform
+			has_reform = modernized_ottoman_government
+			has_reform = janissary_autocracy_reform
+		}
+}
+estate_academy_mamluks = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+	OR = {
+		TAG = MAM
+		has_estate_privilege = estate_nobles_enlist_the_mamluks
+	}
+}
+estate_academy_musketeers = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			mission_completed = fra_musketeers
+			has_reform = musketeers_reform
+		}
+}
+estate_academy_samurai = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_idea = reformed_land_holding
+			has_reform = shogunate
+			has_country_modifier = jap_grant_samurai_modifier
+			culture_group = japanese_g
+		}
+}
+estate_academy_streltsy = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_reform = veche_republic
+			has_reform = great_veche_republic
+			has_reform = tsardom
+			has_reform = principality
+			has_reform = ruthenian_tsardom
+			has_reform = streltsy_reform
+			has_reform = russian_mercenary_guard_reform
+		}
+}
+estate_academy_hussars_test = {
+	has_estate_privilege = estate_academy_establish_specialist_branch
+		OR = {
+			has_idea = winged_hussars
+			has_idea = lithuanian_hussars
+		}
+}

@@ -62,7 +62,18 @@ uis_lost_to_junta_rebels = {
 }
 
 # Infrastructure
-
+cultivating_land = {
+	# Add modifiers semi-related to farming
+}
+gathering_herd = {
+	# Add modifiers semi-related to livestock
+}
+surveying_huntinggrounds = {
+	# Add modifiers semi-related to hunting
+}
+surveying_fishingspots = {
+	# Add modifiers semi-related to fishing
+}
 
 # DIP
 #Maritime Ideas

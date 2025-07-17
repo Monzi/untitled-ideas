@@ -3,16 +3,54 @@
  change_trade_good_button_TT:0 "Change Trade Good"
 # Events
  uis_ideagroups.5000.t:0 "Title"
- uis_ideagroups.5000.d:0 "Desc"
- uis_ideagroups.5000.cultivate:0 ""
- uis_ideagroups.5000.gatherherd:0 ""
- uis_ideagroups.5000.hunting:0 ""
- uis_ideagroups.5000.fishing:0 ""
- uis_ideagroups.5000.lumber:0 ""
- uis_ideagroups.5000.prospect:0 ""
+ uis_ideagroups.5000.d:0 "What should we do?"
+ uis_ideagroups.5000.cancel:0 "We've changed our mind"
+ uis_ideagroups.5000.cultivate:0 "Cultivate the land"
+ uis_ideagroups.5000.gatherherd:0 "Gather a herd"
+ uis_ideagroups.5000.hunting:0 "Survey for hunting grounds"
+ uis_ideagroups.5000.fishing:0 "Survey for fishing spots"
+ uis_ideagroups.5000.lumber:0 "Survey for exotic lumber"
+ uis_ideagroups.5000.prospect:0 "Prospect for resources"
+# Cultivate the land
+ uis_ideagroups.5001.t:0 "Title"
+ uis_ideagroups.5001.d:0 "What should we plant?"
+ uis_ideagroups.5001.grain:0 "Grain"
+ uis_ideagroups.5001.wine:0 "Wine"
+ uis_ideagroups.5001.spice:0 "Spices"
+ uis_ideagroups.5001.tea:0 "Tea"
+ uis_ideagroups.5001.cocoa:0 "Cocoa"
+ uis_ideagroups.5001.coffee:0 "Coffee"
+ uis_ideagroups.5001.cotton:0 "Cotton"
+ uis_ideagroups.5001.sugar:0 "Sugar"
+ uis_ideagroups.5001.tobacco:0 "Tobacco"
+ uis_ideagroups.5001.cloves:0 "Cloves"
+# Gather herds
+ uis_ideagroups.5002.t:0 "Title"
+ uis_ideagroups.5002.d:0 "What animals should we gather"
+ uis_ideagroups.5002.wool:0 "Wool"
+ uis_ideagroups.5002.livestock:0 "Livestock"
+# Survey for hunting grounds
+ uis_ideagroups.5004.t:0 "Title"
+ uis_ideagroups.5004.d:0 "Here is what we found."
+ uis_ideagroups.5004.fur:0 "Fur"
+ uis_ideagroups.5004.ivory:0 "Ivory"
+ uis_ideagroups.5004.slaves:0 "Slaves"
+# Survey for fishing spots
+ uis_ideagroups.5005.t:0 "Title"
+ uis_ideagroups.5005.d:0 "Here is what we found"
+ uis_ideagroups.5005.cancel:0 "We give up"
+ uis_ideagroups.5005.tryagain:0 "Let's try again"
+ uis_ideagroups.5005.fish:0 "Fish"
+ uis_ideagroups.5005.gems:0 "Pearls"
+# Survey for exotic lumber
+# Prospect for resources
 
 # Custom toolips
 
 # Helpers
 
 # Modifiers
+ cultivating_land:0 "Cultivating the land"
+ desc_cultivating_land:0 "The land in this province is being cultivated."
+ gathering_herd:0 "Gathering a herd"
+ desc_gathering_herd:0 "A large herd of animals is being gathered in this province."

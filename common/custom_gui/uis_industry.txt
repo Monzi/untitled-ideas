@@ -9,6 +9,9 @@ custom_button = {
 		owner = {
 			full_idea_group = infrastructure_ideas
 		}
+		NOT = {
+			blacklisted_province = yes
+		}
 	}
 	effect = {
 		province_event = { id = uis_ideagroups.5000 }
