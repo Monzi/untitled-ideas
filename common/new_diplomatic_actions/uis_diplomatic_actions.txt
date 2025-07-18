@@ -46,15 +46,26 @@ raid_estate = {
 	require_acceptance = no
 
 	is_visible = {
-		has_idea_group = spy_ideas
+		full_idea_group = spy_ideas
 	}
 
 	is_allowed = {
-		has_spy_network_in = {
-			who = FROM
-			value = 40
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_40_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 40
+			}
 		}
-		full_idea_group = spy_ideas
+		if = {
+			limit = {
+				NOT = { is_neighbor_of = FROM }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_MUST_BE_NEIGHBOR_TT
+				is_neighbor_of = FROM
+			}
+		}
 	}
 
 	on_accept = {
@@ -69,7 +80,10 @@ raid_estate = {
 	}
 
 	ai_will_do = {
-		always = no
+		has_spy_network_in = {
+			who = FROM
+			value = 40
+		}
 	}
 }
 # ROOT = Sender, FROM = Target
@@ -79,16 +93,20 @@ weaken_imperial_authority = {
 	require_acceptance = no
 
 	is_visible = {
-		is_emperor = yes
-		has_idea_group = spy_ideas
+		full_idea_group = spy_ideas
 	}
 
 	is_allowed = {
-		has_spy_network_in = {
-			who = FROM
-			value = 60
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_60_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 60
+			}
 		}
-		full_idea_group = spy_ideas
+		FROM = {
+			is_emperor = yes
+		}
 	}
 
 	on_accept = {
@@ -97,18 +115,24 @@ weaken_imperial_authority = {
 			value = -60
 		}
 		random_list = {
-			20 = { # Success
-				add_imperial_influence = -10
+			5 = { # Success
+				FROM = {
+					add_imperial_influence = -10
+				}
 			}
-			40 = { # Success but gets discovered
-				add_imperial_influence = -10
-				# Add discovered effect
-			}
-			60 = { # Fails but doesn't get discovered
-				 
+			15 = { # Fails but doesn't get discovered
+				ROOT = {
+					# Gets event saying we failed, but we got away with it
+				}
+				
 			}
 			80 = { # Fails
-				# Add discovered effect
+				ROOT = {
+					# Gets event saying we failed, and didn't get away with it
+				}
+				FROM = {
+					# Gets event saying ROOT failed
+				}
 			}
 		}
 	}
@@ -117,7 +141,11 @@ weaken_imperial_authority = {
 	}
 
 	ai_will_do = {
-		always = no
+		is_rival = FROM
+		has_spy_network_in = {
+			who = FROM
+			value = 60
+		}
 	}
 }
 # ROOT = Sender, FROM = Target
@@ -127,15 +155,17 @@ plot_assassination = {
 	require_acceptance = no
 
 	is_visible = {
-		has_idea_group = spy_ideas
+		full_idea_group = spy_ideas
 	}
 
 	is_allowed = {
-		has_spy_network_in = {
-			who = FROM
-			value = 90
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_90_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 90
+			}
 		}
-		full_idea_group = spy_ideas
 	}
 
 	on_accept = {
@@ -149,7 +179,11 @@ plot_assassination = {
 	}
 
 	ai_will_do = {
-		always = no
+		is_rival = FROM
+		has_spy_network_in = {
+			who = FROM
+			value = 90
+		}
 	}
 }
 
